@@ -17,7 +17,16 @@ const TABS = [
 
 export default function App() {
   const [store, setStore] = useState(loadStore);
-  const [tab, setTab] = useState('setup');
+  const [tab, setTabState] = useState(() => {
+    const p = new URLSearchParams(window.location.search).get('tab');
+    return ['setup', 'findings', 'outcomes', 'rules', 'tests', 'publish'].includes(p) ? p : 'setup';
+  });
+  const setTab = (t) => {
+    setTabState(t);
+    const url = new URL(window.location);
+    url.searchParams.set('tab', t);
+    window.history.replaceState({}, '', url);
+  };
   const [msg, setMsg] = useState(null);
   const fileRef = useRef();
 

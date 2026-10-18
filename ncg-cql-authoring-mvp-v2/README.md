@@ -1,6 +1,6 @@
-# NCG Guideline Studio (v2) - No-Code Clinical Pathway Authoring
+# NCG Guideline Studio (v2) — No-Code Clinical Pathway Authoring
 
-A standalone authoring environment designed specifically for **medical experts, oncologists, and guideline panels** to create, edit, test, and publish National Cancer Grid (NCG) clinical decision pathways **without writing any code**.
+A standalone web authoring environment designed specifically for **medical experts, oncologists, and guideline panels** to create, edit, test, and publish National Cancer Grid (NCG) clinical decision pathways **without writing any code**.
 
 The clinical author only defines findings, treatment outcomes, and decision rules in plain clinical language. The studio automatically generates:
 1. **Spec-compliant CQL 1.4 logic libraries** (with automatic data-provenance gates).
@@ -30,14 +30,14 @@ In earlier iterations, adding a new disease guideline required writing JavaScrip
 ```bash
 cd ncg-cql-authoring-mvp-v2
 npm install
-npm run dev -- --port 5174
+npm run dev
 ```
 
-Open [http://localhost:5174](http://localhost:5174) in your browser.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## Authoring Workflow (The 6 Tabs)
+## Authoring Workflow & Studio Tour
 
 ```
 ┌───────────┐   ┌────────────┐   ┌────────────┐   ┌─────────┐   ┌────────────┐   ┌─────────────────┐
@@ -45,12 +45,50 @@ Open [http://localhost:5174](http://localhost:5174) in your browser.
 └───────────┘   └────────────┘   └────────────┘   └─────────┘   └────────────┘   └─────────────────┘
 ```
 
-1. **Details:** Title, organization, source guideline citation, and the safety provenance gate toggle.
-2. **Findings:** Clinical parameters (e.g. *Stage*, *Grade*, *Biomarker*) and their valid values.
-3. **Outcomes:** Treatment groups (curative RT, systemic chemoimmunotherapy, watchful waiting, clinician review) and their regimen shortlists.
-4. **Rules:** Ordered clinical logic checked top-to-bottom. The first rule whose conditions match determines the outcome.
-5. **Test cases:** Benchmark patient cases evaluated live against the rules with detailed execution traces.
-6. **Review & export:** Visual decision ladder and one-click downloads for CQL, FHIR PlanDefinition, FHIR Library, CodeSystems, and portable JSON.
+### 1 · Details & Clinical Safety Gate
+Define the guideline identity, managing oncology working group, citation, and version. The built-in **Data Provenance Safety Gate** can be toggled to automatically guarantee that unvalidated free-text referral data is routed to clinician review instead of inadvertently triggering cytotoxic systemic therapy.
+
+![Guideline Details and Safety Provenance Gate](docs/screenshots/01_details.png)
+
+---
+
+### 2 · Clinical Findings
+Specify clinical input parameters (e.g., *Histology / Grade*, *Ann Arbor Stage*, *Stage II Contiguity*, *Bone Marrow Biopsy*, *GELF Tumour Burden*, *Fitness for Systemic Therapy*) and configure allowed values with clinical guidance notes.
+
+![Clinical Findings Editor](docs/screenshots/02_findings.png)
+
+---
+
+### 3 · Treatment Outcomes & Regimens
+Create actionable clinical outcomes categorized into **Treatment**, **Observation / Watchful Waiting**, or **Needs Clinician Review**. Attach regimen shortlists (e.g., *Obinutuzumab + bendamustine*, *R-CHOP*, *ISRT 24 Gy*) and explicit clinical rationales.
+
+![Treatment Outcomes and Regimens](docs/screenshots/03_outcomes.png)
+
+---
+
+### 4 · Visual Decision Rules (Top-to-Bottom Ladder)
+Construct hierarchical decision logic using an intuitive visual **IF ... THEN ...** rule builder. Rules evaluate top-to-bottom so that safety caveats and specific contraindications execute before broad default treatment pathways.
+
+![Visual IF-THEN Decision Rules](docs/screenshots/04_rules.png)
+
+---
+
+### 5 · Patient Test Bench & Live Verification
+Define representative patient cases (e.g., *Stage I limited*, *Advanced high burden*, *Unparsed histology safety test*, *Transformed DLBCL*) and instantly observe evaluation outcomes and full rule execution traces live in the browser.
+
+![Patient Test Bench and Evaluation](docs/screenshots/05_test_cases.png)
+
+---
+
+### 6 · Review & Multi-Standard Export
+Inspect the generated visual decision flowchart and export standard-compliant clinical artifacts with a single click:
+* **Guideline (JSON, shareable)** — Portable document for version control and peer exchange.
+* **CQL Library** — Spec-compliant HL7 CQL 1.4 with automated provenance gates.
+* **FHIR Library & PlanDefinition** — HL7 FHIR R4 resources ready for CDS Hooks engines.
+* **FHIR CodeSystems & ValueSets** — Standardized terminologies for EHR mapping.
+* **Flowchart (Mermaid)** — Visual pathway diagram for clinical review.
+
+![Review, Decision Ladder and Export](docs/screenshots/06_review_export.png)
 
 ---
 
@@ -58,6 +96,14 @@ Open [http://localhost:5174](http://localhost:5174) in your browser.
 
 ```text
 ncg-cql-authoring-mvp-v2/
+├── docs/
+│   └── screenshots/         # Captured high-resolution studio screenshots
+│       ├── 01_details.png
+│       ├── 02_findings.png
+│       ├── 03_outcomes.png
+│       ├── 04_rules.png
+│       ├── 05_test_cases.png
+│       └── 06_review_export.png
 ├── src/
 │   ├── components/
 │   │   ├── Setup.jsx        # Tab 1: Metadata & safety checks
