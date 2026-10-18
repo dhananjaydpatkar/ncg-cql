@@ -1,0 +1,564 @@
+==============================================================================
+NCG CLL Pathway - Recommendation Report
+Source: sample_data/sample_cll_case_groupA.pdf
+==============================================================================
+Treatment group : GROUP-A
+Regimen options :
+  - FCR (Fludarabine-Cyclophosphamide-Rituximab)
+  - Ibrutinib
+
+Rationale (per NCG_CLL_2019.cql 'ClassificationRationale'):
+  - treatment_indicated: True
+  - del17p_status: negative
+  - tp53_status: negative
+  - fitness_status: fit
+
+Requires human review: False
+==============================================================================
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "timestamp": "2026-10-13T09:37:05.612919+00:00",
+  "entry": [
+    {
+      "fullUrl": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "077ea1c6-243a-47fb-9548-ec83e7a4ff80",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "12-3456-7890-1234"
+          }
+        ],
+        "name": [
+          {
+            "text": "CASE A - YOUNG FIT NO 17P"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Condition/b3800510-8b51-46d3-8b5a-9095d716196d",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "b3800510-8b51-46d3-8b5a-9095d716196d",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-condition-heme-malignancy"
+          ]
+        },
+        "subject": {
+          "reference": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-o-3",
+              "code": "9823/3",
+              "display": "Chronic lymphocytic leukemia/small lymphocytic lymphoma"
+            }
+          ]
+        },
+        "recordedDate": "2026-10-13T09:37:05.612919+00:00"
+      }
+    },
+    {
+      "fullUrl": "Observation/b4974779-f2d7-4acc-9016-7c0ff9a74828",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "b4974779-f2d7-4acc-9016-7c0ff9a74828",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-performance-status"
+          ]
+        },
+        "status": "final",
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "structured-capture",
+                  "display": "Captured via structured synoptic report / SDC form"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "89247-1",
+              "display": "ECOG Performance Status score"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80"
+        },
+        "valueQuantity": {
+          "value": 0.0,
+          "unit": "score"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/06e2254f-6bfc-4ed1-a65c-394fd44ea723",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "06e2254f-6bfc-4ed1-a65c-394fd44ea723",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-renal-function"
+          ]
+        },
+        "status": "final",
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "structured-capture",
+                  "display": "Captured via structured synoptic report / SDC form"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80"
+        },
+        "valueQuantity": {
+          "value": 0.9,
+          "unit": "mg/dL"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/d5c2fd99-ba5f-4213-9c97-95b18c8886e5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "d5c2fd99-ba5f-4213-9c97-95b18c8886e5",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-renal-function"
+          ]
+        },
+        "status": "final",
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "structured-capture",
+                  "display": "Captured via structured synoptic report / SDC form"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "33914-3",
+              "display": "Creatinine clearance"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80"
+        },
+        "valueQuantity": {
+          "value": 95.0,
+          "unit": "mL/min"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/95a5f5e4-6b04-4a1e-8f74-b20ec849a182",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "95a5f5e4-6b04-4a1e-8f74-b20ec849a182",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-cytogenetic-finding"
+          ]
+        },
+        "status": "final",
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "structured-capture",
+                  "display": "Captured via structured synoptic report / SDC form"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cytogenetic-finding",
+              "code": "del-13q",
+              "display": "Deletion 13q14"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-finding-qualifier",
+              "code": "positive",
+              "display": "Positive"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/e0bd47c5-304a-494b-9709-9a8b6c54fa4a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "e0bd47c5-304a-494b-9709-9a8b6c54fa4a",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-cytogenetic-finding"
+          ]
+        },
+        "status": "final",
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "structured-capture",
+                  "display": "Captured via structured synoptic report / SDC form"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cytogenetic-finding",
+              "code": "del-11q",
+              "display": "Deletion 11q22-23 (ATM locus)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-finding-qualifier",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/c773c449-9881-4c6b-841f-af3635b4fe02",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "c773c449-9881-4c6b-841f-af3635b4fe02",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-cytogenetic-finding"
+          ]
+        },
+        "status": "final",
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "structured-capture",
+                  "display": "Captured via structured synoptic report / SDC form"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cytogenetic-finding",
+              "code": "trisomy-12",
+              "display": "Trisomy 12"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-finding-qualifier",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/66b5782c-989f-420f-bf40-998cc2cf348f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "66b5782c-989f-420f-bf40-998cc2cf348f",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-cytogenetic-finding"
+          ]
+        },
+        "status": "final",
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "structured-capture",
+                  "display": "Captured via structured synoptic report / SDC form"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cytogenetic-finding",
+              "code": "del-17p",
+              "display": "Deletion 17p13 (TP53 locus)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-finding-qualifier",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/bee68ee5-e192-409f-a130-6d7f5a80021a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "bee68ee5-e192-409f-a130-6d7f5a80021a",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-cytogenetic-finding"
+          ]
+        },
+        "status": "final",
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "structured-capture",
+                  "display": "Captured via structured synoptic report / SDC form"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cytogenetic-finding",
+              "code": "tp53-mutation",
+              "display": "TP53 gene mutation (NGS/sequencing)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-finding-qualifier",
+              "code": "negative",
+              "display": "Negative"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/e5a553d6-41c5-40da-aaff-9e98b03d94b8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "e5a553d6-41c5-40da-aaff-9e98b03d94b8",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-ighv-status"
+          ]
+        },
+        "status": "final",
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "structured-capture",
+                  "display": "Captured via structured synoptic report / SDC form"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-ighv-status",
+              "code": "ighv-mutation-status",
+              "display": "IGHV mutation status"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-ighv-status",
+              "code": "mutated",
+              "display": "IGHV mutated"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/f244f23d-7958-45b9-893d-125ffef8ab20",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "f244f23d-7958-45b9-893d-125ffef8ab20",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-fitness-flag"
+          ]
+        },
+        "status": "final",
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "structured-capture",
+                  "display": "Captured via structured synoptic report / SDC form"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-clinical-flag",
+              "code": "fit-for-intensive-iv-therapy",
+              "display": "Fit for intensive IV therapy"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80"
+        },
+        "valueBoolean": true
+      }
+    },
+    {
+      "fullUrl": "Observation/4b2298f5-4ab7-4c69-82b9-5b40809ff86a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "4b2298f5-4ab7-4c69-82b9-5b40809ff86a",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-fitness-flag"
+          ]
+        },
+        "status": "final",
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "structured-capture",
+                  "display": "Captured via structured synoptic report / SDC form"
+                }
+              ]
+            }
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-clinical-flag",
+              "code": "treatment-indicated-iwcll",
+              "display": "Treatment indicated per iwCLL criteria"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/077ea1c6-243a-47fb-9548-ec83e7a4ff80"
+        },
+        "valueBoolean": true
+      }
+    }
+  ]
+}

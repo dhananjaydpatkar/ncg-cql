@@ -1,0 +1,71 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "ncg-lymphoma-histology-to-national-terminology",
+  "url": "http://ncgindia.org/fhir/ConceptMap/ncg-lymphoma-histology-to-national-terminology",
+  "version": "0.1.0-draft",
+  "status": "draft",
+  "sourceUri": "http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-histology",
+  "group": [
+    {
+      "source": "http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-histology",
+      "target": "http://snomed.info/sct (India Edition) / http://loinc.org",
+      "element": [
+        {
+          "code": "fl-grade-1-2",
+          "display": "Follicular lymphoma, grade 1-2 (low grade)",
+          "target": [
+            {
+              "code": "26274007",
+              "equivalence": "equivalent",
+              "comment": null
+            }
+          ]
+        },
+        {
+          "code": "fl-grade-3a",
+          "display": "Follicular lymphoma, grade 3a (low grade)",
+          "target": [
+            {
+              "code": "89369001",
+              "equivalence": "equivalent",
+              "comment": null
+            }
+          ]
+        },
+        {
+          "code": "fl-grade-3b",
+          "display": "Follicular lymphoma, grade 3b (high grade - treat as DLBCL)",
+          "target": [
+            {
+              "code": "89369001",
+              "equivalence": "equivalent",
+              "comment": null
+            }
+          ]
+        },
+        {
+          "code": "fl-duodenal",
+          "display": "Duodenal-type follicular lymphoma (mucosal, indolent)",
+          "target": [
+            {
+              "code": "443831000124108",
+              "equivalence": "equivalent",
+              "comment": null
+            }
+          ]
+        },
+        {
+          "code": "transformed-dlbcl",
+          "display": "Histological transformation to DLBCL",
+          "target": [
+            {
+              "code": "63449009",
+              "equivalence": "equivalent",
+              "comment": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

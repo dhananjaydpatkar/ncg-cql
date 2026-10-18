@@ -1,0 +1,38 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "ncg-gelf-tumour-burden-to-national-terminology",
+  "url": "http://ncgindia.org/fhir/ConceptMap/ncg-gelf-tumour-burden-to-national-terminology",
+  "version": "0.1.0-draft",
+  "status": "draft",
+  "sourceUri": "http://ncgindia.org/fhir/CodeSystem/ncg-gelf-tumour-burden",
+  "group": [
+    {
+      "source": "http://ncgindia.org/fhir/CodeSystem/ncg-gelf-tumour-burden",
+      "target": "http://snomed.info/sct (India Edition) / http://loinc.org",
+      "element": [
+        {
+          "code": "high-burden",
+          "display": "High tumour burden per GELF criteria (any 1 criterion met)",
+          "target": [
+            {
+              "code": "PENDING-VERIFICATION",
+              "equivalence": "unmatched",
+              "comment": "Illustrative mapping pending confirmation against the live SNOMED CT-IN / LOINC release -- see terminology/codesystems.py docstring."
+            }
+          ]
+        },
+        {
+          "code": "low-burden",
+          "display": "Low tumour burden per GELF criteria (none of criteria met)",
+          "target": [
+            {
+              "code": "PENDING-VERIFICATION",
+              "equivalence": "unmatched",
+              "comment": "Illustrative mapping pending confirmation against the live SNOMED CT-IN / LOINC release -- see terminology/codesystems.py docstring."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

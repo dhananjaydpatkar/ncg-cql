@@ -1,0 +1,42 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ncg-condition-heme-malignancy",
+  "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-condition-heme-malignancy",
+  "version": "0.1.0-draft",
+  "name": "ConditionHemeMalignancy",
+  "title": "NCG Hematolymphoid Malignancy Condition",
+  "status": "draft",
+  "description": "Condition profile for a hematolymphoid malignancy diagnosis (e.g. Follicular Lymphoma, DLBCL), coded via ICD-O-3 morphology/topography per EHR Standards for India.",
+  "purpose": "NCG data-dictionary tier: essential. See fhir-profiles/generate_profiles.py PROFILES table.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Condition",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Condition",
+        "path": "Condition",
+        "mustSupport": true
+      },
+      {
+        "id": "Condition.extension:dataProvenance",
+        "path": "Condition.extension",
+        "sliceName": "dataProvenance",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

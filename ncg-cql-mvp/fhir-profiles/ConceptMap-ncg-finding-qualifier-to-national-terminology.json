@@ -1,0 +1,49 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "ncg-finding-qualifier-to-national-terminology",
+  "url": "http://ncgindia.org/fhir/ConceptMap/ncg-finding-qualifier-to-national-terminology",
+  "version": "0.1.0-draft",
+  "status": "draft",
+  "sourceUri": "http://ncgindia.org/fhir/CodeSystem/ncg-finding-qualifier",
+  "group": [
+    {
+      "source": "http://ncgindia.org/fhir/CodeSystem/ncg-finding-qualifier",
+      "target": "http://snomed.info/sct (India Edition) / http://loinc.org",
+      "element": [
+        {
+          "code": "positive",
+          "display": "Positive",
+          "target": [
+            {
+              "code": "10828004",
+              "equivalence": "equivalent",
+              "comment": null
+            }
+          ]
+        },
+        {
+          "code": "negative",
+          "display": "Negative",
+          "target": [
+            {
+              "code": "260385009",
+              "equivalence": "equivalent",
+              "comment": null
+            }
+          ]
+        },
+        {
+          "code": "not-done",
+          "display": "Not done",
+          "target": [
+            {
+              "code": "272125009",
+              "equivalence": "equivalent",
+              "comment": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

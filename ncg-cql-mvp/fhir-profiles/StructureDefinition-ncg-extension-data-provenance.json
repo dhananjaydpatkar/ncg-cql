@@ -1,0 +1,40 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ncg-extension-data-provenance",
+  "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+  "version": "0.1.0-draft",
+  "name": "NCGDataProvenance",
+  "title": "NCG Data Provenance Extension",
+  "status": "draft",
+  "description": "Flags how a data element entered the record: coded at source, captured via a structured synoptic report/SDC form, extracted from free text by NLP (with a confidence tier), unparsed (present but did not match the expected value set), or missing. NCG CQL libraries MUST check this extension via the shared IsUsable() function before using a value to drive a treatment-pathway branch.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {"type": "element", "expression": "Observation"},
+    {"type": "element", "expression": "Condition"}
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "max": "1",
+        "type": [{"code": "CodeableConcept"}],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ncgindia.org/fhir/ValueSet/ncg-data-provenance"
+        }
+      }
+    ]
+  }
+}

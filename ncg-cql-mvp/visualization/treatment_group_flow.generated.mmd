@@ -1,0 +1,75 @@
+%% GENERATED from cql/NCG_FL_2020.cql by cql_to_flowchart.py -- do not edit.
+flowchart TD
+    start([Follicular Lymphoma FHIR Bundle]):::start
+    d1{"not 'HistologyStatusKnown'"}:::decision
+    start --> d1
+    out_needs_review[/"needs-review"/]:::review
+    d1 -- Yes --> out_needs_review
+    d2{"'IsTransformedDlbcl'"}:::decision
+    d1 -- No --> d2
+    out_transformed_dlbcl[/"transformed-dlbcl<br/>R-CHOP x 6 cycles -> Autologous Stem Cell Transplant (ASCT) [Optimal]"/]:::outcome
+    d2 -- Yes --> out_transformed_dlbcl
+    d3{"'IsGrade3b'"}:::decision
+    d2 -- No --> d3
+    out_grade_3b_dlbcl[/"grade-3b-dlbcl<br/>R-CHOP protocol (Treat as DLBCL)"/]:::outcome
+    d3 -- Yes --> out_grade_3b_dlbcl
+    d4{"'IsDuodenalFL' and 'IsHighTumourBurden'"}:::decision
+    d3 -- No --> d4
+    out_duodenal_symptomatic[/"duodenal-symptomatic<br/>Single-agent Rituximab (375 mg/m2 weekly x 4) [Optimal]<br/>ISRT 24 Gy [Optimal]"/]:::outcome
+    d4 -- Yes --> out_duodenal_symptomatic
+    d5{"'IsDuodenalFL' and not 'IsHighTumourBurden'"}:::decision
+    d4 -- No --> d5
+    out_duodenal_asymptomatic[/"duodenal-asymptomatic<br/>Observation / Watchful waiting [Optimal]<br/>Endoscopic mucosal resection (if technically feasible)"/]:::outcome
+    d5 -- Yes --> out_duodenal_asymptomatic
+    d6{"not 'IsLowGradeFL'"}:::decision
+    d5 -- No --> d6
+    d6 -- Yes --> out_needs_review
+    d7{"not 'StageStatusKnown'"}:::decision
+    d6 -- No --> d7
+    d7 -- Yes --> out_needs_review
+    d8{"'IsStage1' and not 'BoneMarrowAssessed'"}:::decision
+    d7 -- No --> d8
+    d8 -- Yes --> out_needs_review
+    d9{"'IsStage1' and 'IsFitForRT'"}:::decision
+    d8 -- No --> d9
+    out_stage_1_rt_fit[/"stage-1-rt-fit<br/>ISRT (Involved-site RT) 24 Gy [Optimal]<br/>IFRT (Involved-field RT) 24 Gy [Essential]"/]:::outcome
+    d9 -- Yes --> out_stage_1_rt_fit
+    d10{"'IsStage1' and not 'IsFitForRT'"}:::decision
+    d9 -- No --> d10
+    out_stage_1_rt_unsuitable[/"stage-1-rt-unsuitable<br/>Watchful waiting (Low-volume / high-risk toxicity site) [Optional]<br/>Single-agent Rituximab (375 mg/m2 weekly x 4 doses) [Optional]"/]:::outcome
+    d10 -- Yes --> out_stage_1_rt_unsuitable
+    d11{"'IsStage2' and not 'BoneMarrowAssessed'"}:::decision
+    d10 -- No --> d11
+    d11 -- Yes --> out_needs_review
+    d12{"'IsStage2' and 'IsContiguousStage2'"}:::decision
+    d11 -- No --> d12
+    out_stage_2_contiguous[/"stage-2-contiguous<br/>IFRT 24 Gy [Optimal]<br/>Watchful waiting (if low-volume disease) [Optimal]<br/>Single-agent Rituximab (375 mg/m2 weekly x 4) [Optimal]"/]:::outcome
+    d12 -- Yes --> out_stage_2_contiguous
+    d13{"'IsStage2' and not 'IsContiguousStage2'"}:::decision
+    d12 -- No --> d13
+    out_stage_2_non_contiguous[/"stage-2-non-contiguous<br/>Observation / Watchful waiting [Preferred if low-volume]<br/>Single-agent Rituximab (375 mg/m2 weekly x 4) [Optimal]"/]:::outcome
+    d13 -- Yes --> out_stage_2_non_contiguous
+    d14{"'IsAdvancedStage' and not 'GelfBurdenKnown'"}:::decision
+    d13 -- No --> d14
+    d14 -- Yes --> out_needs_review
+    d15{"'IsAdvancedStage' and 'IsLowTumourBurden'"}:::decision
+    d14 -- No --> d15
+    out_advanced_low_burden[/"advanced-low-burden<br/>Watchful waiting / Active surveillance [Optimal]<br/>Single-agent Rituximab x 4 doses (if patient declines observation) [Optional]"/]:::outcome
+    d15 -- Yes --> out_advanced_low_burden
+    d16{"'IsAdvancedStage' and 'IsHighTumourBurden' and 'IsHighLdhOrAggressive' and 'IsFitForAnthracycline'"}:::decision
+    d15 -- No --> d16
+    out_advanced_high_burden_rchop[/"advanced-high-burden-rchop<br/>R-CHOP x 6 cycles [Optimal - high LDH / high proliferation / aggressive features]"/]:::outcome
+    d16 -- Yes --> out_advanced_high_burden_rchop
+    d17{"'IsAdvancedStage' and 'IsHighTumourBurden' and 'IsFitForBendamustine'"}:::decision
+    d16 -- No --> d17
+    out_advanced_high_burden_br[/"advanced-high-burden-br<br/>BR (Bendamustine + Rituximab) x 6 cycles [Optimal / Preferred]"/]:::outcome
+    d17 -- Yes --> out_advanced_high_burden_br
+    d18{"'IsAdvancedStage' and 'IsHighTumourBurden' and not 'IsFitForBendamustine'"}:::decision
+    d17 -- No --> d18
+    out_advanced_high_burden_rlen[/"advanced-high-burden-rlen<br/>R + Lenalidomide (Induction 6 cycles -> Response-guided maintenance) [Optimal for bendamustine-unfit]"/]:::outcome
+    d18 -- Yes --> out_advanced_high_burden_rlen
+    d18 -- else --> out_needs_review
+    classDef start fill:#1f2937,color:#fff,stroke:#111;
+    classDef decision fill:#fff4cc,stroke:#c99a00,color:#000;
+    classDef outcome fill:#d9f2e3,stroke:#2e8b57,color:#000;
+    classDef review fill:#ffe0e0,stroke:#c0392b,color:#000;

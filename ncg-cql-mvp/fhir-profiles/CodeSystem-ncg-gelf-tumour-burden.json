@@ -1,0 +1,19 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "ncg-gelf-tumour-burden",
+  "url": "http://ncgindia.org/fhir/CodeSystem/ncg-gelf-tumour-burden",
+  "version": "0.1.0-draft",
+  "name": "GelfTumourBurden",
+  "status": "draft",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "high-burden",
+      "display": "High tumour burden per GELF criteria (any 1 criterion met)"
+    },
+    {
+      "code": "low-burden",
+      "display": "Low tumour burden per GELF criteria (none of criteria met)"
+    }
+  ]
+}

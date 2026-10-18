@@ -1,0 +1,59 @@
+%% Clinical view of cql/NCG_FL_2020.cql ("TreatmentGroup" + "RecommendedRegimens").
+%% Hand-authored for readability; see treatment_group_flow.generated.mmd for the
+%% exact evaluation order extracted from the CQL.
+flowchart TD
+    start([Synoptic report -> FHIR Bundle]):::start
+
+    histo{"Histology Gate<br/>(usable histology grade)"}:::decision
+    grade3b[/"treat-as-dlbcl<br/>R-CHOP x 6 + ISRT<br/>Polatuzumab-R-CHP"/]:::dlbcl
+    duodenal[/"fl-duodenal-limited<br/>Observation / Watchful waiting<br/>ISRT (24-30 Gy) if symptomatic"/]:::outcome
+    review[/"needs-review<br/>Clarify histology / stage / provenance"/]:::review
+
+    stage{"Ann Arbor Stage<br/>(Stage I, II, III, IV)"}:::decision
+    stage2Contig{"Stage II Contiguity?"}:::decision
+
+    bmGate{"Bone Marrow Cleared?<br/>(Excludes Stage IV occult)"}:::decision
+    stage1[/"stage-1-limited<br/>Involved-Site RT (ISRT 24 Gy in 12 fx)<br/>Observation if contraindicated"/]:::outcome
+    stage2c[/"stage-2-contiguous<br/>Involved-Field / Involved-Site RT (ISRT 24 Gy)"/]:::outcome
+
+    gelf{"GELF Tumor Burden<br/>(usable burden criteria)"}:::decision
+    lowBurden[/"advanced-low-burden<br/>Watch and Wait (Observation)<br/>Rituximab single agent (if patient preference)"/]:::outcome
+    
+    fit{"Fitness / Comorbidity Check"}:::decision
+    highFit[/"advanced-high-burden-systemic<br/>Bendamustine + Rituximab (BR) x 6<br/>R-CHOP x 6<br/>R-Lenalidomide (R2)"/]:::outcome
+    highUnfit[/"advanced-high-burden-frail<br/>Rituximab single agent weekly x 4<br/>Attenuated BR or CVP-R"/]:::outcome
+
+    start --> histo
+    histo -- "Grade 3b / Transformed" --> grade3b
+    histo -- "Duodenal FL" --> duodenal
+    histo -- "Unknown / Unusable" --> review
+    histo -- "Grade 1, 2, or 3a" --> stage
+
+    stage -- "Stage I" --> bmGate
+    bmGate -- "Yes (negative marrow)" --> stage1
+    bmGate -- "No / Pending" --> stage2Contig
+
+    stage -- "Stage II" --> stage2Contig
+    stage2Contig -- "Contiguous" --> stage2c
+    stage2Contig -- "Non-contiguous / Disseminated" --> gelf
+
+    stage -- "Stage III or IV" --> gelf
+
+    gelf -- "Low Tumor Burden" --> lowBurden
+    gelf -- "High Tumor Burden" --> fit
+    gelf -- "Unknown / Unusable" --> review
+
+    fit -- "Standard / Fit" --> highFit
+    fit -- "Frail / Comorbid" --> highUnfit
+
+    prov["NCGCommon.IsUsable()<br/>checks ncg-extension-data-provenance<br/>untrusted values trigger 'needs-review'"]:::note
+    prov -.-> histo
+    prov -.-> stage
+    prov -.-> gelf
+
+    classDef start fill:#1f2937,color:#fff,stroke:#111;
+    classDef decision fill:#fff4cc,stroke:#c99a00,color:#000;
+    classDef outcome fill:#d9f2e3,stroke:#2e8b57,color:#000;
+    classDef dlbcl fill:#e0ecff,stroke:#2b57c0,color:#000;
+    classDef review fill:#ffe0e0,stroke:#c0392b,color:#000;
+    classDef note fill:#eef,stroke:#88a,stroke-dasharray:4 3,color:#000;

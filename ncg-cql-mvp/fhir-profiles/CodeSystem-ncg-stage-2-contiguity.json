@@ -1,0 +1,19 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "ncg-stage-2-contiguity",
+  "url": "http://ncgindia.org/fhir/CodeSystem/ncg-stage-2-contiguity",
+  "version": "0.1.0-draft",
+  "name": "Stage2Contiguity",
+  "status": "draft",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "contiguous",
+      "display": "Contiguous nodal areas (coverable by single radiation field)"
+    },
+    {
+      "code": "non-contiguous",
+      "display": "Non-contiguous nodal areas (cannot be covered by single field)"
+    }
+  ]
+}

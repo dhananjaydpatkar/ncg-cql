@@ -1,0 +1,13 @@
+{
+  "name": "ncg-cql-mvp-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Production CQL execution path for the NCG-Heme MVP. NOT wired up in this sandboxed skeleton (see engine/cql_lite_cll.py docstring) because the HL7 cql-to-elm translator requires JVM + Maven Central access that this build environment doesn't have. Install and complete evaluate_via_cql_execution.js in an environment with that access.",
+  "dependencies": {
+    "cql-execution": "^3.x",
+    "cql-exec-fhir": "^2.x"
+  },
+  "scripts": {
+    "translate": "echo 'Run the HL7 cql-to-elm translator (cqframework/clinical_quality_language releases) against cql/*.cql to produce elm/*.json, then: node engine/js/evaluate_via_cql_execution.js <fhir-bundle.json>'"
+  }
+}

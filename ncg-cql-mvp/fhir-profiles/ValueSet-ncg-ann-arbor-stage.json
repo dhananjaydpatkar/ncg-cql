@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ncg-ann-arbor-stage",
+  "url": "http://ncgindia.org/fhir/ValueSet/ncg-ann-arbor-stage",
+  "version": "0.1.0-draft",
+  "name": "AnnArborStageValueSet",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ncgindia.org/fhir/CodeSystem/ncg-ann-arbor-stage",
+        "concept": [
+          {
+            "code": "stage-1",
+            "display": "Stage I (single nodal region or localized single extranodal site IE)"
+          },
+          {
+            "code": "stage-2",
+            "display": "Stage II (>= 2 nodal regions on same side of diaphragm)"
+          },
+          {
+            "code": "stage-3",
+            "display": "Stage III (nodal regions on both sides of diaphragm)"
+          },
+          {
+            "code": "stage-4",
+            "display": "Stage IV (diffuse or disseminated organ involvement)"
+          }
+        ]
+      }
+    ]
+  }
+}

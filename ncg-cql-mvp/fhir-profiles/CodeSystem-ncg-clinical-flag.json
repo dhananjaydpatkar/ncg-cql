@@ -1,0 +1,63 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "ncg-clinical-flag",
+  "url": "http://ncgindia.org/fhir/CodeSystem/ncg-clinical-flag",
+  "version": "0.1.0-draft",
+  "name": "ClinicalFlag",
+  "status": "draft",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "fit-for-bendamustine",
+      "display": "Fit for Bendamustine-based therapy"
+    },
+    {
+      "code": "fit-for-anthracycline",
+      "display": "Fit for Anthracycline-based therapy (Normal ECHO)"
+    },
+    {
+      "code": "fit-for-radiotherapy",
+      "display": "Fit and suitable for involved-site radiation therapy"
+    },
+    {
+      "code": "bone-marrow-cleared",
+      "display": "Bone marrow aspirate and trephine negative for lymphoma"
+    },
+    {
+      "code": "high-ldh-or-proliferation",
+      "display": "Elevated serum LDH (>ULN) or high Ki-67/MIB proliferation index"
+    },
+    {
+      "code": "b-symptoms-present",
+      "display": "Systemic B symptoms present (fever, sweats, >10% weight loss)"
+    },
+    {
+      "code": "bulky-mass-gt-7cm",
+      "display": "Single nodal or extranodal mass > 7 cm"
+    },
+    {
+      "code": "multiple-masses-gte-3cm",
+      "display": ">= 3 distinct nodal sites each > 3 cm"
+    },
+    {
+      "code": "spleen-enlarged-below-umbilicus",
+      "display": "Splenomegaly extending below umbilical line"
+    },
+    {
+      "code": "compressive-organ-dysfunction",
+      "display": "Compressive symptoms causing organ compromise"
+    },
+    {
+      "code": "effusion-present",
+      "display": "Pleural or peritoneal effusions present"
+    },
+    {
+      "code": "cytopenias-gelf",
+      "display": "GELF cytopenia (ANC < 1000/mm3 or Platelets < 100,000/mm3)"
+    },
+    {
+      "code": "circulating-cells-gt-5000",
+      "display": "Circulating lymphoma cells > 5000/mm3 in peripheral blood"
+    }
+  ]
+}

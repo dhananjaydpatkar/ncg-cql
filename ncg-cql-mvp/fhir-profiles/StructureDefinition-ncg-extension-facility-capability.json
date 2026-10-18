@@ -1,0 +1,57 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ncg-extension-facility-capability",
+  "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-facility-capability",
+  "version": "0.1.0-draft",
+  "name": "NCGFacilityCapability",
+  "title": "NCG Facility Diagnostic Capability Extension",
+  "status": "draft",
+  "description": "Records which diagnostic capability tier a reporting facility has for a given test category, directly mirroring NCG's own Essential/Optimal/Optional guideline tiering (NCG Hematolymphoid Guidelines 2019, p.2 and Annexures 2-3). Lets pathway logic branch on what a site can actually run (e.g. FISH panel availability) instead of assuming uniform lab access.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {"type": "element", "expression": "Organization"},
+    {"type": "element", "expression": "DiagnosticReport"}
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension.extension:testCategory",
+        "path": "Extension.extension",
+        "sliceName": "testCategory",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:testCategory.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [{"code": "CodeableConcept"}]
+      },
+      {
+        "id": "Extension.extension:tier",
+        "path": "Extension.extension",
+        "sliceName": "tier",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Extension.extension:tier.value[x]",
+        "path": "Extension.extension.value[x]",
+        "type": [{"code": "code"}],
+        "binding": {
+          "strength": "required",
+          "description": "essential | optimal | optional | unavailable"
+        }
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-facility-capability"
+      }
+    ]
+  }
+}

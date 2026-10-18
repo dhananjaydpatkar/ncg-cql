@@ -1,0 +1,42 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ncg-observation-fitness-flag",
+  "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-fitness-flag",
+  "version": "0.1.0-draft",
+  "name": "ObservationFitnessFlag",
+  "title": "NCG Clinical Fitness Flag Observation",
+  "status": "draft",
+  "description": "Boolean clinical flags (fit for bendamustine, fit for anthracycline, fit for RT, bone marrow clearance).",
+  "purpose": "NCG data-dictionary tier: essential. See fhir-profiles/generate_profiles.py PROFILES table.",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation",
+        "path": "Observation",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.extension:dataProvenance",
+        "path": "Observation.extension",
+        "sliceName": "dataProvenance",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance"
+            ]
+          }
+        ],
+        "mustSupport": true
+      }
+    ]
+  }
+}

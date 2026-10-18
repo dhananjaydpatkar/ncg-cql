@@ -1,0 +1,67 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "ncg-fl-treatment-group",
+  "url": "http://ncgindia.org/fhir/CodeSystem/ncg-fl-treatment-group",
+  "version": "0.1.0-draft",
+  "name": "FlTreatmentGroup",
+  "status": "draft",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "stage-1-rt-fit",
+      "display": "Stage I: Fit for RT -> ISRT/IFRT 24 Gy (Optimal)"
+    },
+    {
+      "code": "stage-1-rt-unsuitable",
+      "display": "Stage I: RT refused/toxic site -> Watchful waiting or Rituximab x4"
+    },
+    {
+      "code": "stage-2-contiguous",
+      "display": "Stage II: Contiguous nodes -> IFRT 24 Gy or Watchful waiting"
+    },
+    {
+      "code": "stage-2-non-contiguous",
+      "display": "Stage II: Non-contiguous -> Observation or Rituximab x4"
+    },
+    {
+      "code": "advanced-low-burden",
+      "display": "Stage III/IV Low Burden -> Watchful waiting (Observation)"
+    },
+    {
+      "code": "advanced-high-burden-br",
+      "display": "Stage III/IV High Burden -> BR (Bendamustine + Rituximab) x 6"
+    },
+    {
+      "code": "advanced-high-burden-rchop",
+      "display": "Stage III/IV High Burden -> R-CHOP x 6 (High LDH / aggressive)"
+    },
+    {
+      "code": "advanced-high-burden-rlen",
+      "display": "Stage III/IV High Burden -> R + Lenalidomide (Unfit for bendamustine)"
+    },
+    {
+      "code": "advanced-high-burden-frail",
+      "display": "Stage III/IV High Burden -> Single-agent Rituximab (Frail palliative)"
+    },
+    {
+      "code": "grade-3b-dlbcl",
+      "display": "Grade IIIb: High-grade FL -> Treat as DLBCL (R-CHOP protocol)"
+    },
+    {
+      "code": "transformed-dlbcl",
+      "display": "Transformation: Histologically transformed to DLBCL -> R-CHOP -> ASCT"
+    },
+    {
+      "code": "duodenal-asymptomatic",
+      "display": "Duodenal FL (Asymptomatic): Observation / Endoscopic resection"
+    },
+    {
+      "code": "duodenal-symptomatic",
+      "display": "Duodenal FL (Symptomatic): Single-agent Rituximab x 4 or ISRT 24 Gy"
+    },
+    {
+      "code": "needs-review",
+      "display": "Insufficient / unverified data - refer to multidisciplinary tumour board"
+    }
+  ]
+}

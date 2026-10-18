@@ -1,0 +1,35 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "ncg-data-provenance",
+  "url": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+  "version": "0.1.0-draft",
+  "name": "DataProvenance",
+  "status": "draft",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "source-coded",
+      "display": "Coded at source system (e.g. LIS/HIS discrete field)"
+    },
+    {
+      "code": "structured-capture",
+      "display": "Captured via structured synoptic report / SDC form"
+    },
+    {
+      "code": "nlp-extracted-high-confidence",
+      "display": "Extracted from free text, high confidence"
+    },
+    {
+      "code": "nlp-extracted-low-confidence",
+      "display": "Extracted from free text, low confidence"
+    },
+    {
+      "code": "unparsed",
+      "display": "Value present but did not match expected value set"
+    },
+    {
+      "code": "missing",
+      "display": "Not captured / omitted"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ncg-finding-qualifier",
+  "url": "http://ncgindia.org/fhir/ValueSet/ncg-finding-qualifier",
+  "version": "0.1.0-draft",
+  "name": "FindingQualifierValueSet",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ncgindia.org/fhir/CodeSystem/ncg-finding-qualifier",
+        "concept": [
+          {
+            "code": "positive",
+            "display": "Positive"
+          },
+          {
+            "code": "negative",
+            "display": "Negative"
+          },
+          {
+            "code": "not-done",
+            "display": "Not done"
+          },
+          {
+            "code": "indeterminate",
+            "display": "Indeterminate / unparsed free text"
+          }
+        ]
+      }
+    ]
+  }
+}

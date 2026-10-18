@@ -1,0 +1,37 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ncg-lymphoma-histology",
+  "url": "http://ncgindia.org/fhir/ValueSet/ncg-lymphoma-histology",
+  "version": "0.1.0-draft",
+  "name": "LymphomaHistologyValueSet",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-histology",
+        "concept": [
+          {
+            "code": "fl-grade-1-2",
+            "display": "Follicular lymphoma, grade 1-2 (low grade)"
+          },
+          {
+            "code": "fl-grade-3a",
+            "display": "Follicular lymphoma, grade 3a (low grade)"
+          },
+          {
+            "code": "fl-grade-3b",
+            "display": "Follicular lymphoma, grade 3b (high grade - treat as DLBCL)"
+          },
+          {
+            "code": "fl-duodenal",
+            "display": "Duodenal-type follicular lymphoma (mucosal, indolent)"
+          },
+          {
+            "code": "transformed-dlbcl",
+            "display": "Histological transformation to DLBCL"
+          }
+        ]
+      }
+    ]
+  }
+}

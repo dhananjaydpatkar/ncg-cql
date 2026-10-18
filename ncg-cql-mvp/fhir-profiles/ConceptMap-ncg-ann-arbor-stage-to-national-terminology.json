@@ -1,0 +1,60 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "ncg-ann-arbor-stage-to-national-terminology",
+  "url": "http://ncgindia.org/fhir/ConceptMap/ncg-ann-arbor-stage-to-national-terminology",
+  "version": "0.1.0-draft",
+  "status": "draft",
+  "sourceUri": "http://ncgindia.org/fhir/CodeSystem/ncg-ann-arbor-stage",
+  "group": [
+    {
+      "source": "http://ncgindia.org/fhir/CodeSystem/ncg-ann-arbor-stage",
+      "target": "http://snomed.info/sct (India Edition) / http://loinc.org",
+      "element": [
+        {
+          "code": "stage-1",
+          "display": "Stage I (single nodal region or localized single extranodal site IE)",
+          "target": [
+            {
+              "code": "261645007",
+              "equivalence": "equivalent",
+              "comment": null
+            }
+          ]
+        },
+        {
+          "code": "stage-2",
+          "display": "Stage II (>= 2 nodal regions on same side of diaphragm)",
+          "target": [
+            {
+              "code": "261646008",
+              "equivalence": "equivalent",
+              "comment": null
+            }
+          ]
+        },
+        {
+          "code": "stage-3",
+          "display": "Stage III (nodal regions on both sides of diaphragm)",
+          "target": [
+            {
+              "code": "261647004",
+              "equivalence": "equivalent",
+              "comment": null
+            }
+          ]
+        },
+        {
+          "code": "stage-4",
+          "display": "Stage IV (diffuse or disseminated organ involvement)",
+          "target": [
+            {
+              "code": "261648009",
+              "equivalence": "equivalent",
+              "comment": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
