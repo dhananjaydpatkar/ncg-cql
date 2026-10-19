@@ -1,6 +1,6 @@
 # NCG Guideline Studio (v2) — No-Code Clinical Pathway Authoring
 
-A standalone web authoring environment designed specifically for **medical experts, oncologists, and guideline panels** to create, edit, test, and publish National Cancer Grid (NCG) clinical decision pathways **without writing any code**.
+A standalone web authoring environment designed specifically for **medical experts, oncologists, and guideline panels** to create, edit, test, and publish executable, standards-compliant(HL7 CQL) clinical practice guidelines **without writing any code**.
 
 The clinical author only defines findings, treatment outcomes, and decision rules in plain clinical language. The studio automatically generates:
 1. **Spec-compliant CQL 1.4 logic libraries** (with automatic data-provenance gates).
@@ -11,9 +11,8 @@ The clinical author only defines findings, treatment outcomes, and decision rule
 
 ---
 
-## Why this exists
+## How it works
 
-In earlier iterations, adding a new disease guideline required writing JavaScript data files, updating hardcoded CQL generator logic, and modifying evaluator functions. 
 
 **NCG Guideline Studio (v2) removes all code dependencies.** A senior oncologist can:
 * Click **"+ New"** to start a brand new disease guideline from scratch.
@@ -92,37 +91,4 @@ Inspect the generated visual decision flowchart and export standard-compliant cl
 
 ---
 
-## Directory Structure
 
-```text
-ncg-cql-authoring-mvp-v2/
-├── docs/
-│   └── screenshots/         # Captured high-resolution studio screenshots
-│       ├── 01_details.png
-│       ├── 02_findings.png
-│       ├── 03_outcomes.png
-│       ├── 04_rules.png
-│       ├── 05_test_cases.png
-│       └── 06_review_export.png
-├── src/
-│   ├── components/
-│   │   ├── Setup.jsx        # Tab 1: Metadata & safety checks
-│   │   ├── Findings.jsx     # Tab 2: Clinical inputs & values editor
-│   │   ├── Outcomes.jsx     # Tab 3: Treatment groups & regimens
-│   │   ├── Rules.jsx        # Tab 4: Visual IF/THEN rule builder
-│   │   ├── Tests.jsx        # Tab 5: Patient test bench & execution trace
-│   │   ├── Publish.jsx      # Tab 6: Pathway decision ladder & export
-│   │   └── ui.jsx           # Reusable UI primitives
-│   ├── lib/
-│   │   ├── model.js         # Generic data schema & utilities
-│   │   ├── evaluate.js      # Disease-agnostic rule evaluation engine
-│   │   ├── cql.js           # Generic CQL 1.4 generator
-│   │   ├── fhir.js          # Generic FHIR R4 resource generator
-│   │   ├── validate.js      # Clinical consistency checker
-│   │   └── store.js         # Browser persistence & file I/O
-│   ├── data/
-│   │   └── seed.js          # Pre-loaded Follicular Lymphoma guideline
-│   ├── App.jsx              # Main shell, tabs & guideline switcher
-│   └── index.css            # Clean institutional design system
-└── package.json
-```
