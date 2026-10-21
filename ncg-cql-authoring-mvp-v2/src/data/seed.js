@@ -80,4 +80,6 @@ export const NCG_FL = {
   ],
 };
 
-export const SEED_GUIDELINES = [NCG_FL];
+import { NCG_LYMPHOMA_WORKUP } from './lymphoma_workup.js';
+
+export const SEED_GUIDELINES = [NCG_FL, NCG_LYMPHOMA_WORKUP];

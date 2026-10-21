@@ -1,4 +1,4 @@
-import { generateCql, csUrl } from './cql';
+import { generateCql, csUrl } from './cql.js';
 
 const b64 = (s) => btoa(unescape(encodeURIComponent(s)));
 const rid = (g) => g.id.toLowerCase().replace(/_/g, '-');

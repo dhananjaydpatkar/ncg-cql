@@ -1,0 +1,2458 @@
+{
+  "schema": 1,
+  "id": "NCG_LYMPHOMA_WORKUP_2020",
+  "version": "1.2.0",
+  "title": "Suspected Lymphoma - Diagnostic Workup & Staging Pathway",
+  "organization": "National Cancer Grid (India) / NCG-Heme Working Group",
+  "source": "NCG Guidelines - Lymphoma Workup Flowchart with Immunophenotyping & Validated Prognostic Indices",
+  "description": "Evidence-based clinical decision pathway guiding initial evaluation, peripheral blood flow cytometry vs. tissue biopsy triage, staging imaging (PET-CT vs CECT), bone marrow biopsy indications, CNS staging, pre-treatment viral prophylaxis (HBV, HCV, HIV), TLS metabolic prophylaxis, and validated prognostic scoring (aaIPI, IPI, FLIPI, MIPI, CLL-IPI, IPS, MALT-IPI, PIT).",
+  "status": "draft",
+  "author": "NCG-Heme Working Group",
+  "enforceProvenance": true,
+  "findings": [
+    {
+      "id": "presentation-smear",
+      "label": "Peripheral smear / lymphocytosis",
+      "help": "Step 4 critical branch point: presence of abnormal circulating lymphocytes or absolute lymphocytosis (>5 x 10^9/L).",
+      "values": [
+        {
+          "code": "lymphocytosis-present",
+          "label": "Lymphocytosis present (circulating abnormal cells)"
+        },
+        {
+          "code": "no-lymphocytosis",
+          "label": "No lymphocytosis (solid nodal / extranodal mass)"
+        }
+      ]
+    },
+    {
+      "id": "lymphoma-category",
+      "label": "Suspected / confirmed subtype",
+      "help": "Histopathological or flow-cytometric diagnosis per WHO / NCG classification.",
+      "values": [
+        {
+          "code": "cll-sll",
+          "label": "CLL / SLL (Chronic lymphocytic leukemia)"
+        },
+        {
+          "code": "mcl",
+          "label": "Mantle cell lymphoma (MCL)"
+        },
+        {
+          "code": "fl",
+          "label": "Follicular lymphoma (FL)"
+        },
+        {
+          "code": "mzl",
+          "label": "Marginal zone lymphoma (MZL / MALT / SMZL)"
+        },
+        {
+          "code": "dlbcl",
+          "label": "Diffuse large B-cell lymphoma (DLBCL)"
+        },
+        {
+          "code": "hl",
+          "label": "Classical Hodgkin lymphoma (cHL)"
+        },
+        {
+          "code": "ptcl",
+          "label": "Peripheral T-cell lymphoma (PTCL)"
+        },
+        {
+          "code": "ctcl-mf",
+          "label": "Cutaneous T-cell lymphoma (MF / Sézary)"
+        },
+        {
+          "code": "burkitt-hbl",
+          "label": "Burkitt / High-grade B-cell lymphoma"
+        },
+        {
+          "code": "hcl-lpl",
+          "label": "Hairy cell leukemia / LPL / Waldenström"
+        }
+      ]
+    },
+    {
+      "id": "cll-therapy-indication",
+      "label": "CLL therapy indication status",
+      "help": "Step 7 imaging triage for CLL: asymptomatic observation vs. progressive disease / cytopenias requiring therapy.",
+      "values": [
+        {
+          "code": "asymptomatic-no-therapy",
+          "label": "Asymptomatic / stable (no indication for therapy)"
+        },
+        {
+          "code": "therapy-indicated",
+          "label": "Symptomatic / cytopenias / treatment indicated"
+        },
+        {
+          "code": "not-applicable",
+          "label": "Not applicable (non-CLL subtype)"
+        }
+      ]
+    },
+    {
+      "id": "staging-extent",
+      "label": "Anatomical stage / clinical extent",
+      "help": "Validated anatomical extent (Ann Arbor stage) from clinical assessment or imaging.",
+      "values": [
+        {
+          "code": "stage-1-2-limited",
+          "label": "Limited stage (Stage I-II)"
+        },
+        {
+          "code": "stage-3-4-advanced",
+          "label": "Advanced stage (Stage III-IV)"
+        },
+        {
+          "code": "mf-early-plaques",
+          "label": "Early Mycosis Fungoides (thin plaques only)"
+        },
+        {
+          "code": "mf-extensive-tumour",
+          "label": "MF extensive / nodular plaques / Sézary cells"
+        }
+      ]
+    },
+    {
+      "id": "cns-risk-factors",
+      "label": "CNS high-risk features",
+      "help": "High-risk extranodal involvement (testicular, parameningeal, breast, renal, adrenal, >2 extranodal sites with high LDH, blastoid MCL).",
+      "values": [
+        {
+          "code": "cns-high-risk",
+          "label": "High-risk CNS features present"
+        },
+        {
+          "code": "cns-standard-risk",
+          "label": "Standard risk / no high-risk CNS features"
+        }
+      ]
+    },
+    {
+      "id": "planned-therapy-cardiac",
+      "label": "Planned regimen & organ safety",
+      "help": "Planned systemic therapy requiring baseline organ assessment (anthracycline cardiotoxicity or high-dose MTX renal monitoring).",
+      "values": [
+        {
+          "code": "anthracycline-planned",
+          "label": "Anthracycline planned (CHOP/ABVD) or cardiac comorbidity"
+        },
+        {
+          "code": "high-dose-mtx-planned",
+          "label": "High-dose Methotrexate planned (age >40 or renal risk)"
+        },
+        {
+          "code": "other-systemic-therapy",
+          "label": "Other standard therapy / low cardiac risk"
+        }
+      ]
+    },
+    {
+      "id": "viral-screening-hbv",
+      "label": "Hepatitis B serology (HBsAg / HBcAb)",
+      "help": "Screening before B-cell depleting (anti-CD20) or immunosuppressive therapy to prevent fatal HBV reactivation.",
+      "values": [
+        {
+          "code": "hbv-positive",
+          "label": "HBsAg or HBcAb-IgG positive"
+        },
+        {
+          "code": "hbv-negative",
+          "label": "HBsAg and HBcAb-IgG negative"
+        }
+      ]
+    },
+    {
+      "id": "viral-screening-hcv",
+      "label": "Hepatitis C serology (Anti-HCV)",
+      "help": "Screening before systemic therapy. If positive, quantitative HCV RNA is required with hepatologist referral.",
+      "values": [
+        {
+          "code": "hcv-positive",
+          "label": "Anti-HCV antibody reactive"
+        },
+        {
+          "code": "hcv-negative",
+          "label": "Anti-HCV antibody negative"
+        }
+      ]
+    },
+    {
+      "id": "viral-screening-hiv",
+      "label": "HIV screening serology",
+      "help": "Step 3 viral marker: if positive, check CD4 count, viral load, initiate OI prophylaxis, and coordinate non-myelosuppressive ART.",
+      "values": [
+        {
+          "code": "hiv-positive",
+          "label": "HIV-1/2 reactive"
+        },
+        {
+          "code": "hiv-negative",
+          "label": "HIV-1/2 non-reactive"
+        }
+      ]
+    },
+    {
+      "id": "tls-metabolic-risk",
+      "label": "Tumor lysis syndrome (TLS) metabolic risk",
+      "help": "Metabolic panel screening (Ca, Phos, Uric acid, LDH) to detect hyperuricemia and high TLS risk before therapy.",
+      "values": [
+        {
+          "code": "tls-high-risk",
+          "label": "High TLS risk (bulky disease, elevated uric acid / LDH)"
+        },
+        {
+          "code": "tls-standard-risk",
+          "label": "Standard / low TLS risk"
+        }
+      ]
+    },
+    {
+      "id": "double-hit-fish",
+      "label": "Double-hit (DHL) FISH panel (MYC/BCL2)",
+      "help": "Reflex cytogenetic testing in GCB-DLBCL to screen for MYC and BCL-2 rearrangements.",
+      "values": [
+        {
+          "code": "dhl-detected",
+          "label": "Double-hit / Triple-hit confirmed (MYC + BCL2/6 rearrangement)"
+        },
+        {
+          "code": "dhl-negative",
+          "label": "Standard GCB-DLBCL (MYC rearrangement negative)"
+        },
+        {
+          "code": "not-applicable",
+          "label": "Not applicable / non-DLBCL"
+        }
+      ]
+    },
+    {
+      "id": "age-group",
+      "label": "Age group (IPI / aaIPI / FLIPI / MIPI stratification)",
+      "help": "Age factor for prognostic scoring: Age <= 60 uses aaIPI (max score 3); Age > 60 uses standard IPI/FLIPI; Age >= 70 confers adverse risk in MIPI and MALT-IPI.",
+      "values": [
+        {
+          "code": "age-le-60",
+          "label": "Age <= 60 years (aaIPI candidate)"
+        },
+        {
+          "code": "age-gt-60",
+          "label": "Age 61-69 years (standard IPI / FLIPI / IPS)"
+        },
+        {
+          "code": "age-ge-70",
+          "label": "Age >= 70 years (MIPI / MALT-IPI adverse)"
+        }
+      ]
+    },
+    {
+      "id": "ecog-ps",
+      "label": "ECOG performance status",
+      "help": "Performance status at presentation (ECOG >= 2 is an adverse prognostic factor in IPI, aaIPI, MIPI, and PIT).",
+      "values": [
+        {
+          "code": "ecog-0-1",
+          "label": "ECOG 0-1 (fully active / light work)"
+        },
+        {
+          "code": "ecog-ge-2",
+          "label": "ECOG >= 2 (capable of self-care / bedbound > 50%)"
+        }
+      ]
+    },
+    {
+      "id": "serum-ldh",
+      "label": "Serum LDH (Lactate Dehydrogenase)",
+      "help": "Serum LDH compared to upper limit of normal (ULN). Elevated LDH indicates high tumor proliferation and is an adverse factor across all indices.",
+      "values": [
+        {
+          "code": "ldh-normal",
+          "label": "Normal (<= ULN)"
+        },
+        {
+          "code": "ldh-elevated",
+          "label": "Elevated (> ULN)"
+        }
+      ]
+    },
+    {
+      "id": "extranodal-sites",
+      "label": "Extranodal involvement sites",
+      "help": "Number of involved extranodal anatomical sites (> 1 extranodal site is an adverse factor in standard IPI).",
+      "values": [
+        {
+          "code": "extranodal-0-1",
+          "label": "0 or 1 extranodal site"
+        },
+        {
+          "code": "extranodal-gt-1",
+          "label": "> 1 extranodal site"
+        }
+      ]
+    },
+    {
+      "id": "hemoglobin-level",
+      "label": "Hemoglobin level",
+      "help": "Adverse anemia threshold: Hb < 12 g/dL in FLIPI; Hb < 10.5 g/dL in IPS for Hodgkin Lymphoma.",
+      "values": [
+        {
+          "code": "hb-normal",
+          "label": "Hb >= 12.0 g/dL (normal)"
+        },
+        {
+          "code": "hb-lt-12",
+          "label": "Hb < 12.0 g/dL (FLIPI adverse)"
+        },
+        {
+          "code": "hb-lt-10-5",
+          "label": "Hb < 10.5 g/dL (IPS adverse)"
+        }
+      ]
+    },
+    {
+      "id": "wbc-count",
+      "label": "White blood cell count (WBC)",
+      "help": "Elevated leucocyte count: WBC >= 10 x 10^9/L in MIPI; WBC >= 15 x 10^9/L in IPS.",
+      "values": [
+        {
+          "code": "wbc-normal",
+          "label": "WBC < 10.0 x 10^9/L (normal)"
+        },
+        {
+          "code": "wbc-ge-10",
+          "label": "WBC >= 10.0 x 10^9/L (MIPI adverse)"
+        },
+        {
+          "code": "wbc-ge-15",
+          "label": "WBC >= 15.0 x 10^9/L (IPS adverse)"
+        }
+      ]
+    },
+    {
+      "id": "serum-albumin",
+      "label": "Serum albumin",
+      "help": "Serum albumin < 4.0 g/dL is an adverse factor in IPS for Hodgkin Lymphoma.",
+      "values": [
+        {
+          "code": "albumin-normal",
+          "label": "Albumin >= 4.0 g/dL (normal)"
+        },
+        {
+          "code": "albumin-low",
+          "label": "Albumin < 4.0 g/dL (IPS adverse)"
+        }
+      ]
+    },
+    {
+      "id": "b2m-level",
+      "label": "Beta-2 microglobulin (B2M)",
+      "help": "Elevated B2M (> 3.5 mg/L in CLL-IPI; > ULN in FLIPI-2) indicates high tumor burden.",
+      "values": [
+        {
+          "code": "b2m-normal",
+          "label": "Normal (<= 3.5 mg/L)"
+        },
+        {
+          "code": "b2m-elevated",
+          "label": "Elevated (> 3.5 mg/L in CLL-IPI / > ULN)"
+        }
+      ]
+    },
+    {
+      "id": "tp53-status",
+      "label": "TP53 mutation / 17p deletion",
+      "help": "TP53 disruption (17p deletion or mutation) confers 4 points in CLL-IPI and predicts chemotherapy refractoriness.",
+      "values": [
+        {
+          "code": "tp53-wild-type",
+          "label": "TP53 wild-type / negative"
+        },
+        {
+          "code": "tp53-aberrant",
+          "label": "TP53 mutated or 17p deletion present (high risk)"
+        }
+      ]
+    },
+    {
+      "id": "igvh-status",
+      "label": "IGHV somatic mutation status",
+      "help": "Unmutated IGHV (>=98% homology to germline) confers 2 points in CLL-IPI.",
+      "values": [
+        {
+          "code": "igvh-mutated",
+          "label": "IGHV mutated (< 98% homology, favorable)"
+        },
+        {
+          "code": "igvh-unmutated",
+          "label": "IGHV unmutated (>= 98% homology, adverse)"
+        }
+      ]
+    },
+    {
+      "id": "bone-marrow-status",
+      "label": "Bone marrow biopsy involvement",
+      "help": "Bone marrow infiltration confirmed on aspirate/trephine (adverse factor in FLIPI-2 and PIT).",
+      "values": [
+        {
+          "code": "bm-negative",
+          "label": "Bone marrow uninvolved / negative"
+        },
+        {
+          "code": "bm-positive",
+          "label": "Bone marrow involved / positive"
+        }
+      ]
+    },
+    {
+      "id": "nodal-sites-count",
+      "label": "Number of involved nodal sites",
+      "help": "> 4 nodal anatomical areas involved confers 1 adverse point in FLIPI.",
+      "values": [
+        {
+          "code": "nodal-sites-le-4",
+          "label": "<= 4 nodal areas involved"
+        },
+        {
+          "code": "nodal-sites-gt-4",
+          "label": "> 4 nodal areas involved (FLIPI adverse)"
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "id": "aaipi-dlbcl",
+      "name": "aaIPI",
+      "label": "Age-adjusted IPI (aaIPI)",
+      "description": "Age-adjusted International Prognostic Index for DLBCL in patients age <= 60 years. Sums Stage III-IV (1 pt), elevated LDH (1 pt), and ECOG >= 2 (1 pt). Max score: 3.",
+      "appliesWhen": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "dlbcl"
+          ]
+        },
+        {
+          "findingId": "age-group",
+          "op": "is",
+          "values": [
+            "age-le-60"
+          ]
+        }
+      ],
+      "factors": [
+        {
+          "findingId": "staging-extent",
+          "points": {
+            "stage-1-2-limited": 0,
+            "stage-3-4-advanced": 1
+          }
+        },
+        {
+          "findingId": "serum-ldh",
+          "points": {
+            "ldh-normal": 0,
+            "ldh-elevated": 1
+          }
+        },
+        {
+          "findingId": "ecog-ps",
+          "points": {
+            "ecog-0-1": 0,
+            "ecog-ge-2": 1
+          }
+        }
+      ],
+      "bands": [
+        {
+          "code": "low",
+          "label": "Low Risk",
+          "min": 0,
+          "max": 0,
+          "note": "~75-80% 5-yr OS"
+        },
+        {
+          "code": "low-intermediate",
+          "label": "Low-Intermediate Risk",
+          "min": 1,
+          "max": 1,
+          "note": "~65-70% 5-yr OS"
+        },
+        {
+          "code": "high-intermediate",
+          "label": "High-Intermediate Risk",
+          "min": 2,
+          "max": 2,
+          "note": "~50-55% 5-yr OS"
+        },
+        {
+          "code": "high",
+          "label": "High Risk",
+          "min": 3,
+          "max": 3,
+          "note": "~35-45% 5-yr OS"
+        }
+      ]
+    },
+    {
+      "id": "ipi-dlbcl",
+      "name": "IPI",
+      "label": "International Prognostic Index (IPI)",
+      "description": "Standard IPI for DLBCL (all ages). Sums Age > 60 (1 pt), Stage III-IV (1 pt), elevated LDH (1 pt), ECOG >= 2 (1 pt), Extranodal > 1 site (1 pt). Max: 5.",
+      "appliesWhen": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "dlbcl"
+          ]
+        }
+      ],
+      "factors": [
+        {
+          "findingId": "age-group",
+          "points": {
+            "age-le-60": 0,
+            "age-gt-60": 1,
+            "age-ge-70": 1
+          }
+        },
+        {
+          "findingId": "staging-extent",
+          "points": {
+            "stage-1-2-limited": 0,
+            "stage-3-4-advanced": 1
+          }
+        },
+        {
+          "findingId": "serum-ldh",
+          "points": {
+            "ldh-normal": 0,
+            "ldh-elevated": 1
+          }
+        },
+        {
+          "findingId": "ecog-ps",
+          "points": {
+            "ecog-0-1": 0,
+            "ecog-ge-2": 1
+          }
+        },
+        {
+          "findingId": "extranodal-sites",
+          "points": {
+            "extranodal-0-1": 0,
+            "extranodal-gt-1": 1
+          }
+        }
+      ],
+      "bands": [
+        {
+          "code": "low",
+          "label": "Low Risk",
+          "min": 0,
+          "max": 1,
+          "note": "~75-80% 5-yr OS"
+        },
+        {
+          "code": "low-intermediate",
+          "label": "Low-Intermediate Risk",
+          "min": 2,
+          "max": 2,
+          "note": "~65-70% 5-yr OS"
+        },
+        {
+          "code": "high-intermediate",
+          "label": "High-Intermediate Risk",
+          "min": 3,
+          "max": 3,
+          "note": "~50-55% 5-yr OS"
+        },
+        {
+          "code": "high",
+          "label": "High Risk",
+          "min": 4,
+          "max": 5,
+          "note": "~35-45% 5-yr OS"
+        }
+      ]
+    },
+    {
+      "id": "flipi-fl",
+      "name": "FLIPI",
+      "label": "Follicular Lymphoma International Prognostic Index (FLIPI)",
+      "description": "Prognostic index for Follicular Lymphoma. Sums Age > 60 (1 pt), Stage III-IV (1 pt), Hb < 12 g/dL (1 pt), Nodal sites > 4 (1 pt), LDH > ULN (1 pt). Max: 5.",
+      "appliesWhen": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "fl"
+          ]
+        }
+      ],
+      "factors": [
+        {
+          "findingId": "age-group",
+          "points": {
+            "age-le-60": 0,
+            "age-gt-60": 1,
+            "age-ge-70": 1
+          }
+        },
+        {
+          "findingId": "staging-extent",
+          "points": {
+            "stage-1-2-limited": 0,
+            "stage-3-4-advanced": 1
+          }
+        },
+        {
+          "findingId": "hemoglobin-level",
+          "points": {
+            "hb-normal": 0,
+            "hb-lt-12": 1,
+            "hb-lt-10-5": 1
+          }
+        },
+        {
+          "findingId": "nodal-sites-count",
+          "points": {
+            "nodal-sites-le-4": 0,
+            "nodal-sites-gt-4": 1
+          }
+        },
+        {
+          "findingId": "serum-ldh",
+          "points": {
+            "ldh-normal": 0,
+            "ldh-elevated": 1
+          }
+        }
+      ],
+      "bands": [
+        {
+          "code": "low",
+          "label": "Low Risk",
+          "min": 0,
+          "max": 1,
+          "note": "~91% 5-yr OS"
+        },
+        {
+          "code": "intermediate",
+          "label": "Intermediate Risk",
+          "min": 2,
+          "max": 2,
+          "note": "~78% 5-yr OS"
+        },
+        {
+          "code": "high",
+          "label": "High Risk",
+          "min": 3,
+          "max": 5,
+          "note": "~53% 5-yr OS"
+        }
+      ]
+    },
+    {
+      "id": "cllipi-cll",
+      "name": "CLLIPI",
+      "label": "CLL International Prognostic Index (CLL-IPI)",
+      "description": "Prognostic scoring for CLL: TP53 del/mut (4 pts), IGHV unmutated (2 pts), B2M > 3.5 mg/L (2 pts), Stage III-IV (1 pt), Age > 65 (1 pt). Max: 10.",
+      "appliesWhen": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "cll-sll"
+          ]
+        }
+      ],
+      "factors": [
+        {
+          "findingId": "tp53-status",
+          "points": {
+            "tp53-wild-type": 0,
+            "tp53-aberrant": 4
+          }
+        },
+        {
+          "findingId": "igvh-status",
+          "points": {
+            "igvh-mutated": 0,
+            "igvh-unmutated": 2
+          }
+        },
+        {
+          "findingId": "b2m-level",
+          "points": {
+            "b2m-normal": 0,
+            "b2m-elevated": 2
+          }
+        },
+        {
+          "findingId": "staging-extent",
+          "points": {
+            "stage-1-2-limited": 0,
+            "stage-3-4-advanced": 1
+          }
+        },
+        {
+          "findingId": "age-group",
+          "points": {
+            "age-le-60": 0,
+            "age-gt-60": 1,
+            "age-ge-70": 1
+          }
+        }
+      ],
+      "bands": [
+        {
+          "code": "low",
+          "label": "Low Risk",
+          "min": 0,
+          "max": 1,
+          "note": "~93% 5-yr OS"
+        },
+        {
+          "code": "intermediate",
+          "label": "Intermediate Risk",
+          "min": 2,
+          "max": 3,
+          "note": "~79% 5-yr OS"
+        },
+        {
+          "code": "high",
+          "label": "High Risk",
+          "min": 4,
+          "max": 6,
+          "note": "~64% 5-yr OS"
+        },
+        {
+          "code": "very-high",
+          "label": "Very High Risk",
+          "min": 7,
+          "max": 10,
+          "note": "~23% 5-yr OS"
+        }
+      ]
+    },
+    {
+      "id": "mipi-mcl",
+      "name": "MIPI",
+      "label": "MCL International Prognostic Index (MIPI)",
+      "description": "Simplified MIPI for Mantle Cell Lymphoma. Evaluates Age, ECOG, LDH, and WBC count. Max: 11.",
+      "appliesWhen": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "mcl"
+          ]
+        }
+      ],
+      "factors": [
+        {
+          "findingId": "age-group",
+          "points": {
+            "age-le-60": 0,
+            "age-gt-60": 2,
+            "age-ge-70": 3
+          }
+        },
+        {
+          "findingId": "ecog-ps",
+          "points": {
+            "ecog-0-1": 0,
+            "ecog-ge-2": 2
+          }
+        },
+        {
+          "findingId": "serum-ldh",
+          "points": {
+            "ldh-normal": 0,
+            "ldh-elevated": 2
+          }
+        },
+        {
+          "findingId": "wbc-count",
+          "points": {
+            "wbc-normal": 0,
+            "wbc-ge-10": 2,
+            "wbc-ge-15": 2
+          }
+        }
+      ],
+      "bands": [
+        {
+          "code": "low",
+          "label": "Low Risk",
+          "min": 0,
+          "max": 3,
+          "note": "Median OS not reached"
+        },
+        {
+          "code": "intermediate",
+          "label": "Intermediate Risk",
+          "min": 4,
+          "max": 5,
+          "note": "Median OS ~51 mo"
+        },
+        {
+          "code": "high",
+          "label": "High Risk",
+          "min": 6,
+          "max": 11,
+          "note": "Median OS ~29 mo"
+        }
+      ]
+    },
+    {
+      "id": "ips-hl",
+      "name": "IPS",
+      "label": "International Prognostic Score (IPS)",
+      "description": "IPS for Hodgkin Lymphoma: Albumin < 4 (1 pt), Hb < 10.5 (1 pt), Stage IV (1 pt), Age >= 45 (1 pt), WBC >= 15 (1 pt). Max: 5.",
+      "appliesWhen": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "hl"
+          ]
+        }
+      ],
+      "factors": [
+        {
+          "findingId": "serum-albumin",
+          "points": {
+            "albumin-normal": 0,
+            "albumin-low": 1
+          }
+        },
+        {
+          "findingId": "hemoglobin-level",
+          "points": {
+            "hb-normal": 0,
+            "hb-lt-12": 0,
+            "hb-lt-10-5": 1
+          }
+        },
+        {
+          "findingId": "staging-extent",
+          "points": {
+            "stage-1-2-limited": 0,
+            "stage-3-4-advanced": 1
+          }
+        },
+        {
+          "findingId": "age-group",
+          "points": {
+            "age-le-60": 0,
+            "age-gt-60": 1,
+            "age-ge-70": 1
+          }
+        },
+        {
+          "findingId": "wbc-count",
+          "points": {
+            "wbc-normal": 0,
+            "wbc-ge-10": 0,
+            "wbc-ge-15": 1
+          }
+        }
+      ],
+      "bands": [
+        {
+          "code": "score-0",
+          "label": "Score 0",
+          "min": 0,
+          "max": 0,
+          "note": "~84% 5-yr FFP"
+        },
+        {
+          "code": "score-1",
+          "label": "Score 1",
+          "min": 1,
+          "max": 1,
+          "note": "~77% 5-yr FFP"
+        },
+        {
+          "code": "score-2",
+          "label": "Score 2",
+          "min": 2,
+          "max": 2,
+          "note": "~67% 5-yr FFP"
+        },
+        {
+          "code": "score-3",
+          "label": "Score 3",
+          "min": 3,
+          "max": 3,
+          "note": "~60% 5-yr FFP"
+        },
+        {
+          "code": "score-4",
+          "label": "Score 4",
+          "min": 4,
+          "max": 4,
+          "note": "~51% 5-yr FFP"
+        },
+        {
+          "code": "score-high",
+          "label": "Score >= 5",
+          "min": 5,
+          "max": 7,
+          "note": "~42% 5-yr FFP"
+        }
+      ]
+    },
+    {
+      "id": "malti-mzl",
+      "name": "MALT_IPI",
+      "label": "MALT-IPI",
+      "description": "Marginal Zone / MALT International Prognostic Index. Sums Age >= 70 (1 pt), Stage III-IV (1 pt), LDH > ULN (1 pt). Max: 3.",
+      "appliesWhen": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "mzl"
+          ]
+        }
+      ],
+      "factors": [
+        {
+          "findingId": "age-group",
+          "points": {
+            "age-le-60": 0,
+            "age-gt-60": 0,
+            "age-ge-70": 1
+          }
+        },
+        {
+          "findingId": "staging-extent",
+          "points": {
+            "stage-1-2-limited": 0,
+            "stage-3-4-advanced": 1
+          }
+        },
+        {
+          "findingId": "serum-ldh",
+          "points": {
+            "ldh-normal": 0,
+            "ldh-elevated": 1
+          }
+        }
+      ],
+      "bands": [
+        {
+          "code": "low",
+          "label": "Low Risk",
+          "min": 0,
+          "max": 0,
+          "note": "~70% 5-yr PFS"
+        },
+        {
+          "code": "intermediate",
+          "label": "Intermediate Risk",
+          "min": 1,
+          "max": 1,
+          "note": "~56% 5-yr PFS"
+        },
+        {
+          "code": "high",
+          "label": "High Risk",
+          "min": 2,
+          "max": 3,
+          "note": "~29% 5-yr PFS"
+        }
+      ]
+    },
+    {
+      "id": "pit-ptcl",
+      "name": "PIT",
+      "label": "Prognostic Index for PTCL (PIT)",
+      "description": "Prognostic scoring for Peripheral T-Cell Lymphoma. Age > 60 (1 pt), ECOG >= 2 (1 pt), LDH > ULN (1 pt), Bone marrow involvement (1 pt). Max: 4.",
+      "appliesWhen": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "ptcl"
+          ]
+        }
+      ],
+      "factors": [
+        {
+          "findingId": "age-group",
+          "points": {
+            "age-le-60": 0,
+            "age-gt-60": 1,
+            "age-ge-70": 1
+          }
+        },
+        {
+          "findingId": "ecog-ps",
+          "points": {
+            "ecog-0-1": 0,
+            "ecog-ge-2": 1
+          }
+        },
+        {
+          "findingId": "serum-ldh",
+          "points": {
+            "ldh-normal": 0,
+            "ldh-elevated": 1
+          }
+        },
+        {
+          "findingId": "bone-marrow-status",
+          "points": {
+            "bm-negative": 0,
+            "bm-positive": 1
+          }
+        }
+      ],
+      "bands": [
+        {
+          "code": "group-1",
+          "label": "Group 1 (0 adverse factors)",
+          "min": 0,
+          "max": 0,
+          "note": "~62% 5-yr OS"
+        },
+        {
+          "code": "group-2",
+          "label": "Group 2 (1 adverse factor)",
+          "min": 1,
+          "max": 1,
+          "note": "~53% 5-yr OS"
+        },
+        {
+          "code": "group-3",
+          "label": "Group 3 (2 adverse factors)",
+          "min": 2,
+          "max": 2,
+          "note": "~33% 5-yr OS"
+        },
+        {
+          "code": "group-4",
+          "label": "Group 4 (3-4 adverse factors)",
+          "min": 3,
+          "max": 4,
+          "note": "~18% 5-yr OS"
+        }
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "id": "needs-review",
+      "label": "Needs clinician review (Safety gate)",
+      "kind": "review",
+      "rationale": "Critical diagnostic or staging inputs are missing, unrecorded, or derived from unverified free-text. A clinician must review before ordering invasive biopsies or treatment.",
+      "regimens": []
+    },
+    {
+      "id": "pathway-viral-prophylaxis-hbv",
+      "label": "HBV Reactivation Prophylaxis Protocol",
+      "kind": "treatment",
+      "rationale": "HBsAg or HBcAb-IgG positivity carries a high risk of lethal Hepatitis B reactivation under anti-CD20 (rituximab) or immunosuppressive chemotherapy. Quantitative HBV DNA and prophylactic entecavir or tenofovir are mandatory.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "Quantitative HBV DNA PCR test",
+          "category": "Virology"
+        },
+        {
+          "id": "r2",
+          "name": "Initiate prophylactic antiviral therapy (Entecavir 0.5 mg daily or Tenofovir)",
+          "category": "Prophylaxis"
+        },
+        {
+          "id": "r3",
+          "name": "Continue antiviral prophylaxis during and for at least 12 months post-chemotherapy",
+          "category": "Monitoring"
+        },
+        {
+          "id": "r4",
+          "name": "LFT monitoring every 4-6 weeks",
+          "category": "Safety labs"
+        }
+      ]
+    },
+    {
+      "id": "pathway-viral-prophylaxis-hcv",
+      "label": "HCV Management: Quantitative HCV RNA + Hepatology Referral",
+      "kind": "treatment",
+      "rationale": "Step 3: Anti-HCV positive patients require quantitative HCV RNA testing. If detectable, urgent referral to a gastroenterologist/hepatologist prior to systemic chemo is mandatory to coordinate direct-acting antiviral (DAA) therapy.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "Quantitative HCV RNA by RT-PCR",
+          "category": "Virology"
+        },
+        {
+          "id": "r2",
+          "name": "Gastroenterology / Hepatology referral before systemic therapy",
+          "category": "Specialist consultation"
+        },
+        {
+          "id": "r3",
+          "name": "Coordinate Direct-Acting Antiviral (DAA) therapy",
+          "category": "Antiviral therapy"
+        }
+      ]
+    },
+    {
+      "id": "pathway-hiv-multidisciplinary",
+      "label": "HIV Lymphoma Protocol: CD4/Viral Load + ART Coordination",
+      "kind": "treatment",
+      "rationale": "Step 3: In HIV-positive patients, evaluate CD4 count and HIV viral load, initiate opportunistic infection (OI) prophylaxis per CD4 count, and coordinate ART avoiding myelosuppressive drugs (e.g. avoid Zidovudine).",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "CD4 cell count and HIV-1 RNA viral load",
+          "category": "Immunology & Virology"
+        },
+        {
+          "id": "r2",
+          "name": "Opportunistic infection (OI) assessment and prophylaxis (PJP, MAC, Fungal)",
+          "category": "Prophylaxis"
+        },
+        {
+          "id": "r3",
+          "name": "Coordinate with HIV specialist; avoid myelosuppressive antiretroviral agents",
+          "category": "Clinical pharmacology"
+        }
+      ]
+    },
+    {
+      "id": "pathway-tls-prophylaxis",
+      "label": "Tumor Lysis Syndrome (TLS) Metabolic Prophylaxis",
+      "kind": "treatment",
+      "rationale": "Step 3: Metabolic screening identifies high-risk TLS (elevated uric acid, high LDH, bulky disease). Mandatory vigorous IV hydration, urine output monitoring, and Rasburicase or Allopurinol prophylaxis.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "Aggressive intravenous hydration (2.5-3 L/m2/day) with strict I/O monitoring",
+          "category": "Hydration therapy"
+        },
+        {
+          "id": "r2",
+          "name": "Rasburicase (0.2 mg/kg IV) for hyperuricemia or Allopurinol for moderate risk",
+          "category": "Uric acid reduction"
+        },
+        {
+          "id": "r3",
+          "name": "Serum electrolytes, Ca, Phos, Uric acid, Creatinine, LDH Q6-12h",
+          "category": "Metabolic monitoring"
+        }
+      ]
+    },
+    {
+      "id": "pathway-double-hit-specialized",
+      "label": "Double-Hit Lymphoma (DHL): High-Grade B-Cell Protocol",
+      "kind": "treatment",
+      "rationale": "Step 8: GCB-DLBCL harboring concurrent MYC and BCL-2 rearrangements has poor outcomes with standard R-CHOP. Dose-adjusted EPOCH-R (DA-EPOCH-R) and CNS prophylaxis are recommended.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "Dose-adjusted EPOCH-R (DA-EPOCH-R) regimen",
+          "category": "Chemotherapy"
+        },
+        {
+          "id": "r2",
+          "name": "Diagnostic LP and CNS-directed prophylaxis (IT methotrexate / cytarabine)",
+          "category": "CNS prophylaxis"
+        },
+        {
+          "id": "r3",
+          "name": "Evaluate for autologous or allogeneic stem cell transplantation in CR1",
+          "category": "Transplant evaluation"
+        }
+      ]
+    },
+    {
+      "id": "pathway-flow-cytometry-clpd",
+      "label": "Peripheral Blood Flow Cytometry (Avoid initial nodal biopsy)",
+      "kind": "treatment",
+      "rationale": "Step 4 & 5: Abnormal lymphocytosis on smear enables rapid peripheral blood immunophenotyping. Lymph node biopsy is avoided (unless FL or Richter transformation suspected). Bone marrow exam is NOT required if flow confirms diagnosis.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "Flow cytometry CLPD panel (CD5, CD10, CD19, CD20, CD23, CD22, FMC7, CD200, Cyclin D1)",
+          "category": "Diagnostic immunology"
+        },
+        {
+          "id": "r2",
+          "name": "Subtype differentiation (CLL vs MCL vs FL vs SMZL vs HCL vs T/NK-CLPD)",
+          "category": "Laboratory diagnosis"
+        },
+        {
+          "id": "r3",
+          "name": "Omit initial lymph node biopsy and routine bone marrow examination",
+          "category": "Clinical pathway guidance"
+        }
+      ]
+    },
+    {
+      "id": "pathway-tissue-excision-biopsy",
+      "label": "Tissue Excision Biopsy + Immunohistochemistry (IHC)",
+      "kind": "treatment",
+      "rationale": "Step 6: In the absence of peripheral lymphocytosis, primary diagnosis requires histopathological examination. Excision biopsy of the largest accessible lymph node is preferred over core needle.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "Excision biopsy of largest accessible lymph node (preferred over FNA/core)",
+          "category": "Surgical biopsy"
+        },
+        {
+          "id": "r2",
+          "name": "Comprehensive lymphoma IHC panel (B-cell, T-cell, proliferation markers)",
+          "category": "Immunohistochemistry"
+        },
+        {
+          "id": "r3",
+          "name": "Image-guided core needle biopsy (USG/CT) if nodes are deep/internal or surgery contraindicated",
+          "category": "Alternative technique"
+        }
+      ]
+    },
+    {
+      "id": "pathway-staging-pet-ct-and-bm",
+      "label": "Staging: Whole-body PET-CT + Bone Marrow Examination",
+      "kind": "treatment",
+      "rationale": "Step 7 & 8: For low-grade lymphomas (FL, MZL, MCL, Burkitt, PTCL), whole-body 18F-FDG PET-CT is standard staging, AND bone marrow aspiration + trephine biopsy is mandatory because marrow involvement dictates stage and prognosis.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "Whole-body 18F-FDG PET-CT (skull base to mid-thigh)",
+          "category": "Staging imaging"
+        },
+        {
+          "id": "r2",
+          "name": "Bone marrow aspiration + imprint + trephine biopsy",
+          "category": "Bone marrow staging"
+        },
+        {
+          "id": "r3",
+          "name": "Flow cytometry and cytogenetics on bone marrow aspirate",
+          "category": "Ancillary marrow test"
+        }
+      ]
+    },
+    {
+      "id": "pathway-staging-pet-ct-omit-bm",
+      "label": "Staging: PET-CT alone (Bone Marrow NOT required)",
+      "kind": "treatment",
+      "rationale": "Step 8: In Stage I-II DLBCL and Classical Hodgkin Lymphoma staged with high-quality PET-CT, PET-CT has exceptional negative predictive value for marrow disease. Routine bone marrow biopsy can be safely omitted.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "Whole-body 18F-FDG PET-CT",
+          "category": "Staging imaging"
+        },
+        {
+          "id": "r2",
+          "name": "Omit routine bone marrow biopsy (PET-CT sufficient)",
+          "category": "Clinical recommendation"
+        },
+        {
+          "id": "r3",
+          "name": "Calculate disease-specific prognostic index (aaIPI / IPI / IPS)",
+          "category": "Prognostication"
+        }
+      ]
+    },
+    {
+      "id": "pathway-staging-cll-surveillance",
+      "label": "CLL Staging: CXR PA view + Abdominal USG (Minimal Staging)",
+      "kind": "observation",
+      "rationale": "Step 7: For asymptomatic CLL without therapy indication, avoid unnecessary radiation from CT and invasive bone marrow biopsy. Baseline CXR and abdominal ultrasonography are sufficient.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "CXR PA view + Ultrasound abdomen and pelvis",
+          "category": "Baseline imaging"
+        },
+        {
+          "id": "r2",
+          "name": "Omit CT chest/abdomen/pelvis and omit bone marrow biopsy",
+          "category": "Radiation stewardship"
+        },
+        {
+          "id": "r3",
+          "name": "Active clinical and haematological surveillance (every 3-6 months)",
+          "category": "Surveillance"
+        }
+      ]
+    },
+    {
+      "id": "pathway-staging-cll-pretherapy",
+      "label": "CLL Pre-Therapy Workup: CECT + Bone Marrow + FISH Panel",
+      "kind": "treatment",
+      "rationale": "Step 7 & 8: When CLL requires systemic treatment: CECT chest/abdomen/pelvis is indicated, bone marrow biopsy evaluates cytopenias, and CLL FISH panel (17p deletion, TP53, IgVH mutation status) is mandatory.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "CECT chest + abdomen + pelvis",
+          "category": "Contrast CT staging"
+        },
+        {
+          "id": "r2",
+          "name": "Bone marrow aspirate & trephine biopsy (for cytopenias / reserve assessment)",
+          "category": "Bone marrow"
+        },
+        {
+          "id": "r3",
+          "name": "CLL FISH panel (del 17p, 11q, 13q, +12) + TP53 mutation + IgVH status",
+          "category": "Molecular genetics"
+        },
+        {
+          "id": "r4",
+          "name": "Calculate CLL-IPI prognostic score",
+          "category": "Prognostic scoring"
+        }
+      ]
+    },
+    {
+      "id": "pathway-staging-mzl-cect",
+      "label": "MZL Staging: Diagnostic CECT + SPEP + Subtype Genetics",
+      "kind": "treatment",
+      "rationale": "Step 7 & 8: In Marginal Zone Lymphoma (all subtypes), CECT chest/abdomen/pelvis is preferred. Serum Protein Electrophoresis (SPEP) evaluates paraproteinemia, and t(11;18) FISH in gastric MALT predicts anti-H. pylori resistance.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "CECT chest + abdomen + pelvis",
+          "category": "Diagnostic imaging"
+        },
+        {
+          "id": "r2",
+          "name": "Serum Protein Electrophoresis (SPEP) for paraprotein / immunoglobulin spike",
+          "category": "Laboratory"
+        },
+        {
+          "id": "r3",
+          "name": "Bone marrow aspirate and trephine biopsy",
+          "category": "Staging biopsy"
+        },
+        {
+          "id": "r4",
+          "name": "t(11;18) translocation FISH if gastric MALT (predicts H. pylori resistance)",
+          "category": "Special genetics"
+        }
+      ]
+    },
+    {
+      "id": "pathway-cns-staging-and-cardiac",
+      "label": "High-Risk CNS Staging (LP with CSF flow) + 2D-ECHO",
+      "kind": "treatment",
+      "rationale": "Step 8: For DLBCL with high-risk extranodal involvement (testicular, parameningeal, renal/adrenal) or blastoid MCL: diagnostic lumbar puncture with CSF morphology and flow cytometry is mandatory. 2D-ECHO is required prior to anthracyclines.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "Diagnostic Lumbar Puncture: CSF cytology + flow cytometry",
+          "category": "CNS staging"
+        },
+        {
+          "id": "r2",
+          "name": "Brain MRI with contrast (if neurological symptoms or PCNSL suspected)",
+          "category": "Neuroimaging"
+        },
+        {
+          "id": "r3",
+          "name": "2D-Echocardiography (LVEF assessment) prior to anthracycline therapy",
+          "category": "Cardiac evaluation"
+        },
+        {
+          "id": "r4",
+          "name": "Plan CNS-directed prophylaxis (intrathecal MTX or systemic high-dose MTX)",
+          "category": "Therapeutic planning"
+        }
+      ]
+    },
+    {
+      "id": "pathway-cutaneous-tcell-staging",
+      "label": "Cutaneous T-Cell Lymphoma: Skin Biopsy + Stage-Directed Imaging",
+      "kind": "treatment",
+      "rationale": "Step 6 & 7: Skin biopsy is mandatory for MF/Sézary subtype confirmation. Early thin-plaque disease requires clinical staging only. Extensive skin, tumour, or Sézary cells in peripheral blood require CECT chest/abdomen/pelvis.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "Skin biopsy (punch or incisional, mandatory for histopathology + TCR clonality)",
+          "category": "Dermatopathology"
+        },
+        {
+          "id": "r2",
+          "name": "Clinical skin staging (mSWAT score for early plaque disease)",
+          "category": "Clinical staging"
+        },
+        {
+          "id": "r3",
+          "name": "CECT chest + abdomen + pelvis if nodular, extensive skin disease, or Sézary cells",
+          "category": "Cross-sectional imaging"
+        },
+        {
+          "id": "r4",
+          "name": "Peripheral blood smear review for cerebriform Sézary cells",
+          "category": "Haematology"
+        }
+      ]
+    },
+    {
+      "id": "pathway-high-dose-mtx-dtpa",
+      "label": "High-Dose MTX Protocol: Mandatory DTPA-GFR Clearance",
+      "kind": "treatment",
+      "rationale": "Step 8: High-dose Methotrexate requires accurate baseline renal glomerular clearance. In patients aged > 40 or with diabetic/hypertensive/borderline eGFR, 99mTc-DTPA GFR is mandatory before infusion.",
+      "regimens": [
+        {
+          "id": "r1",
+          "name": "99mTc-DTPA GFR clearance test (mandatory before high-dose MTX if age > 40)",
+          "category": "Nuclear nephrology"
+        },
+        {
+          "id": "r2",
+          "name": "Hydration and urine alkalinization protocol (target urinary pH >= 7.0)",
+          "category": "Renal protection"
+        },
+        {
+          "id": "r3",
+          "name": "Leucovorin rescue planning and methotrexate serum drug level monitoring",
+          "category": "Pharmacotherapy"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule1",
+      "label": "Missing or unparsed smear/presentation",
+      "conditions": [
+        {
+          "findingId": "presentation-smear",
+          "op": "unknown",
+          "values": []
+        }
+      ],
+      "outcomeId": "needs-review"
+    },
+    {
+      "id": "rule2",
+      "label": "Missing or unparsed lymphoma subtype",
+      "conditions": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "unknown",
+          "values": []
+        }
+      ],
+      "outcomeId": "needs-review"
+    },
+    {
+      "id": "rule3",
+      "label": "Hepatitis B positive requiring antiviral prophylaxis",
+      "conditions": [
+        {
+          "findingId": "viral-screening-hbv",
+          "op": "is",
+          "values": [
+            "hbv-positive"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-viral-prophylaxis-hbv"
+    },
+    {
+      "id": "rule4",
+      "label": "Hepatitis C positive requiring HCV RNA and hepatology referral",
+      "conditions": [
+        {
+          "findingId": "viral-screening-hcv",
+          "op": "is",
+          "values": [
+            "hcv-positive"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-viral-prophylaxis-hcv"
+    },
+    {
+      "id": "rule5",
+      "label": "HIV positive requiring viral load, CD4 count, and OI prophylaxis",
+      "conditions": [
+        {
+          "findingId": "viral-screening-hiv",
+          "op": "is",
+          "values": [
+            "hiv-positive"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-hiv-multidisciplinary"
+    },
+    {
+      "id": "rule6",
+      "label": "High metabolic risk requiring Tumor Lysis Syndrome prophylaxis",
+      "conditions": [
+        {
+          "findingId": "tls-metabolic-risk",
+          "op": "is",
+          "values": [
+            "tls-high-risk"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-tls-prophylaxis"
+    },
+    {
+      "id": "rule7",
+      "label": "Circulating lymphocytosis present on smear",
+      "conditions": [
+        {
+          "findingId": "presentation-smear",
+          "op": "is",
+          "values": [
+            "lymphocytosis-present"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-flow-cytometry-clpd"
+    },
+    {
+      "id": "rule8",
+      "label": "Solid mass without lymphocytosis (biopsy needed)",
+      "conditions": [
+        {
+          "findingId": "presentation-smear",
+          "op": "is",
+          "values": [
+            "no-lymphocytosis"
+          ]
+        },
+        {
+          "findingId": "staging-extent",
+          "op": "unknown",
+          "values": []
+        }
+      ],
+      "outcomeId": "pathway-tissue-excision-biopsy"
+    },
+    {
+      "id": "rule9",
+      "label": "Double-Hit Lymphoma confirmed (DA-EPOCH-R protocol)",
+      "conditions": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "dlbcl"
+          ]
+        },
+        {
+          "findingId": "double-hit-fish",
+          "op": "is",
+          "values": [
+            "dhl-detected"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-double-hit-specialized"
+    },
+    {
+      "id": "rule10",
+      "label": "Asymptomatic CLL without treatment indication",
+      "conditions": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "cll-sll"
+          ]
+        },
+        {
+          "findingId": "cll-therapy-indication",
+          "op": "is",
+          "values": [
+            "asymptomatic-no-therapy"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-staging-cll-surveillance"
+    },
+    {
+      "id": "rule11",
+      "label": "CLL with treatment indicated",
+      "conditions": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "cll-sll"
+          ]
+        },
+        {
+          "findingId": "cll-therapy-indication",
+          "op": "is",
+          "values": [
+            "therapy-indicated"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-staging-cll-pretherapy"
+    },
+    {
+      "id": "rule12",
+      "label": "Marginal Zone Lymphoma (MALT / SMZL)",
+      "conditions": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "mzl"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-staging-mzl-cect"
+    },
+    {
+      "id": "rule13",
+      "label": "Cutaneous T-Cell Lymphoma (MF / Sézary)",
+      "conditions": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "ctcl-mf"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-cutaneous-tcell-staging"
+    },
+    {
+      "id": "rule14",
+      "label": "DLBCL or MCL with CNS high-risk anatomical features",
+      "conditions": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "dlbcl",
+            "mcl"
+          ]
+        },
+        {
+          "findingId": "cns-risk-factors",
+          "op": "is",
+          "values": [
+            "cns-high-risk"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-cns-staging-and-cardiac"
+    },
+    {
+      "id": "rule15",
+      "label": "High-dose Methotrexate planned requiring DTPA-GFR renal clearance",
+      "conditions": [
+        {
+          "findingId": "planned-therapy-cardiac",
+          "op": "is",
+          "values": [
+            "high-dose-mtx-planned"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-high-dose-mtx-dtpa"
+    },
+    {
+      "id": "rule16",
+      "label": "Limited-stage DLBCL or Hodgkin Lymphoma on PET-CT (omit marrow)",
+      "conditions": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "dlbcl",
+            "hl"
+          ]
+        },
+        {
+          "findingId": "staging-extent",
+          "op": "is",
+          "values": [
+            "stage-1-2-limited"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-staging-pet-ct-omit-bm"
+    },
+    {
+      "id": "rule17",
+      "label": "Low-grade lymphomas, MCL, Burkitt, PTCL (PET-CT + BM required)",
+      "conditions": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "fl",
+            "mcl",
+            "ptcl",
+            "burkitt-hbl",
+            "hcl-lpl"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-staging-pet-ct-and-bm"
+    },
+    {
+      "id": "rule18",
+      "label": "Advanced DLBCL (Age <= 60) with high aaIPI score (>= 2)",
+      "conditions": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "dlbcl"
+          ]
+        },
+        {
+          "findingId": "staging-extent",
+          "op": "is",
+          "values": [
+            "stage-3-4-advanced"
+          ]
+        },
+        {
+          "functionId": "aaipi-dlbcl",
+          "op": "score_gte",
+          "threshold": 2
+        }
+      ],
+      "outcomeId": "pathway-staging-pet-ct-omit-bm"
+    },
+    {
+      "id": "rule19",
+      "label": "Advanced DLBCL standard risk (PET-CT staging)",
+      "conditions": [
+        {
+          "findingId": "lymphoma-category",
+          "op": "is",
+          "values": [
+            "dlbcl"
+          ]
+        },
+        {
+          "findingId": "staging-extent",
+          "op": "is",
+          "values": [
+            "stage-3-4-advanced"
+          ]
+        }
+      ],
+      "outcomeId": "pathway-staging-pet-ct-omit-bm"
+    }
+  ],
+  "fallbackOutcomeId": "needs-review",
+  "testCases": [
+    {
+      "id": "tc1",
+      "name": "Circulating lymphocytosis on smear",
+      "description": "64M with absolute lymphocyte count 28 x 10^9/L, smudge cells on smear. Routes directly to peripheral blood flow cytometry.",
+      "expectedOutcomeId": "pathway-flow-cytometry-clpd",
+      "inputs": {
+        "presentation-smear": {
+          "value": "lymphocytosis-present",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "cll-sll",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc2",
+      "name": "Isolated cervical lymphadenopathy (no lymphocytosis)",
+      "description": "45F presenting with 3.5 cm painless neck mass, normal CBC and smear. Routes to tissue excision biopsy + IHC.",
+      "expectedOutcomeId": "pathway-tissue-excision-biopsy",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "dlbcl",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc3",
+      "name": "Asymptomatic CLL without treatment indication",
+      "description": "71M with known CLL, normal hemoglobin and platelets, asymptomatic. Undergoes baseline CXR + abdominal USG; omits CT and bone marrow biopsy.",
+      "expectedOutcomeId": "pathway-staging-cll-surveillance",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "cll-sll",
+          "provenance": "source-coded"
+        },
+        "cll-therapy-indication": {
+          "value": "asymptomatic-no-therapy",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "stage-1-2-limited",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc4",
+      "name": "CLL with progressive cytopenias requiring therapy",
+      "description": "68F with progressive fatigue, Hb 9.2 g/dL, massive splenomegaly. Needs CECT staging, bone marrow biopsy, and CLL FISH panel (17p/TP53/IgVH).",
+      "expectedOutcomeId": "pathway-staging-cll-pretherapy",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "cll-sll",
+          "provenance": "source-coded"
+        },
+        "cll-therapy-indication": {
+          "value": "therapy-indicated",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "stage-3-4-advanced",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc5",
+      "name": "Stage I DLBCL staged with PET-CT (omit marrow)",
+      "description": "52M with localized axillary DLBCL. PET-CT confirms Stage I. Routine bone marrow biopsy is safely omitted.",
+      "expectedOutcomeId": "pathway-staging-pet-ct-omit-bm",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "dlbcl",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "stage-1-2-limited",
+          "provenance": "source-coded"
+        },
+        "cns-risk-factors": {
+          "value": "cns-standard-risk",
+          "provenance": "source-coded"
+        },
+        "double-hit-fish": {
+          "value": "dhl-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc6",
+      "name": "Follicular Lymphoma staging (PET-CT + bone marrow mandatory)",
+      "description": "59F with biopsy-proven Follicular Lymphoma Grade 2. Requires both PET-CT and bone marrow biopsy for complete staging.",
+      "expectedOutcomeId": "pathway-staging-pet-ct-and-bm",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "fl",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "stage-3-4-advanced",
+          "provenance": "source-coded"
+        },
+        "cns-risk-factors": {
+          "value": "cns-standard-risk",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc7",
+      "name": "Marginal Zone Lymphoma staging (CECT + SPEP)",
+      "description": "63M with gastric MALT lymphoma. Staged with CECT chest/abdomen/pelvis, SPEP, and t(11;18) translocation testing.",
+      "expectedOutcomeId": "pathway-staging-mzl-cect",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "mzl",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "stage-1-2-limited",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc8",
+      "name": "DLBCL with testicular involvement (high-risk CNS staging + LP)",
+      "description": "56M with primary testicular DLBCL. Mandatory diagnostic LP with CSF flow cytometry and 2D-ECHO before anthracyclines.",
+      "expectedOutcomeId": "pathway-cns-staging-and-cardiac",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "dlbcl",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "stage-1-2-limited",
+          "provenance": "source-coded"
+        },
+        "cns-risk-factors": {
+          "value": "cns-high-risk",
+          "provenance": "source-coded"
+        },
+        "double-hit-fish": {
+          "value": "dhl-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc9",
+      "name": "HBsAg-positive patient scheduled for anti-CD20 therapy",
+      "description": "60F with lymphoma and positive HBsAg. Triggers quantitative HBV DNA and antiviral prophylaxis prior to rituximab.",
+      "expectedOutcomeId": "pathway-viral-prophylaxis-hbv",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "fl",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-positive",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc10",
+      "name": "Referral note with unparsed text (Safety provenance gate)",
+      "description": "External referral document has unparsed smear text. Safety gate enforces clinician review instead of automatic processing.",
+      "expectedOutcomeId": "needs-review",
+      "inputs": {
+        "presentation-smear": {
+          "value": "lymphocytosis-present",
+          "provenance": "unparsed"
+        },
+        "lymphoma-category": {
+          "value": "cll-sll",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc11",
+      "name": "Cutaneous T-cell Lymphoma / Mycosis Fungoides",
+      "description": "48M presenting with multiple pruritic erythematous skin plaques. Requires skin biopsy for confirmation and clinical mSWAT staging.",
+      "expectedOutcomeId": "pathway-cutaneous-tcell-staging",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "ctcl-mf",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "mf-early-plaques",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc12",
+      "name": "Anti-HCV positive patient requiring HCV RNA & hepatology referral",
+      "description": "54M presenting with DLBCL and reactive Anti-HCV serology. Triggers quantitative HCV RNA PCR and hepatologist consultation prior to chemotherapy.",
+      "expectedOutcomeId": "pathway-viral-prophylaxis-hcv",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "dlbcl",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "stage-3-4-advanced",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-positive",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc13",
+      "name": "HIV-associated lymphoma requiring multidisciplinary ART management",
+      "description": "39M with DLBCL and newly diagnosed HIV. Evaluates CD4 count, viral load, opportunistic infection prophylaxis, avoiding zidovudine.",
+      "expectedOutcomeId": "pathway-hiv-multidisciplinary",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "dlbcl",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "stage-3-4-advanced",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-positive",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc14",
+      "name": "High metabolic risk patient requiring Tumor Lysis Syndrome prophylaxis",
+      "description": "46M with high-grade lymphoma, uric acid 9.8 mg/dL, and elevated LDH. Prioritizes aggressive hydration and rasburicase.",
+      "expectedOutcomeId": "pathway-tls-prophylaxis",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "dlbcl",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "stage-3-4-advanced",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-high-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc15",
+      "name": "Double-Hit Lymphoma confirmed on FISH (DA-EPOCH-R)",
+      "description": "61F with GCB-DLBCL and confirmed MYC + BCL2 translocations on FISH. Pathways to dose-adjusted EPOCH-R and CNS evaluation.",
+      "expectedOutcomeId": "pathway-double-hit-specialized",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "dlbcl",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "stage-3-4-advanced",
+          "provenance": "source-coded"
+        },
+        "double-hit-fish": {
+          "value": "dhl-detected",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc16",
+      "name": "High-dose Methotrexate planned in older adult requiring DTPA-GFR",
+      "description": "65M with primary CNS lymphoma planned for high-dose methotrexate. Triggers mandatory 99mTc-DTPA GFR clearance before infusion.",
+      "expectedOutcomeId": "pathway-high-dose-mtx-dtpa",
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "dlbcl",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "stage-1-2-limited",
+          "provenance": "source-coded"
+        },
+        "planned-therapy-cardiac": {
+          "value": "high-dose-mtx-planned",
+          "provenance": "source-coded"
+        },
+        "cns-risk-factors": {
+          "value": "cns-standard-risk",
+          "provenance": "source-coded"
+        },
+        "double-hit-fish": {
+          "value": "dhl-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    },
+    {
+      "id": "tc17",
+      "name": "Advanced DLBCL in 48M with High aaIPI (Score 2: LDH + Stage IV)",
+      "description": "48M presenting with Ann Arbor Stage IV DLBCL, elevated serum LDH, and ECOG 0-1. Fires Rule 18 with embedded aaIPI score condition (score >= 2).",
+      "expectedOutcomeId": "pathway-staging-pet-ct-omit-bm",
+      "expectedScores": {
+        "aaipi-dlbcl": 2
+      },
+      "inputs": {
+        "presentation-smear": {
+          "value": "no-lymphocytosis",
+          "provenance": "source-coded"
+        },
+        "lymphoma-category": {
+          "value": "dlbcl",
+          "provenance": "source-coded"
+        },
+        "staging-extent": {
+          "value": "stage-3-4-advanced",
+          "provenance": "source-coded"
+        },
+        "cns-risk-factors": {
+          "value": "cns-standard-risk",
+          "provenance": "source-coded"
+        },
+        "double-hit-fish": {
+          "value": "dhl-negative",
+          "provenance": "source-coded"
+        },
+        "age-group": {
+          "value": "age-le-60",
+          "provenance": "source-coded"
+        },
+        "serum-ldh": {
+          "value": "ldh-elevated",
+          "provenance": "source-coded"
+        },
+        "ecog-ps": {
+          "value": "ecog-0-1",
+          "provenance": "source-coded"
+        },
+        "extranodal-sites": {
+          "value": "extranodal-0-1",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hbv": {
+          "value": "hbv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hcv": {
+          "value": "hcv-negative",
+          "provenance": "source-coded"
+        },
+        "viral-screening-hiv": {
+          "value": "hiv-negative",
+          "provenance": "source-coded"
+        },
+        "tls-metabolic-risk": {
+          "value": "tls-standard-risk",
+          "provenance": "source-coded"
+        }
+      }
+    }
+  ],
+  "customDefinitions": [
+    {
+      "name": "Requires_HCV_RNA",
+      "isFunction": true,
+      "params": "hcvStatus String",
+      "returnType": "Boolean",
+      "comment": "HCV RNA confirmation trigger: mandatory before systemic therapy if Anti-HCV is reactive",
+      "expression": "hcvStatus in { 'hcv-positive' }"
+    },
+    {
+      "name": "Requires_HIV_Staging",
+      "isFunction": true,
+      "params": "hivStatus String",
+      "returnType": "Boolean",
+      "comment": "HIV multidisciplinary staging trigger: mandatory CD4, viral load, and OI prophylaxis if HIV reactive",
+      "expression": "hivStatus in { 'hiv-positive' }"
+    },
+    {
+      "name": "Requires_DoubleHit_FISH",
+      "isFunction": true,
+      "params": "subtype String, doubleHitStatus String",
+      "returnType": "Boolean",
+      "comment": "Double-Hit Lymphoma triage: verifies GCB-DLBCL with MYC and BCL2/6 rearrangements",
+      "expression": "subtype in { 'dlbcl' } and doubleHitStatus in { 'dhl-detected' }"
+    },
+    {
+      "name": "Requires_DTPA_GFR",
+      "isFunction": true,
+      "params": "plannedTherapy String, ageGroup String",
+      "returnType": "Boolean",
+      "comment": "Renal clearance trigger: mandatory 99mTc-DTPA GFR if high-dose methotrexate is planned and age > 40",
+      "expression": "plannedTherapy in { 'high-dose-mtx-planned' } and ageGroup in { 'age-gt-60', 'age-ge-70' }"
+    },
+    {
+      "name": "Requires_TLS_Prophylaxis",
+      "isFunction": true,
+      "params": "tlsRisk String",
+      "returnType": "Boolean",
+      "comment": "Tumor Lysis Syndrome prophylaxis trigger: indicates aggressive IV hydration and rasburicase/allopurinol",
+      "expression": "tlsRisk in { 'tls-high-risk' }"
+    }
+  ]
+}

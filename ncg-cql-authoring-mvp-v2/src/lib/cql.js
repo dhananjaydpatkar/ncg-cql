@@ -1,8 +1,90 @@
-import { pascal, slug, outcomeById } from './model';
+import { pascal, slug, outcomeById, functionById, cqlIdent, camel, findingById } from './model.js';
 
 const q = (s) => String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 const list = (arr) => '{ ' + arr.map((v) => `'${q(v)}'`).join(', ') + ' }';
+const comment = (s) => String(s).replace(/\*\//g, '* /').replace(/\s+/g, ' ').trim();
 export const csUrl = (f) => f.codeSystemUrl || `http://ncgindia.org/fhir/CodeSystem/ncg-${slug(f.id)}`;
+
+// CQL names generated for a score function. Kept distinct from each other so the
+// HL7 translator never reports "identifier is hiding another identifier".
+export function fnNames(fn) {
+  const base = cqlIdent(fn.name);
+  return {
+    calc: `Calculate_${base}`,      // define function Calculate_X(<inputs>) returns Integer
+    classify: `Classify_${base}`,   // define function Classify_X(score Integer) returns String
+    score: `${base}_Score`,         // define "X_Score"      (patient: Integer or null)
+    group: `${base}_RiskGroup`,     // define "X_RiskGroup"  (patient: band code or null)
+    label: `${base}_RiskLabel`,     // define "X_RiskLabel"  (patient: human-readable band)
+  };
+}
+
+// A finding condition as a CQL boolean expression (shared by rules and function gates).
+function findingCondCql(g, c) {
+  const f = findingById(g, c.findingId);
+  if (!f) return 'false';
+  const n = pascal(f.id);
+  if (c.op === 'unknown') return `not "${n}Known"`;
+  return `("${n}Known" and "${n}Value" ${c.op === 'is_not' ? 'not in' : 'in'} ${list(c.values || [])})`;
+}
+
+// Any rule condition (finding or embedded score function) as CQL.
+export function condCql(g, c) {
+  if (!c.functionId) return findingCondCql(g, c);
+  const fn = functionById(g, c.functionId);
+  if (!fn) return 'false';
+  const n = fnNames(fn);
+  if (c.op === 'score_unknown') return `("${n.score}" is null)`;
+  if (c.op === 'score_gte') return `("${n.score}" >= ${Number(c.threshold) || 0})`;
+  if (c.op === 'score_lte') return `("${n.score}" <= ${Number(c.threshold) || 0})`;
+  return `("${n.group}" in ${list(c.values || [])})`;
+}
+
+// Emits the CQL for one score function: two pure functions + three patient expressions.
+export function generateFunctionCql(g, fn) {
+  const L = [];
+  const n = fnNames(fn);
+  const factors = fn.factors.map((fa) => ({ fa, f: findingById(g, fa.findingId) })).filter((x) => x.f);
+  const params = factors.map(({ f }) => `${camel(f.id)} String`).join(', ');
+
+  L.push(`/* ${comment(fn.label)}${fn.description ? ' - ' + comment(fn.description) : ''} */`);
+  L.push(`define function ${n.calc}(${params}) returns Integer:`);
+  const terms = factors.map(({ fa, f }) => {
+    const p = camel(f.id);
+    const scored = Object.entries(fa.points || {}).filter(([, v]) => Number(v));
+    if (!scored.length) return '0';
+    return `(case ${p} ${scored.map(([code, pts]) => `when '${q(code)}' then ${Number(pts)}`).join(' ')} else 0 end)`;
+  });
+  L.push('  ' + (terms.length ? terms.join('\n    + ') : '0'));
+  L.push('');
+
+  L.push(`define function ${n.classify}(score Integer) returns String:`);
+  L.push('  case');
+  fn.bands.forEach((b) => L.push(`    when score between ${Number(b.min)} and ${Number(b.max)} then '${q(b.code)}'`));
+  L.push('    else null');
+  L.push('  end');
+  L.push('');
+
+  // Patient-level score: null unless the score applies and every input passed the provenance gate.
+  const guards = [
+    ...(fn.appliesWhen || []).map((c) => findingCondCql(g, c)),
+    ...factors.map(({ f }) => `"${pascal(f.id)}Known"`),
+  ];
+  L.push(`define "${n.score}":`);
+  L.push(`  if ${guards.length ? guards.join('\n    and ') : 'true'}`);
+  L.push(`    then ${n.calc}(${factors.map(({ f }) => `"${pascal(f.id)}Value"`).join(', ')})`);
+  L.push('    else null');
+  L.push('');
+  L.push(`define "${n.group}":`);
+  L.push(`  ${n.classify}("${n.score}")`);
+  L.push('');
+  L.push(`define "${n.label}":`);
+  L.push(`  case "${n.group}"`);
+  fn.bands.forEach((b) => L.push(`    when '${q(b.code)}' then '${q(b.label + (b.note ? ` (${b.note})` : ''))}'`));
+  L.push('    else null');
+  L.push('  end');
+  L.push('');
+  return L.join('\n');
+}
 
 // Generates standard CQL 1.4 from the guideline model (any disease).
 export function generateCql(g) {
@@ -48,19 +130,18 @@ export function generateCql(g) {
     L.push('');
   });
 
+  if (g.functions?.length) {
+    L.push('/* ---- Score functions (authored in the Functions tab; usable in rules) ---- */');
+    g.functions.forEach((fn) => L.push(generateFunctionCql(g, fn)));
+  }
+
   L.push('/* ---- Rules (evaluated in order; first match wins) ---- */');
   const ruleNames = [];
   g.rules.forEach((r, i) => {
     const name = `Rule${i + 1}_${pascal(r.label).slice(0, 40)}`;
     ruleNames.push(name);
-    const parts = r.conditions.map((c) => {
-      const f = g.findings.find((x) => x.id === c.findingId);
-      if (!f) return 'false';
-      const n = pascal(f.id);
-      if (c.op === 'unknown') return `not "${n}Known"`;
-      return `("${n}Known" and "${n}Value" ${c.op === 'is_not' ? 'not in' : 'in'} ${list(c.values || [])})`;
-    });
-    L.push(`/* ${r.label} */`);
+    const parts = r.conditions.map((c) => condCql(g, c));
+    L.push(`/* ${comment(r.label)} */`);
     L.push(`define "${name}":`);
     L.push('  ' + (parts.length ? parts.join('\n    and ') : 'false'));
     L.push('');
@@ -84,6 +165,23 @@ export function generateCql(g) {
   L.push('    else { }');
   L.push('  end');
   L.push('');
+
+  // Advanced: raw CQL definitions (not evaluated by the in-browser test runner).
+  if (g.customDefinitions?.length) {
+    L.push('/* ---- Advanced custom CQL definitions ---- */');
+    g.customDefinitions.forEach((d) => {
+      if (d.comment) L.push(`/* ${comment(d.comment)} */`);
+      if (d.isFunction || d.type === 'function' || d.params) {
+        const returns = d.returnType ? ` returns ${d.returnType}` : '';
+        L.push(`define function ${d.name}(${d.params || ''})${returns}:`);
+      } else {
+        L.push(`define "${d.name}":`);
+      }
+      L.push(`  ${d.expression.split('\n').join('\n  ')}`);
+      L.push('');
+    });
+  }
+
   return L.join('\n');
 }
 

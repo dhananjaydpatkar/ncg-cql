@@ -72,6 +72,49 @@ export function Tests({ g, edit }) {
               </div>
             </div>
 
+            {(g.functions || []).length > 0 && (
+              <div className="card">
+                <div className="card-head">
+                  <h3>Calculated Score Functions</h3>
+                  <span className="spacer" />
+                  <span className="hint">{Object.values(res?.scores || {}).filter((s) => s.score != null).length} of {g.functions.length} computed</span>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+                  {g.functions.map((fn) => {
+                    const s = res?.scores?.[fn.id];
+                    if (!s) return null;
+                    return (
+                      <div key={fn.id} style={{ background: 'var(--sunk)', padding: '8px 12px', borderRadius: 6 }}>
+                        <div className="row">
+                          <b style={{ fontSize: 13 }}>{fn.label}</b>
+                          <code className="hint" style={{ fontSize: 11 }}>{fn.name}</code>
+                          <span className="spacer" />
+                          {!s.applicable ? (
+                            <span className="pill" style={{ background: '#e5e7eb', color: '#6b7280' }}>Not applicable (cohort filter)</span>
+                          ) : s.score == null ? (
+                            <span className="pill fail">Cannot compute (missing / unverified: {s.missing.join(', ')})</span>
+                          ) : (
+                            <span className="pill pass">
+                              <b>{s.score} pts</b> · {s.band?.label || 'Score ' + s.score}
+                            </span>
+                          )}
+                        </div>
+                        {s.applicable && s.parts.length > 0 && (
+                          <div className="hint" style={{ marginTop: 4, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                            {s.parts.map((p, pi) => (
+                              <span key={pi} style={{ background: '#fff', padding: '1px 6px', borderRadius: 4, border: '1px solid var(--line)' }}>
+                                {p.label}: <b>{p.value}</b> ({p.points > 0 ? `+${p.points}` : p.points} pt)
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
             <div className="card">
               <div className="card-head"><h3>Result</h3>{res.outcomeId === tc.expectedOutcomeId ? <span className="pill pass">Passes</span> : <span className="pill fail">Does not match expected</span>}</div>
               <div className="row" style={{ marginBottom: 8 }}><b style={{ fontSize: 16 }}>{res.outcome?.label}</b>{res.outcome && <KindPill kind={res.outcome.kind} />}</div>

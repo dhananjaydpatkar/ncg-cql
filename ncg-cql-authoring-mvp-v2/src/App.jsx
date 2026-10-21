@@ -1,25 +1,39 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { loadStore, saveStore } from './lib/store';
+import { loadStore, saveStore, resetStore, resetGuidelineToSeed } from './lib/store';
 import { blankGuideline } from './lib/model';
 import { validate } from './lib/validate';
 import { runAllTests } from './lib/evaluate';
 import { Setup } from './components/Setup';
 import { Findings } from './components/Findings';
+import { Functions } from './components/Functions';
 import { Outcomes } from './components/Outcomes';
 import { Rules } from './components/Rules';
 import { Tests } from './components/Tests';
 import { Publish } from './components/Publish';
+import { CatalogModal } from './components/CatalogModal';
 
 const TABS = [
-  ['setup', '1 · Details'], ['findings', '2 · Findings'], ['outcomes', '3 · Outcomes'],
-  ['rules', '4 · Rules'], ['tests', '5 · Test cases'], ['publish', '6 · Review & export'],
+  ['setup', '1 · Details'],
+  ['findings', '2 · Findings'],
+  ['functions', '3 · Functions'],
+  ['outcomes', '4 · Outcomes'],
+  ['rules', '5 · Rules'],
+  ['tests', '6 · Test cases'],
+  ['publish', '7 · Review & export'],
 ];
 
 export default function App() {
-  const [store, setStore] = useState(loadStore);
+  const [store, setStore] = useState(() => {
+    const s = loadStore();
+    const gParam = new URLSearchParams(window.location.search).get('guideline');
+    if (gParam && s.guidelines.some((x) => x.id === gParam)) {
+      return { ...s, activeId: gParam };
+    }
+    return s;
+  });
   const [tab, setTabState] = useState(() => {
     const p = new URLSearchParams(window.location.search).get('tab');
-    return ['setup', 'findings', 'outcomes', 'rules', 'tests', 'publish'].includes(p) ? p : 'setup';
+    return ['setup', 'findings', 'functions', 'outcomes', 'rules', 'tests', 'publish'].includes(p) ? p : 'setup';
   });
   const setTab = (t) => {
     setTabState(t);
@@ -28,12 +42,13 @@ export default function App() {
     window.history.replaceState({}, '', url);
   };
   const [msg, setMsg] = useState(null);
+  const [globalCatalogOpen, setGlobalCatalogOpen] = useState(false);
   const fileRef = useRef();
 
   useEffect(() => saveStore(store), [store]);
   const g = store.guidelines.find((x) => x.id === store.activeId) || store.guidelines[0];
 
-  const toast = (m) => { setMsg(m); setTimeout(() => setMsg(null), 2200); };
+  const toast = (m) => { setMsg(m); setTimeout(() => setMsg(null), 2400); };
   const edit = (fn) => setStore((s) => {
     const guidelines = s.guidelines.map((x) => {
       if (x.id !== s.activeId) return x;
@@ -84,14 +99,38 @@ export default function App() {
     e.target.value = '';
   };
 
-  const shared = { g, edit };
+  const resetDefaults = () => {
+    if (!confirm(`Reset "${g.title}" to default seed definition? Any local unsaved edits will be refreshed from official seed definitions.`)) return;
+    const fresh = resetGuidelineToSeed(g.id);
+    if (fresh) {
+      setStore((s) => ({
+        ...s,
+        guidelines: s.guidelines.map((x) => (x.id === g.id ? fresh : x)),
+      }));
+      toast(`Reset "${g.title}" to seed definitions`);
+    } else {
+      const allFresh = resetStore();
+      setStore(allFresh);
+      toast('Reset all guidelines to seed defaults');
+    }
+  };
+
+  const shared = { g, edit, allGuidelines: store.guidelines, toast };
+  const catalogDefaultType = ['functions', 'outcomes'].includes(tab) ? tab : 'findings';
+
   return (
     <>
       <header className="topbar">
         <div className="topbar-row">
           <div className="brand"><div className="brand-mark">N</div><div>NCG Guideline Studio<small>Write guidelines as rules - CQL &amp; FHIR are generated</small></div></div>
           <span className="spacer" />
-          <select className="inline" value={g.id} onChange={(e) => setStore((s) => ({ ...s, activeId: e.target.value }))} aria-label="Active guideline">
+          <select className="inline" value={g.id} onChange={(e) => {
+            const nextId = e.target.value;
+            setStore((s) => ({ ...s, activeId: nextId }));
+            const url = new URL(window.location);
+            url.searchParams.set('guideline', nextId);
+            window.history.replaceState({}, '', url);
+          }} aria-label="Active guideline">
             {store.guidelines.map((x) => <option key={x.id} value={x.id}>{x.title}</option>)}
           </select>
           <span className={`pill ${g.status === 'approved' ? 'approved' : 'draft'}`}>{g.status}</span>
@@ -99,6 +138,10 @@ export default function App() {
           <button className="btn sm primary" onClick={newGuideline}>+ New</button>
           <button className="btn sm" onClick={duplicate}>Duplicate</button>
           <button className="btn sm" onClick={() => fileRef.current.click()}>Import</button>
+          <button className="btn sm" title="Browse standardized clinical findings, score functions, and outcomes" onClick={() => setGlobalCatalogOpen(true)}>
+            📚 Reusable Library
+          </button>
+          <button className="btn sm" title="Reset active guideline to original seed definition" onClick={resetDefaults}>↺ Reset to Seed</button>
           <button className="btn sm danger" onClick={remove}>Delete</button>
           <input ref={fileRef} type="file" accept=".json,application/json" hidden onChange={importFile} />
         </div>
@@ -114,11 +157,25 @@ export default function App() {
       <main key={g.id}>
         {tab === 'setup' && <Setup {...shared} issues={issues} goto={setTab} />}
         {tab === 'findings' && <Findings {...shared} />}
+        {tab === 'functions' && <Functions {...shared} />}
         {tab === 'outcomes' && <Outcomes {...shared} />}
         {tab === 'rules' && <Rules {...shared} />}
         {tab === 'tests' && <Tests {...shared} />}
         {tab === 'publish' && <Publish g={g} issues={issues} toast={toast} />}
       </main>
+      {globalCatalogOpen && (
+        <CatalogModal
+          initialType={catalogDefaultType}
+          g={g}
+          allGuidelines={store.guidelines}
+          edit={edit}
+          toast={toast}
+          onClose={() => setGlobalCatalogOpen(false)}
+          onSelectImported={(itemType) => {
+            setTab(itemType);
+          }}
+        />
+      )}
       {msg && <div className="toast">{msg}</div>}
     </>
   );
