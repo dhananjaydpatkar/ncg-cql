@@ -1,0 +1,126 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-ncg-fl-2020-t6",
+  "type": "collection",
+  "timestamp": "2026-10-23T06:21:20.807Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://ncgindia.org/guideline",
+        "code": "NCG_FL_2020"
+      },
+      {
+        "system": "http://ncgindia.org/test-case-id",
+        "code": "t6"
+      },
+      {
+        "system": "http://ncgindia.org/expected-outcome",
+        "code": "treat-as-dlbcl"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-t6",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-t6",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-0000-0006-0000"
+          }
+        ],
+        "name": [
+          {
+            "text": "Transformed to DLBCL"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Transformed to DLBCL</b> - Biopsy shows transformation.</p></div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-histology-t6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-histology-t6",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t6"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-histology",
+              "code": "transformed-dlbcl",
+              "display": "Transformed to DLBCL"
+            }
+          ],
+          "text": "Histology / grade: Transformed to DLBCL"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-stage-t6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-stage-t6",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t6"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-stage",
+              "code": "stage-4",
+              "display": "Stage IV"
+            }
+          ],
+          "text": "Ann Arbor stage: Stage IV"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

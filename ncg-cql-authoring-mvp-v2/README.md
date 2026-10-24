@@ -113,6 +113,35 @@ To prevent guideline panels from redefining identical findings, scores, and regi
 
 ---
 
+## Interactive Guided Tour (Replayable On-Demand)
+
+To help clinicians, informatics specialists, and new guideline authors get up to speed quickly, the studio features a built-in **Interactive Guided Tour**:
+
+![Guided Tour Step 1](docs/screenshots/09_guided_tour_step1.png)
+
+### Key Features of the Guided Tour:
+1. **Always Accessible & Replayable:**
+   - A dedicated **`🧭 Guided Tour`** button in the header bar allows users to replay the entire tour from Step 1 on demand at any time.
+   - For first-time visitors, a gentle welcome banner highlights the 2-minute tour with 1-click launch or dismiss options.
+   - At the final step, a prominent **`↺ Replay Tour`** action allows instant repetition.
+   - A quick-restart icon (`↺`) in the popover header lets authors rewind to Step 1 from any point in the walkthrough.
+
+2. **Automated Tab Switching & In-Context Highlighting:**
+   - As the tour steps from *Setup* → *Findings* → *Functions* → *Outcomes* → *Rules* → *Test cases* → *Review & export*, the studio **automatically switches the active tab** so users see the actual live authoring interface in context.
+   - An SVG spotlight cutout mask focuses on the target UI element with an animated accent glow while dimming the surrounding background.
+
+![Automatic Tab Switching and Live Element Focus](docs/screenshots/10_guided_tour_tab_switch.png)
+
+3. **Step Navigation & Keyboard Shortcuts:**
+   - **Clickable Step Dots:** Click any of the 11 step dots in the footer to jump directly to that authoring phase.
+   - **Keyboard Navigation:** Navigate with `Arrow Right` (Next), `Arrow Left` (Previous), and `Escape` (Exit).
+   - **Clinical Tips & Guidance:** Each step includes practical oncology authoring tips explaining terminology bindings, CQL mathematical function compilation, and EHR safety gates.
+
+![On-Demand Tour Replay Trigger](docs/screenshots/11_guided_tour_replay.png)
+
+---
+
+
 ## Pre-loaded Clinical Guidelines
 
 1. **Suspected Lymphoma — Diagnostic Workup & Staging Pathway** (`NCG_LYMPHOMA_WORKUP_2020`)
@@ -167,3 +196,24 @@ npm run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## AWS Deployment
+
+The authoring studio can be deployed to **AWS Amplify Hosting** in under 2 minutes:
+
+1. Package the production release into a deployment zip:
+   ```bash
+   npm run build:zip
+   ```
+   *Generates `ncg-authoring-studio.zip` (~160 KB).*
+2. Open the [AWS Amplify Console](https://console.aws.amazon.com/amplify/) → **Deploy without Git provider** → Drag and drop `ncg-authoring-studio.zip`.
+3. Add the Single Page Application rewrite rule under **Rewrites and redirects**:
+   - Source: `</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|woff2|ttf|map|json)$)([^.]+$)/>`
+   - Target: `/index.html`
+   - Type: `200 (Rewrite)`
+
+For detailed CLI scripts, custom domain setup, and verification checklists, see the full guide:  
+👉 [**AWS Amplify Deployment Guide**](DEPLOYMENT_AWS_AMPLIFY.md)
+

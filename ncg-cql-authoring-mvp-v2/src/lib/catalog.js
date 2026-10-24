@@ -2,8 +2,6 @@
 // Standardized Findings, Score Functions, and Outcomes that can be searched,
 // shared, and reused across multiple clinical guidelines.
 
-import { slug, uniqueSlug } from './model.js';
-
 const STORAGE_KEY = 'ncg-clinical-catalog-v2';
 
 // ---------------------------------------------------------------------------
@@ -309,7 +307,233 @@ export const STANDARD_FINDINGS = [
       { code: 'planned', label: 'HD-MTX planned (requires mandatory 99mTc-DTPA clearance GFR test)' },
     ],
   },
+  {
+    id: 'anthracycline-fitness',
+    label: 'Anthracycline (R-CHOP) fitness status',
+    category: 'Performance & Fitness',
+    help: 'Cardiopulmonary fitness and comorbidity evaluation: normal LVEF >= 50%, age < 70, absence of severe uncontrolled organ failure.',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-anthracycline-fitness',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-anthracycline-fitness',
+    values: [
+      { code: 'fit-r-chop', label: 'Fit for standard R-CHOP (LVEF >= 50%, Age < 70, controlled comorbidities)' },
+      { code: 'unfit-cardiac', label: 'Cardiac dysfunction / CAD / RWMA / prior anthracycline toxicity (LVEF < 50%)' },
+      { code: 'unfit-elderly-frail', label: 'Elderly with significant frailty / comorbid (Age > 70 with frailty)' },
+      { code: 'unfit-anthra-ineligible', label: 'Severe hepatic / renal / systemic contraindication to anthracyclines' },
+      { code: 'frail-palliative', label: 'Frail / advanced decline (candidate for palliative / low-intensity therapy only)' },
+    ],
+  },
+  {
+    id: 'dlbcl-stage',
+    label: 'Ann Arbor anatomical disease stage',
+    category: 'Staging & Anatomy',
+    help: 'Anatomical stage classification validated by baseline whole-body 18F-FDG PET-CT.',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-dlbcl-stage',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-dlbcl-stage',
+    values: [
+      { code: 'stage-1-2-limited', label: 'Limited Stage (Stage I & II)' },
+      { code: 'stage-3-4-advanced', label: 'Advanced Stage (Stage III & IV)' },
+    ],
+  },
+  {
+    id: 'bulky-status',
+    label: 'Bulky disease status (>= 7.5 cm)',
+    category: 'Staging & Anatomy',
+    help: 'Single largest contiguous tumor mass dimension on PET-CT (cutoff >= 7.5 cm per NCG guideline).',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-bulky-status',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-bulky-status',
+    values: [
+      { code: 'non-bulky', label: 'Non-bulky disease (largest lesion < 7.5 cm)' },
+      { code: 'bulky-gte-7-5cm', label: 'Bulky disease (largest lesion >= 7.5 cm)' },
+    ],
+  },
+  {
+    id: 'cell-of-origin',
+    label: 'DLBCL cell-of-origin (IHC Hans algorithm)',
+    category: 'Histology & Pathology',
+    help: 'Immunohistochemical subtyping (CD10, BCL6, MUM1): Germinal Center B-cell (GCB) vs Non-GCB / Activated B-cell (ABC).',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-cell-of-origin',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-cell-of-origin',
+    values: [
+      { code: 'gcb', label: 'GCB (Germinal Center B-cell phenotype)' },
+      { code: 'non-gcb', label: 'Non-GCB / ABC (Activated B-cell phenotype)' },
+    ],
+  },
+  {
+    id: 'cns-risk-sites',
+    label: 'CNS high-risk anatomical involvement',
+    category: 'Prognosis & Risk',
+    help: 'High-risk anatomical sites: testicular, breast, adnexa, adrenal, renal involvement, or confirmed Double-Hit Lymphoma (DHL).',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-cns-risk-sites',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-cns-risk-sites',
+    values: [
+      { code: 'cns-high-risk', label: 'High CNS risk (testicular, breast, adnexal, renal, adrenal DLBCL or DHL)' },
+      { code: 'cns-standard-risk', label: 'Standard CNS risk (no high-risk anatomical involvement)' },
+    ],
+  },
+  {
+    id: 'cd4-count',
+    label: 'CD4 lymphocyte count (in HIV+ DLBCL)',
+    category: 'Infectious & Safety',
+    help: 'Absolute CD4 count threshold: CD4 >= 50 cells/uL permits Rituximab (SC-RR-EPOCH); CD4 < 50 cells/uL contraindicates Rituximab (EPOCH without R).',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-cd4-count',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-cd4-count',
+    values: [
+      { code: 'cd4-gte-50', label: 'CD4 >= 50 cells/uL (Rituximab permitted)' },
+      { code: 'cd4-lt-50', label: 'CD4 < 50 cells/uL (Rituximab contraindicated / avoided)' },
+      { code: 'not-applicable', label: 'Not applicable (HIV negative)' },
+    ],
+  },
+  {
+    id: 'central-venous-access',
+    label: 'Central venous access availability (for PMBCL)',
+    category: 'Treatment Planning',
+    help: 'Continuous infusional chemotherapy (DA-EPOCH-R) mandates central venous access (PICC line or chemo port).',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-central-venous-access',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-central-venous-access',
+    values: [
+      { code: 'central-access-available', label: 'Central venous access available (PICC line or chemo port in place)' },
+      { code: 'no-central-access', label: 'No central venous access / peripheral IV only' },
+    ],
+  },
+  {
+    id: 'cardiac-echo-status',
+    label: '2D-ECHO LVEF monitoring on therapy',
+    category: 'Safety & Comorbidities',
+    help: 'Mandatory 2D-ECHO at baseline and after cycle 4 of R-CHOP. Decline > 10% requires anthracycline discontinuation.',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-cardiac-echo-status',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-cardiac-echo-status',
+    values: [
+      { code: 'echo-normal-stable', label: 'LVEF >= 50% and stable (decline <= 10% from baseline)' },
+      { code: 'echo-lvef-declined', label: 'LVEF decline > 10% from baseline (cardiotoxicity gate)' },
+    ],
+  },
+  {
+    id: 'prephase-indication',
+    label: 'Pre-phase therapy indication',
+    category: 'Performance & Fitness',
+    help: 'Mandatory pre-phase Cyclophosphamide + Steroids in: elderly Stage III/IV, bulky disease, GI involvement, or poor PS.',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-prephase-indication',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-prephase-indication',
+    values: [
+      { code: 'prephase-indicated', label: 'Pre-phase indicated (elderly III/IV, bulky, GI involvement, poor PS)' },
+      { code: 'prephase-not-indicated', label: 'No pre-phase indicated (standard good PS non-bulky)' },
+    ],
+  },
+  {
+    id: 'relapse-biopsy-status',
+    label: 'Relapse tissue biopsy confirmation status',
+    category: 'Diagnostics & Pathology',
+    help: 'Mandatory repeat biopsy from most representative site (largest size + highest SUVmax) to confirm DLBCL, repeat IHC (GCB vs non-GCB), and exclude indolent transformation.',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-relapse-biopsy-status',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-relapse-biopsy-status',
+    values: [
+      { code: 'biopsy-confirmed-dlbcl', label: 'Biopsy confirmed DLBCL (repeat IHC completed)' },
+      { code: 'transformation-indolent', label: 'Transformed from prior indolent lymphoma (e.g. transformed FL)' },
+      { code: 'biopsy-pending', label: 'Biopsy pending / FNAC only (repeat core/excisional biopsy mandatory)' },
+    ],
+  },
+  {
+    id: 'relapse-timing',
+    label: 'Timing of relapse / progression relative to R-CHOP',
+    category: 'Prognosis & Chronology',
+    help: 'Critical branch point: Relapse > 12 months after R-CHOP completion (chemosensitive likely -> Pathway A) vs Relapse <= 12 months / progression ON R-CHOP (early/refractory -> Pathway B).',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-relapse-timing',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-relapse-timing',
+    values: [
+      { code: 'relapse-gt-12m', label: 'Late relapse (> 12 months post completion of first-line R-CHOP)' },
+      { code: 'relapse-le-12m', label: 'Early relapse (<= 12 months post completion of first-line R-CHOP)' },
+      { code: 'primary-refractory', label: 'Primary refractory / progression ON first-line R-CHOP therapy' },
+    ],
+  },
+  {
+    id: 'chemo-fitness-overall',
+    label: 'Fitness for combination systemic chemotherapy',
+    category: 'Performance & Fitness',
+    help: 'General fitness to tolerate intensive or non-transplant combination chemotherapy vs candidate for palliative/low-intensity oral therapy only.',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-chemo-fitness-overall',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-chemo-fitness-overall',
+    values: [
+      { code: 'chemo-eligible', label: 'Chemotherapy eligible (candidate for intensive or standard combination salvage)' },
+      { code: 'unfit-all-chemo', label: 'Unfit for combination chemotherapy (candidate for palliative / oral metronomic / targeted only)' },
+    ],
+  },
+  {
+    id: 'asct-fitness',
+    label: 'Fitness for salvage chemotherapy + ASCT',
+    category: 'Performance & Fitness',
+    help: 'Eligibility for high-dose chemotherapy and Autologous Stem Cell Transplant (age, ECOG PS, absence of severe organ dysfunction).',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-asct-fitness',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-asct-fitness',
+    values: [
+      { code: 'asct-fit', label: 'Fit for intensive salvage therapy + Autologous Stem Cell Transplant (ASCT)' },
+      { code: 'asct-unfit', label: 'Not fit for ASCT (non-transplant candidate)' },
+    ],
+  },
+  {
+    id: 'car-t-fitness',
+    label: 'Fitness for anti-CD19 CAR-T cell therapy',
+    category: 'Performance & Fitness',
+    help: 'Physiological fitness to tolerate cytokine release syndrome (CRS) and neurotoxicity (ICANS) associated with CAR-T.',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-car-t-fitness',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-car-t-fitness',
+    values: [
+      { code: 'car-t-fit', label: 'Fit for CAR-T cell therapy (tolerable CRS/ICANS risk, adequate organ reserve)' },
+      { code: 'car-t-unfit', label: 'Not fit for CAR-T cell therapy' },
+    ],
+  },
+  {
+    id: 'pet-response-salvage',
+    label: 'PET-CT response after salvage chemotherapy (3 cycles)',
+    category: 'Response Assessment',
+    help: 'Deauville 5-point scale score after 3 cycles of salvage chemo (R-GEMOX / R-GDP / Pola-R-GEMOX).',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-pet-response-salvage',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-pet-response-salvage',
+    values: [
+      { code: 'salvage-cr-pr', label: 'Chemosensitive: PR or CR (Deauville Score 1-3, >= 50% reduction in uptake)' },
+      { code: 'salvage-ds4-partial', label: 'Partial response / residual uptake (Deauville Score 4, no new disease sites)' },
+      { code: 'salvage-ds5-refractory', label: 'Chemotherapy-refractory (Deauville Score 5 or progressive disease)' },
+      { code: 'not-assessed', label: 'Not yet assessed / salvage therapy not yet completed' },
+    ],
+  },
+  {
+    id: 'car-t-future-plan',
+    label: 'CAR-T cell therapy future intention / possibility',
+    category: 'Treatment Planning & Safety',
+    help: 'CRITICAL SAFETY GATE: Bendamustine causes prolonged T-cell lymphopenia and impairs CAR-T manufacture. Must be AVOIDED if CAR-T remains a possibility.',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-car-t-future-plan',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-car-t-future-plan',
+    values: [
+      { code: 'cart-possible', label: 'CAR-T is planned or remains a future possibility (MANDATORY TO AVOID BENDA / POLA-BR)' },
+      { code: 'cart-definitively-excluded', label: 'CAR-T is definitively NOT planned / patient ineligible / unavailable' },
+    ],
+  },
+  {
+    id: 'cell-of-origin-rr',
+    label: 'Repeat IHC cell-of-origin subtype at relapse',
+    category: 'Histology & Pathology',
+    help: 'Tumor biology may evolve at relapse. Non-GCB subtype qualifies for oral targeted lenalidomide or bortezomib in the palliative setting.',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-cell-of-origin-rr',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-cell-of-origin-rr',
+    values: [
+      { code: 'non-gcb', label: 'Non-GCB phenotype (eligible for targeted lenalidomide / bortezomib)' },
+      { code: 'gcb', label: 'GCB phenotype' },
+    ],
+  },
+  {
+    id: 'dominant-residual-site',
+    label: 'Residual or bulky disease site for radiation',
+    category: 'Radiation Therapy',
+    help: 'Presence of single residual PET-positive site or bulky site at presentation suitable for consolidative radiotherapy (30-36 Gy).',
+    codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-dominant-residual-site',
+    valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-dominant-residual-site',
+    values: [
+      { code: 'single-site-residual', label: 'Single residual PET+ site OR initial bulky site (candidate for consolidative RT 30-36 Gy)' },
+      { code: 'diffuse-multisite', label: 'Diffuse widespread multi-site disease (systemic therapy only)' },
+      { code: 'no-residual-cmr', label: 'Complete metabolic response (no residual uptake)' },
+    ],
+  },
 ];
+
 
 // ---------------------------------------------------------------------------
 // 2. STANDARD BUILT-IN CLINICAL SCORE FUNCTIONS
@@ -648,7 +872,311 @@ export const STANDARD_OUTCOMES = [
       { id: 'r-alkalinization', name: 'Urine alkalinization (IV sodium bicarbonate, target urine pH > 7.0)', category: 'Safety Protocol' },
     ],
   },
+  {
+    id: 'dlbcl-fit-limited-aai0-nonbulky',
+    label: 'Limited Stage DLBCL (aaIPI 0, Non-Bulky): PET-Adapted R-CHOP x 3-4 Cycles',
+    kind: 'treatment',
+    category: 'Limited Stage DLBCL',
+    rationale: 'Limited Stage (Stage I-II) with aaIPI 0 and non-bulky disease (< 7.5 cm): R-CHOP x 3 cycles followed by interim PET-CT. If CMR -> 1 additional cycle (total 4 R-CHOP); if PET positive -> 3 more cycles OR 30-35 Gy IFRT.',
+    regimens: [
+      { id: 'r-rchop-3', name: 'R-CHOP x 3 cycles', category: 'Chemoimmunotherapy' },
+      { id: 'r-interim-pet', name: 'Interim 18F-FDG PET-CT after cycle 3', category: 'Response Imaging' },
+      { id: 'r-rchop-plus1', name: 'If PET CMR: +1 more R-CHOP cycle (total 4 cycles, no radiation)', category: 'Consolidation' },
+      { id: 'r-ifrt-pos', name: 'If PET positive: 3 more R-CHOP cycles OR 30-35 Gy IFRT', category: 'Radiation' },
+    ],
+  },
+  {
+    id: 'dlbcl-fit-limited-aai1-or-bulky',
+    label: 'Limited Stage DLBCL (aaIPI >= 1 or Bulky >= 7.5 cm): R-CHOP x 6 + IFRT',
+    kind: 'treatment',
+    category: 'Limited Stage DLBCL',
+    rationale: 'Limited stage DLBCL with aaIPI >= 1 or bulky disease (>= 7.5 cm): full 6 cycles of R-CHOP plus Involved-Field Radiotherapy (IFRT 30-35 Gy) to bulky disease site(s).',
+    regimens: [
+      { id: 'r-rchop-6', name: 'R-CHOP x 6 cycles q21d', category: 'Chemoimmunotherapy' },
+      { id: 'r-ifrt-bulk', name: 'Involved-Field Radiotherapy (IFRT) 30-35 Gy to bulky disease site(s)', category: 'Radiation Therapy' },
+      { id: 'r-echo-c4', name: 'Mandatory 2D-ECHO after cycle 4 to monitor LVEF', category: 'Cardiac Safety' },
+    ],
+  },
+  {
+    id: 'dlbcl-fit-advanced-standard',
+    label: 'Advanced Stage DLBCL (Fit): Standard R-CHOP x 6 Cycles',
+    kind: 'treatment',
+    category: 'Advanced Stage DLBCL',
+    rationale: 'Standard backbone for advanced stage (Stage III-IV) fit DLBCL is R-CHOP x 6 cycles. End-of-treatment PET-CT: if CMR -> observation; if Partial Response (PR) at single site -> consolidative RT 30-35 Gy.',
+    regimens: [
+      { id: 'r-rchop-6-std', name: 'R-CHOP x 6 cycles q21d', category: 'Standard Chemoimmunotherapy' },
+      { id: 'r-echo-c4-std', name: '2D-ECHO mandatory after cycle 4', category: 'Cardiac Safety' },
+      { id: 'r-eot-pet-std', name: 'End-of-treatment (EOT) PET-CT assessment', category: 'Imaging' },
+      { id: 'r-rt-pr-site', name: 'Consolidative RT 30-35 Gy if PR at single residual site', category: 'Radiation Therapy' },
+    ],
+  },
+  {
+    id: 'dlbcl-fit-advanced-pola-r-chp',
+    label: 'Advanced Non-GCB DLBCL (IPI >= 2, Age < 70, Non-Bulky): Pola-R-CHP x 6',
+    kind: 'treatment',
+    category: 'Targeted Chemoimmunotherapy',
+    rationale: 'POLARIX regimen for previously untreated Non-GCB DLBCL with IPI >= 2, age < 70, non-bulky: Polatuzumab vedotin (1.8 mg/kg) replaces vincristine in R-CHP backbone x 6 cycles.',
+    regimens: [
+      { id: 'r-pola-r-chp', name: 'Polatuzumab vedotin (1.8 mg/kg) + R-CHP x 6 cycles q21d', category: 'Targeted ADC Chemo' },
+      { id: 'r-ritux-maint', name: 'Rituximab monotherapy (375 mg/m2) x 2 additional doses', category: 'Monoclonal Antibody' },
+      { id: 'r-gcsf-pep', name: 'Pegylated G-CSF primary prophylaxis 24h post-chemo', category: 'Growth Factor Support' },
+    ],
+  },
+  {
+    id: 'dlbcl-high-cns-risk-prophylaxis',
+    label: 'High-Risk CNS DLBCL: Intrathecal + High-Dose MTX Prophylaxis',
+    kind: 'treatment',
+    category: 'CNS Prophylaxis',
+    rationale: 'DLBCL involving testicular, breast, adnexal, adrenal, renal sites or DHL: Intrathecal MTX with each R-CHOP cycle plus 2 cycles of High-Dose Methotrexate (3-3.5 g/m2) post cycle 6 (DTPA GFR > 60 required).',
+    regimens: [
+      { id: 'r-rchop-cns', name: 'R-CHOP x 6 cycles q21d', category: 'Systemic Backbone' },
+      { id: 'r-it-mtx', name: 'Intrathecal Methotrexate (12 mg) with each cycle', category: 'Intrathecal Prophylaxis' },
+      { id: 'r-hd-mtx', name: 'High-Dose Methotrexate (3.0-3.5 g/m2) x 2 cycles after cycle 6', category: 'Systemic CNS Prophylaxis' },
+    ],
+  },
+  {
+    id: 'dlbcl-hiv-cd4-gte-50',
+    label: 'HIV+ DLBCL (CD4 >= 50): SC-RR-EPOCH + ART + OI Prophylaxis',
+    kind: 'treatment',
+    category: 'HIV Lymphoma',
+    rationale: 'In HIV-positive DLBCL with CD4 >= 50 cells/uL, Rituximab can be safely given. SC-RR-EPOCH with concurrent ART and opportunistic infection prophylaxis is recommended.',
+    regimens: [
+      { id: 'r-sc-rr-epoch', name: 'SC-RR-EPOCH (short-course dose-dense infusional EPOCH with Rituximab)', category: 'Chemoimmunotherapy' },
+      { id: 'r-art', name: 'Combination Antiretroviral Therapy (ART) continuation', category: 'Antiviral' },
+      { id: 'r-oi-proph', name: 'Opportunistic infection prophylaxis (TMP-SMX for PCP + fungal)', category: 'Infectious Prophylaxis' },
+    ],
+  },
+  {
+    id: 'dlbcl-hiv-cd4-lt-50',
+    label: 'HIV+ DLBCL (CD4 < 50): EPOCH (Without Rituximab) + ART',
+    kind: 'treatment',
+    category: 'HIV Lymphoma',
+    rationale: 'Severe CD4 lymphopenia (< 50 cells/uL) carries high risk of fatal infection if Rituximab is given. Treatment is infusional EPOCH alone with ART optimization and strict OI prophylaxis.',
+    regimens: [
+      { id: 'r-epoch-no-r', name: 'Infusional EPOCH without Rituximab (Rituximab avoided due to CD4 < 50)', category: 'Chemotherapy' },
+      { id: 'r-art-opt', name: 'Aggressive ART optimization & viral load monitoring', category: 'Antiviral' },
+      { id: 'r-oi-full', name: 'Mandatory multi-pathogen opportunistic infection prophylaxis', category: 'Infectious Prophylaxis' },
+    ],
+  },
+  {
+    id: 'dlbcl-unfit-cardiac-ceop',
+    label: 'Unfit (Cardiac Dysfunction): R-CEOP x 6 Cycles',
+    kind: 'treatment',
+    category: 'Alternative Backbone',
+    rationale: 'Significant cardiac dysfunction (LVEF < 50%, CAD with RWMA, or prior CHF): Doxorubicin is contraindicated. R-CEOP (Etoposide replacing Doxorubicin) achieves curative intent without cardiotoxicity.',
+    regimens: [
+      { id: 'r-ceop-6', name: 'R-CEOP x 6 cycles (Rituximab, Cyclophosphamide, Etoposide, Vincristine, Prednisone)', category: 'Non-Anthracycline Chemo' },
+      { id: 'r-gcsf-ceop', name: 'Prophylactic G-CSF support', category: 'Growth Factor' },
+    ],
+  },
+  {
+    id: 'dlbcl-unfit-elderly-minichop',
+    label: 'Unfit / Elderly Frail (Curative Intent): R-miniCHOP x 6 Cycles',
+    kind: 'treatment',
+    category: 'Attenuated Chemoimmunotherapy',
+    rationale: 'Elderly patients (age > 70 with frailty) eligible for curative intent: R-miniCHOP (attenuated doses of CHOP + full-dose rituximab) significantly reduces treatment-related mortality.',
+    regimens: [
+      { id: 'r-minichop-6', name: 'R-miniCHOP x 6 cycles q21d (attenuated CHOP + Rituximab 375 mg/m2)', category: 'Attenuated Chemo' },
+      { id: 'r-prephase-elderly', name: 'Pre-phase Cyclophosphamide + Prednisone x 7 days prior to cycle 1', category: 'Toxicity Reduction' },
+    ],
+  },
+  {
+    id: 'dlbcl-unfit-anthra-ineligible-gcvp',
+    label: 'Unfit (Anthracycline Ineligible): R-GCVP / R-CGOP x 6 Cycles',
+    kind: 'treatment',
+    category: 'Alternative Backbone',
+    rationale: 'Gemcitabine-based chemoimmunotherapy (R-GCVP: Gemcitabine, Cyclophosphamide, Vincristine, Prednisolone) provides an active non-anthracycline curative option.',
+    regimens: [
+      { id: 'r-gcvp-6', name: 'R-GCVP x 6 cycles (Rituximab, Gemcitabine, Cyclophosphamide, Vincristine, Prednisone)', category: 'Gemcitabine Backbone' },
+      { id: 'r-gcsf-gcvp', name: 'G-CSF prophylaxis', category: 'Supportive Care' },
+    ],
+  },
+  {
+    id: 'dlbcl-frail-palliative',
+    label: 'Frail / Palliative Intent: BR or R-PEP-C / Palliative RT',
+    kind: 'treatment',
+    category: 'Palliative Care',
+    rationale: 'Frail patients unable to tolerate systemic curative regimens: palliative-intent BR (Bendamustine + Rituximab), oral metronomic R-PEP-C, or localized RT alone.',
+    regimens: [
+      { id: 'r-br-palliative', name: 'Bendamustine + Rituximab (BR) attenuated / palliative intent', category: 'Chemoimmunotherapy' },
+      { id: 'r-pepc', name: 'Oral metronomic R-PEP-C', category: 'Oral Chemotherapy' },
+    ],
+  },
+  {
+    id: 'pmbcl-fit-central-access',
+    label: 'PMBCL (Fit, Central Access Available): DA-EPOCH-R x 6 Cycles',
+    kind: 'treatment',
+    category: 'PMBCL First-Line',
+    rationale: 'Primary Mediastinal B-Cell Lymphoma in fit patients with central venous access (PICC/port): Dose-Adjusted EPOCH-R x 6 cycles is preferred. Interim PET at cycle 4; if DS <= 3 -> complete 6 cycles without RT.',
+    regimens: [
+      { id: 'r-da-epoch-r', name: 'DA-EPOCH-R x 6 cycles (continuous 96-hr infusional chemo + rituximab)', category: 'Dose-Adjusted Infusion' },
+      { id: 'r-cbc-titration', name: 'CBC on Days 8, 10, 12 of each cycle to guide dose adjustment', category: 'Safety Protocol' },
+    ],
+  },
+  {
+    id: 'pmbcl-alternative-rchop',
+    label: 'PMBCL (No Central Access): R-CHOP x 6 Cycles + RT',
+    kind: 'treatment',
+    category: 'PMBCL Alternative',
+    rationale: 'When infusional DA-EPOCH-R cannot be delivered: R-CHOP x 6 cycles is the standard alternative. Interim PET-CT at cycle 4: if positive (DS 4-5) -> consolidative radiotherapy after cycle 6.',
+    regimens: [
+      { id: 'r-rchop-pmbcl', name: 'R-CHOP x 6 cycles q21d', category: 'Chemoimmunotherapy' },
+      { id: 'r-rt-positive-pmbcl', name: 'Consolidative RT to mediastinum if interim PET positive', category: 'Radiation Therapy' },
+    ],
+  },
+  {
+    id: 'cardiotoxicity-switch',
+    label: 'Cardiac Toxicity Alert: Discontinue Anthracycline',
+    kind: 'treatment',
+    category: 'Cardiac Safety',
+    rationale: '2D-ECHO showed LVEF decline > 10% from baseline. Discontinue doxorubicin immediately, refer to cardiology, and switch to non-cardiotoxic alternative (etoposide or gemcitabine).',
+    regimens: [
+      { id: 'r-cardio-ref', name: 'Urgent Cardiology referral & cardioprotection', category: 'Safety Consultation' },
+      { id: 'r-ceop-switch', name: 'Switch to R-CEOP (Etoposide replaces Doxorubicin)', category: 'Chemoimmunotherapy' },
+    ],
+  },
+  {
+    id: 'rr-biopsy-mandatory-gate',
+    label: 'Relapse Workup Gate: Mandatory Repeat Biopsy & Staging PET-CT',
+    kind: 'review',
+    category: 'Diagnostics & Safety',
+    rationale: 'Repeat biopsy is MANDATORY from the most representative site (largest size + highest SUVmax) to rule out transformation from indolent lymphoma, confirm DLBCL histology, and re-evaluate IHC (GCB vs non-GCB).',
+    regimens: [
+      { id: 'r-pet-ct-staging', name: 'Whole-body 18F-FDG PET-CT to identify highest SUVmax site', category: 'Staging Imaging' },
+      { id: 'r-core-biopsy', name: 'Image-guided core needle or surgical excisional biopsy of dominant lesion', category: 'Diagnostic Procedure' },
+      { id: 'r-ihc-repeat', name: 'Repeat immunohistochemistry panel (CD20, CD10, BCL6, MUM1, MYC, BCL2)', category: 'Pathology' },
+    ],
+  },
+  {
+    id: 'rr-pathway-a-salvage-fit',
+    label: 'Pathway A (Relapse > 12 Mo, Fit for ASCT): Salvage Chemotherapy x 3 Cycles',
+    kind: 'treatment',
+    category: 'Salvage Chemotherapy',
+    rationale: 'Late relapse (> 12 months) in a transplant-eligible patient. Initiate platinum/gemcitabine salvage chemoimmunotherapy for 3 cycles (R-GEMOX, R-GDP, or Pola-R-GEMOX), followed by mandatory PET-CT restaging.',
+    regimens: [
+      { id: 'r-gemox', name: 'R-GEMOX x 3 cycles (Rituximab, Gemcitabine, Oxaliplatin)', category: 'Standard Salvage Backbone' },
+      { id: 'r-gdp', name: 'Alternative: R-GDP x 3 cycles (Rituximab, Gemcitabine, Dexamethasone, Cisplatin)', category: 'Platinum Salvage' },
+      { id: 'r-pola-gemox', name: 'Alternative: Pola-R-GEMOX x 3 cycles (Polatuzumab + R-GEMOX)', category: 'Targeted ADC Salvage' },
+    ],
+  },
+  {
+    id: 'rr-pathway-a-asct-consolidation',
+    label: 'Pathway A: Chemosensitive Responders -> Autologous Stem Cell Transplant (ASCT)',
+    kind: 'treatment',
+    category: 'Transplant Consolidation',
+    rationale: 'Patients achieving PR or CR (Deauville Score 1-3) after 3 cycles of salvage chemotherapy demonstrate chemosensitivity and proceed directly to high-dose therapy and Autologous Stem Cell Transplant (ASCT).',
+    regimens: [
+      { id: 'r-stem-cell-mobil', name: 'Peripheral blood stem cell (PBSC) mobilization and apheresis harvest', category: 'Cellular Therapy' },
+      { id: 'r-beam-asct', name: 'High-dose conditioning chemotherapy (BEAM regimen)', category: 'Conditioning Chemo' },
+      { id: 'r-asct-infusion', name: 'Autologous stem cell transplantation and post-transplant supportive care', category: 'Transplantation' },
+    ],
+  },
+  {
+    id: 'rr-pathway-a-ds4-biopsy-triage',
+    label: 'Pathway A (Salvage DS-4 Partial Response): Re-Biopsy & MDT CAR-T Triage',
+    kind: 'review',
+    category: 'Response Triage',
+    rationale: 'Deauville Score 4 after 3 cycles of salvage chemo represents residual metabolic uptake. Repeat biopsy is considered to distinguish viable lymphoma from necrosis. If viable, re-assess for CAR-T in MDT.',
+    regimens: [
+      { id: 'r-biopsy-residual', name: 'Targeted biopsy of residual FDG-avid mass', category: 'Diagnostic Procedure' },
+      { id: 'r-mdt-cart-review', name: 'Multidisciplinary Tumor Board review for CAR-T eligibility', category: 'Specialist Review' },
+    ],
+  },
+  {
+    id: 'rr-pathway-a-ds5-salvage-cart',
+    label: 'Pathway A (Salvage Refractory DS-5): Switch to CAR-T Cell Therapy',
+    kind: 'treatment',
+    category: 'Cellular Immunotherapy',
+    rationale: 'Deauville Score 5 indicates chemotherapy-refractory disease. Immediately transition to anti-CD19 CAR-T cell therapy if fit and eligible.',
+    regimens: [
+      { id: 'r-cart-referral', name: 'Urgent referral to CAR-T certified cellular therapy center', category: 'Cellular Therapy' },
+      { id: 'r-cart-infusion-ds5', name: 'Anti-CD19 CAR-T cell infusion (Axi-cel, Tisa-cel, or Liso-cel)', category: 'CAR-T Cell Therapy' },
+    ],
+  },
+  {
+    id: 'rr-pathway-a-nontransplant-salvage',
+    label: 'Pathway A (Relapse > 12 Mo, NOT Fit for ASCT): Non-Transplant Salvage x 6 Cycles',
+    kind: 'treatment',
+    category: 'Non-Transplant Salvage',
+    rationale: 'Late relapse (> 12 months) in patients ineligible for high-dose chemotherapy/ASCT. Administer 3 cycles of R-GEMOX, R-GDP, or Pola-R-GEMOX; if responding, complete 6 cycles total.',
+    regimens: [
+      { id: 'r-nontransplant-gemox', name: 'R-GEMOX / R-GDP / Pola-R-GEMOX x 3 cycles -> if responding complete 6 cycles total', category: 'Combination Chemo' },
+      { id: 'r-glofit-alt', name: 'Alternative: Glofitamab-GEM-OX (CD20xCD3 bispecific + GemOx)', category: 'Bispecific Antibody' },
+    ],
+  },
+  {
+    id: 'rr-pathway-b-cart-primary',
+    label: 'Pathway B (Early Relapse / Refractory, Fit for CAR-T): Primary CAR-T Therapy',
+    kind: 'treatment',
+    category: 'Cellular Immunotherapy',
+    rationale: 'Early relapse (<= 12 months) or primary refractory DLBCL carries chemotherapy resistance. Anti-CD19 CAR-T cell therapy is the PRIMARY curative strategy. Bridging with R-GEMOX, Pola-R-GEMOX, or dominant-site radiation. STRICT SAFETY WARNING: AVOID Pola-BR and Bendamustine (impairs T-cell harvest quality).',
+    regimens: [
+      { id: 'r-apheresis-cart', name: 'T-cell leukapheresis for anti-CD19 CAR-T manufacturing (Axi-cel / Tisa-cel / Liso-cel)', category: 'Cellular Therapy' },
+      { id: 'r-bridging-nobenda', name: 'Bridging therapy: R-GEMOX or Pola-R-GEMOX or dominant-site RT (AVOID BENDAMUSTINE)', category: 'Bridging Debulking' },
+      { id: 'r-flucy-lymphodeplete', name: 'Pre-infusion lymphodepleting chemo: Fludarabine + Cyclophosphamide', category: 'Conditioning Protocol' },
+      { id: 'r-cart-infuse', name: 'Anti-CD19 CAR-T cell infusion with inpatient CRS and ICANS monitoring', category: 'CAR-T Infusion' },
+    ],
+  },
+  {
+    id: 'rr-pathway-b-cart-unfit-glofit',
+    label: 'Pathway B (Early Relapse / Refractory, NOT Fit for CAR-T): Glofitamab-GEMOX',
+    kind: 'treatment',
+    category: 'Bispecific Immunotherapy',
+    rationale: 'Early relapse or primary refractory DLBCL in patients ineligible for CAR-T. Glofitamab-GEMOX (CD20xCD3 bispecific with GemOx) delivers high response rates without requiring apheresis.',
+    regimens: [
+      { id: 'r-obinutuzumab-pre', name: 'Obinutuzumab pre-treatment (1000 mg IV on D-7 of Cycle 1) to mitigate CRS', category: 'CRS Prophylaxis' },
+      { id: 'r-glofit-stepup', name: 'Glofitamab step-up dosing (2.5 mg D8, 10 mg D15, then 30 mg D1 Cycle 2 onwards)', category: 'Bispecific T-Cell Engager' },
+      { id: 'r-gemox-partner', name: 'Gemcitabine (1000 mg/m2) + Oxaliplatin (100 mg/m2) chemotherapy backbone', category: 'Chemotherapy Backbone' },
+    ],
+  },
+  {
+    id: 'rr-pathway-b-cart-unfit-pola-br',
+    label: 'Pathway B (NOT Fit for CAR-T, CAR-T Excluded): Pola-BR x 6 Cycles',
+    kind: 'treatment',
+    category: 'Targeted Chemoimmunotherapy',
+    rationale: 'Pola-BR x 6 cycles is indicated ONLY when CAR-T cell therapy is definitively NOT planned or permanently contraindicated. Bendamustine impairs T-cell harvest, but provides disease control in non-CAR-T patients.',
+    regimens: [
+      { id: 'r-pola-br-6', name: 'Polatuzumab vedotin + Bendamustine + Rituximab x 6 cycles q28d', category: 'Targeted Chemo' },
+      { id: 'r-gcsf-polabr', name: 'Prophylactic G-CSF support in every cycle', category: 'Growth Factor' },
+    ],
+  },
+  {
+    id: 'rr-pathway-c-palliative-nongcb',
+    label: 'Pathway C (Unfit for Chemo, Non-GCB): Palliative Care + Targeted Lenalidomide / Bortezomib',
+    kind: 'treatment',
+    category: 'Palliative Targeted Therapy',
+    rationale: 'Frail patients unable to tolerate IV combination chemotherapy with confirmed Non-GCB DLBCL phenotype. Non-GCB tumors respond to oral immunomodulatory or proteasome inhibitor targeted therapy (Lenalidomide or Bortezomib based) with low toxicity.',
+    regimens: [
+      { id: 'r-lenalidomide-oral', name: 'Oral Lenalidomide (20-25 mg daily D1-21 q28d +/- Rituximab)', category: 'Targeted Immunomodulatory' },
+      { id: 'r-bortezomib-alt', name: 'Alternative: Subcutaneous Bortezomib-based therapy', category: 'Proteasome Inhibitor' },
+      { id: 'r-palliative-support', name: 'Palliative symptom care, pain management, and transfusion support', category: 'Palliative Care' },
+    ],
+  },
+  {
+    id: 'rr-pathway-c-palliative-supportive',
+    label: 'Pathway C (Unfit for Chemo): Palliative Care + Oral Metronomic Chemotherapy',
+    kind: 'treatment',
+    category: 'Palliative Care',
+    rationale: 'Frail patients unable to tolerate IV chemotherapy. Comprehensive palliative care, symptom management, and low-toxicity oral metronomic chemotherapy (e.g. oral etoposide-based regimens) provide disease stabilization.',
+    regimens: [
+      { id: 'r-palliative-core', name: 'Best supportive care: pain control, palliative care team co-management', category: 'Supportive Care' },
+      { id: 'r-oral-metronomic', name: 'Oral metronomic chemotherapy (e.g. low-dose oral etoposide 50 mg/m2)', category: 'Oral Metronomic Chemo' },
+      { id: 'r-palliative-rt', name: 'Palliative RT for localized bleeding or mass obstruction', category: 'Radiation Therapy' },
+    ],
+  },
+  {
+    id: 'rr-consolidative-radiotherapy',
+    label: 'Consolidative Radiotherapy (30-36 Gy) to Residual or Bulky Site',
+    kind: 'treatment',
+    category: 'Radiation Therapy',
+    rationale: 'Radiation therapy (30-36 Gy) plays a vital consolidative role in R/R DLBCL when given to a single residual PET-positive site after salvage chemotherapy or to an initial presentation bulky site post-ASCT.',
+    regimens: [
+      { id: 'r-isrt-30-36', name: 'Consolidative ISRT 30-36 Gy delivered to single residual FDG-avid lesion or initial presentation bulk', category: 'Radiation Therapy' },
+      { id: 'r-pet-followup-rt', name: 'Post-radiotherapy PET-CT assessment at 12 weeks', category: 'Imaging Response' },
+    ],
+  },
 ];
+
 
 // ---------------------------------------------------------------------------
 // 4. STORAGE & CATALOG OPERATIONS
@@ -709,6 +1237,8 @@ export function getAllCatalogItems(allGuidelines = [], activeGuidelineId = '') {
         sourceGuidelineTitle: g.title,
         sourceType: 'guideline',
         category: f.category || srcTag,
+        codeSystemUrl: f.codeSystemUrl || `http://ncgindia.org/fhir/CodeSystem/ncg-${f.id}`,
+        valueSetUrl: f.valueSetUrl || `http://ncgindia.org/fhir/ValueSet/ncg-${f.id}`,
       });
     });
 
@@ -734,7 +1264,12 @@ export function getAllCatalogItems(allGuidelines = [], activeGuidelineId = '') {
   });
 
   // Built-in standard library items tagged with source
-  const stdFindings = STANDARD_FINDINGS.map((x) => ({ ...x, sourceType: 'standard' }));
+  const stdFindings = STANDARD_FINDINGS.map((x) => ({
+    ...x,
+    codeSystemUrl: x.codeSystemUrl || `http://ncgindia.org/fhir/CodeSystem/ncg-${x.id}`,
+    valueSetUrl: x.valueSetUrl || `http://ncgindia.org/fhir/ValueSet/ncg-${x.id}`,
+    sourceType: 'standard',
+  }));
   const stdFunctions = STANDARD_FUNCTIONS.map((x) => ({ ...x, sourceType: 'standard' }));
   const stdOutcomes = STANDARD_OUTCOMES.map((x) => ({ ...x, sourceType: 'standard' }));
 
@@ -856,7 +1391,8 @@ export function importFindingIntoGuideline(guideline, catalogFinding) {
     label: catalogFinding.label,
     help: catalogFinding.help || '',
     category: catalogFinding.category || '',
-    codeSystemUrl: catalogFinding.codeSystemUrl || '',
+    codeSystemUrl: catalogFinding.codeSystemUrl || `http://ncgindia.org/fhir/CodeSystem/ncg-${catalogFinding.id}`,
+    valueSetUrl: catalogFinding.valueSetUrl || `http://ncgindia.org/fhir/ValueSet/ncg-${catalogFinding.id}`,
     values: structuredClone(catalogFinding.values || []),
   };
 

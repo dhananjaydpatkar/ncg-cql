@@ -7,6 +7,7 @@ import {
   getAllCatalogItems,
 } from '../lib/catalog';
 import { KindPill } from './ui';
+import { Folder, Tag } from 'lucide-react';
 
 export function CatalogModal({
   initialType = 'findings', // 'findings' | 'functions' | 'outcomes'
@@ -24,6 +25,8 @@ export function CatalogModal({
   const [selectedId, setSelectedId] = useState(null);
   const [multiSel, setMultiSel] = useState(new Set());
   const [autoImportMissing, setAutoImportMissing] = useState(true);
+  const [groupByCategory, setGroupByCategory] = useState(true);
+  const [collapsedCategories, setCollapsedCategories] = useState(new Set());
 
   // Get all catalog items to extract category lists and all findings for dependency auto-import
   const allCatalog = useMemo(() => getAllCatalogItems(allGuidelines, g.id), [allGuidelines, g.id]);
@@ -48,6 +51,36 @@ export function CatalogModal({
     });
     return Array.from(set).sort();
   }, [allCatalog, type]);
+
+  // Category counts
+  const categoryCounts = useMemo(() => {
+    const counts = {};
+    (allCatalog[type] || []).forEach((it) => {
+      const c = it.category || 'General';
+      counts[c] = (counts[c] || 0) + 1;
+    });
+    return counts;
+  }, [allCatalog, type]);
+
+  // Grouped results for categorized view
+  const groupedResults = useMemo(() => {
+    const groups = {};
+    results.forEach((item) => {
+      const cat = item.category || 'General';
+      if (!groups[cat]) groups[cat] = [];
+      groups[cat].push(item);
+    });
+    return Object.entries(groups).sort((a, b) => a[0].localeCompare(b[0]));
+  }, [results]);
+
+  const toggleCollapse = (catName) => {
+    setCollapsedCategories((prev) => {
+      const next = new Set(prev);
+      if (next.has(catName)) next.delete(catName);
+      else next.add(catName);
+      return next;
+    });
+  };
 
   // Active item in preview
   const activeItem = useMemo(() => {
@@ -139,6 +172,63 @@ export function CatalogModal({
     });
   };
 
+  const renderItemCard = (item) => {
+    const isSel = item.id === activeItem?.id;
+    const isChecked = multiSel.has(item.id);
+    return (
+      <div
+        key={item.id}
+        className={`catalog-item-card ${isSel ? 'sel' : ''} ${item.alreadyInGuideline ? 'in-use' : ''}`}
+        onClick={() => setSelectedId(item.id)}
+      >
+        <input
+          type="checkbox"
+          checked={isChecked}
+          disabled={item.alreadyInGuideline}
+          onChange={(e) => {
+            e.stopPropagation();
+            toggleMulti(item.id);
+          }}
+          style={{ marginTop: 3 }}
+        />
+        <div className="grow">
+          <div className="row" style={{ justifyContent: 'space-between' }}>
+            <b>{item.label}</b>
+            {item.alreadyInGuideline ? (
+              <span className="pill pass" style={{ fontSize: 10 }}>In Guideline</span>
+            ) : (
+              <span className="pill draft" style={{ fontSize: 10 }}>Available</span>
+            )}
+          </div>
+          <div className="catalog-item-meta">
+            {item.category && (
+              <button
+                type="button"
+                className="meta-tag"
+                title={`Filter by ${item.category}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setCategory(item.category);
+                }}
+              >
+                {item.category}
+              </button>
+            )}
+            {type === 'findings' && <span className="meta-val">{(item.values || []).length} values</span>}
+            {type === 'functions' && (
+              <span className="meta-val">
+                {(item.factors || []).length} factors · {(item.bands || []).length} bands
+              </span>
+            )}
+            {type === 'outcomes' && (
+              <span className="meta-val">{(item.regimens || []).length} regimens</span>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="catalog-modal-backdrop" onClick={onClose}>
       <div className="catalog-modal-window" onClick={(e) => e.stopPropagation()}>
@@ -178,7 +268,7 @@ export function CatalogModal({
           </button>
         </div>
 
-        {/* Controls: Search, Source, Categories */}
+        {/* Controls: Search, Category, Source, Grouping */}
         <div className="catalog-toolbar">
           <div className="catalog-search-wrap">
             <span className="search-icon">🔍</span>
@@ -193,6 +283,23 @@ export function CatalogModal({
             {query && (
               <button className="clear-btn" onClick={() => setQuery('')}>✕</button>
             )}
+          </div>
+
+          <div className="catalog-filter-wrap">
+            <label className="lbl-mini">Category:</label>
+            <select
+              className="catalog-source-select"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              aria-label="Filter by category"
+            >
+              <option value="all">All Categories ({allCatalog[type].length})</option>
+              {categories.map((c) => (
+                <option key={c} value={c}>
+                  {c} ({categoryCounts[c] || 0})
+                </option>
+              ))}
+            </select>
           </div>
 
           <div className="catalog-source-wrap">
@@ -216,25 +323,54 @@ export function CatalogModal({
               )}
             </select>
           </div>
+
+          <button
+            type="button"
+            className={`btn sm ${groupByCategory ? 'primary' : ''}`}
+            onClick={() => setGroupByCategory(!groupByCategory)}
+            title="Toggle between categorized sections and a flat list"
+          >
+            <Folder size={12} /> {groupByCategory ? 'Grouped' : 'Flat'}
+          </button>
         </div>
 
-        {/* Category Filter Pills */}
-        <div className="catalog-categories">
-          <button
-            className={`cat-pill ${category === 'all' ? 'on' : ''}`}
-            onClick={() => setCategory('all')}
-          >
-            All Categories ({allCatalog[type].length})
-          </button>
-          {categories.map((c) => (
+        {/* Category Quick Filter Pills Bar (Wrapped, No Horizontal Scroll) */}
+        <div className="catalog-categories-bar">
+          <div className="catalog-categories-head">
+            <div className="row" style={{ gap: 6 }}>
+              <Tag size={12} style={{ color: 'var(--soft)' }} />
+              <span>Quick Category Filters:</span>
+            </div>
+            {category !== 'all' && (
+              <button
+                type="button"
+                className="btn sm ghost"
+                onClick={() => setCategory('all')}
+                style={{ fontSize: 11, padding: '1px 6px', color: 'var(--bad)' }}
+              >
+                ✕ Clear Filter (Show All)
+              </button>
+            )}
+          </div>
+          <div className="catalog-categories">
             <button
-              key={c}
-              className={`cat-pill ${category === c ? 'on' : ''}`}
-              onClick={() => setCategory(c)}
+              type="button"
+              className={`cat-pill ${category === 'all' ? 'on' : ''}`}
+              onClick={() => setCategory('all')}
             >
-              {c}
+              All Categories <span className="cat-pill-count">{allCatalog[type].length}</span>
             </button>
-          ))}
+            {categories.map((c) => (
+              <button
+                type="button"
+                key={c}
+                className={`cat-pill ${category === c ? 'on' : ''}`}
+                onClick={() => setCategory(c)}
+              >
+                {c} <span className="cat-pill-count">{categoryCounts[c] || 0}</span>
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Split View: Results List + Detail Preview */}
@@ -244,6 +380,7 @@ export function CatalogModal({
             <div className="catalog-list-head">
               <span className="hint">
                 Found <b>{results.length}</b> {type}
+                {category !== 'all' && <span> in <b>{category}</b></span>}
               </span>
               {multiSel.size > 0 && (
                 <button className="btn sm primary" onClick={handleBulkImport}>
@@ -258,50 +395,38 @@ export function CatalogModal({
               </div>
             ) : (
               <div className="catalog-items-scroll">
-                {results.map((item) => {
-                  const isSel = item.id === activeItem?.id;
-                  const isChecked = multiSel.has(item.id);
-                  return (
-                    <div
-                      key={item.id}
-                      className={`catalog-item-card ${isSel ? 'sel' : ''} ${item.alreadyInGuideline ? 'in-use' : ''}`}
-                      onClick={() => setSelectedId(item.id)}
-                    >
-                      <input
-                        type="checkbox"
-                        checked={isChecked}
-                        disabled={item.alreadyInGuideline}
-                        onChange={(e) => {
-                          e.stopPropagation();
-                          toggleMulti(item.id);
-                        }}
-                        style={{ marginTop: 3 }}
-                      />
-                      <div className="grow">
-                        <div className="row" style={{ justifyContent: 'space-between' }}>
-                          <b>{item.label}</b>
-                          {item.alreadyInGuideline ? (
-                            <span className="pill pass" style={{ fontSize: 10 }}>In Guideline</span>
-                          ) : (
-                            <span className="pill draft" style={{ fontSize: 10 }}>Available</span>
-                          )}
+                {groupByCategory && category === 'all' ? (
+                  groupedResults.map(([catName, items]) => {
+                    const isCollapsed = collapsedCategories.has(catName);
+                    const inGuidelineCount = items.filter((x) => x.alreadyInGuideline).length;
+                    return (
+                      <div key={catName} className="catalog-category-group">
+                        <div
+                          className="catalog-category-header"
+                          onClick={() => toggleCollapse(catName)}
+                          title={isCollapsed ? `Expand ${catName}` : `Collapse ${catName}`}
+                        >
+                          <div className="row" style={{ gap: 6 }}>
+                            <span className="cat-chevron">{isCollapsed ? '▸' : '▾'}</span>
+                            <Folder size={13} className="cat-folder-icon" />
+                            <span>{catName}</span>
+                            <span className="pill-count">{items.length}</span>
+                          </div>
+                          <div className="hint" style={{ fontSize: 11 }}>
+                            {inGuidelineCount > 0 ? `${inGuidelineCount} in guideline` : 'All available'}
+                          </div>
                         </div>
-                        <div className="catalog-item-meta">
-                          {item.category && <span className="meta-tag">{item.category}</span>}
-                          {type === 'findings' && <span className="meta-val">{(item.values || []).length} values</span>}
-                          {type === 'functions' && (
-                            <span className="meta-val">
-                              {(item.factors || []).length} factors · {(item.bands || []).length} bands
-                            </span>
-                          )}
-                          {type === 'outcomes' && (
-                            <span className="meta-val">{(item.regimens || []).length} regimens</span>
-                          )}
-                        </div>
+                        {!isCollapsed && (
+                          <div className="catalog-category-items">
+                            {items.map(renderItemCard)}
+                          </div>
+                        )}
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })
+                ) : (
+                  results.map(renderItemCard)
+                )}
               </div>
             )}
           </div>
@@ -412,7 +537,7 @@ export function CatalogModal({
                       </thead>
                       <tbody>
                         {(activeItem.factors || []).map((fa, i) => {
-                          const nonZero = Object.entries(fa.points || {}).filter(([_, pts]) => Number(pts) > 0);
+                          const nonZero = Object.entries(fa.points || {}).filter(([, pts]) => Number(pts) > 0);
                           return (
                             <tr key={i} style={{ borderBottom: '1px solid var(--line)' }}>
                               <td style={{ padding: '6px 8px', fontWeight: 500 }}>{fa.findingId}</td>

@@ -1,0 +1,2450 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorVersion" : "3.29.0",
+         "translatorOptions" : "",
+         "signatureLevel" : "None",
+         "type" : "CqlToElmInfo"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      } ],
+      "identifier" : {
+         "id" : "NCG_FL_2020",
+         "version" : "0.2.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1",
+            "annotation" : [ ]
+         }, {
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ ]
+         }, {
+            "localIdentifier" : "NCGCommon",
+            "path" : "NCGCommon",
+            "version" : "0.1.0",
+            "annotation" : [ ]
+         } ]
+      },
+      "codeSystems" : {
+         "def" : [ {
+            "name" : "HistologyCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-histology",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "StageCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-stage",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "Stage2ContiguityCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-stage2-contiguity",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "BoneMarrowCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-bone-marrow",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "GelfCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-gelf",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "FitnessCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-fitness",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         } ]
+      },
+      "codes" : {
+         "def" : [ {
+            "name" : "Histology_FlGrade12",
+            "id" : "fl-grade-1-2",
+            "display" : "FL grade 1-2",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "HistologyCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Histology_FlGrade3a",
+            "id" : "fl-grade-3a",
+            "display" : "FL grade 3a",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "HistologyCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Histology_FlGrade3b",
+            "id" : "fl-grade-3b",
+            "display" : "FL grade 3b",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "HistologyCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Histology_FlDuodenal",
+            "id" : "fl-duodenal",
+            "display" : "Primary duodenal FL",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "HistologyCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Histology_TransformedDlbcl",
+            "id" : "transformed-dlbcl",
+            "display" : "Transformed to DLBCL",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "HistologyCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Stage_Stage1",
+            "id" : "stage-1",
+            "display" : "Stage I",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "StageCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Stage_Stage2",
+            "id" : "stage-2",
+            "display" : "Stage II",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "StageCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Stage_Stage3",
+            "id" : "stage-3",
+            "display" : "Stage III",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "StageCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Stage_Stage4",
+            "id" : "stage-4",
+            "display" : "Stage IV",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "StageCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Stage2Contiguity_Contiguous",
+            "id" : "contiguous",
+            "display" : "Contiguous",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "Stage2ContiguityCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Stage2Contiguity_NonContiguous",
+            "id" : "non-contiguous",
+            "display" : "Non-contiguous",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "Stage2ContiguityCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "BoneMarrow_Cleared",
+            "id" : "cleared",
+            "display" : "Negative (cleared)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "BoneMarrowCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "BoneMarrow_Involved",
+            "id" : "involved",
+            "display" : "Involved",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "BoneMarrowCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Gelf_LowBurden",
+            "id" : "low-burden",
+            "display" : "Low burden",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "GelfCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Gelf_HighBurden",
+            "id" : "high-burden",
+            "display" : "High burden",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "GelfCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Fitness_Fit",
+            "id" : "fit",
+            "display" : "Fit",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "FitnessCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Fitness_Frail",
+            "id" : "frail",
+            "display" : "Frail / comorbid",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "FitnessCS",
+               "annotation" : [ ]
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "name" : "Patient",
+            "annotation" : [ ]
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "name" : "Patient",
+            "context" : "Patient",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "annotation" : [ ],
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "name" : "HistologyObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "Union",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "type" : "Union",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "dataType" : "{http://hl7.org/fhir}Observation",
+                           "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                           "codeProperty" : "code",
+                           "codeComparator" : "~",
+                           "type" : "Retrieve",
+                           "annotation" : [ ],
+                           "codes" : {
+                              "type" : "ToList",
+                              "annotation" : [ ],
+                              "signature" : [ ],
+                              "operand" : {
+                                 "name" : "Histology_FlGrade12",
+                                 "type" : "CodeRef",
+                                 "annotation" : [ ]
+                              }
+                           },
+                           "include" : [ ],
+                           "codeFilter" : [ ],
+                           "dateFilter" : [ ],
+                           "otherFilter" : [ ]
+                        }, {
+                           "dataType" : "{http://hl7.org/fhir}Observation",
+                           "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                           "codeProperty" : "code",
+                           "codeComparator" : "~",
+                           "type" : "Retrieve",
+                           "annotation" : [ ],
+                           "codes" : {
+                              "type" : "ToList",
+                              "annotation" : [ ],
+                              "signature" : [ ],
+                              "operand" : {
+                                 "name" : "Histology_FlGrade3a",
+                                 "type" : "CodeRef",
+                                 "annotation" : [ ]
+                              }
+                           },
+                           "include" : [ ],
+                           "codeFilter" : [ ],
+                           "dateFilter" : [ ],
+                           "otherFilter" : [ ]
+                        } ]
+                     }, {
+                        "type" : "Union",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "dataType" : "{http://hl7.org/fhir}Observation",
+                           "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                           "codeProperty" : "code",
+                           "codeComparator" : "~",
+                           "type" : "Retrieve",
+                           "annotation" : [ ],
+                           "codes" : {
+                              "type" : "ToList",
+                              "annotation" : [ ],
+                              "signature" : [ ],
+                              "operand" : {
+                                 "name" : "Histology_FlGrade3b",
+                                 "type" : "CodeRef",
+                                 "annotation" : [ ]
+                              }
+                           },
+                           "include" : [ ],
+                           "codeFilter" : [ ],
+                           "dateFilter" : [ ],
+                           "otherFilter" : [ ]
+                        }, {
+                           "dataType" : "{http://hl7.org/fhir}Observation",
+                           "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                           "codeProperty" : "code",
+                           "codeComparator" : "~",
+                           "type" : "Retrieve",
+                           "annotation" : [ ],
+                           "codes" : {
+                              "type" : "ToList",
+                              "annotation" : [ ],
+                              "signature" : [ ],
+                              "operand" : {
+                                 "name" : "Histology_FlDuodenal",
+                                 "type" : "CodeRef",
+                                 "annotation" : [ ]
+                              }
+                           },
+                           "include" : [ ],
+                           "codeFilter" : [ ],
+                           "dateFilter" : [ ],
+                           "otherFilter" : [ ]
+                        } ]
+                     } ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "Histology_TransformedDlbcl",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "HistologyKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "HistologyObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "HistologyObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "HistologyValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "HistologyObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "StageObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "Union",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "Stage_Stage1",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     }, {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "Stage_Stage2",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     } ]
+                  }, {
+                     "type" : "Union",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "Stage_Stage3",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     }, {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "Stage_Stage4",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     } ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "StageKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "StageObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "StageObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "StageValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "StageObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "Stage2ContiguityObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "Stage2Contiguity_Contiguous",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "Stage2Contiguity_NonContiguous",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "Stage2ContiguityKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "Stage2ContiguityObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "Stage2ContiguityObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Stage2ContiguityValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "Stage2ContiguityObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "BoneMarrowObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "BoneMarrow_Cleared",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "BoneMarrow_Involved",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "BoneMarrowKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "BoneMarrowObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "BoneMarrowObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "BoneMarrowValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "BoneMarrowObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "GelfObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "Gelf_LowBurden",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "Gelf_HighBurden",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "GelfKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "GelfObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "GelfObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "GelfValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "GelfObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "FitnessObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "Fitness_Fit",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "Fitness_Frail",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "FitnessKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "FitnessObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "FitnessObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "FitnessValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "FitnessObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "Rule1_HistologyUnknown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "Not",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "name" : "HistologyKnown",
+                  "type" : "ExpressionRef",
+                  "annotation" : [ ]
+               }
+            }
+         }, {
+            "name" : "Rule2_Grade3bOrTransformed",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "name" : "HistologyKnown",
+                  "type" : "ExpressionRef",
+                  "annotation" : [ ]
+               }, {
+                  "type" : "In",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "ToString",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "HistologyValue",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     } ]
+                  }, {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "fl-grade-3b",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "transformed-dlbcl",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule3_DuodenalFl",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "name" : "HistologyKnown",
+                  "type" : "ExpressionRef",
+                  "annotation" : [ ]
+               }, {
+                  "type" : "In",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "ToString",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "HistologyValue",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     } ]
+                  }, {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "fl-duodenal",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule4_StageUnknown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "Not",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "name" : "StageKnown",
+                  "type" : "ExpressionRef",
+                  "annotation" : [ ]
+               }
+            }
+         }, {
+            "name" : "Rule5_StageIMarrowNotAssessed",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "StageKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "StageValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "stage-1",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "name" : "BoneMarrowKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }
+               } ]
+            }
+         }, {
+            "name" : "Rule6_StageIMarrowCleared",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "StageKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "StageValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "stage-1",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "BoneMarrowKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "BoneMarrowValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "cleared",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule7_StageIButMarrowInvolvedRestageAsIv",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "StageKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "StageValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "stage-1",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "BoneMarrowKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "BoneMarrowValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "involved",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule8_StageIiContiguous",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "StageKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "StageValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "stage-2",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "Stage2ContiguityKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "Stage2ContiguityValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "contiguous",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule9_AdvancedDiseaseGelfUnknown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "StageKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "StageValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "stage-2",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        }, {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "stage-3",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        }, {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "stage-4",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "name" : "GelfKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }
+               } ]
+            }
+         }, {
+            "name" : "Rule10_AdvancedDiseaseLowBurden",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "StageKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "StageValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "stage-2",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        }, {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "stage-3",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        }, {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "stage-4",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "GelfKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "GelfValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "low-burden",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule11_AdvancedHighBurdenFit",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "StageKnown",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }, {
+                        "type" : "In",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "StageValue",
+                              "type" : "ExpressionRef",
+                              "annotation" : [ ]
+                           } ]
+                        }, {
+                           "type" : "List",
+                           "annotation" : [ ],
+                           "element" : [ {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "stage-2",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           }, {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "stage-3",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           }, {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "stage-4",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           } ]
+                        } ]
+                     } ]
+                  }, {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "GelfKnown",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }, {
+                        "type" : "In",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "GelfValue",
+                              "type" : "ExpressionRef",
+                              "annotation" : [ ]
+                           } ]
+                        }, {
+                           "type" : "List",
+                           "annotation" : [ ],
+                           "element" : [ {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "high-burden",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "FitnessKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "FitnessValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "fit",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule12_AdvancedHighBurdenFrail",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "StageKnown",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }, {
+                        "type" : "In",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "StageValue",
+                              "type" : "ExpressionRef",
+                              "annotation" : [ ]
+                           } ]
+                        }, {
+                           "type" : "List",
+                           "annotation" : [ ],
+                           "element" : [ {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "stage-2",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           }, {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "stage-3",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           }, {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "stage-4",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           } ]
+                        } ]
+                     } ]
+                  }, {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "GelfKnown",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }, {
+                        "type" : "In",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "GelfValue",
+                              "type" : "ExpressionRef",
+                              "annotation" : [ ]
+                           } ]
+                        }, {
+                           "type" : "List",
+                           "annotation" : [ ],
+                           "element" : [ {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "high-burden",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "FitnessKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "FitnessValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "frail",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "TreatmentGroup",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "Case",
+               "annotation" : [ ],
+               "caseItem" : [ {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule1_HistologyUnknown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "needs-review",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule2_Grade3bOrTransformed",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "treat-as-dlbcl",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule3_DuodenalFl",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "fl-duodenal-limited",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule4_StageUnknown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "needs-review",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule5_StageIMarrowNotAssessed",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "needs-review",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule6_StageIMarrowCleared",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "stage-1-limited",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule7_StageIButMarrowInvolvedRestageAsIv",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "needs-review",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule8_StageIiContiguous",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "stage-2-contiguous",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule9_AdvancedDiseaseGelfUnknown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "needs-review",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule10_AdvancedDiseaseLowBurden",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "advanced-low-burden",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule11_AdvancedHighBurdenFit",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "advanced-high-burden-systemic",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule12_AdvancedHighBurdenFrail",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "advanced-high-burden-frail",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               } ],
+               "else" : {
+                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                  "value" : "needs-review",
+                  "type" : "Literal",
+                  "annotation" : [ ]
+               }
+            }
+         }, {
+            "name" : "RecommendedRegimens",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "Case",
+               "annotation" : [ ],
+               "comparand" : {
+                  "name" : "TreatmentGroup",
+                  "type" : "ExpressionRef",
+                  "annotation" : [ ]
+               },
+               "caseItem" : [ {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "treat-as-dlbcl",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "R-CHOP x 6 cycles (+/- ISRT to bulky sites)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Polatuzumab vedotin + R-CHP",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "fl-duodenal-limited",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Observation / watchful waiting",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "ISRT 24-30 Gy if symptomatic",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "stage-1-limited",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "ISRT 24 Gy in 12 fractions",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Watchful waiting if radiotherapy contraindicated",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "stage-2-contiguous",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "IFRT / ISRT 24 Gy",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Single-agent rituximab 375 mg/m2 weekly x 4",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "advanced-low-burden",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Watchful waiting (review every 3-6 months)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Single-agent rituximab x 4 if patient declines observation",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "advanced-high-burden-systemic",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Bendamustine + rituximab (BR) x 6",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "R-CHOP x 6",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Rituximab + lenalidomide (R2)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "advanced-high-burden-frail",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Single-agent rituximab weekly x 4",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Attenuated bendamustine + rituximab",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "R-CVP",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               } ],
+               "else" : {
+                  "type" : "List",
+                  "annotation" : [ ],
+                  "element" : [ ]
+               }
+            }
+         } ]
+      }
+   }
+}
+

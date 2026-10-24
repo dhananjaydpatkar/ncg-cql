@@ -33,6 +33,8 @@ export function Findings({ g, edit, allGuidelines = [], toast = () => {} }) {
         label: 'New finding',
         category: 'Clinical',
         help: '',
+        codeSystemUrl: `http://ncgindia.org/fhir/CodeSystem/ncg-${id}`,
+        valueSetUrl: `http://ncgindia.org/fhir/ValueSet/ncg-${id}`,
         values: [{ code: 'yes', label: 'Yes' }, { code: 'no', label: 'No' }],
       });
     });
@@ -160,25 +162,60 @@ export function Findings({ g, edit, allGuidelines = [], toast = () => {} }) {
               />
             </Field>
 
-            <Field label="FHIR CodeSystem URL" hint="Identifier for standard terminology binding (defaults to NCG standard URL if empty)">
-              <input
-                type="text"
-                value={f.codeSystemUrl || ''}
-                placeholder="http://ncgindia.org/fhir/CodeSystem/ncg-..."
-                onChange={(e) => edit((d) => { d.findings.find((x) => x.id === f.id).codeSystemUrl = e.target.value; })}
-              />
-            </Field>
+            <div className="grid2">
+              <Field label="FHIR CodeSystem URL" hint="Identifier for standard terminology binding (defaults to NCG standard URL if empty)">
+                <input
+                  type="text"
+                  value={f.codeSystemUrl || ''}
+                  placeholder="http://ncgindia.org/fhir/CodeSystem/ncg-..."
+                  onChange={(e) => edit((d) => { d.findings.find((x) => x.id === f.id).codeSystemUrl = e.target.value; })}
+                />
+              </Field>
+              <Field label="FHIR ValueSet URL" hint="Identifier for reusable ValueSet composition (defaults to NCG ValueSet URL if empty)">
+                <input
+                  type="text"
+                  value={f.valueSetUrl || ''}
+                  placeholder="http://ncgindia.org/fhir/ValueSet/ncg-..."
+                  onChange={(e) => edit((d) => { d.findings.find((x) => x.id === f.id).valueSetUrl = e.target.value; })}
+                />
+              </Field>
+            </div>
 
             <div className="lbl" style={{ marginBottom: 6 }}>Possible values ({f.values.length})</div>
             {f.values.map((v, i) => (
-              <div className="row" key={v.code} style={{ marginBottom: 6 }}>
+              <div className="row" key={i} style={{ marginBottom: 6, gap: 6 }}>
                 <input
                   type="text"
                   className="grow"
+                  placeholder="Display label"
                   value={v.label}
                   onChange={(e) => edit((d) => { d.findings.find((x) => x.id === f.id).values[i].label = e.target.value; })}
                 />
-                <code className="hint">{v.code}</code>
+                <input
+                  type="text"
+                  style={{ width: 150, fontFamily: 'monospace', fontSize: 12 }}
+                  placeholder="concept code"
+                  title="Machine code / standard terminology code (e.g. LOINC / SNOMED CT)"
+                  value={v.code}
+                  onChange={(e) => {
+                    const oldCode = v.code;
+                    const newCode = e.target.value;
+                    edit((d) => {
+                      const ff = d.findings.find((x) => x.id === f.id);
+                      ff.values[i].code = newCode;
+                      d.rules.forEach((r) => r.conditions.forEach((c) => {
+                        if (c.findingId === f.id && Array.isArray(c.values)) {
+                          c.values = c.values.map((val) => val === oldCode ? newCode : val);
+                        }
+                      }));
+                      d.testCases.forEach((t) => {
+                        if (t.inputs?.[f.id]?.value === oldCode) {
+                          t.inputs[f.id].value = newCode;
+                        }
+                      });
+                    });
+                  }}
+                />
                 <button
                   className="btn sm danger"
                   disabled={f.values.length <= 1}

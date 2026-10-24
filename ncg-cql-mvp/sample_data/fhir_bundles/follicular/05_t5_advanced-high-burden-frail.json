@@ -1,0 +1,206 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-ncg-fl-2020-t5",
+  "type": "collection",
+  "timestamp": "2026-10-23T06:21:20.807Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://ncgindia.org/guideline",
+        "code": "NCG_FL_2020"
+      },
+      {
+        "system": "http://ncgindia.org/test-case-id",
+        "code": "t5"
+      },
+      {
+        "system": "http://ncgindia.org/expected-outcome",
+        "code": "advanced-high-burden-frail"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-t5",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-t5",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-0000-0005-0000"
+          }
+        ],
+        "name": [
+          {
+            "text": "Advanced high burden, frail"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Advanced high burden, frail</b> - 78M, stage III, high burden, frail.</p></div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-histology-t5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-histology-t5",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t5"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-histology",
+              "code": "fl-grade-3a",
+              "display": "FL grade 3a"
+            }
+          ],
+          "text": "Histology / grade: FL grade 3a"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-stage-t5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-stage-t5",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t5"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-stage",
+              "code": "stage-3",
+              "display": "Stage III"
+            }
+          ],
+          "text": "Ann Arbor stage: Stage III"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-gelf-t5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-gelf-t5",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t5"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-gelf",
+              "code": "high-burden",
+              "display": "High burden"
+            }
+          ],
+          "text": "GELF tumour burden: High burden"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-fitness-t5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-fitness-t5",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t5"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-fitness",
+              "code": "frail",
+              "display": "Frail / comorbid"
+            }
+          ],
+          "text": "Fitness for systemic therapy: Frail / comorbid"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

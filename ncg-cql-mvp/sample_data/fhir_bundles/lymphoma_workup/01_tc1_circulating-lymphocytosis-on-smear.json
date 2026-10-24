@@ -1,0 +1,286 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-ncg-lymphoma-workup-2020-tc1",
+  "type": "collection",
+  "timestamp": "2026-10-23T06:21:20.801Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://ncgindia.org/guideline",
+        "code": "NCG_LYMPHOMA_WORKUP_2020"
+      },
+      {
+        "system": "http://ncgindia.org/test-case-id",
+        "code": "tc1"
+      },
+      {
+        "system": "http://ncgindia.org/expected-outcome",
+        "code": "pathway-flow-cytometry-clpd"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-tc1",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-tc1",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-0000-0001-0000"
+          }
+        ],
+        "name": [
+          {
+            "text": "Circulating lymphocytosis on smear"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Circulating lymphocytosis on smear</b> - 64M with absolute lymphocyte count 28 x 10^9/L, smudge cells on smear. Routes directly to peripheral blood flow cytometry.</p></div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-presentation-smear-tc1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-presentation-smear-tc1",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-presentation-smear",
+              "code": "lymphocytosis-present",
+              "display": "Lymphocytosis present (circulating abnormal cells)"
+            }
+          ],
+          "text": "Peripheral smear / lymphocytosis: Lymphocytosis present (circulating abnormal cells)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-lymphoma-category-tc1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-lymphoma-category-tc1",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-category",
+              "code": "cll-sll",
+              "display": "CLL / SLL (Chronic lymphocytic leukemia)"
+            }
+          ],
+          "text": "Suspected / confirmed subtype: CLL / SLL (Chronic lymphocytic leukemia)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hbv-tc1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hbv-tc1",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hbv",
+              "code": "hbv-negative",
+              "display": "HBsAg and HBcAb-IgG negative"
+            }
+          ],
+          "text": "Hepatitis B serology (HBsAg / HBcAb): HBsAg and HBcAb-IgG negative"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hcv-tc1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hcv-tc1",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hcv",
+              "code": "hcv-negative",
+              "display": "Anti-HCV antibody negative"
+            }
+          ],
+          "text": "Hepatitis C serology (Anti-HCV): Anti-HCV antibody negative"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hiv-tc1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hiv-tc1",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hiv",
+              "code": "hiv-negative",
+              "display": "HIV-1/2 non-reactive"
+            }
+          ],
+          "text": "HIV screening serology: HIV-1/2 non-reactive"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-tls-metabolic-risk-tc1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-tls-metabolic-risk-tc1",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc1"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-tls-metabolic-risk",
+              "code": "tls-standard-risk",
+              "display": "Standard / low TLS risk"
+            }
+          ],
+          "text": "Tumor lysis syndrome (TLS) metabolic risk: Standard / low TLS risk"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

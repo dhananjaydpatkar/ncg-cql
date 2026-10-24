@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NCG CQL Execution Engine & CDS Dashboard</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230F6B5C' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=ncg-v2">
+</head>
+<body>
+  <div class="app-shell">
+    
+    <!-- Top Navigation Bar matching ncg-cql-authoring-mvp-v2 -->
+    <header class="topbar">
+      <div class="topbar-row">
+        <div class="brand">
+          <div class="brand-mark">N</div>
+          <div>
+            NCG CQL Engine &amp; CDS Dashboard
+            <small>HL7 CQL 1.4/1.5 &amp; FHIR R4 Practice Guidelines • ABDM Gated</small>
+          </div>
+        </div>
+
+        <span class="spacer"></span>
+
+        <!-- Guideline Selector -->
+        <div class="row">
+          <label for="guidelineSelect" class="lbl">Guideline:</label>
+          <select id="guidelineSelect" class="inline" aria-label="Active guideline">
+            <!-- Loaded dynamically from /api/guidelines -->
+          </select>
+          <span id="guidelineVersionBadge" class="pill approved">v1.2.0</span>
+        </div>
+
+        <span class="pill approved">Engine Ready</span>
+        <span id="testSuiteStatus" class="pill pass">67/67 Tests Passed</span>
+
+        <a href="http://localhost:5173" target="_blank" rel="noreferrer" class="btn sm" title="Switch to NCG Guideline Studio Authoring Workbench">
+          🎨 Guideline Studio ↗
+        </a>
+      </div>
+
+      <!-- Intake Sub-Tabs Bar matching authoring studio -->
+      <nav class="tabs" role="tablist">
+        <button class="tab modality-tab active" data-modality="bundle" id="tab-bundle">
+          📦 1 · FHIR R4 Bundle <span id="tabCountBundle" class="n">47 cases</span>
+        </button>
+        <button class="tab modality-tab" data-modality="manual" id="tab-manual">
+          📝 2 · Manual Clinical Entry <span class="n">Interactive</span>
+        </button>
+        <button class="tab modality-tab" data-modality="synoptic" id="tab-synoptic">
+          📄 3 · Synoptic OCR / Report <span class="n">Extractor</span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main Workspace Layout -->
+    <main class="page-workspace">
+      
+      <!-- LEFT COLUMN: Tri-Modal Clinical Intake -->
+      <section class="card intake-card">
+        <div class="card-head">
+          <div class="row">
+            <span class="lbl-section-icon">📥</span>
+            <div>
+              <h3>Clinical Intake &amp; Data Source</h3>
+              <p class="hint">Select structured FHIR bundle, enter patient findings, or parse synoptic text report</p>
+            </div>
+          </div>
+          <span class="spacer"></span>
+          <span id="activeModalityBadge" class="pill observation">FHIR Bundle Mode</span>
+        </div>
+
+        <!-- MODALITY 1: FHIR Bundle -->
+        <div id="modality-bundle-view" class="modality-view active">
+          <div class="field">
+            <label for="bundleSelect">Load Synthetic Patient Case (47 Pre-Built Bundles):</label>
+            <select id="bundleSelect" class="select-full">
+              <option value="">-- Select a Test Patient Case --</option>
+            </select>
+          </div>
+
+          <div class="quick-scenarios-row">
+            <span class="lbl">Quick Scenarios:</span>
+            <div class="chips">
+              <button type="button" class="chip on" data-preset="dlbcl-high-risk">🎯 Advanced DLBCL (aaIPI=2)</button>
+              <button type="button" class="chip" data-preset="fl-high-burden">🍇 High-Burden FL (BR)</button>
+              <button type="button" class="chip" data-preset="unparsed-gate">⚠️ Unparsed Safety Gate</button>
+              <button type="button" class="chip" data-preset="pmbcl-central">💉 PMBCL Central Access</button>
+            </div>
+          </div>
+
+          <div class="editor-header-bar">
+            <div class="row">
+              <span class="lbl">FHIR R4 Collection Bundle (JSON)</span>
+              <span id="bundleEntryCount" class="pill observation">14 resources</span>
+            </div>
+            <div class="row">
+              <button id="btnCopyBundle" class="btn sm" title="Copy FHIR JSON">📋 Copy</button>
+              <button id="btnResetBundle" class="btn sm" title="Reset Bundle">↺ Reset</button>
+            </div>
+          </div>
+
+          <textarea id="fhirBundleInput" class="code-editor" spellcheck="false" placeholder="Paste or load FHIR R4 Bundle JSON..."></textarea>
+        </div>
+
+        <!-- MODALITY 2: Manual Clinical Form -->
+        <div id="modality-manual-view" class="modality-view">
+          <div class="form-container">
+            <div class="form-subheading">Patient Demographics &amp; Identifiers</div>
+            <div class="grid3">
+              <div class="field">
+                <label for="manualPatientName">Patient Full Name</label>
+                <input type="text" id="manualPatientName" value="Dhananjay Patil" placeholder="e.g. Ramesh Kumar">
+              </div>
+              <div class="field">
+                <label for="manualAge">Age (Years)</label>
+                <input type="number" id="manualAge" value="52" min="1" max="110">
+              </div>
+              <div class="field">
+                <label for="manualGender">Gender</label>
+                <select id="manualGender">
+                  <option value="male" selected>Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-subheading">Clinical Findings &amp; Staging Variables</div>
+            <div class="grid2">
+              <div class="field">
+                <label for="manualHistology">Histological Diagnosis</label>
+                <select id="manualHistology">
+                  <option value="dlbcl" selected>Diffuse Large B-Cell Lymphoma (DLBCL)</option>
+                  <option value="fl-grade-1-2">Follicular Lymphoma Grade 1-2</option>
+                  <option value="fl-grade-3a">Follicular Lymphoma Grade 3A</option>
+                  <option value="fl-grade-3b">Follicular Lymphoma Grade 3B</option>
+                  <option value="transformed-dlbcl">Transformed Follicular to DLBCL</option>
+                  <option value="mzl">Marginal Zone Lymphoma (MZL)</option>
+                  <option value="cll">Chronic Lymphocytic Leukemia (CLL)</option>
+                  <option value="cutaneous-tcell">Cutaneous T-Cell Lymphoma (CTCL)</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="manualStage">Ann Arbor Clinical Stage</label>
+                <select id="manualStage">
+                  <option value="stage-1">Stage I (Single nodal region)</option>
+                  <option value="stage-2">Stage II (Two+ regions same side diaphragm)</option>
+                  <option value="stage-3">Stage III (Regions both sides diaphragm)</option>
+                  <option value="stage-4" selected>Stage IV (Disseminated extranodal involvement)</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="manualLdh">Serum LDH Level</label>
+                <select id="manualLdh">
+                  <option value="elevated" selected>Elevated (&gt; 1x Upper Limit of Normal)</option>
+                  <option value="normal">Normal (Within reference range)</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="manualEcog">ECOG Performance Status</label>
+                <select id="manualEcog">
+                  <option value="ecog-0-1" selected>ECOG 0 - 1 (Fully active or ambulatory)</option>
+                  <option value="ecog-2-4">ECOG 2 - 4 (Impaired / Bedbound &gt;50%)</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="manualGelf">GELF Tumor Burden (Follicular)</label>
+                <select id="manualGelf">
+                  <option value="none">Not Applicable / Workup Phase</option>
+                  <option value="high-burden">High Burden (Mass ≥7cm, 3 nodes ≥3cm, B-symptoms)</option>
+                  <option value="low-burden">Low Burden (Asymptomatic small-volume)</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="manualBoneMarrow">Bone Marrow Status</label>
+                <select id="manualBoneMarrow">
+                  <option value="negative" selected>Negative / Clear Marrow</option>
+                  <option value="involved">Involved (Marrow infiltration)</option>
+                  <option value="not-performed">Not Performed / Omitted</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="manualFitness">Patient Fitness / Functional Status</label>
+                <select id="manualFitness">
+                  <option value="fit" selected>Fit for standard systemic therapy</option>
+                  <option value="frail">Frail / Unfit / Dose-attenuated only</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="manualOrgan">Organ / Extranodal Sites</label>
+                <select id="manualOrgan">
+                  <option value="none" selected>Standard Lymphoid Sites Only</option>
+                  <option value="testicular">Testicular Involvement (High CNS Risk)</option>
+                  <option value="renal-adrenal">Renal / Adrenal Involvement</option>
+                  <option value="bone-marrow">Bone Marrow Infiltration</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="manualViral">Viral Infection Serology</label>
+                <select id="manualViral">
+                  <option value="negative" selected>Negative for HBV / HCV / HIV</option>
+                  <option value="hbsag-positive">HBsAg Positive (HBV Prophylaxis Required)</option>
+                  <option value="hcv-antibody-positive">Anti-HCV Positive</option>
+                  <option value="hiv-positive">HIV Positive</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="manualRelapse">Relapse / Prior Therapy Status</label>
+                <select id="manualRelapse">
+                  <option value="none" selected>De Novo / First-Line Presentation</option>
+                  <option value="early-refractory-lte-12m">Early Relapse / Refractory (≤12 Months)</option>
+                  <option value="late-relapse-gt-12m">Late Relapse (&gt;12 Months post-chemo)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Provenance Gating Demonstration Toggle -->
+            <div class="provenance-panel">
+              <div class="row">
+                <span class="prov-icon">🛡️</span>
+                <div>
+                  <strong>ABDM Data Provenance Security Gate</strong>
+                  <p class="hint">Simulate whether data originates from validated EHR or raw unparsed outside text</p>
+                </div>
+              </div>
+              <div class="provenance-options">
+                <label class="radio-chip">
+                  <input type="radio" name="manualProvenance" value="source-coded" checked>
+                  <span><strong>Source-Coded (Verified):</strong> Structured EHR coding passes <code>IsUsable()</code> safety check</span>
+                </label>
+                <label class="radio-chip alert">
+                  <input type="radio" name="manualProvenance" value="unparsed-text">
+                  <span><strong>Unparsed External Referral:</strong> Unparsed outside text blocks automated therapy &amp; flags review</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODALITY 3: Synoptic Report OCR & Text -->
+        <div id="modality-synoptic-view" class="modality-view">
+          <div class="field">
+            <label for="sampleReportSelect">Load Sample Pathology / Staging Synoptic Report:</label>
+            <select id="sampleReportSelect" class="select-full">
+              <!-- Loaded from /api/sample-reports -->
+            </select>
+          </div>
+
+          <div class="synoptic-editor-wrapper">
+            <div class="editor-header-bar">
+              <span class="lbl">Raw Synoptic Diagnostic / Referral Text</span>
+              <button id="btnParseText" class="btn sm">🔍 Parse Text Normalizer</button>
+            </div>
+            <textarea id="synopticTextInput" class="code-editor synoptic-text" placeholder="Paste synoptic report text with field labels (Histology: ..., Ann Arbor Stage: ...)..."></textarea>
+          </div>
+
+          <!-- Extraction Table -->
+          <div class="field">
+            <div class="row" style="margin-bottom:6px">
+              <span class="lbl">Template Extractor Output &amp; Data Provenance Tags</span>
+              <span class="spacer"></span>
+              <span id="extractionStatusBadge" class="pill observation">Ready</span>
+            </div>
+            <div class="table-container">
+              <table class="clinical-table">
+                <thead>
+                  <tr>
+                    <th>Clinical Field</th>
+                    <th>Extracted Value</th>
+                    <th>Provenance Status</th>
+                    <th>Safety Gate</th>
+                  </tr>
+                </thead>
+                <tbody id="extractionTableBody">
+                  <tr>
+                    <td colspan="4" class="empty-cell">Load a sample report or click "Parse Text Normalizer"</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Execute Action Button -->
+        <div class="card-footer-action">
+          <button id="btnRunEvaluation" class="btn primary btn-execute">
+            <span>⚡ Execute HL7 CQL Engine</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- RIGHT COLUMN: Clinical Decision Support & Evaluation -->
+      <section class="card results-card">
+        <div class="card-head">
+          <div class="row">
+            <span class="lbl-section-icon">🩺</span>
+            <div>
+              <h3>Clinical Decision Support Output</h3>
+              <p class="hint">Evaluated via official HL7 cql-execution engine against compiled ELM libraries</p>
+            </div>
+          </div>
+          <span class="spacer"></span>
+          <span id="execTimerBadge" class="pill draft">Engine Idle</span>
+        </div>
+
+        <!-- Provenance Safety Alert Banner -->
+        <div id="safetyGateAlert" class="issue info">
+          <span id="safetyGateIcon" class="issue-icon">🛡️</span>
+          <div class="grow">
+            <strong id="safetyGateTitle">ABDM Data Provenance Verified</strong>
+            <div id="safetyGateDesc" class="hint">All input clinical observations passed NCGCommon.IsUsable() verification gates.</div>
+          </div>
+          <span id="safetyGateBadge" class="pill pass">Passed Gate</span>
+        </div>
+
+        <!-- Primary Treatment Group / Recommendation Card -->
+        <div class="recommendation-box rule">
+          <div class="rec-top-row">
+            <span class="lbl">Primary Guideline Determination</span>
+            <span id="treatmentGroupBadge" class="pill treatment">AWAITING EVALUATION</span>
+          </div>
+          <h2 id="treatmentGroupTitle" class="rec-heading">Run evaluation to view guideline recommendation</h2>
+          <div id="treatmentGroupSummary" class="sentence">
+            Select a patient bundle, fill in clinical findings, or extract synoptic report text, then click <b>Execute HL7 CQL Engine</b>.
+          </div>
+        </div>
+
+        <!-- Recommended Regimens Section -->
+        <div class="section-block">
+          <div class="row" style="margin-bottom:8px">
+            <span class="lbl">💊 Recommended Regimens &amp; Interventions</span>
+          </div>
+          <div id="regimensList" class="regimens-container">
+            <div class="empty">No regimens evaluated yet</div>
+          </div>
+        </div>
+
+        <!-- Prognostic Indices Calculator Card -->
+        <div class="section-block">
+          <div class="row" style="margin-bottom:8px">
+            <span class="lbl">📊 Calculated Prognostic Scoring Indices</span>
+          </div>
+          <div id="scoresGrid" class="scores-row">
+            <!-- Dynamically populated aaIPI, IPI, FLIPI, MIPI cards -->
+            <div class="empty">Score matrices will appear here</div>
+          </div>
+        </div>
+
+        <!-- Classification Rationale -->
+        <div class="section-block">
+          <div class="row" style="margin-bottom:8px">
+            <span class="lbl">📜 CQL Classification Rationale</span>
+          </div>
+          <ul id="rationaleList" class="rationale-box">
+            <li class="empty-item">Logic conditions from ClassificationRationale expression will be listed here.</li>
+          </ul>
+        </div>
+
+        <!-- Detailed Inspection Subtabs -->
+        <div class="inspection-wrapper">
+          <div class="inspection-tabs-bar" role="tablist">
+            <button class="insp-tab active" data-insp="expressions">CQL Expressions (<span id="exprCount">0</span>)</button>
+            <button class="insp-tab" data-insp="cdshooks">CDS Hooks Card</button>
+            <button class="insp-tab" data-insp="fhirbundle">ABDM FHIR Bundle</button>
+          </div>
+
+          <div id="insp-expressions-view" class="insp-content active">
+            <div class="table-container-sm">
+              <table class="clinical-table">
+                <thead>
+                  <tr>
+                    <th>Expression Identifier</th>
+                    <th>Evaluated Result</th>
+                  </tr>
+                </thead>
+                <tbody id="expressionsTableBody">
+                  <tr><td colspan="2" class="empty-cell">No expressions available</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div id="insp-cdshooks-view" class="insp-content">
+            <div class="code-header-row">
+              <span class="lbl">HL7 CDS Hooks Specification v1.0 Response</span>
+              <button id="btnCopyCds" class="btn sm">📋 Copy JSON</button>
+            </div>
+            <pre id="cdsHooksOutput" class="code">{}</pre>
+          </div>
+
+          <div id="insp-fhirbundle-view" class="insp-content">
+            <div class="code-header-row">
+              <span class="lbl">Evaluated ABDM FHIR R4 Bundle</span>
+              <button id="btnCopyEvaluatedBundle" class="btn sm">📋 Copy JSON</button>
+            </div>
+            <pre id="fhirBundleOutput" class="code">{}</pre>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- Bottom Status Bar -->
+    <footer class="app-footer">
+      <div class="row">
+        <span><b>National Cancer Grid (India)</b></span>
+        <span class="dot-sep">•</span>
+        <span>HL7 CQL 1.4 / 1.5</span>
+        <span class="dot-sep">•</span>
+        <span>HL7 FHIR R4 v4.0.1</span>
+        <span class="dot-sep">•</span>
+        <span>ABDM Provenance Gated</span>
+      </div>
+      <span class="spacer"></span>
+      <div class="row">
+        <button id="btnRunSuite" class="btn sm">🧪 Run 67 Regression Tests</button>
+        <span class="pill pass">All Tests Passing</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="app.js?v=ncg-v2"></script>
+</body>
+</html>

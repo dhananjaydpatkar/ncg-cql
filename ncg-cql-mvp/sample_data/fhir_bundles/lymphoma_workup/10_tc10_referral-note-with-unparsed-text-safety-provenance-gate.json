@@ -1,0 +1,166 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-ncg-lymphoma-workup-2020-tc10",
+  "type": "collection",
+  "timestamp": "2026-10-23T06:21:20.805Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://ncgindia.org/guideline",
+        "code": "NCG_LYMPHOMA_WORKUP_2020"
+      },
+      {
+        "system": "http://ncgindia.org/test-case-id",
+        "code": "tc10"
+      },
+      {
+        "system": "http://ncgindia.org/expected-outcome",
+        "code": "needs-review"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-tc10",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-tc10",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-0000-0010-0000"
+          }
+        ],
+        "name": [
+          {
+            "text": "Referral note with unparsed text (Safety provenance gate)"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Referral note with unparsed text (Safety provenance gate)</b> - External referral document has unparsed smear text. Safety gate enforces clinician review instead of automatic processing.</p></div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-presentation-smear-tc10",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-presentation-smear-tc10",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc10"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-presentation-smear",
+              "code": "lymphocytosis-present",
+              "display": "Lymphocytosis present (circulating abnormal cells)"
+            }
+          ],
+          "text": "Peripheral smear / lymphocytosis: Lymphocytosis present (circulating abnormal cells)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "unparsed",
+                  "display": "unparsed"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-lymphoma-category-tc10",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-lymphoma-category-tc10",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc10"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-category",
+              "code": "cll-sll",
+              "display": "CLL / SLL (Chronic lymphocytic leukemia)"
+            }
+          ],
+          "text": "Suspected / confirmed subtype: CLL / SLL (Chronic lymphocytic leukemia)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hbv-tc10",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hbv-tc10",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc10"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hbv",
+              "code": "hbv-negative",
+              "display": "HBsAg and HBcAb-IgG negative"
+            }
+          ],
+          "text": "Hepatitis B serology (HBsAg / HBcAb): HBsAg and HBcAb-IgG negative"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

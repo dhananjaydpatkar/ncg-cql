@@ -1,7 +1,8 @@
-import { generateCql, csUrl } from './cql.js';
+import { generateCql, csUrl, vsUrl } from './cql.js';
 
 const b64 = (s) => btoa(unescape(encodeURIComponent(s)));
 const rid = (g) => g.id.toLowerCase().replace(/_/g, '-');
+const pascal = (s = '') => String(s).split(/[^A-Za-z0-9]+/).filter(Boolean).map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join('');
 
 export function fhirLibrary(g) {
   return {
@@ -29,8 +30,30 @@ export function fhirPlanDefinition(g) {
 
 export function fhirCodeSystems(g) {
   return g.findings.map((f) => ({
-    resourceType: 'CodeSystem', id: `ncg-${f.id}`, url: csUrl(f), version: g.version, name: f.id, title: f.label,
+    resourceType: 'CodeSystem', id: `ncg-cs-${f.id}`, url: csUrl(f), version: g.version, name: f.id, title: f.label,
     status: 'draft', content: 'complete', publisher: g.organization,
     concept: f.values.map((v) => ({ code: v.code, display: v.label })),
+  }));
+}
+
+export function fhirValueSets(g) {
+  return g.findings.map((f) => ({
+    resourceType: 'ValueSet',
+    id: `ncg-vs-${f.id}`,
+    url: vsUrl(f),
+    version: g.version,
+    name: `${pascal(f.id)}_ValueSet`,
+    title: `${f.label} Value Set`,
+    status: 'draft',
+    publisher: g.organization,
+    description: `Allowed values for ${f.label} in ${g.title}`,
+    compose: {
+      include: [
+        {
+          system: csUrl(f),
+          concept: f.values.map((v) => ({ code: v.code, display: v.label })),
+        },
+      ],
+    },
   }));
 }

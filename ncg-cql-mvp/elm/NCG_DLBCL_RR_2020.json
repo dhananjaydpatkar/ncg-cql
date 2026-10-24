@@ -1,0 +1,3642 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorVersion" : "3.29.0",
+         "translatorOptions" : "",
+         "signatureLevel" : "None",
+         "type" : "CqlToElmInfo"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      } ],
+      "identifier" : {
+         "id" : "NCG_DLBCL_RR_2020",
+         "version" : "1.0.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1",
+            "annotation" : [ ]
+         }, {
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ ]
+         }, {
+            "localIdentifier" : "NCGCommon",
+            "path" : "NCGCommon",
+            "version" : "0.1.0",
+            "annotation" : [ ]
+         } ]
+      },
+      "codeSystems" : {
+         "def" : [ {
+            "name" : "RelapseBiopsyStatusCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-relapse-biopsy-status",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "RelapseTimingCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-relapse-timing",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "ChemoFitnessOverallCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-chemo-fitness-overall",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "AsctFitnessCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-asct-fitness",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "CarTFitnessCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-car-t-fitness",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "PetResponseSalvageCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-pet-response-salvage",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "CarTFuturePlanCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-car-t-future-plan",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "CellOfOriginRrCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-cell-of-origin-rr",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "DominantResidualSiteCS",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-dominant-residual-site",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         } ]
+      },
+      "codes" : {
+         "def" : [ {
+            "name" : "RelapseBiopsyStatus_BiopsyConfirmedDlbcl",
+            "id" : "biopsy-confirmed-dlbcl",
+            "display" : "Biopsy confirmed DLBCL (repeat IHC completed)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "RelapseBiopsyStatusCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "RelapseBiopsyStatus_TransformationIndolent",
+            "id" : "transformation-indolent",
+            "display" : "Transformed from prior indolent lymphoma (e.g. transformed FL)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "RelapseBiopsyStatusCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "RelapseBiopsyStatus_BiopsyPending",
+            "id" : "biopsy-pending",
+            "display" : "Biopsy pending / FNAC only (repeat core/excisional biopsy mandatory)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "RelapseBiopsyStatusCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "RelapseTiming_RelapseGt12m",
+            "id" : "relapse-gt-12m",
+            "display" : "Late relapse (> 12 months post completion of first-line R-CHOP)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "RelapseTimingCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "RelapseTiming_RelapseLe12m",
+            "id" : "relapse-le-12m",
+            "display" : "Early relapse (<= 12 months post completion of first-line R-CHOP)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "RelapseTimingCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "RelapseTiming_PrimaryRefractory",
+            "id" : "primary-refractory",
+            "display" : "Primary refractory / progression ON first-line R-CHOP therapy",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "RelapseTimingCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "ChemoFitnessOverall_ChemoEligible",
+            "id" : "chemo-eligible",
+            "display" : "Chemotherapy eligible (candidate for intensive or standard combination salvage)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "ChemoFitnessOverallCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "ChemoFitnessOverall_UnfitAllChemo",
+            "id" : "unfit-all-chemo",
+            "display" : "Unfit for combination chemotherapy (candidate for palliative / oral metronomic / targeted only)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "ChemoFitnessOverallCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "AsctFitness_AsctFit",
+            "id" : "asct-fit",
+            "display" : "Fit for intensive salvage therapy + Autologous Stem Cell Transplant (ASCT)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "AsctFitnessCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "AsctFitness_AsctUnfit",
+            "id" : "asct-unfit",
+            "display" : "Not fit for ASCT (non-transplant candidate)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "AsctFitnessCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "CarTFitness_CarTFit",
+            "id" : "car-t-fit",
+            "display" : "Fit for CAR-T cell therapy (tolerable CRS/ICANS risk, adequate organ reserve)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "CarTFitnessCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "CarTFitness_CarTUnfit",
+            "id" : "car-t-unfit",
+            "display" : "Not fit for CAR-T cell therapy",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "CarTFitnessCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "PetResponseSalvage_SalvageCrPr",
+            "id" : "salvage-cr-pr",
+            "display" : "Chemosensitive: PR or CR (Deauville Score 1-3, >= 50% reduction in uptake)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "PetResponseSalvageCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "PetResponseSalvage_SalvageDs4Partial",
+            "id" : "salvage-ds4-partial",
+            "display" : "Partial response / residual uptake (Deauville Score 4, no new disease sites)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "PetResponseSalvageCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "PetResponseSalvage_SalvageDs5Refractory",
+            "id" : "salvage-ds5-refractory",
+            "display" : "Chemotherapy-refractory (Deauville Score 5 or progressive disease)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "PetResponseSalvageCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "PetResponseSalvage_NotAssessed",
+            "id" : "not-assessed",
+            "display" : "Not yet assessed / salvage therapy not yet completed",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "PetResponseSalvageCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "CarTFuturePlan_CartPossible",
+            "id" : "cart-possible",
+            "display" : "CAR-T is planned or remains a future possibility (MANDATORY TO AVOID BENDA / POLA-BR)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "CarTFuturePlanCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "CarTFuturePlan_CartDefinitivelyExcluded",
+            "id" : "cart-definitively-excluded",
+            "display" : "CAR-T is definitively NOT planned / patient ineligible / unavailable",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "CarTFuturePlanCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "CellOfOriginRr_NonGcb",
+            "id" : "non-gcb",
+            "display" : "Non-GCB phenotype (eligible for targeted lenalidomide / bortezomib)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "CellOfOriginRrCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "CellOfOriginRr_Gcb",
+            "id" : "gcb",
+            "display" : "GCB phenotype",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "CellOfOriginRrCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "DominantResidualSite_SingleSiteResidual",
+            "id" : "single-site-residual",
+            "display" : "Single residual PET+ site OR initial bulky site (candidate for consolidative RT 30-36 Gy)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "DominantResidualSiteCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "DominantResidualSite_DiffuseMultisite",
+            "id" : "diffuse-multisite",
+            "display" : "Diffuse widespread multi-site disease (systemic therapy only)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "DominantResidualSiteCS",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "DominantResidualSite_NoResidualCmr",
+            "id" : "no-residual-cmr",
+            "display" : "Complete metabolic response (no residual uptake)",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "DominantResidualSiteCS",
+               "annotation" : [ ]
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "name" : "Patient",
+            "annotation" : [ ]
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "name" : "Patient",
+            "context" : "Patient",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "annotation" : [ ],
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "name" : "RelapseBiopsyStatusObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "Union",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "RelapseBiopsyStatus_BiopsyConfirmedDlbcl",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     }, {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "RelapseBiopsyStatus_TransformationIndolent",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     } ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "RelapseBiopsyStatus_BiopsyPending",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "RelapseBiopsyStatusKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "RelapseBiopsyStatusObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "RelapseBiopsyStatusObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "RelapseBiopsyStatusValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "RelapseBiopsyStatusObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "RelapseTimingObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "Union",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "RelapseTiming_RelapseGt12m",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     }, {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "RelapseTiming_RelapseLe12m",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     } ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "RelapseTiming_PrimaryRefractory",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "RelapseTimingKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "RelapseTimingObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "RelapseTimingObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "RelapseTimingValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "RelapseTimingObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "ChemoFitnessOverallObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "ChemoFitnessOverall_ChemoEligible",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "ChemoFitnessOverall_UnfitAllChemo",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "ChemoFitnessOverallKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "ChemoFitnessOverallObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "ChemoFitnessOverallObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "ChemoFitnessOverallValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "ChemoFitnessOverallObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "AsctFitnessObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "AsctFitness_AsctFit",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "AsctFitness_AsctUnfit",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "AsctFitnessKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "AsctFitnessObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "AsctFitnessObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "AsctFitnessValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "AsctFitnessObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "CarTFitnessObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "CarTFitness_CarTFit",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "CarTFitness_CarTUnfit",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "CarTFitnessKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "CarTFitnessObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "CarTFitnessObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "CarTFitnessValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "CarTFitnessObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "PetResponseSalvageObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "Union",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "PetResponseSalvage_SalvageCrPr",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     }, {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "PetResponseSalvage_SalvageDs4Partial",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     } ]
+                  }, {
+                     "type" : "Union",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "PetResponseSalvage_SalvageDs5Refractory",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     }, {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "PetResponseSalvage_NotAssessed",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     } ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "PetResponseSalvageKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "PetResponseSalvageObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "PetResponseSalvageObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "PetResponseSalvageValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "PetResponseSalvageObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "CarTFuturePlanObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "CarTFuturePlan_CartPossible",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "CarTFuturePlan_CartDefinitivelyExcluded",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "CarTFuturePlanKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "CarTFuturePlanObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "CarTFuturePlanObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "CarTFuturePlanValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "CarTFuturePlanObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "CellOfOriginRrObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "CellOfOriginRr_NonGcb",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "CellOfOriginRr_Gcb",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "CellOfOriginRrKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "CellOfOriginRrObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "CellOfOriginRrObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "CellOfOriginRrValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "CellOfOriginRrObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "DominantResidualSiteObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "SingletonFrom",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Union",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "Union",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "DominantResidualSite_SingleSiteResidual",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     }, {
+                        "dataType" : "{http://hl7.org/fhir}Observation",
+                        "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                        "codeProperty" : "code",
+                        "codeComparator" : "~",
+                        "type" : "Retrieve",
+                        "annotation" : [ ],
+                        "codes" : {
+                           "type" : "ToList",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "name" : "DominantResidualSite_DiffuseMultisite",
+                              "type" : "CodeRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "include" : [ ],
+                        "codeFilter" : [ ],
+                        "dateFilter" : [ ],
+                        "otherFilter" : [ ]
+                     } ]
+                  }, {
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "annotation" : [ ],
+                     "codes" : {
+                        "type" : "ToList",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "name" : "DominantResidualSite_NoResidualCmr",
+                           "type" : "CodeRef",
+                           "annotation" : [ ]
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "DominantResidualSiteKnown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Not",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : {
+                     "type" : "IsNull",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "DominantResidualSiteObservation",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }
+                  }
+               }, {
+                  "name" : "IsUsable",
+                  "libraryName" : "NCGCommon",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "DominantResidualSiteObservation",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "DominantResidualSiteValue",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "path" : "code",
+               "type" : "Property",
+               "annotation" : [ ],
+               "source" : {
+                  "type" : "Indexer",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "path" : "coding",
+                     "type" : "Property",
+                     "annotation" : [ ],
+                     "source" : {
+                        "path" : "code",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "DominantResidualSiteObservation",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }
+            }
+         }, {
+            "name" : "Rule1_BiopsyPendingMandatoryRepeatBiopsyBefore",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "name" : "RelapseBiopsyStatusKnown",
+                  "type" : "ExpressionRef",
+                  "annotation" : [ ]
+               }, {
+                  "type" : "In",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "ToString",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "RelapseBiopsyStatusValue",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     } ]
+                  }, {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "biopsy-pending",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule2_RelapseTimingOrOverallFitnessUnknown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "Not",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "name" : "RelapseTimingKnown",
+                  "type" : "ExpressionRef",
+                  "annotation" : [ ]
+               }
+            }
+         }, {
+            "name" : "Rule3_OverallChemotherapyFitnessUnknown",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "Not",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "name" : "ChemoFitnessOverallKnown",
+                  "type" : "ExpressionRef",
+                  "annotation" : [ ]
+               }
+            }
+         }, {
+            "name" : "Rule4_UnfitForChemoNonGcbTargetedLenalidomideB",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "ChemoFitnessOverallKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ChemoFitnessOverallValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "unfit-all-chemo",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "CellOfOriginRrKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "CellOfOriginRrValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "non-gcb",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule5_UnfitForChemoPalliativeCareOralMetronomi",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "name" : "ChemoFitnessOverallKnown",
+                  "type" : "ExpressionRef",
+                  "annotation" : [ ]
+               }, {
+                  "type" : "In",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "ToString",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ChemoFitnessOverallValue",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     } ]
+                  }, {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "unfit-all-chemo",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule6_EarlyRelapseRefractoryFitForCarTPrimaryC",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "RelapseTimingKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "RelapseTimingValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "relapse-le-12m",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        }, {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "primary-refractory",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "CarTFitnessKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "CarTFitnessValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "car-t-fit",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule7_EarlyRelapseRefractoryNotFitForCarTCarTD",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "RelapseTimingKnown",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }, {
+                        "type" : "In",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "RelapseTimingValue",
+                              "type" : "ExpressionRef",
+                              "annotation" : [ ]
+                           } ]
+                        }, {
+                           "type" : "List",
+                           "annotation" : [ ],
+                           "element" : [ {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "relapse-le-12m",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           }, {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "primary-refractory",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           } ]
+                        } ]
+                     } ]
+                  }, {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "CarTFitnessKnown",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }, {
+                        "type" : "In",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "CarTFitnessValue",
+                              "type" : "ExpressionRef",
+                              "annotation" : [ ]
+                           } ]
+                        }, {
+                           "type" : "List",
+                           "annotation" : [ ],
+                           "element" : [ {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "car-t-unfit",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "CarTFuturePlanKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "CarTFuturePlanValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "cart-definitively-excluded",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule8_EarlyRelapseRefractoryNotFitForCarTGlofi",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "RelapseTimingKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "RelapseTimingValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "relapse-le-12m",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        }, {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "primary-refractory",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "CarTFitnessKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "CarTFitnessValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "car-t-unfit",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule9_LateRelapsePostSalvageChemosensitivePrOr",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "RelapseTimingKnown",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }, {
+                        "type" : "In",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "RelapseTimingValue",
+                              "type" : "ExpressionRef",
+                              "annotation" : [ ]
+                           } ]
+                        }, {
+                           "type" : "List",
+                           "annotation" : [ ],
+                           "element" : [ {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "relapse-gt-12m",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           } ]
+                        } ]
+                     } ]
+                  }, {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "AsctFitnessKnown",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }, {
+                        "type" : "In",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "AsctFitnessValue",
+                              "type" : "ExpressionRef",
+                              "annotation" : [ ]
+                           } ]
+                        }, {
+                           "type" : "List",
+                           "annotation" : [ ],
+                           "element" : [ {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "asct-fit",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "PetResponseSalvageKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "PetResponseSalvageValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "salvage-cr-pr",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule10_LateRelapsePostSalvageDs4PartialUptakeBi",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "RelapseTimingKnown",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }, {
+                        "type" : "In",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "RelapseTimingValue",
+                              "type" : "ExpressionRef",
+                              "annotation" : [ ]
+                           } ]
+                        }, {
+                           "type" : "List",
+                           "annotation" : [ ],
+                           "element" : [ {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "relapse-gt-12m",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           } ]
+                        } ]
+                     } ]
+                  }, {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "AsctFitnessKnown",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }, {
+                        "type" : "In",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "AsctFitnessValue",
+                              "type" : "ExpressionRef",
+                              "annotation" : [ ]
+                           } ]
+                        }, {
+                           "type" : "List",
+                           "annotation" : [ ],
+                           "element" : [ {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "asct-fit",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "PetResponseSalvageKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "PetResponseSalvageValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "salvage-ds4-partial",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule11_LateRelapseSalvageRefractoryDs5ReAssessF",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "RelapseTimingKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "RelapseTimingValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "relapse-gt-12m",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "PetResponseSalvageKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "PetResponseSalvageValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "salvage-ds5-refractory",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule12_LateRelapseFitForAsctSalvageChemotherapy",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "RelapseTimingKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "RelapseTimingValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "relapse-gt-12m",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "AsctFitnessKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "AsctFitnessValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "asct-fit",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule13_SingleResidualSitePostSalvageConsolidati",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "type" : "And",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "RelapseTimingKnown",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }, {
+                           "type" : "In",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "ToString",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "annotation" : [ ],
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "name" : "RelapseTimingValue",
+                                 "type" : "ExpressionRef",
+                                 "annotation" : [ ]
+                              } ]
+                           }, {
+                              "type" : "List",
+                              "annotation" : [ ],
+                              "element" : [ {
+                                 "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                 "value" : "relapse-gt-12m",
+                                 "type" : "Literal",
+                                 "annotation" : [ ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "type" : "And",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "AsctFitnessKnown",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        }, {
+                           "type" : "In",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "ToString",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "annotation" : [ ],
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "name" : "AsctFitnessValue",
+                                 "type" : "ExpressionRef",
+                                 "annotation" : [ ]
+                              } ]
+                           }, {
+                              "type" : "List",
+                              "annotation" : [ ],
+                              "element" : [ {
+                                 "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                                 "value" : "asct-unfit",
+                                 "type" : "Literal",
+                                 "annotation" : [ ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  }, {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "DominantResidualSiteKnown",
+                        "type" : "ExpressionRef",
+                        "annotation" : [ ]
+                     }, {
+                        "type" : "In",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "DominantResidualSiteValue",
+                              "type" : "ExpressionRef",
+                              "annotation" : [ ]
+                           } ]
+                        }, {
+                           "type" : "List",
+                           "annotation" : [ ],
+                           "element" : [ {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "single-site-residual",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "PetResponseSalvageKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "PetResponseSalvageValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "salvage-ds4-partial",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "Rule14_LateRelapseNotFitForAsctNonTransplantSal",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "RelapseTimingKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "RelapseTimingValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "relapse-gt-12m",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "And",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "AsctFitnessKnown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "In",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "ToString",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "AsctFitnessValue",
+                           "type" : "ExpressionRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "List",
+                        "annotation" : [ ],
+                        "element" : [ {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "asct-unfit",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "name" : "TreatmentGroup",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "Case",
+               "annotation" : [ ],
+               "caseItem" : [ {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule1_BiopsyPendingMandatoryRepeatBiopsyBefore",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-biopsy-mandatory-gate",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule2_RelapseTimingOrOverallFitnessUnknown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "needs-review",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule3_OverallChemotherapyFitnessUnknown",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "needs-review",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule4_UnfitForChemoNonGcbTargetedLenalidomideB",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-c-palliative-nongcb",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule5_UnfitForChemoPalliativeCareOralMetronomi",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-c-palliative-supportive",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule6_EarlyRelapseRefractoryFitForCarTPrimaryC",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-b-cart-primary",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule7_EarlyRelapseRefractoryNotFitForCarTCarTD",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-b-cart-unfit-pola-br",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule8_EarlyRelapseRefractoryNotFitForCarTGlofi",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-b-cart-unfit-glofit",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule9_LateRelapsePostSalvageChemosensitivePrOr",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-a-asct-consolidation",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule10_LateRelapsePostSalvageDs4PartialUptakeBi",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-a-ds4-biopsy-triage",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule11_LateRelapseSalvageRefractoryDs5ReAssessF",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-a-ds5-salvage-cart",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule12_LateRelapseFitForAsctSalvageChemotherapy",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-a-salvage-fit",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule13_SingleResidualSitePostSalvageConsolidati",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-consolidative-radiotherapy",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "name" : "Rule14_LateRelapseNotFitForAsctNonTransplantSal",
+                     "type" : "ExpressionRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-a-nontransplant-salvage",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               } ],
+               "else" : {
+                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                  "value" : "needs-review",
+                  "type" : "Literal",
+                  "annotation" : [ ]
+               }
+            }
+         }, {
+            "name" : "RecommendedRegimens",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "Case",
+               "annotation" : [ ],
+               "comparand" : {
+                  "name" : "TreatmentGroup",
+                  "type" : "ExpressionRef",
+                  "annotation" : [ ]
+               },
+               "caseItem" : [ {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-biopsy-mandatory-gate",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Whole-body 18F-FDG PET-CT to identify highest SUVmax biopsy site",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Image-guided core needle or surgical excisional biopsy of dominant lesion",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Repeat immunohistochemistry panel (CD20, CD10, BCL6, MUM1, MYC, BCL2)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Baseline 2D-ECHO (LVEF) & Viral screening (HBsAg, HBcAb, HCV, HIV)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-a-salvage-fit",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "R-GEMOX x 3 cycles (Rituximab 375 mg/m2 D1, Gemcitabine 1000 mg/m2 D1,8, Oxaliplatin 100 mg/m2 D1 q14d)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Alternative: R-GDP x 3 cycles (Rituximab, Gemcitabine, Dexamethasone, Cisplatin/Carboplatin)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Alternative: Pola-R-GEMOX x 3 cycles (Polatuzumab vedotin + R-GEMOX)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Mandatory 18F-FDG PET-CT response evaluation after cycle 3",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-a-asct-consolidation",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Peripheral blood stem cell (PBSC) mobilization (G-CSF +/- Plerixafor) and apheresis harvest",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "High-dose conditioning chemotherapy (BEAM regimen: Carmustine, Etoposide, Cytarabine, Melphalan)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Autologous stem cell transplantation and post-transplant supportive care",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Consolidative ISRT 30-36 Gy to single residual or initial presentation bulky site post-ASCT",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-a-ds4-biopsy-triage",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Targeted biopsy of residual FDG-avid mass to verify viable lymphoma vs inflammatory necrosis",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Multidisciplinary Tumor Board review for CAR-T eligibility vs consolidative RT",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-a-ds5-salvage-cart",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Urgent referral to CAR-T certified cellular therapy center",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Anti-CD19 CAR-T cell infusion (Axi-cel, Tisa-cel, or Liso-cel)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Non-bendamustine bridging therapy (R-GEMOX or localized RT)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-a-nontransplant-salvage",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "R-GEMOX / R-GDP / Pola-R-GEMOX x 3 cycles -> if responding complete 6 cycles total",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Alternative: Glofitamab-GEM-OX (CD20xCD3 bispecific + GemOx)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Note: Carboplatin replaces cisplatin in R-GDP for renal impairment",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Consolidative RT (30-36 Gy) to single residual or bulky presentation site post-chemotherapy",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-b-cart-primary",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "T-cell leukapheresis for anti-CD19 CAR-T manufacturing (Axi-cel / Tisa-cel / Liso-cel)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Bridging therapy: R-GEMOX or Pola-R-GEMOX or dominant-site RT (STRICTLY AVOID BENDAMUSTINE)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Pre-infusion lymphodepleting chemotherapy: Fludarabine (30 mg/m2 D1-3) + Cyclophosphamide (300 mg/m2 D1-3)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Anti-CD19 CAR-T cell infusion with mandatory inpatient CRS and ICANS neurotoxicity monitoring",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-b-cart-unfit-glofit",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Obinutuzumab pre-treatment (1000 mg IV on D-7 of Cycle 1) to deplete circulating B cells and mitigate CRS",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Glofitamab step-up dosing (2.5 mg D8, 10 mg D15 of Cycle 1, then 30 mg D1 Cycle 2 onwards)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Gemcitabine (1000 mg/m2) + Oxaliplatin (100 mg/m2) chemotherapy backbone",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Alternative if Glofitamab unavailable: R-GEMOX / R-GDP x 6 cycles",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-b-cart-unfit-pola-br",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Polatuzumab vedotin (1.8 mg/kg D1) + Bendamustine (90 mg/m2 D1,2) + Rituximab (375 mg/m2 D1) x 6 cycles q28d",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Prophylactic G-CSF support in every cycle",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "End-of-treatment PET-CT assessment",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-c-palliative-nongcb",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Oral Lenalidomide (20-25 mg daily D1-21 q28d +/- Rituximab)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Alternative: Subcutaneous Bortezomib-based therapy",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Palliative symptom care, pain management, and transfusion support",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Palliative radiotherapy to localized painful or symptomatic sites",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-pathway-c-palliative-supportive",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Best supportive care: pain control, nutritional support, palliative care team co-management",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Oral metronomic chemotherapy (e.g. low-dose oral etoposide 50 mg/m2 or oral cyclophosphamide)",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Palliative RT for localized bleeding, bone pain, or mass obstruction",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               }, {
+                  "annotation" : [ ],
+                  "when" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "rr-consolidative-radiotherapy",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Consolidative ISRT 30-36 Gy delivered to single residual FDG-avid lesion or initial presentation bulk",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Post-radiotherapy PET-CT assessment at 12 weeks",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  }
+               } ],
+               "else" : {
+                  "type" : "List",
+                  "annotation" : [ ],
+                  "element" : [ ]
+               }
+            }
+         }, {
+            "name" : "Avoid_Bendamustine_Safety_Rule",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "In",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "cartFuturePlan",
+                     "type" : "OperandRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "cart-possible",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "In",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "proposedRegimen",
+                     "type" : "OperandRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Pola-BR",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "Bendamustine",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  } ]
+               } ]
+            },
+            "operand" : [ {
+               "name" : "cartFuturePlan",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            }, {
+               "name" : "proposedRegimen",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            } ]
+         }, {
+            "name" : "Qualifies_For_Consolidative_RT",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "In",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "residualSiteStatus",
+                     "type" : "OperandRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "single-site-residual",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "In",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "postChemoResponse",
+                     "type" : "OperandRef",
+                     "annotation" : [ ]
+                  }, {
+                     "type" : "List",
+                     "annotation" : [ ],
+                     "element" : [ {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "salvage-cr-pr",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     }, {
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "salvage-ds4-partial",
+                        "type" : "Literal",
+                        "annotation" : [ ]
+                     } ]
+                  } ]
+               } ]
+            },
+            "operand" : [ {
+               "name" : "residualSiteStatus",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            }, {
+               "name" : "postChemoResponse",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            } ]
+         }, {
+            "name" : "Mandatory_Repeat_Biopsy_Required",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "In",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "name" : "biopsyStatus",
+                  "type" : "OperandRef",
+                  "annotation" : [ ]
+               }, {
+                  "type" : "List",
+                  "annotation" : [ ],
+                  "element" : [ {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                     "value" : "biopsy-pending",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               } ]
+            },
+            "operand" : [ {
+               "name" : "biopsyStatus",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}String",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            } ]
+         } ]
+      }
+   }
+}
+

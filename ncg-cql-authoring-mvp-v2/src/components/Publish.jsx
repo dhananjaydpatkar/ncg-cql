@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Lead, download } from './ui';
 import { generateCql, generateMermaid } from '../lib/cql';
-import { fhirLibrary, fhirPlanDefinition, fhirCodeSystems } from '../lib/fhir';
+import { fhirLibrary, fhirPlanDefinition, fhirCodeSystems, fhirValueSets } from '../lib/fhir';
 import { describeRule, outcomeById } from '../lib/model';
 
 export function Publish({ g, issues, toast }) {
@@ -26,6 +26,7 @@ export function Publish({ g, issues, toast }) {
           <button className="btn" onClick={() => act(`Library-${g.id}.json`, J(fhirLibrary(g)))}>FHIR Library</button>
           <button className="btn" onClick={() => act(`PlanDefinition-${g.id}.json`, J(fhirPlanDefinition(g)))}>FHIR PlanDefinition</button>
           <button className="btn" onClick={() => act(`CodeSystems-${g.id}.json`, J(fhirCodeSystems(g)))}>FHIR CodeSystems</button>
+          <button className="btn" onClick={() => act(`ValueSets-${g.id}.json`, J(fhirValueSets(g)))}>FHIR ValueSets</button>
           <button className="btn" onClick={() => act(`${g.id}.mmd`, generateMermaid(g), 'text/plain')}>Flowchart (Mermaid)</button>
         </div>
       </div>

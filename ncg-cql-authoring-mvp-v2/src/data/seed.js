@@ -8,7 +8,7 @@ const inp = (o) => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, { va
 export const NCG_FL = {
   schema: 1,
   id: 'NCG_FL_2020',
-  version: '0.2.0',
+  version: '0.2.1',
   title: 'Follicular Lymphoma - first-line treatment pathway',
   organization: 'National Cancer Grid (India) / NCG-Heme Working Group',
   source: 'NCG Follicular Lymphoma Treatment Workflow; Lymphoma Workup Flowchart',
@@ -17,18 +17,60 @@ export const NCG_FL = {
   author: 'NCG-Heme Working Group',
   enforceProvenance: true,
   findings: [
-    { id: 'histology', label: 'Histology / grade', help: 'WHO histological grade from the pathology report.',
-      values: [V('fl-grade-1-2', 'FL grade 1-2'), V('fl-grade-3a', 'FL grade 3a'), V('fl-grade-3b', 'FL grade 3b'), V('fl-duodenal', 'Primary duodenal FL'), V('transformed-dlbcl', 'Transformed to DLBCL')] },
-    { id: 'stage', label: 'Ann Arbor stage', help: 'Validated anatomical stage (PET-CT / CECT).',
-      values: [V('stage-1', 'Stage I'), V('stage-2', 'Stage II'), V('stage-3', 'Stage III'), V('stage-4', 'Stage IV')] },
-    { id: 'stage2-contiguity', label: 'Stage II contiguity', help: 'Only relevant for Stage II.',
-      values: [V('contiguous', 'Contiguous'), V('non-contiguous', 'Non-contiguous')] },
-    { id: 'bone-marrow', label: 'Bone marrow biopsy', help: 'Marrow involvement upstages the patient to Stage IV.',
-      values: [V('cleared', 'Negative (cleared)'), V('involved', 'Involved')] },
-    { id: 'gelf', label: 'GELF tumour burden', help: 'High if any GELF criterion is met (bulky mass > 7 cm, 3 nodes > 3 cm, cytopenias, B symptoms...).',
-      values: [V('low-burden', 'Low burden'), V('high-burden', 'High burden')] },
-    { id: 'fitness', label: 'Fitness for systemic therapy', help: 'Fit for full-dose chemoimmunotherapy (BR / R-CHOP).',
-      values: [V('fit', 'Fit'), V('frail', 'Frail / comorbid')] },
+    {
+      id: 'histology',
+      label: 'Histology / grade',
+      category: 'Histology & Pathology',
+      help: 'WHO histological grade from the pathology report.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-fl-histology',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-fl-histology',
+      values: [V('fl-grade-1-2', 'FL grade 1-2'), V('fl-grade-3a', 'FL grade 3a'), V('fl-grade-3b', 'FL grade 3b'), V('fl-duodenal', 'Primary duodenal FL'), V('transformed-dlbcl', 'Transformed to DLBCL')],
+    },
+    {
+      id: 'stage',
+      label: 'Ann Arbor stage',
+      category: 'Staging & Anatomy',
+      help: 'Validated anatomical stage (PET-CT / CECT).',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-ann-arbor-stage',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-ann-arbor-stage',
+      values: [V('stage-1', 'Stage I'), V('stage-2', 'Stage II'), V('stage-3', 'Stage III'), V('stage-4', 'Stage IV')],
+    },
+    {
+      id: 'stage2-contiguity',
+      label: 'Stage II contiguity',
+      category: 'Staging & Anatomy',
+      help: 'Only relevant for Stage II.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-stage2-contiguity',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-stage2-contiguity',
+      values: [V('contiguous', 'Contiguous'), V('non-contiguous', 'Non-contiguous')],
+    },
+    {
+      id: 'bone-marrow',
+      label: 'Bone marrow biopsy',
+      category: 'Staging & Anatomy',
+      help: 'Marrow involvement upstages the patient to Stage IV.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-bone-marrow',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-bone-marrow',
+      values: [V('cleared', 'Negative (cleared)'), V('involved', 'Involved')],
+    },
+    {
+      id: 'gelf',
+      label: 'GELF tumour burden',
+      category: 'Prognosis & Tumor Burden',
+      help: 'High if any GELF criterion is met (bulky mass > 7 cm, 3 nodes > 3 cm, cytopenias, B symptoms...).',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-gelf',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-gelf',
+      values: [V('low-burden', 'Low burden'), V('high-burden', 'High burden')],
+    },
+    {
+      id: 'fitness',
+      label: 'Fitness for systemic therapy',
+      category: 'Performance & Fitness',
+      help: 'Fit for full-dose chemoimmunotherapy (BR / R-CHOP).',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-fitness',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-fitness',
+      values: [V('fit', 'Fit'), V('frail', 'Frail / comorbid')],
+    },
   ],
   outcomes: [
     { id: 'needs-review', label: 'Needs clinician review', kind: 'review', rationale: 'Required data is missing or unreliable. A clinician must decide - no regimen is suggested.', regimens: [] },
@@ -81,5 +123,13 @@ export const NCG_FL = {
 };
 
 import { NCG_LYMPHOMA_WORKUP } from './lymphoma_workup.js';
+import { NCG_DLBCL_TREATMENT } from './dlbcl_treatment.js';
+import { NCG_DLBCL_RR } from './dlbcl_relapsed_refractory.js';
 
-export const SEED_GUIDELINES = [NCG_FL, NCG_LYMPHOMA_WORKUP];
+export const SEED_GUIDELINES = [
+  NCG_FL,
+  NCG_LYMPHOMA_WORKUP,
+  NCG_DLBCL_TREATMENT,
+  NCG_DLBCL_RR,
+];
+

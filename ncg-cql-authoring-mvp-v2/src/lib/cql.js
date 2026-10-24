@@ -4,6 +4,7 @@ const q = (s) => String(s).replace(/\\/g, '\\\\').replace(/'/g, "\\'");
 const list = (arr) => '{ ' + arr.map((v) => `'${q(v)}'`).join(', ') + ' }';
 const comment = (s) => String(s).replace(/\*\//g, '* /').replace(/\s+/g, ' ').trim();
 export const csUrl = (f) => f.codeSystemUrl || `http://ncgindia.org/fhir/CodeSystem/ncg-${slug(f.id)}`;
+export const vsUrl = (f) => f.valueSetUrl || `http://ncgindia.org/fhir/ValueSet/ncg-${slug(f.id)}`;
 
 // CQL names generated for a score function. Kept distinct from each other so the
 // HL7 translator never reports "identifier is hiding another identifier".

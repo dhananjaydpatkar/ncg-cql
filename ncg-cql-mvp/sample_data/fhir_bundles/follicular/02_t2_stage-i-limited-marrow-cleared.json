@@ -1,0 +1,246 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-ncg-fl-2020-t2",
+  "type": "collection",
+  "timestamp": "2026-10-23T06:21:20.807Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://ncgindia.org/guideline",
+        "code": "NCG_FL_2020"
+      },
+      {
+        "system": "http://ncgindia.org/test-case-id",
+        "code": "t2"
+      },
+      {
+        "system": "http://ncgindia.org/expected-outcome",
+        "code": "stage-1-limited"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-t2",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-t2",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-0000-0002-0000"
+          }
+        ],
+        "name": [
+          {
+            "text": "Stage I limited, marrow cleared"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Stage I limited, marrow cleared</b> - 54F, grade 1 FL, isolated cervical node, marrow negative.</p></div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-histology-t2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-histology-t2",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t2"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-histology",
+              "code": "fl-grade-1-2",
+              "display": "FL grade 1-2"
+            }
+          ],
+          "text": "Histology / grade: FL grade 1-2"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-stage-t2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-stage-t2",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t2"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-stage",
+              "code": "stage-1",
+              "display": "Stage I"
+            }
+          ],
+          "text": "Ann Arbor stage: Stage I"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-bone-marrow-t2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-bone-marrow-t2",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t2"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-bone-marrow",
+              "code": "cleared",
+              "display": "Negative (cleared)"
+            }
+          ],
+          "text": "Bone marrow biopsy: Negative (cleared)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-gelf-t2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-gelf-t2",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t2"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-gelf",
+              "code": "low-burden",
+              "display": "Low burden"
+            }
+          ],
+          "text": "GELF tumour burden: Low burden"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-fitness-t2",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-fitness-t2",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t2"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-fitness",
+              "code": "fit",
+              "display": "Fit"
+            }
+          ],
+          "text": "Fitness for systemic therapy: Fit"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

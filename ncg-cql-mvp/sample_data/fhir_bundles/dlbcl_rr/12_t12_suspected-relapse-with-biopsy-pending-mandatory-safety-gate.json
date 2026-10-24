@@ -1,0 +1,406 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-ncg-dlbcl-rr-2020-t12",
+  "type": "collection",
+  "timestamp": "2026-10-23T06:21:20.812Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://ncgindia.org/guideline",
+        "code": "NCG_DLBCL_RR_2020"
+      },
+      {
+        "system": "http://ncgindia.org/test-case-id",
+        "code": "t12"
+      },
+      {
+        "system": "http://ncgindia.org/expected-outcome",
+        "code": "rr-biopsy-mandatory-gate"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-t12",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-t12",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-0000-0012-0000"
+          }
+        ],
+        "name": [
+          {
+            "text": "Suspected Relapse with Biopsy Pending: Mandatory Safety Gate"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Suspected Relapse with Biopsy Pending: Mandatory Safety Gate</b> - Patient with new mass on surveillance scan but pending biopsy confirmation. Triggers mandatory biopsy safety review.</p></div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-relapse-biopsy-status-t12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-relapse-biopsy-status-t12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-relapse-biopsy-status",
+              "code": "biopsy-pending",
+              "display": "Biopsy pending / FNAC only (repeat core/excisional biopsy mandatory)"
+            }
+          ],
+          "text": "Relapse tissue biopsy confirmation status: Biopsy pending / FNAC only (repeat core/excisional biopsy mandatory)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-relapse-timing-t12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-relapse-timing-t12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-relapse-timing",
+              "code": "relapse-gt-12m",
+              "display": "Late relapse (> 12 months post completion of first-line R-CHOP)"
+            }
+          ],
+          "text": "Timing of relapse / progression relative to R-CHOP: Late relapse (> 12 months post completion of first-line R-CHOP)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-chemo-fitness-overall-t12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-chemo-fitness-overall-t12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-chemo-fitness-overall",
+              "code": "chemo-eligible",
+              "display": "Chemotherapy eligible (candidate for intensive or standard combination salvage)"
+            }
+          ],
+          "text": "Fitness for combination systemic chemotherapy: Chemotherapy eligible (candidate for intensive or standard combination salvage)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-asct-fitness-t12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-asct-fitness-t12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-asct-fitness",
+              "code": "asct-fit",
+              "display": "Fit for intensive salvage therapy + Autologous Stem Cell Transplant (ASCT)"
+            }
+          ],
+          "text": "Fitness for salvage chemotherapy + ASCT: Fit for intensive salvage therapy + Autologous Stem Cell Transplant (ASCT)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-car-t-fitness-t12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-car-t-fitness-t12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-car-t-fitness",
+              "code": "car-t-fit",
+              "display": "Fit for CAR-T cell therapy (tolerable CRS/ICANS risk, adequate organ reserve)"
+            }
+          ],
+          "text": "Fitness for anti-CD19 CAR-T cell therapy: Fit for CAR-T cell therapy (tolerable CRS/ICANS risk, adequate organ reserve)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-pet-response-salvage-t12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-pet-response-salvage-t12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-pet-response-salvage",
+              "code": "not-assessed",
+              "display": "Not yet assessed / salvage therapy not yet completed"
+            }
+          ],
+          "text": "PET-CT response after salvage chemotherapy (3 cycles): Not yet assessed / salvage therapy not yet completed"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-car-t-future-plan-t12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-car-t-future-plan-t12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-car-t-future-plan",
+              "code": "cart-possible",
+              "display": "CAR-T is planned or remains a future possibility (MANDATORY TO AVOID BENDA / POLA-BR)"
+            }
+          ],
+          "text": "CAR-T cell therapy future intention / possibility: CAR-T is planned or remains a future possibility (MANDATORY TO AVOID BENDA / POLA-BR)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-cell-of-origin-rr-t12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-cell-of-origin-rr-t12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cell-of-origin-rr",
+              "code": "gcb",
+              "display": "GCB phenotype"
+            }
+          ],
+          "text": "Repeat IHC cell-of-origin subtype at relapse: GCB phenotype"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-dominant-residual-site-t12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-dominant-residual-site-t12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-dominant-residual-site",
+              "code": "single-site-residual",
+              "display": "Single residual PET+ site OR initial bulky site (candidate for consolidative RT 30-36 Gy)"
+            }
+          ],
+          "text": "Residual or bulky disease site for radiation: Single residual PET+ site OR initial bulky site (candidate for consolidative RT 30-36 Gy)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

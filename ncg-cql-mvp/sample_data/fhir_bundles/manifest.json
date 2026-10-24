@@ -1,0 +1,411 @@
+{
+  "generatedAt": "2026-10-23T06:21:20.812Z",
+  "sourceGuidelines": [
+    {
+      "id": "NCG_LYMPHOMA_WORKUP_2020",
+      "version": "1.2.0",
+      "count": 17,
+      "testCases": [
+        {
+          "index": 1,
+          "id": "tc1",
+          "name": "Circulating lymphocytosis on smear",
+          "expectedOutcome": "pathway-flow-cytometry-clpd",
+          "filename": "01_tc1_circulating-lymphocytosis-on-smear.json"
+        },
+        {
+          "index": 2,
+          "id": "tc2",
+          "name": "Isolated cervical lymphadenopathy (no lymphocytosis)",
+          "expectedOutcome": "pathway-tissue-excision-biopsy",
+          "filename": "02_tc2_isolated-cervical-lymphadenopathy-no-lymphocytosis.json"
+        },
+        {
+          "index": 3,
+          "id": "tc3",
+          "name": "Asymptomatic CLL without treatment indication",
+          "expectedOutcome": "pathway-staging-cll-surveillance",
+          "filename": "03_tc3_asymptomatic-cll-without-treatment-indication.json"
+        },
+        {
+          "index": 4,
+          "id": "tc4",
+          "name": "CLL with progressive cytopenias requiring therapy",
+          "expectedOutcome": "pathway-staging-cll-pretherapy",
+          "filename": "04_tc4_cll-with-progressive-cytopenias-requiring-therapy.json"
+        },
+        {
+          "index": 5,
+          "id": "tc5",
+          "name": "Stage I DLBCL staged with PET-CT (omit marrow)",
+          "expectedOutcome": "pathway-staging-pet-ct-omit-bm",
+          "filename": "05_tc5_stage-i-dlbcl-staged-with-pet-ct-omit-marrow.json"
+        },
+        {
+          "index": 6,
+          "id": "tc6",
+          "name": "Follicular Lymphoma staging (PET-CT + bone marrow mandatory)",
+          "expectedOutcome": "pathway-staging-pet-ct-and-bm",
+          "filename": "06_tc6_follicular-lymphoma-staging-pet-ct-bone-marrow-mandatory.json"
+        },
+        {
+          "index": 7,
+          "id": "tc7",
+          "name": "Marginal Zone Lymphoma staging (CECT + SPEP)",
+          "expectedOutcome": "pathway-staging-mzl-cect",
+          "filename": "07_tc7_marginal-zone-lymphoma-staging-cect-spep.json"
+        },
+        {
+          "index": 8,
+          "id": "tc8",
+          "name": "DLBCL with testicular involvement (high-risk CNS staging + LP)",
+          "expectedOutcome": "pathway-cns-staging-and-cardiac",
+          "filename": "08_tc8_dlbcl-with-testicular-involvement-high-risk-cns-staging-lp.json"
+        },
+        {
+          "index": 9,
+          "id": "tc9",
+          "name": "HBsAg-positive patient scheduled for anti-CD20 therapy",
+          "expectedOutcome": "pathway-viral-prophylaxis-hbv",
+          "filename": "09_tc9_hbsag-positive-patient-scheduled-for-anti-cd20-therapy.json"
+        },
+        {
+          "index": 10,
+          "id": "tc10",
+          "name": "Referral note with unparsed text (Safety provenance gate)",
+          "expectedOutcome": "needs-review",
+          "filename": "10_tc10_referral-note-with-unparsed-text-safety-provenance-gate.json"
+        },
+        {
+          "index": 11,
+          "id": "tc11",
+          "name": "Cutaneous T-cell Lymphoma / Mycosis Fungoides",
+          "expectedOutcome": "pathway-cutaneous-tcell-staging",
+          "filename": "11_tc11_cutaneous-t-cell-lymphoma-mycosis-fungoides.json"
+        },
+        {
+          "index": 12,
+          "id": "tc12",
+          "name": "Anti-HCV positive patient requiring HCV RNA & hepatology referral",
+          "expectedOutcome": "pathway-viral-prophylaxis-hcv",
+          "filename": "12_tc12_anti-hcv-positive-patient-requiring-hcv-rna-hepatology-referral.json"
+        },
+        {
+          "index": 13,
+          "id": "tc13",
+          "name": "HIV-associated lymphoma requiring multidisciplinary ART management",
+          "expectedOutcome": "pathway-hiv-multidisciplinary",
+          "filename": "13_tc13_hiv-associated-lymphoma-requiring-multidisciplinary-art-management.json"
+        },
+        {
+          "index": 14,
+          "id": "tc14",
+          "name": "High metabolic risk patient requiring Tumor Lysis Syndrome prophylaxis",
+          "expectedOutcome": "pathway-tls-prophylaxis",
+          "filename": "14_tc14_high-metabolic-risk-patient-requiring-tumor-lysis-syndrome-prophylaxis.json"
+        },
+        {
+          "index": 15,
+          "id": "tc15",
+          "name": "Double-Hit Lymphoma confirmed on FISH (DA-EPOCH-R)",
+          "expectedOutcome": "pathway-double-hit-specialized",
+          "filename": "15_tc15_double-hit-lymphoma-confirmed-on-fish-da-epoch-r.json"
+        },
+        {
+          "index": 16,
+          "id": "tc16",
+          "name": "High-dose Methotrexate planned in older adult requiring DTPA-GFR",
+          "expectedOutcome": "pathway-high-dose-mtx-dtpa",
+          "filename": "16_tc16_high-dose-methotrexate-planned-in-older-adult-requiring-dtpa-gfr.json"
+        },
+        {
+          "index": 17,
+          "id": "tc17",
+          "name": "Advanced DLBCL in 48M with High aaIPI (Score 2: LDH + Stage IV)",
+          "expectedOutcome": "pathway-staging-pet-ct-omit-bm",
+          "filename": "17_tc17_advanced-dlbcl-in-48m-with-high-aaipi-score-2-ldh-stage-iv.json"
+        }
+      ]
+    },
+    {
+      "id": "NCG_FL_2020",
+      "version": "0.2.0",
+      "count": 7,
+      "testCases": [
+        {
+          "index": 1,
+          "id": "t1",
+          "name": "Advanced high burden, fit",
+          "expectedOutcome": "advanced-high-burden-systemic",
+          "filename": "01_t1_advanced-high-burden-fit.json"
+        },
+        {
+          "index": 2,
+          "id": "t2",
+          "name": "Stage I limited, marrow cleared",
+          "expectedOutcome": "stage-1-limited",
+          "filename": "02_t2_stage-i-limited-marrow-cleared.json"
+        },
+        {
+          "index": 3,
+          "id": "t3",
+          "name": "Advanced low burden",
+          "expectedOutcome": "advanced-low-burden",
+          "filename": "03_t3_advanced-low-burden.json"
+        },
+        {
+          "index": 4,
+          "id": "t4",
+          "name": "Referral report with unparsed histology (safety)",
+          "expectedOutcome": "needs-review",
+          "filename": "04_t4_referral-report-with-unparsed-histology-safety.json"
+        },
+        {
+          "index": 5,
+          "id": "t5",
+          "name": "Advanced high burden, frail",
+          "expectedOutcome": "advanced-high-burden-frail",
+          "filename": "05_t5_advanced-high-burden-frail.json"
+        },
+        {
+          "index": 6,
+          "id": "t6",
+          "name": "Transformed to DLBCL",
+          "expectedOutcome": "treat-as-dlbcl",
+          "filename": "06_t6_transformed-to-dlbcl.json"
+        },
+        {
+          "index": 7,
+          "id": "t7",
+          "name": "Stage II contiguous",
+          "expectedOutcome": "stage-2-contiguous",
+          "filename": "07_t7_stage-ii-contiguous.json"
+        }
+      ]
+    },
+    {
+      "id": "NCG_DLBCL_TREATMENT_2020",
+      "version": "1.0.0",
+      "count": 16,
+      "testCases": [
+        {
+          "index": 1,
+          "id": "t1",
+          "name": "Limited Stage aaIPI 0 Non-Bulky (Fit 45M)",
+          "expectedOutcome": "dlbcl-fit-limited-aai0-nonbulky",
+          "filename": "01_t1_limited-stage-aaipi-0-non-bulky-fit-45m.json"
+        },
+        {
+          "index": 2,
+          "id": "t2",
+          "name": "Limited Stage Bulky Mass 8.5 cm (Fit 52F)",
+          "expectedOutcome": "dlbcl-fit-limited-aai1-or-bulky",
+          "filename": "02_t2_limited-stage-bulky-mass-8-5-cm-fit-52f.json"
+        },
+        {
+          "index": 3,
+          "id": "t3",
+          "name": "Limited Stage aaIPI 1 Non-Bulky (Fit 38M with Elevated LDH)",
+          "expectedOutcome": "dlbcl-fit-limited-aai1-or-bulky",
+          "filename": "03_t3_limited-stage-aaipi-1-non-bulky-fit-38m-with-elevated-ldh.json"
+        },
+        {
+          "index": 4,
+          "id": "t4",
+          "name": "Advanced Non-GCB DLBCL High IPI (Fit 58M): Pola-R-CHP Candidate",
+          "expectedOutcome": "dlbcl-fit-advanced-pola-r-chp",
+          "filename": "04_t4_advanced-non-gcb-dlbcl-high-ipi-fit-58m-pola-r-chp-candidate.json"
+        },
+        {
+          "index": 5,
+          "id": "t5",
+          "name": "Advanced GCB DLBCL (Fit 42F): Standard R-CHOP x 6",
+          "expectedOutcome": "dlbcl-fit-advanced-standard",
+          "filename": "05_t5_advanced-gcb-dlbcl-fit-42f-standard-r-chop-x-6.json"
+        },
+        {
+          "index": 6,
+          "id": "t6",
+          "name": "Testicular DLBCL High CNS Risk (Fit 55M)",
+          "expectedOutcome": "dlbcl-high-cns-risk-prophylaxis",
+          "filename": "06_t6_testicular-dlbcl-high-cns-risk-fit-55m.json"
+        },
+        {
+          "index": 7,
+          "id": "t7",
+          "name": "HIV+ DLBCL with Preserved CD4 (36M, CD4 = 280)",
+          "expectedOutcome": "dlbcl-hiv-cd4-gte-50",
+          "filename": "07_t7_hiv-dlbcl-with-preserved-cd4-36m-cd4-280.json"
+        },
+        {
+          "index": 8,
+          "id": "t8",
+          "name": "HIV+ DLBCL with Profound Lymphopenia (41M, CD4 = 22)",
+          "expectedOutcome": "dlbcl-hiv-cd4-lt-50",
+          "filename": "08_t8_hiv-dlbcl-with-profound-lymphopenia-41m-cd4-22.json"
+        },
+        {
+          "index": 9,
+          "id": "t9",
+          "name": "Unfit with Prior Infarction / LVEF 40% (64M)",
+          "expectedOutcome": "dlbcl-unfit-cardiac-ceop",
+          "filename": "09_t9_unfit-with-prior-infarction-lvef-40-64m.json"
+        },
+        {
+          "index": 10,
+          "id": "t10",
+          "name": "Elderly Frail Patient 78F (Curative Intent)",
+          "expectedOutcome": "dlbcl-unfit-elderly-minichop",
+          "filename": "10_t10_elderly-frail-patient-78f-curative-intent.json"
+        },
+        {
+          "index": 11,
+          "id": "t11",
+          "name": "Anthracycline Ineligible Severe Hepatic / Renal (66M)",
+          "expectedOutcome": "dlbcl-unfit-anthra-ineligible-gcvp",
+          "filename": "11_t11_anthracycline-ineligible-severe-hepatic-renal-66m.json"
+        },
+        {
+          "index": 12,
+          "id": "t12",
+          "name": "Frail Bedbound Patient (84M, Palliative Intent)",
+          "expectedOutcome": "dlbcl-frail-palliative",
+          "filename": "12_t12_frail-bedbound-patient-84m-palliative-intent.json"
+        },
+        {
+          "index": 13,
+          "id": "t13",
+          "name": "PMBCL with PICC Line in Place (28F): DA-EPOCH-R",
+          "expectedOutcome": "pmbcl-fit-central-access",
+          "filename": "13_t13_pmbcl-with-picc-line-in-place-28f-da-epoch-r.json"
+        },
+        {
+          "index": 14,
+          "id": "t14",
+          "name": "PMBCL No Central Access (32M): R-CHOP Alternative",
+          "expectedOutcome": "pmbcl-alternative-rchop",
+          "filename": "14_t14_pmbcl-no-central-access-32m-r-chop-alternative.json"
+        },
+        {
+          "index": 15,
+          "id": "t15",
+          "name": "Cardiotoxicity Safety Gate: Cycle 4 LVEF Drop > 10%",
+          "expectedOutcome": "cardiotoxicity-switch",
+          "filename": "15_t15_cardiotoxicity-safety-gate-cycle-4-lvef-drop-10.json"
+        },
+        {
+          "index": 16,
+          "id": "t16",
+          "name": "Unassessed Disease Stage: Safety Gate",
+          "expectedOutcome": "needs-review",
+          "filename": "16_t16_unassessed-disease-stage-safety-gate.json"
+        }
+      ]
+    },
+    {
+      "id": "NCG_DLBCL_RR_2020",
+      "version": "1.0.0",
+      "count": 14,
+      "testCases": [
+        {
+          "index": 1,
+          "id": "t1",
+          "name": "Late Relapse 18 Mo Post R-CHOP, Fit for ASCT (48M)",
+          "expectedOutcome": "rr-pathway-a-salvage-fit",
+          "filename": "01_t1_late-relapse-18-mo-post-r-chop-fit-for-asct-48m.json"
+        },
+        {
+          "index": 2,
+          "id": "t2",
+          "name": "Late Relapse Post-Salvage Chemosensitive Responders (52F, DS-2): ASCT Consolidation",
+          "expectedOutcome": "rr-pathway-a-asct-consolidation",
+          "filename": "02_t2_late-relapse-post-salvage-chemosensitive-responders-52f-ds-2-asct-consolidation.json"
+        },
+        {
+          "index": 3,
+          "id": "t3",
+          "name": "Late Relapse Post-Salvage Partial Response DS-4 (46M): Biopsy Triage",
+          "expectedOutcome": "rr-pathway-a-ds4-biopsy-triage",
+          "filename": "03_t3_late-relapse-post-salvage-partial-response-ds-4-46m-biopsy-triage.json"
+        },
+        {
+          "index": 4,
+          "id": "t4",
+          "name": "Late Relapse Salvage-Refractory DS-5 (55M): Transition to CAR-T",
+          "expectedOutcome": "rr-pathway-a-ds5-salvage-cart",
+          "filename": "04_t4_late-relapse-salvage-refractory-ds-5-55m-transition-to-car-t.json"
+        },
+        {
+          "index": 5,
+          "id": "t5",
+          "name": "Late Relapse Transplant-Ineligible Patient (72M): Non-Transplant Salvage x 6",
+          "expectedOutcome": "rr-pathway-a-nontransplant-salvage",
+          "filename": "05_t5_late-relapse-transplant-ineligible-patient-72m-non-transplant-salvage-x-6.json"
+        },
+        {
+          "index": 6,
+          "id": "t6",
+          "name": "Primary Refractory on R-CHOP, Fit for CAR-T (39M): Primary CAR-T Pathway",
+          "expectedOutcome": "rr-pathway-b-cart-primary",
+          "filename": "06_t6_primary-refractory-on-r-chop-fit-for-car-t-39m-primary-car-t-pathway.json"
+        },
+        {
+          "index": 7,
+          "id": "t7",
+          "name": "Early Relapse 6 Mo Post R-CHOP, Fit for CAR-T (58F): Avoid Bendamustine",
+          "expectedOutcome": "rr-pathway-b-cart-primary",
+          "filename": "07_t7_early-relapse-6-mo-post-r-chop-fit-for-car-t-58f-avoid-bendamustine.json"
+        },
+        {
+          "index": 8,
+          "id": "t8",
+          "name": "Early Relapse, Ineligible for CAR-T (68M): Glofitamab-GEMOX Bispecific",
+          "expectedOutcome": "rr-pathway-b-cart-unfit-glofit",
+          "filename": "08_t8_early-relapse-ineligible-for-car-t-68m-glofitamab-gemox-bispecific.json"
+        },
+        {
+          "index": 9,
+          "id": "t9",
+          "name": "Early Relapse, CAR-T Permanently Excluded (71F): Pola-BR Allowed",
+          "expectedOutcome": "rr-pathway-b-cart-unfit-pola-br",
+          "filename": "09_t9_early-relapse-car-t-permanently-excluded-71f-pola-br-allowed.json"
+        },
+        {
+          "index": 10,
+          "id": "t10",
+          "name": "Frail Patient Unfit for Chemo, Non-GCB (82M): Targeted Lenalidomide",
+          "expectedOutcome": "rr-pathway-c-palliative-nongcb",
+          "filename": "10_t10_frail-patient-unfit-for-chemo-non-gcb-82m-targeted-lenalidomide.json"
+        },
+        {
+          "index": 11,
+          "id": "t11",
+          "name": "Frail Patient Unfit for Chemo, GCB (86F): Best Supportive Care & Metronomic",
+          "expectedOutcome": "rr-pathway-c-palliative-supportive",
+          "filename": "11_t11_frail-patient-unfit-for-chemo-gcb-86f-best-supportive-care-metronomic.json"
+        },
+        {
+          "index": 12,
+          "id": "t12",
+          "name": "Suspected Relapse with Biopsy Pending: Mandatory Safety Gate",
+          "expectedOutcome": "rr-biopsy-mandatory-gate",
+          "filename": "12_t12_suspected-relapse-with-biopsy-pending-mandatory-safety-gate.json"
+        },
+        {
+          "index": 13,
+          "id": "t13",
+          "name": "Unassessed Relapse Timing: Missing Clinical Chronology",
+          "expectedOutcome": "needs-review",
+          "filename": "13_t13_unassessed-relapse-timing-missing-clinical-chronology.json"
+        },
+        {
+          "index": 14,
+          "id": "t14",
+          "name": "Single Residual Site Post-Salvage (67M): Consolidative Radiotherapy (30-36 Gy)",
+          "expectedOutcome": "rr-consolidative-radiotherapy",
+          "filename": "14_t14_single-residual-site-post-salvage-67m-consolidative-radiotherapy-30-36-gy.json"
+        }
+      ]
+    }
+  ]
+}

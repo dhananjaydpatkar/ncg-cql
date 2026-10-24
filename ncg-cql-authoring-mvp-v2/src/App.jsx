@@ -11,6 +11,8 @@ import { Rules } from './components/Rules';
 import { Tests } from './components/Tests';
 import { Publish } from './components/Publish';
 import { CatalogModal } from './components/CatalogModal';
+import { GuidedTour } from './components/GuidedTour';
+import { Compass, Sparkles } from 'lucide-react';
 
 const TABS = [
   ['setup', '1 · Details'],
@@ -43,7 +45,31 @@ export default function App() {
   };
   const [msg, setMsg] = useState(null);
   const [globalCatalogOpen, setGlobalCatalogOpen] = useState(false);
+  const [tourOpen, setTourOpen] = useState(false);
+  const [tourStep, setTourStep] = useState(0);
+  const [hasSeenTourPrompt, setHasSeenTourPrompt] = useState(() => {
+    try {
+      return !!localStorage.getItem('ncg-tour-completed');
+    } catch {
+      return false;
+    }
+  });
   const fileRef = useRef();
+
+  const startTour = (step = 0) => {
+    setTourStep(step);
+    setTourOpen(true);
+  };
+
+  const closeTour = () => {
+    setTourOpen(false);
+    try {
+      localStorage.setItem('ncg-tour-completed', 'true');
+    } catch {
+      // ignore storage failure
+    }
+    setHasSeenTourPrompt(true);
+  };
 
   useEffect(() => saveStore(store), [store]);
   const g = store.guidelines.find((x) => x.id === store.activeId) || store.guidelines[0];
@@ -122,9 +148,12 @@ export default function App() {
     <>
       <header className="topbar">
         <div className="topbar-row">
-          <div className="brand"><div className="brand-mark">N</div><div>NCG Guideline Studio<small>Write guidelines as rules - CQL &amp; FHIR are generated</small></div></div>
+          <div className="brand" data-tour="brand">
+            <div className="brand-mark">N</div>
+            <div>NCG Guideline Studio<small>Write guidelines as rules - CQL &amp; FHIR are generated</small></div>
+          </div>
           <span className="spacer" />
-          <select className="inline" value={g.id} onChange={(e) => {
+          <select className="inline" data-tour="guideline-select" value={g.id} onChange={(e) => {
             const nextId = e.target.value;
             setStore((s) => ({ ...s, activeId: nextId }));
             const url = new URL(window.location);
@@ -138,22 +167,62 @@ export default function App() {
           <button className="btn sm primary" onClick={newGuideline}>+ New</button>
           <button className="btn sm" onClick={duplicate}>Duplicate</button>
           <button className="btn sm" onClick={() => fileRef.current.click()}>Import</button>
-          <button className="btn sm" title="Browse standardized clinical findings, score functions, and outcomes" onClick={() => setGlobalCatalogOpen(true)}>
+          <button className="btn sm" title="Browse standardized clinical findings, score functions, and outcomes" onClick={() => setGlobalCatalogOpen(true)} data-tour="reusable-library">
             📚 Reusable Library
           </button>
           <button className="btn sm" title="Reset active guideline to original seed definition" onClick={resetDefaults}>↺ Reset to Seed</button>
           <button className="btn sm danger" onClick={remove}>Delete</button>
+          <button
+            className="btn sm tour-trigger-btn"
+            title="Interactive Guided Tour — Explore features step-by-step (Replayable anytime)"
+            onClick={() => startTour(0)}
+            data-tour="tour-btn"
+          >
+            <Compass size={14} className="tour-trigger-icon" />
+            <span>Guided Tour</span>
+          </button>
           <input ref={fileRef} type="file" accept=".json,application/json" hidden onChange={importFile} />
         </div>
-        <nav className="tabs">
+        <nav className="tabs" data-tour="tabs-nav">
           {TABS.map(([k, label]) => (
-            <button key={k} className={`tab ${tab === k ? 'active' : ''}`} onClick={() => setTab(k)}>
+            <button key={k} data-tour={`tab-${k}`} className={`tab ${tab === k ? 'active' : ''}`} onClick={() => setTab(k)}>
               {label}
               {k === 'setup' && issues.length > 0 && <span className={`n ${errors ? 'bad' : ''}`}>{issues.length}</span>}
             </button>
           ))}
         </nav>
       </header>
+
+      {!hasSeenTourPrompt && !tourOpen && (
+        <div className="tour-welcome-banner">
+          <div className="tour-banner-content">
+            <Sparkles size={16} className="tour-banner-sparkle" />
+            <span>
+              <b>New to NCG Guideline Studio?</b> Take an interactive 2-minute tour to explore findings, score functions, decision rules, test cases, and CQL export.
+            </span>
+          </div>
+          <div className="tour-banner-actions">
+            <button className="btn sm primary" onClick={() => startTour(0)}>
+              Start Tour
+            </button>
+            <button
+              className="btn sm ghost"
+              onClick={() => {
+                try {
+                  localStorage.setItem('ncg-tour-completed', 'true');
+                } catch {
+                  // ignore
+                }
+                setHasSeenTourPrompt(true);
+              }}
+              title="Dismiss banner (you can still replay the tour anytime from the Guided Tour button)"
+            >
+              Dismiss
+            </button>
+          </div>
+        </div>
+      )}
+
       <main key={g.id}>
         {tab === 'setup' && <Setup {...shared} issues={issues} goto={setTab} />}
         {tab === 'findings' && <Findings {...shared} />}
@@ -163,6 +232,15 @@ export default function App() {
         {tab === 'tests' && <Tests {...shared} />}
         {tab === 'publish' && <Publish g={g} issues={issues} toast={toast} />}
       </main>
+
+      <GuidedTour
+        isOpen={tourOpen}
+        initialStep={tourStep}
+        onClose={closeTour}
+        setTab={setTab}
+        currentTab={tab}
+      />
+
       {globalCatalogOpen && (
         <CatalogModal
           initialType={catalogDefaultType}

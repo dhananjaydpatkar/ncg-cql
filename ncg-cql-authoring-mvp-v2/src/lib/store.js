@@ -15,8 +15,10 @@ export function loadStore() {
         s.guidelines = s.guidelines.map((existing) => {
           const seed = seedMap.get(existing.id);
           if (!seed) return existing;
+          const hasMissingFindingMeta = existing.findings?.some((f) => !f.category || !f.codeSystemUrl || !f.valueSetUrl);
           const needsUpdate =
             existing.version !== seed.version ||
+            hasMissingFindingMeta ||
             (!existing.functions && seed.functions) ||
             (existing.functions?.length !== seed.functions?.length) ||
             (!existing.customDefinitions && seed.customDefinitions) ||
@@ -25,6 +27,22 @@ export function loadStore() {
           if (needsUpdate) {
             updated = true;
             return structuredClone(seed);
+          }
+          // Enrich any custom findings that might lack category or URLs
+          if (existing.findings?.length) {
+            const seedFindingMap = new Map((seed.findings || []).map((f) => [f.id, f]));
+            existing.findings.forEach((ef) => {
+              const sf = seedFindingMap.get(ef.id);
+              if (sf) {
+                if (!ef.category && sf.category) { ef.category = sf.category; updated = true; }
+                if (!ef.codeSystemUrl && sf.codeSystemUrl) { ef.codeSystemUrl = sf.codeSystemUrl; updated = true; }
+                if (!ef.valueSetUrl && sf.valueSetUrl) { ef.valueSetUrl = sf.valueSetUrl; updated = true; }
+              } else {
+                if (!ef.category) { ef.category = 'Clinical'; updated = true; }
+                if (!ef.codeSystemUrl) { ef.codeSystemUrl = `http://ncgindia.org/fhir/CodeSystem/ncg-${ef.id}`; updated = true; }
+                if (!ef.valueSetUrl) { ef.valueSetUrl = `http://ncgindia.org/fhir/ValueSet/ncg-${ef.id}`; updated = true; }
+              }
+            });
           }
           return existing;
         });

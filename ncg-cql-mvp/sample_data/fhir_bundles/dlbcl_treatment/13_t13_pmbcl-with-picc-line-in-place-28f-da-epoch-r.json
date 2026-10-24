@@ -1,0 +1,646 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-ncg-dlbcl-treatment-2020-t13",
+  "type": "collection",
+  "timestamp": "2026-10-23T06:21:20.810Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://ncgindia.org/guideline",
+        "code": "NCG_DLBCL_TREATMENT_2020"
+      },
+      {
+        "system": "http://ncgindia.org/test-case-id",
+        "code": "t13"
+      },
+      {
+        "system": "http://ncgindia.org/expected-outcome",
+        "code": "pmbcl-fit-central-access"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-t13",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-t13",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-0000-0013-0000"
+          }
+        ],
+        "name": [
+          {
+            "text": "PMBCL with PICC Line in Place (28F): DA-EPOCH-R"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>PMBCL with PICC Line in Place (28F): DA-EPOCH-R</b> - 28F with anterior mediastinal PMBCL, fit, PICC line inserted. Receives preferred infusional DA-EPOCH-R.</p></div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-lymphoma-subtype-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-lymphoma-subtype-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-subtype",
+              "code": "pmbcl",
+              "display": "Primary Mediastinal B-Cell Lymphoma (PMBCL)"
+            }
+          ],
+          "text": "Histological lymphoma diagnosis: Primary Mediastinal B-Cell Lymphoma (PMBCL)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-anthracycline-fitness-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-anthracycline-fitness-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-anthracycline-fitness",
+              "code": "fit-r-chop",
+              "display": "Fit for standard R-CHOP (LVEF >= 50%, Age < 70, controlled comorbidities)"
+            }
+          ],
+          "text": "Anthracycline (R-CHOP) fitness status: Fit for standard R-CHOP (LVEF >= 50%, Age < 70, controlled comorbidities)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-dlbcl-stage-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-dlbcl-stage-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-dlbcl-stage",
+              "code": "stage-1-2-limited",
+              "display": "Limited Stage (Stage I & II)"
+            }
+          ],
+          "text": "Ann Arbor anatomical disease stage: Limited Stage (Stage I & II)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-bulky-status-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-bulky-status-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-bulky-status",
+              "code": "bulky-gte-7-5cm",
+              "display": "Bulky disease (largest lesion >= 7.5 cm)"
+            }
+          ],
+          "text": "Bulky disease status (>= 7.5 cm): Bulky disease (largest lesion >= 7.5 cm)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-cell-of-origin-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-cell-of-origin-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cell-of-origin",
+              "code": "non-gcb",
+              "display": "Non-GCB / ABC (Activated B-cell phenotype)"
+            }
+          ],
+          "text": "DLBCL cell-of-origin (IHC Hans algorithm): Non-GCB / ABC (Activated B-cell phenotype)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-cns-risk-sites-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-cns-risk-sites-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cns-risk-sites",
+              "code": "cns-standard-risk",
+              "display": "Standard CNS risk (no high-risk anatomical involvement)"
+            }
+          ],
+          "text": "CNS high-risk anatomical involvement: Standard CNS risk (no high-risk anatomical involvement)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hiv-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hiv-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hiv",
+              "code": "hiv-negative",
+              "display": "HIV serology negative / non-reactive"
+            }
+          ],
+          "text": "HIV screening serology: HIV serology negative / non-reactive"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-cd4-count-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-cd4-count-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cd4-count",
+              "code": "not-applicable",
+              "display": "Not applicable (HIV negative)"
+            }
+          ],
+          "text": "CD4 lymphocyte count (in HIV+ DLBCL): Not applicable (HIV negative)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-central-venous-access-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-central-venous-access-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-central-venous-access",
+              "code": "central-access-available",
+              "display": "Central venous access available (PICC line or chemo port in place)"
+            }
+          ],
+          "text": "Central venous access availability (for PMBCL): Central venous access available (PICC line or chemo port in place)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-cardiac-echo-status-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-cardiac-echo-status-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cardiac-echo-status",
+              "code": "echo-normal-stable",
+              "display": "LVEF >= 50% and stable (decline <= 10% from baseline)"
+            }
+          ],
+          "text": "2D-ECHO LVEF monitoring on therapy: LVEF >= 50% and stable (decline <= 10% from baseline)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-prephase-indication-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-prephase-indication-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-prephase-indication",
+              "code": "prephase-not-indicated",
+              "display": "No pre-phase indicated (standard good PS non-bulky)"
+            }
+          ],
+          "text": "Pre-phase therapy indication: No pre-phase indicated (standard good PS non-bulky)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-age-group-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-age-group-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-age-group",
+              "code": "age-le-60",
+              "display": "Age <= 60 years"
+            }
+          ],
+          "text": "Patient age bracket (IPI cutoff): Age <= 60 years"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-serum-ldh-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-serum-ldh-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-serum-ldh",
+              "code": "ldh-elevated",
+              "display": "Elevated (> ULN)"
+            }
+          ],
+          "text": "Serum LDH (Lactate Dehydrogenase): Elevated (> ULN)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-ecog-ps-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-ecog-ps-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-ecog-ps",
+              "code": "ecog-0-1",
+              "display": "ECOG 0-1 (ambulatory, fully active or restricted light work)"
+            }
+          ],
+          "text": "ECOG performance status: ECOG 0-1 (ambulatory, fully active or restricted light work)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-extranodal-sites-t13",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-extranodal-sites-t13",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t13"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-extranodal-sites",
+              "code": "extranodal-0-1",
+              "display": "0 or 1 extranodal site"
+            }
+          ],
+          "text": "Extranodal involvement sites: 0 or 1 extranodal site"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

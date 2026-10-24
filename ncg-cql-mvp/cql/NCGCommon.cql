@@ -94,7 +94,7 @@ define function IsNotDone(observation FHIR.Observation):
  */
 define function CalculateBSA(heightCm Decimal, weightKg Decimal):
   // Mosteller formula: BSA (m^2) = sqrt((height_cm * weight_kg) / 3600)
-  Sqrt((heightCm * weightKg) / 3600.0)
+  Power((heightCm * weightKg) / 3600.0, 0.5)
 
 define function CalculateCrClCockcroftGault(ageYears Decimal, weightKg Decimal, serumCreatinineMgDl Decimal, isFemale Boolean):
   (((140 - ageYears) * weightKg) / (72 * serumCreatinineMgDl)) * (if isFemale then 0.85 else 1.0)

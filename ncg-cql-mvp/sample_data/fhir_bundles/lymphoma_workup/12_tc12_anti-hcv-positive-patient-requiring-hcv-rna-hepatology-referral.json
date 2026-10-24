@@ -1,0 +1,326 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-ncg-lymphoma-workup-2020-tc12",
+  "type": "collection",
+  "timestamp": "2026-10-23T06:21:20.805Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://ncgindia.org/guideline",
+        "code": "NCG_LYMPHOMA_WORKUP_2020"
+      },
+      {
+        "system": "http://ncgindia.org/test-case-id",
+        "code": "tc12"
+      },
+      {
+        "system": "http://ncgindia.org/expected-outcome",
+        "code": "pathway-viral-prophylaxis-hcv"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-tc12",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-tc12",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-0000-0012-0000"
+          }
+        ],
+        "name": [
+          {
+            "text": "Anti-HCV positive patient requiring HCV RNA & hepatology referral"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Anti-HCV positive patient requiring HCV RNA & hepatology referral</b> - 54M presenting with DLBCL and reactive Anti-HCV serology. Triggers quantitative HCV RNA PCR and hepatologist consultation prior to chemotherapy.</p></div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-presentation-smear-tc12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-presentation-smear-tc12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-presentation-smear",
+              "code": "no-lymphocytosis",
+              "display": "No lymphocytosis (solid nodal / extranodal mass)"
+            }
+          ],
+          "text": "Peripheral smear / lymphocytosis: No lymphocytosis (solid nodal / extranodal mass)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-lymphoma-category-tc12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-lymphoma-category-tc12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-category",
+              "code": "dlbcl",
+              "display": "Diffuse large B-cell lymphoma (DLBCL)"
+            }
+          ],
+          "text": "Suspected / confirmed subtype: Diffuse large B-cell lymphoma (DLBCL)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-staging-extent-tc12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-staging-extent-tc12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-staging-extent",
+              "code": "stage-3-4-advanced",
+              "display": "Advanced stage (Stage III-IV)"
+            }
+          ],
+          "text": "Anatomical stage / clinical extent: Advanced stage (Stage III-IV)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hbv-tc12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hbv-tc12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hbv",
+              "code": "hbv-negative",
+              "display": "HBsAg and HBcAb-IgG negative"
+            }
+          ],
+          "text": "Hepatitis B serology (HBsAg / HBcAb): HBsAg and HBcAb-IgG negative"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hcv-tc12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hcv-tc12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hcv",
+              "code": "hcv-positive",
+              "display": "Anti-HCV antibody reactive"
+            }
+          ],
+          "text": "Hepatitis C serology (Anti-HCV): Anti-HCV antibody reactive"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hiv-tc12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hiv-tc12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hiv",
+              "code": "hiv-negative",
+              "display": "HIV-1/2 non-reactive"
+            }
+          ],
+          "text": "HIV screening serology: HIV-1/2 non-reactive"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-tls-metabolic-risk-tc12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-tls-metabolic-risk-tc12",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc12"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-tls-metabolic-risk",
+              "code": "tls-standard-risk",
+              "display": "Standard / low TLS risk"
+            }
+          ],
+          "text": "Tumor lysis syndrome (TLS) metabolic risk: Standard / low TLS risk"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

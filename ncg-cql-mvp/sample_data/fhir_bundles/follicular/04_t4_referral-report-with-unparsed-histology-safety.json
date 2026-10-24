@@ -1,0 +1,206 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-ncg-fl-2020-t4",
+  "type": "collection",
+  "timestamp": "2026-10-23T06:21:20.807Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://ncgindia.org/guideline",
+        "code": "NCG_FL_2020"
+      },
+      {
+        "system": "http://ncgindia.org/test-case-id",
+        "code": "t4"
+      },
+      {
+        "system": "http://ncgindia.org/expected-outcome",
+        "code": "needs-review"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-t4",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-t4",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-0000-0004-0000"
+          }
+        ],
+        "name": [
+          {
+            "text": "Referral report with unparsed histology (safety)"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Referral report with unparsed histology (safety)</b> - External lab says \"borderline 3a vs 3b\" as free text.</p></div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-histology-t4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-histology-t4",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t4"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-histology",
+              "code": "fl-grade-3a",
+              "display": "FL grade 3a"
+            }
+          ],
+          "text": "Histology / grade: FL grade 3a"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "unparsed",
+                  "display": "unparsed"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-stage-t4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-stage-t4",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t4"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-stage",
+              "code": "stage-3",
+              "display": "Stage III"
+            }
+          ],
+          "text": "Ann Arbor stage: Stage III"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-gelf-t4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-gelf-t4",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t4"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-gelf",
+              "code": "high-burden",
+              "display": "High burden"
+            }
+          ],
+          "text": "GELF tumour burden: High burden"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-fitness-t4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-fitness-t4",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t4"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-fitness",
+              "code": "fit",
+              "display": "Fit"
+            }
+          ],
+          "text": "Fitness for systemic therapy: Fit"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -9,7 +9,7 @@ const inp = (o) => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, { va
 export const NCG_LYMPHOMA_WORKUP = {
   schema: 1,
   id: 'NCG_LYMPHOMA_WORKUP_2020',
-  version: '1.2.0',
+  version: '1.2.1',
   title: 'Suspected Lymphoma - Diagnostic Workup & Staging Pathway',
   organization: 'National Cancer Grid (India) / NCG-Heme Working Group',
   source: 'NCG Guidelines - Lymphoma Workup Flowchart with Immunophenotyping & Validated Prognostic Indices',
@@ -21,7 +21,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'presentation-smear',
       label: 'Peripheral smear / lymphocytosis',
+      category: 'Morphology & Hematology',
       help: 'Step 4 critical branch point: presence of abnormal circulating lymphocytes or absolute lymphocytosis (>5 x 10^9/L).',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-presentation-smear',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-presentation-smear',
       values: [
         V('lymphocytosis-present', 'Lymphocytosis present (circulating abnormal cells)'),
         V('no-lymphocytosis', 'No lymphocytosis (solid nodal / extranodal mass)'),
@@ -30,7 +33,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'lymphoma-category',
       label: 'Suspected / confirmed subtype',
+      category: 'Histology & Pathology',
       help: 'Histopathological or flow-cytometric diagnosis per WHO / NCG classification.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-category',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-lymphoma-category',
       values: [
         V('cll-sll', 'CLL / SLL (Chronic lymphocytic leukemia)'),
         V('mcl', 'Mantle cell lymphoma (MCL)'),
@@ -47,7 +53,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'cll-therapy-indication',
       label: 'CLL therapy indication status',
+      category: 'Clinical Assessment & Indications',
       help: 'Step 7 imaging triage for CLL: asymptomatic observation vs. progressive disease / cytopenias requiring therapy.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-cll-therapy-indication',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-cll-therapy-indication',
       values: [
         V('asymptomatic-no-therapy', 'Asymptomatic / stable (no indication for therapy)'),
         V('therapy-indicated', 'Symptomatic / cytopenias / treatment indicated'),
@@ -57,7 +66,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'staging-extent',
       label: 'Anatomical stage / clinical extent',
+      category: 'Staging & Anatomy',
       help: 'Validated anatomical extent (Ann Arbor stage) from clinical assessment or imaging.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-staging-extent',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-staging-extent',
       values: [
         V('stage-1-2-limited', 'Limited stage (Stage I-II)'),
         V('stage-3-4-advanced', 'Advanced stage (Stage III-IV)'),
@@ -68,7 +80,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'cns-risk-factors',
       label: 'CNS high-risk features',
+      category: 'Prognosis & Risk',
       help: 'High-risk extranodal involvement (testicular, parameningeal, breast, renal, adrenal, >2 extranodal sites with high LDH, blastoid MCL).',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-cns-risk-factors',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-cns-risk-factors',
       values: [
         V('cns-high-risk', 'High-risk CNS features present'),
         V('cns-standard-risk', 'Standard risk / no high-risk CNS features'),
@@ -77,7 +92,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'planned-therapy-cardiac',
       label: 'Planned regimen & organ safety',
+      category: 'Treatment Plan & Organ Safety',
       help: 'Planned systemic therapy requiring baseline organ assessment (anthracycline cardiotoxicity or high-dose MTX renal monitoring).',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-planned-therapy-cardiac',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-planned-therapy-cardiac',
       values: [
         V('anthracycline-planned', 'Anthracycline planned (CHOP/ABVD) or cardiac comorbidity'),
         V('high-dose-mtx-planned', 'High-dose Methotrexate planned (age >40 or renal risk)'),
@@ -87,7 +105,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'viral-screening-hbv',
       label: 'Hepatitis B serology (HBsAg / HBcAb)',
+      category: 'Infectious & Safety',
       help: 'Screening before B-cell depleting (anti-CD20) or immunosuppressive therapy to prevent fatal HBV reactivation.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hbv',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-viral-screening-hbv',
       values: [
         V('hbv-positive', 'HBsAg or HBcAb-IgG positive'),
         V('hbv-negative', 'HBsAg and HBcAb-IgG negative'),
@@ -96,7 +117,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'viral-screening-hcv',
       label: 'Hepatitis C serology (Anti-HCV)',
+      category: 'Infectious & Safety',
       help: 'Screening before systemic therapy. If positive, quantitative HCV RNA is required with hepatologist referral.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hcv',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-viral-screening-hcv',
       values: [
         V('hcv-positive', 'Anti-HCV antibody reactive'),
         V('hcv-negative', 'Anti-HCV antibody negative'),
@@ -105,7 +129,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'viral-screening-hiv',
       label: 'HIV screening serology',
+      category: 'Infectious & Safety',
       help: 'Step 3 viral marker: if positive, check CD4 count, viral load, initiate OI prophylaxis, and coordinate non-myelosuppressive ART.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hiv',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-viral-screening-hiv',
       values: [
         V('hiv-positive', 'HIV-1/2 reactive'),
         V('hiv-negative', 'HIV-1/2 non-reactive'),
@@ -114,7 +141,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'tls-metabolic-risk',
       label: 'Tumor lysis syndrome (TLS) metabolic risk',
+      category: 'Safety & Comorbidities',
       help: 'Metabolic panel screening (Ca, Phos, Uric acid, LDH) to detect hyperuricemia and high TLS risk before therapy.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-tls-metabolic-risk',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-tls-metabolic-risk',
       values: [
         V('tls-high-risk', 'High TLS risk (bulky disease, elevated uric acid / LDH)'),
         V('tls-standard-risk', 'Standard / low TLS risk'),
@@ -123,7 +153,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'double-hit-fish',
       label: 'Double-hit (DHL) FISH panel (MYC/BCL2)',
+      category: 'Cytogenetics & Molecular',
       help: 'Reflex cytogenetic testing in GCB-DLBCL to screen for MYC and BCL-2 rearrangements.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-double-hit-fish',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-double-hit-fish',
       values: [
         V('dhl-detected', 'Double-hit / Triple-hit confirmed (MYC + BCL2/6 rearrangement)'),
         V('dhl-negative', 'Standard GCB-DLBCL (MYC rearrangement negative)'),
@@ -133,7 +166,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'age-group',
       label: 'Age group (IPI / aaIPI / FLIPI / MIPI stratification)',
+      category: 'Demographics & Prognostic Factors',
       help: 'Age factor for prognostic scoring: Age <= 60 uses aaIPI (max score 3); Age > 60 uses standard IPI/FLIPI; Age >= 70 confers adverse risk in MIPI and MALT-IPI.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-age-group',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-age-group',
       values: [
         V('age-le-60', 'Age <= 60 years (aaIPI candidate)'),
         V('age-gt-60', 'Age 61-69 years (standard IPI / FLIPI / IPS)'),
@@ -143,7 +179,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'ecog-ps',
       label: 'ECOG performance status',
+      category: 'Performance & Fitness',
       help: 'Performance status at presentation (ECOG >= 2 is an adverse prognostic factor in IPI, aaIPI, MIPI, and PIT).',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-ecog-ps',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-ecog-ps',
       values: [
         V('ecog-0-1', 'ECOG 0-1 (fully active / light work)'),
         V('ecog-ge-2', 'ECOG >= 2 (capable of self-care / bedbound > 50%)'),
@@ -152,7 +191,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'serum-ldh',
       label: 'Serum LDH (Lactate Dehydrogenase)',
+      category: 'Labs & Biomarkers',
       help: 'Serum LDH compared to upper limit of normal (ULN). Elevated LDH indicates high tumor proliferation and is an adverse factor across all indices.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-serum-ldh',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-serum-ldh',
       values: [
         V('ldh-normal', 'Normal (<= ULN)'),
         V('ldh-elevated', 'Elevated (> ULN)'),
@@ -161,7 +203,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'extranodal-sites',
       label: 'Extranodal involvement sites',
+      category: 'Staging & Anatomy',
       help: 'Number of involved extranodal anatomical sites (> 1 extranodal site is an adverse factor in standard IPI).',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-extranodal-sites',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-extranodal-sites',
       values: [
         V('extranodal-0-1', '0 or 1 extranodal site'),
         V('extranodal-gt-1', '> 1 extranodal site'),
@@ -170,7 +215,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'hemoglobin-level',
       label: 'Hemoglobin level',
+      category: 'Labs & Biomarkers',
       help: 'Adverse anemia threshold: Hb < 12 g/dL in FLIPI; Hb < 10.5 g/dL in IPS for Hodgkin Lymphoma.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-hemoglobin-level',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-hemoglobin-level',
       values: [
         V('hb-normal', 'Hb >= 12.0 g/dL (normal)'),
         V('hb-lt-12', 'Hb < 12.0 g/dL (FLIPI adverse)'),
@@ -180,7 +228,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'wbc-count',
       label: 'White blood cell count (WBC)',
+      category: 'Labs & Biomarkers',
       help: 'Elevated leucocyte count: WBC >= 10 x 10^9/L in MIPI; WBC >= 15 x 10^9/L in IPS.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-wbc-count',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-wbc-count',
       values: [
         V('wbc-normal', 'WBC < 10.0 x 10^9/L (normal)'),
         V('wbc-ge-10', 'WBC >= 10.0 x 10^9/L (MIPI adverse)'),
@@ -190,7 +241,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'serum-albumin',
       label: 'Serum albumin',
+      category: 'Labs & Biomarkers',
       help: 'Serum albumin < 4.0 g/dL is an adverse factor in IPS for Hodgkin Lymphoma.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-serum-albumin',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-serum-albumin',
       values: [
         V('albumin-normal', 'Albumin >= 4.0 g/dL (normal)'),
         V('albumin-low', 'Albumin < 4.0 g/dL (IPS adverse)'),
@@ -199,7 +253,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'b2m-level',
       label: 'Beta-2 microglobulin (B2M)',
+      category: 'Labs & Biomarkers',
       help: 'Elevated B2M (> 3.5 mg/L in CLL-IPI; > ULN in FLIPI-2) indicates high tumor burden.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-b2m-level',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-b2m-level',
       values: [
         V('b2m-normal', 'Normal (<= 3.5 mg/L)'),
         V('b2m-elevated', 'Elevated (> 3.5 mg/L in CLL-IPI / > ULN)'),
@@ -208,7 +265,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'tp53-status',
       label: 'TP53 mutation / 17p deletion',
+      category: 'Cytogenetics & Molecular',
       help: 'TP53 disruption (17p deletion or mutation) confers 4 points in CLL-IPI and predicts chemotherapy refractoriness.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-tp53-status',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-tp53-status',
       values: [
         V('tp53-wild-type', 'TP53 wild-type / negative'),
         V('tp53-aberrant', 'TP53 mutated or 17p deletion present (high risk)'),
@@ -217,7 +277,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'igvh-status',
       label: 'IGHV somatic mutation status',
+      category: 'Cytogenetics & Molecular',
       help: 'Unmutated IGHV (>=98% homology to germline) confers 2 points in CLL-IPI.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-igvh-status',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-igvh-status',
       values: [
         V('igvh-mutated', 'IGHV mutated (< 98% homology, favorable)'),
         V('igvh-unmutated', 'IGHV unmutated (>= 98% homology, adverse)'),
@@ -226,7 +289,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'bone-marrow-status',
       label: 'Bone marrow biopsy involvement',
+      category: 'Staging & Anatomy',
       help: 'Bone marrow infiltration confirmed on aspirate/trephine (adverse factor in FLIPI-2 and PIT).',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-bone-marrow-status',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-bone-marrow-status',
       values: [
         V('bm-negative', 'Bone marrow uninvolved / negative'),
         V('bm-positive', 'Bone marrow involved / positive'),
@@ -235,7 +301,10 @@ export const NCG_LYMPHOMA_WORKUP = {
     {
       id: 'nodal-sites-count',
       label: 'Number of involved nodal sites',
+      category: 'Staging & Anatomy',
       help: '> 4 nodal anatomical areas involved confers 1 adverse point in FLIPI.',
+      codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-nodal-sites-count',
+      valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-nodal-sites-count',
       values: [
         V('nodal-sites-le-4', '<= 4 nodal areas involved'),
         V('nodal-sites-gt-4', '> 4 nodal areas involved (FLIPI adverse)'),

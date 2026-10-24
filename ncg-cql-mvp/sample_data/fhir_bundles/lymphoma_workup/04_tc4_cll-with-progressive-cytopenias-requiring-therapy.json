@@ -1,0 +1,366 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-ncg-lymphoma-workup-2020-tc4",
+  "type": "collection",
+  "timestamp": "2026-10-23T06:21:20.803Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://ncgindia.org/guideline",
+        "code": "NCG_LYMPHOMA_WORKUP_2020"
+      },
+      {
+        "system": "http://ncgindia.org/test-case-id",
+        "code": "tc4"
+      },
+      {
+        "system": "http://ncgindia.org/expected-outcome",
+        "code": "pathway-staging-cll-pretherapy"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-tc4",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-tc4",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-0000-0004-0000"
+          }
+        ],
+        "name": [
+          {
+            "text": "CLL with progressive cytopenias requiring therapy"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>CLL with progressive cytopenias requiring therapy</b> - 68F with progressive fatigue, Hb 9.2 g/dL, massive splenomegaly. Needs CECT staging, bone marrow biopsy, and CLL FISH panel (17p/TP53/IgVH).</p></div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-presentation-smear-tc4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-presentation-smear-tc4",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc4"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-presentation-smear",
+              "code": "no-lymphocytosis",
+              "display": "No lymphocytosis (solid nodal / extranodal mass)"
+            }
+          ],
+          "text": "Peripheral smear / lymphocytosis: No lymphocytosis (solid nodal / extranodal mass)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-lymphoma-category-tc4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-lymphoma-category-tc4",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc4"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-category",
+              "code": "cll-sll",
+              "display": "CLL / SLL (Chronic lymphocytic leukemia)"
+            }
+          ],
+          "text": "Suspected / confirmed subtype: CLL / SLL (Chronic lymphocytic leukemia)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-cll-therapy-indication-tc4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-cll-therapy-indication-tc4",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc4"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cll-therapy-indication",
+              "code": "therapy-indicated",
+              "display": "Symptomatic / cytopenias / treatment indicated"
+            }
+          ],
+          "text": "CLL therapy indication status: Symptomatic / cytopenias / treatment indicated"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-staging-extent-tc4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-staging-extent-tc4",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc4"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-staging-extent",
+              "code": "stage-3-4-advanced",
+              "display": "Advanced stage (Stage III-IV)"
+            }
+          ],
+          "text": "Anatomical stage / clinical extent: Advanced stage (Stage III-IV)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hbv-tc4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hbv-tc4",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc4"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hbv",
+              "code": "hbv-negative",
+              "display": "HBsAg and HBcAb-IgG negative"
+            }
+          ],
+          "text": "Hepatitis B serology (HBsAg / HBcAb): HBsAg and HBcAb-IgG negative"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hcv-tc4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hcv-tc4",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc4"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hcv",
+              "code": "hcv-negative",
+              "display": "Anti-HCV antibody negative"
+            }
+          ],
+          "text": "Hepatitis C serology (Anti-HCV): Anti-HCV antibody negative"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hiv-tc4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hiv-tc4",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc4"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hiv",
+              "code": "hiv-negative",
+              "display": "HIV-1/2 non-reactive"
+            }
+          ],
+          "text": "HIV screening serology: HIV-1/2 non-reactive"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-tls-metabolic-risk-tc4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-tls-metabolic-risk-tc4",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc4"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-tls-metabolic-risk",
+              "code": "tls-standard-risk",
+              "display": "Standard / low TLS risk"
+            }
+          ],
+          "text": "Tumor lysis syndrome (TLS) metabolic risk: Standard / low TLS risk"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

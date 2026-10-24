@@ -1,0 +1,812 @@
+{
+   "library" : {
+      "annotation" : [ {
+         "translatorVersion" : "3.29.0",
+         "translatorOptions" : "",
+         "signatureLevel" : "None",
+         "type" : "CqlToElmInfo"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      } ],
+      "identifier" : {
+         "id" : "NCGCommon",
+         "version" : "0.1.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1",
+            "annotation" : [ ]
+         }, {
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ ]
+         } ]
+      },
+      "codeSystems" : {
+         "def" : [ {
+            "name" : "NCGDataProvenance",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "NCGFindingQualifier",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-finding-qualifier",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         }, {
+            "name" : "NCGCytogeneticFinding",
+            "id" : "http://ncgindia.org/fhir/CodeSystem/ncg-cytogenetic-finding",
+            "accessLevel" : "Public",
+            "annotation" : [ ]
+         } ]
+      },
+      "codes" : {
+         "def" : [ {
+            "name" : "Positive",
+            "id" : "positive",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "NCGFindingQualifier",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Negative",
+            "id" : "negative",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "NCGFindingQualifier",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "NotDone",
+            "id" : "not-done",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "NCGFindingQualifier",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "SourceCoded",
+            "id" : "source-coded",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "NCGDataProvenance",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "StructuredCapture",
+            "id" : "structured-capture",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "NCGDataProvenance",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "NlpHighConfidence",
+            "id" : "nlp-extracted-high-confidence",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "NCGDataProvenance",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "NlpLowConfidence",
+            "id" : "nlp-extracted-low-confidence",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "NCGDataProvenance",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Unparsed",
+            "id" : "unparsed",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "NCGDataProvenance",
+               "annotation" : [ ]
+            }
+         }, {
+            "name" : "Missing",
+            "id" : "missing",
+            "accessLevel" : "Public",
+            "annotation" : [ ],
+            "codeSystem" : {
+               "name" : "NCGDataProvenance",
+               "annotation" : [ ]
+            }
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "name" : "IsUsable",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "Exists",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "type" : "Query",
+                  "annotation" : [ ],
+                  "source" : [ {
+                     "alias" : "E",
+                     "annotation" : [ ],
+                     "expression" : {
+                        "path" : "extension",
+                        "type" : "Property",
+                        "annotation" : [ ],
+                        "source" : {
+                           "name" : "observation",
+                           "type" : "OperandRef",
+                           "annotation" : [ ]
+                        }
+                     }
+                  } ],
+                  "let" : [ ],
+                  "relationship" : [ ],
+                  "where" : {
+                     "type" : "And",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "type" : "Equal",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "name" : "ToString",
+                           "libraryName" : "FHIRHelpers",
+                           "type" : "FunctionRef",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "path" : "url",
+                              "scope" : "E",
+                              "type" : "Property",
+                              "annotation" : [ ]
+                           } ]
+                        }, {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "type" : "Or",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "type" : "Or",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "type" : "Equivalent",
+                              "annotation" : [ ],
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "name" : "ToConcept",
+                                 "libraryName" : "FHIRHelpers",
+                                 "type" : "FunctionRef",
+                                 "annotation" : [ ],
+                                 "signature" : [ ],
+                                 "operand" : [ {
+                                    "strict" : false,
+                                    "type" : "As",
+                                    "annotation" : [ ],
+                                    "signature" : [ ],
+                                    "operand" : {
+                                       "path" : "value",
+                                       "scope" : "E",
+                                       "type" : "Property",
+                                       "annotation" : [ ]
+                                    },
+                                    "asTypeSpecifier" : {
+                                       "name" : "{http://hl7.org/fhir}CodeableConcept",
+                                       "type" : "NamedTypeSpecifier",
+                                       "annotation" : [ ]
+                                    }
+                                 } ]
+                              }, {
+                                 "type" : "ToConcept",
+                                 "annotation" : [ ],
+                                 "signature" : [ ],
+                                 "operand" : {
+                                    "name" : "SourceCoded",
+                                    "type" : "CodeRef",
+                                    "annotation" : [ ]
+                                 }
+                              } ]
+                           }, {
+                              "type" : "Equivalent",
+                              "annotation" : [ ],
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "name" : "ToConcept",
+                                 "libraryName" : "FHIRHelpers",
+                                 "type" : "FunctionRef",
+                                 "annotation" : [ ],
+                                 "signature" : [ ],
+                                 "operand" : [ {
+                                    "strict" : false,
+                                    "type" : "As",
+                                    "annotation" : [ ],
+                                    "signature" : [ ],
+                                    "operand" : {
+                                       "path" : "value",
+                                       "scope" : "E",
+                                       "type" : "Property",
+                                       "annotation" : [ ]
+                                    },
+                                    "asTypeSpecifier" : {
+                                       "name" : "{http://hl7.org/fhir}CodeableConcept",
+                                       "type" : "NamedTypeSpecifier",
+                                       "annotation" : [ ]
+                                    }
+                                 } ]
+                              }, {
+                                 "type" : "ToConcept",
+                                 "annotation" : [ ],
+                                 "signature" : [ ],
+                                 "operand" : {
+                                    "name" : "StructuredCapture",
+                                    "type" : "CodeRef",
+                                    "annotation" : [ ]
+                                 }
+                              } ]
+                           } ]
+                        }, {
+                           "type" : "Equivalent",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "ToConcept",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "annotation" : [ ],
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "strict" : false,
+                                 "type" : "As",
+                                 "annotation" : [ ],
+                                 "signature" : [ ],
+                                 "operand" : {
+                                    "path" : "value",
+                                    "scope" : "E",
+                                    "type" : "Property",
+                                    "annotation" : [ ]
+                                 },
+                                 "asTypeSpecifier" : {
+                                    "name" : "{http://hl7.org/fhir}CodeableConcept",
+                                    "type" : "NamedTypeSpecifier",
+                                    "annotation" : [ ]
+                                 }
+                              } ]
+                           }, {
+                              "type" : "ToConcept",
+                              "annotation" : [ ],
+                              "signature" : [ ],
+                              "operand" : {
+                                 "name" : "NlpHighConfidence",
+                                 "type" : "CodeRef",
+                                 "annotation" : [ ]
+                              }
+                           } ]
+                        } ]
+                     } ]
+                  }
+               }
+            },
+            "operand" : [ {
+               "name" : "observation",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{http://hl7.org/fhir}Observation",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            } ]
+         }, {
+            "name" : "ProvenanceOf",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ ],
+            "expression" : {
+               "strict" : false,
+               "type" : "As",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : {
+                  "path" : "value",
+                  "type" : "Property",
+                  "annotation" : [ ],
+                  "source" : {
+                     "type" : "First",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "source" : {
+                        "type" : "Query",
+                        "annotation" : [ ],
+                        "source" : [ {
+                           "alias" : "E",
+                           "annotation" : [ ],
+                           "expression" : {
+                              "path" : "extension",
+                              "type" : "Property",
+                              "annotation" : [ ],
+                              "source" : {
+                                 "name" : "observation",
+                                 "type" : "OperandRef",
+                                 "annotation" : [ ]
+                              }
+                           }
+                        } ],
+                        "let" : [ ],
+                        "relationship" : [ ],
+                        "where" : {
+                           "type" : "Equal",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : [ {
+                              "name" : "ToString",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "annotation" : [ ],
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "path" : "url",
+                                 "scope" : "E",
+                                 "type" : "Property",
+                                 "annotation" : [ ]
+                              } ]
+                           }, {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                              "value" : "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           } ]
+                        }
+                     }
+                  }
+               },
+               "asTypeSpecifier" : {
+                  "name" : "{http://hl7.org/fhir}CodeableConcept",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            },
+            "operand" : [ {
+               "name" : "observation",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{http://hl7.org/fhir}Observation",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            } ]
+         }, {
+            "name" : "IsPositive",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "name" : "IsUsable",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "observation",
+                     "type" : "OperandRef",
+                     "annotation" : [ ]
+                  } ]
+               }, {
+                  "type" : "Equivalent",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "ToConcept",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "strict" : false,
+                        "type" : "As",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "path" : "value",
+                           "type" : "Property",
+                           "annotation" : [ ],
+                           "source" : {
+                              "name" : "observation",
+                              "type" : "OperandRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "asTypeSpecifier" : {
+                           "name" : "{http://hl7.org/fhir}CodeableConcept",
+                           "type" : "NamedTypeSpecifier",
+                           "annotation" : [ ]
+                        }
+                     } ]
+                  }, {
+                     "type" : "ToConcept",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "Positive",
+                        "type" : "CodeRef",
+                        "annotation" : [ ]
+                     }
+                  } ]
+               } ]
+            },
+            "operand" : [ {
+               "name" : "observation",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{http://hl7.org/fhir}Observation",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            } ]
+         }, {
+            "name" : "IsNegative",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "name" : "IsUsable",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "observation",
+                     "type" : "OperandRef",
+                     "annotation" : [ ]
+                  } ]
+               }, {
+                  "type" : "Equivalent",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "ToConcept",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "strict" : false,
+                        "type" : "As",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "path" : "value",
+                           "type" : "Property",
+                           "annotation" : [ ],
+                           "source" : {
+                              "name" : "observation",
+                              "type" : "OperandRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "asTypeSpecifier" : {
+                           "name" : "{http://hl7.org/fhir}CodeableConcept",
+                           "type" : "NamedTypeSpecifier",
+                           "annotation" : [ ]
+                        }
+                     } ]
+                  }, {
+                     "type" : "ToConcept",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "Negative",
+                        "type" : "CodeRef",
+                        "annotation" : [ ]
+                     }
+                  } ]
+               } ]
+            },
+            "operand" : [ {
+               "name" : "observation",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{http://hl7.org/fhir}Observation",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            } ]
+         }, {
+            "name" : "IsNotDone",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "And",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "name" : "IsUsable",
+                  "type" : "FunctionRef",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "observation",
+                     "type" : "OperandRef",
+                     "annotation" : [ ]
+                  } ]
+               }, {
+                  "type" : "Equivalent",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "name" : "ToConcept",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "strict" : false,
+                        "type" : "As",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "path" : "value",
+                           "type" : "Property",
+                           "annotation" : [ ],
+                           "source" : {
+                              "name" : "observation",
+                              "type" : "OperandRef",
+                              "annotation" : [ ]
+                           }
+                        },
+                        "asTypeSpecifier" : {
+                           "name" : "{http://hl7.org/fhir}CodeableConcept",
+                           "type" : "NamedTypeSpecifier",
+                           "annotation" : [ ]
+                        }
+                     } ]
+                  }, {
+                     "type" : "ToConcept",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : {
+                        "name" : "NotDone",
+                        "type" : "CodeRef",
+                        "annotation" : [ ]
+                     }
+                  } ]
+               } ]
+            },
+            "operand" : [ {
+               "name" : "observation",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{http://hl7.org/fhir}Observation",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            } ]
+         }, {
+            "name" : "CalculateBSA",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "Power",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Divide",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "Multiply",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "name" : "heightCm",
+                        "type" : "OperandRef",
+                        "annotation" : [ ]
+                     }, {
+                        "name" : "weightKg",
+                        "type" : "OperandRef",
+                        "annotation" : [ ]
+                     } ]
+                  }, {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
+                     "value" : "3600.0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  } ]
+               }, {
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
+                  "value" : "0.5",
+                  "type" : "Literal",
+                  "annotation" : [ ]
+               } ]
+            },
+            "operand" : [ {
+               "name" : "heightCm",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Decimal",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            }, {
+               "name" : "weightKg",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Decimal",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            } ]
+         }, {
+            "name" : "CalculateCrClCockcroftGault",
+            "context" : "Unfiltered",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ ],
+            "expression" : {
+               "type" : "Multiply",
+               "annotation" : [ ],
+               "signature" : [ ],
+               "operand" : [ {
+                  "type" : "Divide",
+                  "annotation" : [ ],
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "type" : "Multiply",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "type" : "Subtract",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "type" : "ToDecimal",
+                           "annotation" : [ ],
+                           "signature" : [ ],
+                           "operand" : {
+                              "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "value" : "140",
+                              "type" : "Literal",
+                              "annotation" : [ ]
+                           }
+                        }, {
+                           "name" : "ageYears",
+                           "type" : "OperandRef",
+                           "annotation" : [ ]
+                        } ]
+                     }, {
+                        "name" : "weightKg",
+                        "type" : "OperandRef",
+                        "annotation" : [ ]
+                     } ]
+                  }, {
+                     "type" : "Multiply",
+                     "annotation" : [ ],
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "type" : "ToDecimal",
+                        "annotation" : [ ],
+                        "signature" : [ ],
+                        "operand" : {
+                           "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                           "value" : "72",
+                           "type" : "Literal",
+                           "annotation" : [ ]
+                        }
+                     }, {
+                        "name" : "serumCreatinineMgDl",
+                        "type" : "OperandRef",
+                        "annotation" : [ ]
+                     } ]
+                  } ]
+               }, {
+                  "type" : "If",
+                  "annotation" : [ ],
+                  "condition" : {
+                     "name" : "isFemale",
+                     "type" : "OperandRef",
+                     "annotation" : [ ]
+                  },
+                  "then" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
+                     "value" : "0.85",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  },
+                  "else" : {
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
+                     "value" : "1.0",
+                     "type" : "Literal",
+                     "annotation" : [ ]
+                  }
+               } ]
+            },
+            "operand" : [ {
+               "name" : "ageYears",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Decimal",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            }, {
+               "name" : "weightKg",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Decimal",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            }, {
+               "name" : "serumCreatinineMgDl",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Decimal",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            }, {
+               "name" : "isFemale",
+               "annotation" : [ ],
+               "operandTypeSpecifier" : {
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier",
+                  "annotation" : [ ]
+               }
+            } ]
+         } ]
+      }
+   }
+}
+

@@ -1,0 +1,566 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-ncg-lymphoma-workup-2020-tc17",
+  "type": "collection",
+  "timestamp": "2026-10-23T06:21:20.806Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://ncgindia.org/guideline",
+        "code": "NCG_LYMPHOMA_WORKUP_2020"
+      },
+      {
+        "system": "http://ncgindia.org/test-case-id",
+        "code": "tc17"
+      },
+      {
+        "system": "http://ncgindia.org/expected-outcome",
+        "code": "pathway-staging-pet-ct-omit-bm"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-tc17",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-tc17",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-0000-0017-0000"
+          }
+        ],
+        "name": [
+          {
+            "text": "Advanced DLBCL in 48M with High aaIPI (Score 2: LDH + Stage IV)"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Advanced DLBCL in 48M with High aaIPI (Score 2: LDH + Stage IV)</b> - 48M presenting with Ann Arbor Stage IV DLBCL, elevated serum LDH, and ECOG 0-1. Fires Rule 18 with embedded aaIPI score condition (score >= 2).</p></div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-presentation-smear-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-presentation-smear-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-presentation-smear",
+              "code": "no-lymphocytosis",
+              "display": "No lymphocytosis (solid nodal / extranodal mass)"
+            }
+          ],
+          "text": "Peripheral smear / lymphocytosis: No lymphocytosis (solid nodal / extranodal mass)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-lymphoma-category-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-lymphoma-category-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-category",
+              "code": "dlbcl",
+              "display": "Diffuse large B-cell lymphoma (DLBCL)"
+            }
+          ],
+          "text": "Suspected / confirmed subtype: Diffuse large B-cell lymphoma (DLBCL)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-staging-extent-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-staging-extent-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-staging-extent",
+              "code": "stage-3-4-advanced",
+              "display": "Advanced stage (Stage III-IV)"
+            }
+          ],
+          "text": "Anatomical stage / clinical extent: Advanced stage (Stage III-IV)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-cns-risk-factors-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-cns-risk-factors-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cns-risk-factors",
+              "code": "cns-standard-risk",
+              "display": "Standard risk / no high-risk CNS features"
+            }
+          ],
+          "text": "CNS high-risk features: Standard risk / no high-risk CNS features"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hbv-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hbv-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hbv",
+              "code": "hbv-negative",
+              "display": "HBsAg and HBcAb-IgG negative"
+            }
+          ],
+          "text": "Hepatitis B serology (HBsAg / HBcAb): HBsAg and HBcAb-IgG negative"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hcv-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hcv-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hcv",
+              "code": "hcv-negative",
+              "display": "Anti-HCV antibody negative"
+            }
+          ],
+          "text": "Hepatitis C serology (Anti-HCV): Anti-HCV antibody negative"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hiv-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hiv-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hiv",
+              "code": "hiv-negative",
+              "display": "HIV-1/2 non-reactive"
+            }
+          ],
+          "text": "HIV screening serology: HIV-1/2 non-reactive"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-tls-metabolic-risk-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-tls-metabolic-risk-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-tls-metabolic-risk",
+              "code": "tls-standard-risk",
+              "display": "Standard / low TLS risk"
+            }
+          ],
+          "text": "Tumor lysis syndrome (TLS) metabolic risk: Standard / low TLS risk"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-double-hit-fish-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-double-hit-fish-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-double-hit-fish",
+              "code": "dhl-negative",
+              "display": "Standard GCB-DLBCL (MYC rearrangement negative)"
+            }
+          ],
+          "text": "Double-hit (DHL) FISH panel (MYC/BCL2): Standard GCB-DLBCL (MYC rearrangement negative)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-age-group-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-age-group-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-age-group",
+              "code": "age-le-60",
+              "display": "Age <= 60 years (aaIPI candidate)"
+            }
+          ],
+          "text": "Age group (IPI / aaIPI / FLIPI / MIPI stratification): Age <= 60 years (aaIPI candidate)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-ecog-ps-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-ecog-ps-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-ecog-ps",
+              "code": "ecog-0-1",
+              "display": "ECOG 0-1 (fully active / light work)"
+            }
+          ],
+          "text": "ECOG performance status: ECOG 0-1 (fully active / light work)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-serum-ldh-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-serum-ldh-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-serum-ldh",
+              "code": "ldh-elevated",
+              "display": "Elevated (> ULN)"
+            }
+          ],
+          "text": "Serum LDH (Lactate Dehydrogenase): Elevated (> ULN)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-extranodal-sites-tc17",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-extranodal-sites-tc17",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-tc17"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-extranodal-sites",
+              "code": "extranodal-0-1",
+              "display": "0 or 1 extranodal site"
+            }
+          ],
+          "text": "Extranodal involvement sites: 0 or 1 extranodal site"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

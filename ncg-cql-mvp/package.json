@@ -8,6 +8,11 @@
     "cql-exec-fhir": "^2.x"
   },
   "scripts": {
-    "translate": "echo 'Run the HL7 cql-to-elm translator (cqframework/clinical_quality_language releases) against cql/*.cql to produce elm/*.json, then: node engine/js/evaluate_via_cql_execution.js <fhir-bundle.json>'"
+    "start": "node server.js",
+    "server": "node server.js",
+    "test": "node tests/test_cql_execution.mjs",
+    "run:cql": "node engine/js/evaluate_via_cql_execution.js",
+    "build:bundles": "node sample_data/build_fhir_bundles.mjs",
+    "translate": "mkdir -p ./elm && java -cp \"/Users/dhananjaypatkar/.gemini/antigravity-ide/brain/796897dd-8544-4bf6-879b-5b79d9b9cbf1/scratch/cqltool/lib/*\" org.cqframework.cql.cql2elm.cli.Main --input ./cql --output ./elm --format JSON --disable-list-promotion"
   }
 }

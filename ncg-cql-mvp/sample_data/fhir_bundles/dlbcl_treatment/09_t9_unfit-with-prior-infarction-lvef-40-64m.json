@@ -1,0 +1,646 @@
+{
+  "resourceType": "Bundle",
+  "id": "bundle-ncg-dlbcl-treatment-2020-t9",
+  "type": "collection",
+  "timestamp": "2026-10-23T06:21:20.809Z",
+  "meta": {
+    "tag": [
+      {
+        "system": "http://ncgindia.org/guideline",
+        "code": "NCG_DLBCL_TREATMENT_2020"
+      },
+      {
+        "system": "http://ncgindia.org/test-case-id",
+        "code": "t9"
+      },
+      {
+        "system": "http://ncgindia.org/expected-outcome",
+        "code": "dlbcl-unfit-cardiac-ceop"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "fullUrl": "Patient/patient-t9",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "patient-t9",
+        "identifier": [
+          {
+            "system": "https://healthid.ndhm.gov.in",
+            "value": "91-0000-0009-0000"
+          }
+        ],
+        "name": [
+          {
+            "text": "Unfit with Prior Infarction / LVEF 40% (64M)"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Unfit with Prior Infarction / LVEF 40% (64M)</b> - 64M, Stage III DLBCL with CAD, previous anterior MI, and LVEF 40%. Anthracycline contraindicated -> R-CEOP.</p></div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-lymphoma-subtype-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-lymphoma-subtype-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-subtype",
+              "code": "dlbcl",
+              "display": "Diffuse Large B-Cell Lymphoma (DLBCL)"
+            }
+          ],
+          "text": "Histological lymphoma diagnosis: Diffuse Large B-Cell Lymphoma (DLBCL)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-anthracycline-fitness-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-anthracycline-fitness-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-anthracycline-fitness",
+              "code": "unfit-cardiac",
+              "display": "Cardiac dysfunction / CAD / RWMA / prior anthracycline toxicity (LVEF < 50%)"
+            }
+          ],
+          "text": "Anthracycline (R-CHOP) fitness status: Cardiac dysfunction / CAD / RWMA / prior anthracycline toxicity (LVEF < 50%)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-dlbcl-stage-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-dlbcl-stage-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-dlbcl-stage",
+              "code": "stage-3-4-advanced",
+              "display": "Advanced Stage (Stage III & IV)"
+            }
+          ],
+          "text": "Ann Arbor anatomical disease stage: Advanced Stage (Stage III & IV)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-bulky-status-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-bulky-status-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-bulky-status",
+              "code": "non-bulky",
+              "display": "Non-bulky disease (largest lesion < 7.5 cm)"
+            }
+          ],
+          "text": "Bulky disease status (>= 7.5 cm): Non-bulky disease (largest lesion < 7.5 cm)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-cell-of-origin-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-cell-of-origin-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cell-of-origin",
+              "code": "gcb",
+              "display": "GCB (Germinal Center B-cell phenotype)"
+            }
+          ],
+          "text": "DLBCL cell-of-origin (IHC Hans algorithm): GCB (Germinal Center B-cell phenotype)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-cns-risk-sites-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-cns-risk-sites-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cns-risk-sites",
+              "code": "cns-standard-risk",
+              "display": "Standard CNS risk (no high-risk anatomical involvement)"
+            }
+          ],
+          "text": "CNS high-risk anatomical involvement: Standard CNS risk (no high-risk anatomical involvement)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-viral-screening-hiv-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-viral-screening-hiv-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hiv",
+              "code": "hiv-negative",
+              "display": "HIV serology negative / non-reactive"
+            }
+          ],
+          "text": "HIV screening serology: HIV serology negative / non-reactive"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-cd4-count-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-cd4-count-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cd4-count",
+              "code": "not-applicable",
+              "display": "Not applicable (HIV negative)"
+            }
+          ],
+          "text": "CD4 lymphocyte count (in HIV+ DLBCL): Not applicable (HIV negative)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-central-venous-access-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-central-venous-access-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-central-venous-access",
+              "code": "no-central-access",
+              "display": "No central venous access / peripheral IV only"
+            }
+          ],
+          "text": "Central venous access availability (for PMBCL): No central venous access / peripheral IV only"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-cardiac-echo-status-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-cardiac-echo-status-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-cardiac-echo-status",
+              "code": "echo-normal-stable",
+              "display": "LVEF >= 50% and stable (decline <= 10% from baseline)"
+            }
+          ],
+          "text": "2D-ECHO LVEF monitoring on therapy: LVEF >= 50% and stable (decline <= 10% from baseline)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-prephase-indication-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-prephase-indication-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-prephase-indication",
+              "code": "prephase-not-indicated",
+              "display": "No pre-phase indicated (standard good PS non-bulky)"
+            }
+          ],
+          "text": "Pre-phase therapy indication: No pre-phase indicated (standard good PS non-bulky)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-age-group-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-age-group-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-age-group",
+              "code": "age-gt-60",
+              "display": "Age > 60 years"
+            }
+          ],
+          "text": "Patient age bracket (IPI cutoff): Age > 60 years"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-serum-ldh-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-serum-ldh-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-serum-ldh",
+              "code": "ldh-elevated",
+              "display": "Elevated (> ULN)"
+            }
+          ],
+          "text": "Serum LDH (Lactate Dehydrogenase): Elevated (> ULN)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-ecog-ps-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-ecog-ps-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-ecog-ps",
+              "code": "ecog-2-4",
+              "display": "ECOG >= 2 (capable of limited self-care, bed/chair > 50% waking hours)"
+            }
+          ],
+          "text": "ECOG performance status: ECOG >= 2 (capable of limited self-care, bed/chair > 50% waking hours)"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "Observation/obs-extranodal-sites-t9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "obs-extranodal-sites-t9",
+        "meta": {
+          "profile": [
+            "http://ncgindia.org/fhir/StructureDefinition/ncg-observation-heme"
+          ]
+        },
+        "status": "final",
+        "subject": {
+          "reference": "Patient/patient-t9"
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://ncgindia.org/fhir/CodeSystem/ncg-extranodal-sites",
+              "code": "extranodal-0-1",
+              "display": "0 or 1 extranodal site"
+            }
+          ],
+          "text": "Extranodal involvement sites: 0 or 1 extranodal site"
+        },
+        "extension": [
+          {
+            "url": "http://ncgindia.org/fhir/StructureDefinition/ncg-extension-data-provenance",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ncgindia.org/fhir/CodeSystem/ncg-data-provenance",
+                  "code": "source-coded",
+                  "display": "source-coded"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
