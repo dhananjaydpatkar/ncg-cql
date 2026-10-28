@@ -16,8 +16,6 @@ A framework for developing and operationalizing National Cancer Grid (NCG India)
   * Node.js test harness and CLI runners executing compiled CQL/ELM logic against synthetic FHIR R4 patient bundles using the official HL7 `cql-execution` engine.
   * Contains disease-specific CQL files (`NCG_LYMPHOMA_WORKUP_2020.cql`, `NCG_FL_2020.cql`, `NCGCommon.cql`).
 
-* **[`ncg-guidelines/`](ncg-guidelines/)** — **Clinical Source Documents**
-  * Official source PDFs and workflows from the National Cancer Grid (e.g. `Lymphoma_Workup_Flowchart.docx.pdf`).
 
 ---
 
