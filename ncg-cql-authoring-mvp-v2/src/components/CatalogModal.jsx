@@ -237,7 +237,7 @@ export function CatalogModal({
           <div className="catalog-modal-title">
             <div className="catalog-icon">📚</div>
             <div>
-              <h3>NCG Reusable Clinical Library</h3>
+              <h3>Reusable Clinical Library</h3>
               <div className="hint">
                 Search and reuse standardized findings, prognostic score functions, and clinical outcomes across guidelines.
               </div>
@@ -310,7 +310,7 @@ export function CatalogModal({
               onChange={(e) => setSource(e.target.value)}
             >
               <option value="all">All Sources</option>
-              <option value="standard">NCG Standard Catalog</option>
+              <option value="standard">Standard Clinical Catalog</option>
               <option value="custom">Custom Saved Library</option>
               {otherGuidelines.length > 0 && (
                 <optgroup label="Other Guidelines">

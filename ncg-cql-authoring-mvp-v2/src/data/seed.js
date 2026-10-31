@@ -1,4 +1,4 @@
-// Sample guideline expressed purely as data: NCG Follicular Lymphoma (derived from the NCG FL workflow).
+// Sample guideline expressed purely as data: Follicular Lymphoma first-line treatment pathway.
 // Authors never edit this file - they use the Studio UI. It only seeds the first run.
 const R = (id, name, category) => ({ id, name, category });
 const V = (code, label) => ({ code, label });
@@ -10,11 +10,11 @@ export const NCG_FL = {
   id: 'NCG_FL_2020',
   version: '0.2.1',
   title: 'Follicular Lymphoma - first-line treatment pathway',
-  organization: 'National Cancer Grid (India) / NCG-Heme Working Group',
-  source: 'NCG Follicular Lymphoma Treatment Workflow; Lymphoma Workup Flowchart',
+  organization: 'Hematology-Oncology Clinical Working Group',
+  source: 'Follicular Lymphoma Treatment Workflow; Lymphoma Workup Flowchart',
   description: 'Assigns an adult follicular lymphoma patient to a treatment group based on histology, Ann Arbor stage, GELF tumour burden, bone marrow status and fitness.',
   status: 'draft',
-  author: 'NCG-Heme Working Group',
+  author: 'Hematology-Oncology Working Group',
   enforceProvenance: true,
   findings: [
     {

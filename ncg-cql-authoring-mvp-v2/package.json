@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:zip": "vite build && (cd dist && zip -r -q ../ncg-authoring-studio.zip .) && ls -lh ncg-authoring-studio.zip",
+    "build:zip": "rm -rf dist guideline-authoring-studio.zip && vite build && (cd dist && zip -r -q ../guideline-authoring-studio.zip .) && ls -lh guideline-authoring-studio.zip",
     "lint": "oxlint",
     "preview": "vite preview"
   },

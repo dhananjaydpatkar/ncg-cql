@@ -1,5 +1,5 @@
-// NCG Suspected Lymphoma - Diagnostic Workup & Staging Pathway
-// Derived from NCG Guidelines: Lymphoma Workup Flowchart with Immunophenotyping & Validated Prognostic Indices.
+// Suspected Lymphoma - Diagnostic Workup & Staging Pathway
+// Derived from Clinical Guidelines: Lymphoma Workup Flowchart with Immunophenotyping & Validated Prognostic Indices.
 
 const R = (id, name, category) => ({ id, name, category });
 const V = (code, label) => ({ code, label });
@@ -11,11 +11,11 @@ export const NCG_LYMPHOMA_WORKUP = {
   id: 'NCG_LYMPHOMA_WORKUP_2020',
   version: '1.2.1',
   title: 'Suspected Lymphoma - Diagnostic Workup & Staging Pathway',
-  organization: 'National Cancer Grid (India) / NCG-Heme Working Group',
-  source: 'NCG Guidelines - Lymphoma Workup Flowchart with Immunophenotyping & Validated Prognostic Indices',
+  organization: 'Hematology-Oncology Clinical Working Group',
+  source: 'Clinical Guidelines - Lymphoma Workup Flowchart with Immunophenotyping & Validated Prognostic Indices',
   description: 'Evidence-based clinical decision pathway guiding initial evaluation, peripheral blood flow cytometry vs. tissue biopsy triage, staging imaging (PET-CT vs CECT), bone marrow biopsy indications, CNS staging, pre-treatment viral prophylaxis (HBV, HCV, HIV), TLS metabolic prophylaxis, and validated prognostic scoring (aaIPI, IPI, FLIPI, MIPI, CLL-IPI, IPS, MALT-IPI, PIT).',
   status: 'draft',
-  author: 'NCG-Heme Working Group',
+  author: 'Hematology-Oncology Working Group',
   enforceProvenance: true,
   findings: [
     {
@@ -34,7 +34,7 @@ export const NCG_LYMPHOMA_WORKUP = {
       id: 'lymphoma-category',
       label: 'Suspected / confirmed subtype',
       category: 'Histology & Pathology',
-      help: 'Histopathological or flow-cytometric diagnosis per WHO / NCG classification.',
+      help: 'Histopathological or flow-cytometric diagnosis per WHO / ICC classification.',
       codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-category',
       valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-lymphoma-category',
       values: [

@@ -15,13 +15,13 @@ import {
 export const TOUR_STEPS = [
   {
     id: 'welcome',
-    title: 'Welcome to NCG Guideline Studio',
+    title: 'Welcome to Clinical Guideline Studio',
     category: 'Overview',
     icon: Sparkles,
     target: '[data-tour="brand"]',
     tab: 'setup',
     description:
-      'Digitize and maintain evidence-based oncology clinical guidelines from the National Cancer Grid (NCG). Author decision logic visually — executable HL7 CQL 1.4 rules and FHIR R4 resources are generated automatically without manual coding.',
+      'Digitize and maintain evidence-based oncology clinical guidelines. Author decision logic visually — executable HL7 CQL 1.4 rules and FHIR R4 resources are generated automatically without manual coding.',
     tip: 'Everything authored here is fully transparent, verifiable against test patients, and ready for EHR and ABDM integration.',
   },
   {
@@ -32,7 +32,7 @@ export const TOUR_STEPS = [
     target: '[data-tour="guideline-select"]',
     tab: 'setup',
     description:
-      'Switch between pre-loaded NCG guidelines including Follicular Lymphoma, DLBCL First-Line Treatment, DLBCL Relapsed/Refractory, and Lymphoma Diagnostic Workup. You can also create new guidelines, duplicate existing workflows, or import JSON models.',
+      'Switch between pre-loaded oncology guidelines including Follicular Lymphoma, DLBCL First-Line Treatment, DLBCL Relapsed/Refractory, and Lymphoma Diagnostic Workup. You can also create new guidelines, duplicate existing workflows, or import JSON models.',
     tip: 'Click "↺ Reset to Seed" anytime if you want to restore official reference guidelines.',
   },
   {

@@ -1,5 +1,5 @@
-// NCG Relapsed / Refractory DLBCL Treatment Workflow
-// Derived from NCG Guidelines: Relapsed/Refractory DLBCL Flowchart (Salvage, CAR-T & Palliative Pathways).
+// Relapsed / Refractory DLBCL Treatment Workflow
+// Derived from Clinical Guidelines: Relapsed/Refractory DLBCL Flowchart (Salvage, CAR-T & Palliative Pathways).
 
 const R = (id, name, category) => ({ id, name, category });
 const V = (code, label) => ({ code, label });
@@ -11,11 +11,11 @@ export const NCG_DLBCL_RR = {
   id: 'NCG_DLBCL_RR_2020',
   version: '1.0.0',
   title: 'Relapsed / Refractory DLBCL - Salvage, CAR-T & Palliative Pathways',
-  organization: 'National Cancer Grid (India) / NCG-Heme Working Group',
-  source: 'NCG Guidelines - Relapsed / Refractory DLBCL Treatment Workflow Flowchart',
+  organization: 'Hematology-Oncology Clinical Working Group',
+  source: 'Clinical Guidelines - Relapsed / Refractory DLBCL Treatment Workflow Flowchart',
   description: 'Evidence-based clinical decision pathway guiding evaluation and management of Relapsed or Refractory Diffuse Large B-Cell Lymphoma (DLBCL). Enforces mandatory repeat biopsy and PET-CT staging, stratifies by relapse timing (late relapse > 12 months vs early relapse <= 12 months / primary refractory), guides Pathway A (salvage chemo R-GEMOX/R-GDP/Pola-R-GEMOX x 3, post-salvage PET response, and ASCT consolidation), Pathway B (CAR-T evaluation, bridging with R-GEMOX/Pola-R-GEMOX, anti-CD19 CAR-T Axi-cel/Tisa-cel/Liso-cel vs Glofitamab-GEMOX), Pathway C (unfit for chemotherapy: palliative care, oral metronomic, targeted lenalidomide/bortezomib for non-GCB), consolidative/palliative radiotherapy (30-36 Gy), and enforces the critical contraindication avoiding bendamustine/Pola-BR when CAR-T is a future possibility.',
   status: 'draft',
-  author: 'NCG-Heme Working Group',
+  author: 'Hematology-Oncology Working Group',
   enforceProvenance: true,
   fallbackOutcomeId: 'needs-review',
   findings: [

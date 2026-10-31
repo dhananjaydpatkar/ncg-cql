@@ -163,19 +163,19 @@ export function Findings({ g, edit, allGuidelines = [], toast = () => {} }) {
             </Field>
 
             <div className="grid2">
-              <Field label="FHIR CodeSystem URL" hint="Identifier for standard terminology binding (defaults to NCG standard URL if empty)">
+              <Field label="FHIR CodeSystem URL" hint="Identifier for standard terminology binding (defaults to standard CodeSystem URL if empty)">
                 <input
                   type="text"
                   value={f.codeSystemUrl || ''}
-                  placeholder="http://ncgindia.org/fhir/CodeSystem/ncg-..."
+                  placeholder="http://example.org/fhir/CodeSystem/..."
                   onChange={(e) => edit((d) => { d.findings.find((x) => x.id === f.id).codeSystemUrl = e.target.value; })}
                 />
               </Field>
-              <Field label="FHIR ValueSet URL" hint="Identifier for reusable ValueSet composition (defaults to NCG ValueSet URL if empty)">
+              <Field label="FHIR ValueSet URL" hint="Identifier for reusable ValueSet composition (defaults to standard ValueSet URL if empty)">
                 <input
                   type="text"
                   value={f.valueSetUrl || ''}
-                  placeholder="http://ncgindia.org/fhir/ValueSet/ncg-..."
+                  placeholder="http://example.org/fhir/ValueSet/..."
                   onChange={(e) => edit((d) => { d.findings.find((x) => x.id === f.id).valueSetUrl = e.target.value; })}
                 />
               </Field>

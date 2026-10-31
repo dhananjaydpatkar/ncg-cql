@@ -1,6 +1,6 @@
 """
 Generates synthetic synoptic Follicular Lymphoma pathology/staging reports
-matching the NCG Hematolymphoid Management Guidelines layout.
+matching the Hematolymphoid Clinical Management Guidelines layout.
 
 Cases generated:
   1. sample_fl_case_advanced_high_burden.pdf  -> advanced-high-burden-br
@@ -111,8 +111,8 @@ def generate_all():
     # 1. Advanced Stage III High Burden, Fit -> BR x 6
     _build_pdf(
         "sample_fl_case_advanced_high_burden.pdf",
-        "TATA MEMORIAL CENTRE / NCG-HEME - FOLLICULAR LYMPHOMA SYNOPTIC WORKUP",
-        "Conforms to NCG Lymphoma Guidelines | ABHA-Linked Diagnostic Record",
+        "HEMATOLOGY-ONCOLOGY CENTER - FOLLICULAR LYMPHOMA SYNOPTIC WORKUP",
+        "Conforms to Lymphoma Clinical Practice Guidelines | ABHA-Linked Diagnostic Record",
         [
             ("Patient Name", "Amit Sharma"),
             ("ABHA ID", "12-3456-7890-1234"),
@@ -138,8 +138,8 @@ def generate_all():
     # 2. Stage I Limited Stage, Fit for RT -> ISRT 24 Gy
     _build_pdf(
         "sample_fl_case_stage1_limited.pdf",
-        "TATA MEMORIAL CENTRE / NCG-HEME - FOLLICULAR LYMPHOMA SYNOPTIC WORKUP",
-        "Conforms to NCG Lymphoma Guidelines | Limited Stage Evaluation",
+        "HEMATOLOGY-ONCOLOGY CENTER - FOLLICULAR LYMPHOMA SYNOPTIC WORKUP",
+        "Conforms to Lymphoma Clinical Practice Guidelines | Limited Stage Evaluation",
         [
             ("Patient Name", "Priya Patel"),
             ("ABHA ID", "98-7654-3210-9876"),
@@ -165,8 +165,8 @@ def generate_all():
     # 3. Stage IV Low Burden, Asymptomatic -> Watchful Waiting
     _build_pdf(
         "sample_fl_case_advanced_low_burden.pdf",
-        "TATA MEMORIAL CENTRE / NCG-HEME - FOLLICULAR LYMPHOMA SYNOPTIC WORKUP",
-        "Conforms to NCG Lymphoma Guidelines | Indolent Advanced Workup",
+        "HEMATOLOGY-ONCOLOGY CENTER - FOLLICULAR LYMPHOMA SYNOPTIC WORKUP",
+        "Conforms to Lymphoma Clinical Practice Guidelines | Indolent Advanced Workup",
         [
             ("Patient Name", "Rajesh Verma"),
             ("ABHA ID", "45-6789-0123-4567"),
@@ -192,7 +192,7 @@ def generate_all():
     # 4. Ambiguous Referral Lab Report -> Needs Review
     _build_pdf(
         "sample_fl_case_ambiguous_referral.pdf",
-        "TATA MEMORIAL CENTRE / NCG-HEME - FOLLICULAR LYMPHOMA SYNOPTIC WORKUP",
+        "HEMATOLOGY-ONCOLOGY CENTER - FOLLICULAR LYMPHOMA SYNOPTIC WORKUP",
         "External Referral Pathology Report | Unverified Data Quality Flag",
         [
             ("Patient Name", "Meena Roy"),

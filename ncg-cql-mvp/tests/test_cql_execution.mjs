@@ -162,7 +162,7 @@ async function runDlbclRrTests() {
 }
 
 async function main() {
-  console.log('Running NCG HL7 CQL Execution Test Suite...');
+  console.log('Running HL7 CQL Execution Test Suite...');
   await runLymphomaTests();
   await runFollicularTests();
   await runDlbclTreatmentTests();

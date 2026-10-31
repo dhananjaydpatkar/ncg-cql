@@ -1,7 +1,7 @@
 """
 Synoptic report field schemas for Follicular Lymphoma Initial Workup.
 
-Source: National Cancer Grid (NCG) Hematolymphoid Management Guidelines:
+Source: Hematolymphoid Clinical Management Guidelines:
   - Follicular Lymphoma Treatment Workflow
   - Lymphoma Workup Flowchart & Annexure Synoptic Reporting Format
 

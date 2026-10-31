@@ -1,8 +1,8 @@
-// Reusable Clinical Catalog for NCG Guideline Authoring Studio.
+// Reusable Clinical Catalog for Clinical Guideline Authoring Studio.
 // Standardized Findings, Score Functions, and Outcomes that can be searched,
 // shared, and reused across multiple clinical guidelines.
 
-const STORAGE_KEY = 'ncg-clinical-catalog-v2';
+const STORAGE_KEY = 'clinical-catalog-v2';
 
 // ---------------------------------------------------------------------------
 // 1. STANDARD BUILT-IN FINDINGS
@@ -338,7 +338,7 @@ export const STANDARD_FINDINGS = [
     id: 'bulky-status',
     label: 'Bulky disease status (>= 7.5 cm)',
     category: 'Staging & Anatomy',
-    help: 'Single largest contiguous tumor mass dimension on PET-CT (cutoff >= 7.5 cm per NCG guideline).',
+    help: 'Single largest contiguous tumor mass dimension on PET-CT (cutoff >= 7.5 cm per clinical guideline).',
     codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-bulky-status',
     valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-bulky-status',
     values: [

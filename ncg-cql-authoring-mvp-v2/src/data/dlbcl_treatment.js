@@ -1,5 +1,5 @@
-// NCG Diffuse Large B-Cell Lymphoma (DLBCL) & PMBCL - First-Line Treatment Pathway
-// Derived from NCG Guidelines: Lymphoma Treatment Workflow by Histological Subtype.
+// Diffuse Large B-Cell Lymphoma (DLBCL) & PMBCL - First-Line Treatment Pathway
+// Derived from Clinical Guidelines: Lymphoma Treatment Workflow by Histological Subtype.
 
 const R = (id, name, category) => ({ id, name, category });
 const V = (code, label) => ({ code, label });
@@ -11,11 +11,11 @@ export const NCG_DLBCL_TREATMENT = {
   id: 'NCG_DLBCL_TREATMENT_2020',
   version: '1.0.0',
   title: 'DLBCL & PMBCL - First-Line Treatment Pathway',
-  organization: 'National Cancer Grid (India) / NCG-Heme Working Group',
-  source: 'NCG Guidelines - Lymphoma Treatment Workflow (DLBCL & PMBCL)',
+  organization: 'Hematology-Oncology Clinical Working Group',
+  source: 'Clinical Guidelines - Lymphoma Treatment Workflow (DLBCL & PMBCL)',
   description: 'Evidence-based clinical decision pathway guiding first-line treatment for Diffuse Large B-Cell Lymphoma (DLBCL) and Primary Mediastinal B-Cell Lymphoma (PMBCL). Incorporates anthracycline fitness assessment (LVEF/Echo, age, comorbidities), stage-based stratification (Limited Stage I-II: aaIPI 0 non-bulky PET-adapted R-CHOP vs aaIPI >= 1 / bulky R-CHOP x 6 + IFRT; Advanced Stage III-IV: standard R-CHOP x 6 vs Pola-R-CHP for non-GCB IPI >= 2), mandatory CNS prophylaxis for high-risk sites, HIV-associated DLBCL (CD4 >= 50 vs < 50), regimens for unfit/frail patients (R-miniCHOP, R-CEOP, R-GCVP, BR/R-PEP-C), PMBCL pathway (DA-EPOCH-R with CBC dose adjustment vs R-CHOP), pre-phase therapy, G-CSF prophylaxis, and cardiac monitoring.',
   status: 'draft',
-  author: 'NCG-Heme Working Group',
+  author: 'Hematology-Oncology Working Group',
   enforceProvenance: true,
   fallbackOutcomeId: 'needs-review',
   findings: [
@@ -62,7 +62,7 @@ export const NCG_DLBCL_TREATMENT = {
       id: 'bulky-status',
       label: 'Bulky disease status (>= 7.5 cm)',
       category: 'Staging & Anatomy',
-      help: 'Single largest contiguous tumor mass dimension on PET-CT (cutoff >= 7.5 cm per NCG guideline).',
+      help: 'Single largest contiguous tumor mass dimension on PET-CT (cutoff >= 7.5 cm per clinical guideline).',
       codeSystemUrl: 'http://ncgindia.org/fhir/CodeSystem/ncg-bulky-status',
       valueSetUrl: 'http://ncgindia.org/fhir/ValueSet/ncg-bulky-status',
       values: [

@@ -1,6 +1,6 @@
 import { SEED_GUIDELINES } from '../data/seed.js';
 
-const KEY = 'ncg-guideline-studio-v2';
+const KEY = 'clinical-guideline-studio-v2';
 
 export function loadStore() {
   try {

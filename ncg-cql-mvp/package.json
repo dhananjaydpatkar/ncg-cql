@@ -2,7 +2,7 @@
   "name": "ncg-cql-mvp-engine",
   "version": "0.1.0",
   "private": true,
-  "description": "Production CQL execution path for the NCG-Heme MVP. NOT wired up in this sandboxed skeleton (see engine/cql_lite_cll.py docstring) because the HL7 cql-to-elm translator requires JVM + Maven Central access that this build environment doesn't have. Install and complete evaluate_via_cql_execution.js in an environment with that access.",
+  "description": "Production HL7 CQL execution engine and Point-of-Care Clinical Decision Support workstation for Hematology-Oncology guidelines.",
   "dependencies": {
     "cql-execution": "^3.x",
     "cql-exec-fhir": "^2.x"
@@ -10,8 +10,11 @@
   "scripts": {
     "start": "node server.js",
     "server": "node server.js",
+    "build": "node scripts/build_amplify.mjs",
+    "build:zip": "rm -rf dist point-of-care-cds.zip && node scripts/build_amplify.mjs && (cd dist && zip -r -q ../point-of-care-cds.zip .) && ls -lh point-of-care-cds.zip",
     "test": "node tests/test_cql_execution.mjs",
     "run:cql": "node engine/js/evaluate_via_cql_execution.js",
+    "build:schemas": "node scripts/build_guideline_schemas.mjs",
     "build:bundles": "node sample_data/build_fhir_bundles.mjs",
     "translate": "mkdir -p ./elm && java -cp \"/Users/dhananjaypatkar/.gemini/antigravity-ide/brain/796897dd-8544-4bf6-879b-5b79d9b9cbf1/scratch/cqltool/lib/*\" org.cqframework.cql.cql2elm.cli.Main --input ./cql --output ./elm --format JSON --disable-list-promotion"
   }

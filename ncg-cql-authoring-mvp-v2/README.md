@@ -1,4 +1,4 @@
-# NCG Guideline Studio (v2) — No-Code Clinical Pathway Authoring
+# Clinical Guideline Studio (v2) — No-Code Clinical Pathway Authoring
 
 A standalone web authoring environment designed specifically for **medical experts, oncologists, and guideline panels** to create, edit, test, and publish executable, standards-compliant ([HL7 CQL](https://cql.hl7.org/) and [HL7 FHIR](https://hl7.org/fhir/R4/)) clinical practice guidelines **without writing any code**.
 
@@ -24,8 +24,6 @@ The studio guides guideline panels through 7 clinical authoring stages:
 ### 1 · Details & Clinical Safety Gate
 Define the guideline identity, managing oncology working group, citations, and version. The built-in **Data Provenance Safety Gate** can be toggled to automatically guarantee that unvalidated free-text referral data is routed to clinician review instead of inadvertently triggering cytotoxic systemic therapy.
 
-![Guideline Details and Safety Provenance Gate](docs/screenshots/01_details.png)
-
 ---
 
 ### 2 · Clinical Findings & Search
@@ -33,8 +31,6 @@ Specify clinical input parameters (e.g. *Anatomical stage*, *Serum LDH*, *ECOG P
 - **In-Page Search:** Instantly filter dozens of findings by name, code, or value.
 - **Category Tags:** Categorize findings into *Staging & Anatomy*, *Labs & Biomarkers*, *Histology & Pathology*, *Safety & Comorbidities*, etc.
 - **Save to Library:** Export custom findings directly into the reusable clinical library.
-
-![Clinical Findings Editor](docs/screenshots/02_findings.png)
 
 ---
 
@@ -46,14 +42,10 @@ Define points-based prognostic indices used in clinical staging and risk stratif
 - **Population Applicability Filter:** Enforce target demographics (e.g. *aaIPI applies only to DLBCL patients age <= 60*).
 - **Spec-Compliant CQL Generation:** Automatically emits pure parameter-driven functions (`Calculate_<Name>` and `Classify_<Name>`) alongside patient-level definitions (`<Name>_Score`, `<Name>_RiskGroup`, `<Name>_RiskLabel`) with data-provenance gates.
 
-![Clinical Score Functions](docs/screenshots/03_functions.png)
-
 ---
 
 ### 4 · Treatment Outcomes & Regimens
 Create actionable clinical pathways categorized into **Treatment Recommendation**, **Observation / Watchful Waiting**, or **Needs Clinician Review (Safety Gate)**. Attach regimen shortlists (e.g. *R-CHOP x 6*, *Bendamustine + Rituximab*, *Polatuzumab + R-CHP*, *ISRT 24 Gy*) and explicit clinical rationales.
-
-![Treatment Outcomes and Regimens](docs/screenshots/04_outcomes.png)
 
 ---
 
@@ -66,8 +58,6 @@ Construct hierarchical clinical decision logic using an intuitive visual **IF ..
   - `risk group is` (e.g. *FLIPI risk group is High Risk*)
   - `cannot be calculated` (e.g. *prognostic score unknown due to missing or unparsed labs*)
 
-![Visual Decision Rules with Embedded Score Functions](docs/screenshots/05_rules.png)
-
 ---
 
 ### 6 · Patient Test Bench & Live Verification
@@ -75,8 +65,6 @@ Define representative synthetic patient cases (e.g. *Stage I limited*, *High aaI
 - **Instant Rule Tracing:** Visual tick/cross indicators show every rule evaluated, matching conditions, and the decisive winning branch.
 - **Calculated Score Functions Card:** Factor-by-factor breakdown showing points awarded for each clinical observation, total calculated score, and resulting risk band.
 - **Safety Provenance Verification:** Confirms that unparsed referral text safely yields a `null` score, causing high-risk intensified rules to defer to clinician review.
-
-![Patient Test Bench and Evaluation](docs/screenshots/06_test_cases.png)
 
 ---
 
@@ -88,19 +76,15 @@ Inspect the generated visual decision ladder and export standard-compliant clini
 * **FHIR CodeSystems & ValueSets** — Standardized terminologies for EHR mapping.
 * **Flowchart (Mermaid)** — Visual pathway diagram for clinical review.
 
-![Review, Decision Ladder and Export](docs/screenshots/07_review_export.png)
-
 ---
 
 ## Cross-Guideline Reusable Clinical Catalog & Search Engine
 
 To prevent guideline panels from redefining identical findings, scores, and regimens across multiple disease pathways, the studio features a unified **Reusable Clinical Library**:
 
-![NCG Reusable Clinical Library](docs/screenshots/08_clinical_library.png)
-
 ### Key Features of the Catalog:
 1. **Multi-Source Knowledge Pool:**
-   - **NCG Standard Catalog:** 27 pre-built clinical findings, 8 prognostic score functions, and 17 standardized outcomes curated from NCG protocols.
+   - **Standard Clinical Catalog:** 27 pre-built clinical findings, 8 prognostic score functions, and 17 standardized outcomes curated from oncology protocols.
    - **Cross-Guideline Discovery:** Automatically indexes findings, scores, and outcomes from all other guidelines loaded in the studio (e.g. import from *Lymphoma Workup* into *Follicular Lymphoma* or *CLL*).
    - **User Custom Library:** Any custom-authored item can be saved with **`⭐ Save to Library`** to persist across all guidelines.
 2. **Instant Search & Category Filters:**
@@ -117,8 +101,6 @@ To prevent guideline panels from redefining identical findings, scores, and regi
 
 To help clinicians, informatics specialists, and new guideline authors get up to speed quickly, the studio features a built-in **Interactive Guided Tour**:
 
-![Guided Tour Step 1](docs/screenshots/09_guided_tour_step1.png)
-
 ### Key Features of the Guided Tour:
 1. **Always Accessible & Replayable:**
    - A dedicated **`🧭 Guided Tour`** button in the header bar allows users to replay the entire tour from Step 1 on demand at any time.
@@ -130,22 +112,17 @@ To help clinicians, informatics specialists, and new guideline authors get up to
    - As the tour steps from *Setup* → *Findings* → *Functions* → *Outcomes* → *Rules* → *Test cases* → *Review & export*, the studio **automatically switches the active tab** so users see the actual live authoring interface in context.
    - An SVG spotlight cutout mask focuses on the target UI element with an animated accent glow while dimming the surrounding background.
 
-![Automatic Tab Switching and Live Element Focus](docs/screenshots/10_guided_tour_tab_switch.png)
-
 3. **Step Navigation & Keyboard Shortcuts:**
    - **Clickable Step Dots:** Click any of the 11 step dots in the footer to jump directly to that authoring phase.
    - **Keyboard Navigation:** Navigate with `Arrow Right` (Next), `Arrow Left` (Previous), and `Escape` (Exit).
    - **Clinical Tips & Guidance:** Each step includes practical oncology authoring tips explaining terminology bindings, CQL mathematical function compilation, and EHR safety gates.
 
-![On-Demand Tour Replay Trigger](docs/screenshots/11_guided_tour_replay.png)
-
 ---
-
 
 ## Pre-loaded Clinical Guidelines
 
 1. **Suspected Lymphoma — Diagnostic Workup & Staging Pathway** (`NCG_LYMPHOMA_WORKUP_2020`)
-   - **Source:** NCG Lymphoma Workup Flowchart ([`ncg-guidelines/Lymphoma_Workup_Flowchart.docx.pdf`](../ncg-guidelines/Lymphoma_Workup_Flowchart.docx.pdf))
+   - **Source:** Lymphoma Workup Flowchart with Immunophenotyping & Validated Prognostic Indices
    - **Workflow:** Implements complete diagnostic triage:
      - Smear lymphocytosis triage (Flow cytometry CLPD panel vs. tissue excision biopsy).
      - Subtype-specific imaging (PET-CT for aggressive/indolent vs. CXR+USG for asymptomatic CLL vs. CECT for MZL & cutaneous T-cell).
@@ -157,7 +134,7 @@ To help clinicians, informatics specialists, and new guideline authors get up to
    - **Direct link:** [http://localhost:5173/?guideline=NCG_LYMPHOMA_WORKUP_2020](http://localhost:5173/?guideline=NCG_LYMPHOMA_WORKUP_2020)
 
 2. **Follicular Lymphoma — First-Line Treatment Pathway** (`NCG_FL_2020`)
-   - **Source:** NCG Follicular Lymphoma Treatment Workflow
+   - **Source:** Follicular Lymphoma Treatment Workflow
    - **Workflow:** GELF tumour burden, Ann Arbor staging, bone marrow involvement, and fitness stratification into curative radiotherapy, watchful waiting, or chemoimmunotherapy (BR / R-CHOP).
    - **Test Suite:** 7/7 automated test cases passing 100%.
    - **Direct link:** [http://localhost:5173/?guideline=NCG_FL_2020](http://localhost:5173/?guideline=NCG_FL_2020)
@@ -178,16 +155,12 @@ To get familiar with the underlying computable guideline specifications:
   * [Clinical Reasoning Module](https://hl7.org/fhir/R4/clinicalreasoning-module.html) — Architecture for knowledge artifacts and automated decision support.
 * **[Clinical Practice Guidelines on FHIR (CPG-on-FHIR)](https://hl7.org/fhir/uv/cpg/)** — Standard implementation guide for computable guidelines.
 * **[Clinical Decision Support (CDS Hooks)](https://cds-hooks.hl7.org/)** — Vendor-agnostic EHR integration triggers for clinical decision support.
-* **[National Cancer Grid (NCG India)](https://tmc.gov.in/ncg/)** — Evidence-based cancer management guidelines.
 
 ---
 
 ## Quick Start
 
 ```bash
-# Navigate to the authoring app directory
-cd ncg-cql-authoring-mvp-v2
-
 # Install dependencies
 npm install
 
@@ -207,8 +180,8 @@ The authoring studio can be deployed to **AWS Amplify Hosting** in under 2 minut
    ```bash
    npm run build:zip
    ```
-   *Generates `ncg-authoring-studio.zip` (~160 KB).*
-2. Open the [AWS Amplify Console](https://console.aws.amazon.com/amplify/) → **Deploy without Git provider** → Drag and drop `ncg-authoring-studio.zip`.
+   *Generates `guideline-authoring-studio.zip` (~150 KB).*
+2. Open the [AWS Amplify Console](https://console.aws.amazon.com/amplify/) → **Deploy without Git provider** → Drag and drop `guideline-authoring-studio.zip`.
 3. Add the Single Page Application rewrite rule under **Rewrites and redirects**:
    - Source: `</^[^.]+$|\.(?!(css|gif|ico|jpg|js|png|txt|svg|woff|woff2|ttf|map|json)$)([^.]+$)/>`
    - Target: `/index.html`
@@ -216,4 +189,3 @@ The authoring studio can be deployed to **AWS Amplify Hosting** in under 2 minut
 
 For detailed CLI scripts, custom domain setup, and verification checklists, see the full guide:  
 👉 [**AWS Amplify Deployment Guide**](DEPLOYMENT_AWS_AMPLIFY.md)
-

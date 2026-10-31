@@ -1,7 +1,7 @@
 """
-Interim NCG CodeSystems for Follicular Lymphoma & Lymphoma Workup.
+Interim CodeSystems for Follicular Lymphoma & Lymphoma Workup.
 
-Source: National Cancer Grid (NCG) Adult Hematolymphoid Management Guidelines:
+Source: Adult Hematolymphoid Clinical Management Guidelines:
   - Follicular Lymphoma Treatment Workflow (Low-grade I/II/IIIa, High-grade IIIb, Duodenal)
   - Lymphoma Workup & Prognostic Scoring (FLIPI, GELF, Immunophenotyping)
 

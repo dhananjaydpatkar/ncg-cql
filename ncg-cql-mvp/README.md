@@ -1,8 +1,8 @@
-# NCG-Heme CQL Execution & Testing Engine
+# Hematology-Oncology CQL Execution & Point-of-Care Decision Support Engine
 
-A production-grade implementation of **HL7 Clinical Quality Language (CQL 1.4/1.5)** and **FHIR R4** clinical decision support for hematologic malignancies under the **National Cancer Grid (NCG) India** guidelines.
+A production-grade implementation of **HL7 Clinical Quality Language (CQL 1.4/1.5)** and **FHIR R4** clinical decision support for hematologic malignancies.
 
-This package connects **visual guideline authoring** from [`ncg-cql-authoring-mvp-v2`](../ncg-cql-authoring-mvp-v2) to a real **HL7 execution pipeline**:
+This package connects **visual guideline authoring** from **Clinical Guideline Studio** to a real **HL7 execution pipeline**:
 1. Evaluates generated CQL libraries (`NCG_LYMPHOMA_WORKUP_2020.cql`, `NCG_FL_2020.cql`, `NCGCommon.cql`) compiled into Expression Logical Model (ELM) JSON.
 2. Tests execution against **24 synthetic FHIR R4 Bundles** covering all lymphoma subtypes, clinical prognostic scores (**aaIPI**, **IPI**, **FLIPI**, **MIPI**, **IPS**), and provenance safety gates.
 3. Enforces ABDM-aligned **data provenance gating** (`ncg-extension-data-provenance`) — ensuring unparsed external referral text blocks treatment calculation and routes safely to multidisciplinary review.
@@ -94,7 +94,7 @@ npm test
 
 Sample output:
 ```text
-Running NCG HL7 CQL Execution Test Suite...
+Running HL7 CQL Execution Test Suite...
 
 ============================================================
 Testing NCG_LYMPHOMA_WORKUP_2020 (Lymphoma Workup Flowchart)

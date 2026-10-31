@@ -19,7 +19,19 @@ export function Publish({ g, issues, toast }) {
       {errors > 0 && <div className="issue error">{errors} problem(s) must be fixed before this guideline should be published. See the Details tab.</div>}
 
       <div className="card">
-        <div className="card-head"><h3>Export</h3></div>
+        <div className="card-head">
+          <h3>Export &amp; Live Clinical Decision Support</h3>
+          <span className="spacer" />
+          <a
+            className="btn sm primary"
+            href={`https://production.d363iqgbc372rx.amplifyapp.com/?guideline=${encodeURIComponent(g.id)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Open this guideline in the Point-of-Care Clinical Decision Support Workstation"
+          >
+            🩺 Open in Point-of-Care CDSS ↗
+          </a>
+        </div>
         <div className="chips">
           <button className="btn primary" onClick={() => act(`${g.id}.guideline.json`, J(g))}>Guideline (JSON, shareable)</button>
           <button className="btn" onClick={() => act(`${g.id}.cql`, cql, 'text/plain')}>CQL library</button>

@@ -98,10 +98,10 @@ export function blankGuideline() {
   const reviewId = 'needs-review';
   return {
     schema: 1,
-    id: 'NCG_NEW_' + new Date().getFullYear(),
+    id: 'GUIDELINE_NEW_' + new Date().getFullYear(),
     version: '0.1.0',
     title: 'Untitled guideline',
-    organization: 'National Cancer Grid (India)',
+    organization: 'Hematology-Oncology Clinical Working Group',
     source: '',
     description: '',
     status: 'draft',

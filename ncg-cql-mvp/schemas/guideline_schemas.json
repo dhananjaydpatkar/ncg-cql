@@ -1,0 +1,4515 @@
+{
+  "generatedAt": "2026-10-31T04:34:40.492Z",
+  "guidelines": [
+    {
+      "id": "NCG_LYMPHOMA_WORKUP_2020",
+      "version": "1.2.1",
+      "title": "Suspected Lymphoma - Diagnostic Workup & Staging Pathway",
+      "shortTitle": "Suspected lymphoma: workup & staging",
+      "stage": "Diagnosis",
+      "order": 1,
+      "organization": "Hematology-Oncology Clinical Working Group",
+      "source": "Clinical Guidelines - Lymphoma Workup Flowchart with Immunophenotyping & Validated Prognostic Indices",
+      "description": "Evidence-based clinical decision pathway guiding initial evaluation, peripheral blood flow cytometry vs. tissue biopsy triage, staging imaging (PET-CT vs CECT), bone marrow biopsy indications, CNS staging, pre-treatment viral prophylaxis (HBV, HCV, HIV), TLS metabolic prophylaxis, and validated prognostic scoring (aaIPI, IPI, FLIPI, MIPI, CLL-IPI, IPS, MALT-IPI, PIT).",
+      "enforceProvenance": true,
+      "fallbackOutcomeId": "needs-review",
+      "findings": [
+        {
+          "id": "presentation-smear",
+          "label": "Peripheral smear / lymphocytosis",
+          "help": "Step 4 critical branch point: presence of abnormal circulating lymphocytes or absolute lymphocytosis (>5 x 10^9/L).",
+          "category": "Morphology & Hematology",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-presentation-smear",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-presentation-smear",
+          "values": [
+            {
+              "code": "lymphocytosis-present",
+              "label": "Lymphocytosis present (circulating abnormal cells)"
+            },
+            {
+              "code": "no-lymphocytosis",
+              "label": "No lymphocytosis (solid nodal / extranodal mass)"
+            }
+          ]
+        },
+        {
+          "id": "lymphoma-category",
+          "label": "Suspected / confirmed subtype",
+          "help": "Histopathological or flow-cytometric diagnosis per WHO / ICC classification.",
+          "category": "Histology & Pathology",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-category",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-lymphoma-category",
+          "values": [
+            {
+              "code": "cll-sll",
+              "label": "CLL / SLL (Chronic lymphocytic leukemia)"
+            },
+            {
+              "code": "mcl",
+              "label": "Mantle cell lymphoma (MCL)"
+            },
+            {
+              "code": "fl",
+              "label": "Follicular lymphoma (FL)"
+            },
+            {
+              "code": "mzl",
+              "label": "Marginal zone lymphoma (MZL / MALT / SMZL)"
+            },
+            {
+              "code": "dlbcl",
+              "label": "Diffuse large B-cell lymphoma (DLBCL)"
+            },
+            {
+              "code": "hl",
+              "label": "Classical Hodgkin lymphoma (cHL)"
+            },
+            {
+              "code": "ptcl",
+              "label": "Peripheral T-cell lymphoma (PTCL)"
+            },
+            {
+              "code": "ctcl-mf",
+              "label": "Cutaneous T-cell lymphoma (MF / Sézary)"
+            },
+            {
+              "code": "burkitt-hbl",
+              "label": "Burkitt / High-grade B-cell lymphoma"
+            },
+            {
+              "code": "hcl-lpl",
+              "label": "Hairy cell leukemia / LPL / Waldenström"
+            }
+          ]
+        },
+        {
+          "id": "cll-therapy-indication",
+          "label": "CLL therapy indication status",
+          "help": "Step 7 imaging triage for CLL: asymptomatic observation vs. progressive disease / cytopenias requiring therapy.",
+          "category": "Clinical Assessment & Indications",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-cll-therapy-indication",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-cll-therapy-indication",
+          "values": [
+            {
+              "code": "asymptomatic-no-therapy",
+              "label": "Asymptomatic / stable (no indication for therapy)"
+            },
+            {
+              "code": "therapy-indicated",
+              "label": "Symptomatic / cytopenias / treatment indicated"
+            },
+            {
+              "code": "not-applicable",
+              "label": "Not applicable (non-CLL subtype)"
+            }
+          ]
+        },
+        {
+          "id": "staging-extent",
+          "label": "Anatomical stage / clinical extent",
+          "help": "Validated anatomical extent (Ann Arbor stage) from clinical assessment or imaging.",
+          "category": "Staging & Anatomy",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-staging-extent",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-staging-extent",
+          "values": [
+            {
+              "code": "stage-1-2-limited",
+              "label": "Limited stage (Stage I-II)"
+            },
+            {
+              "code": "stage-3-4-advanced",
+              "label": "Advanced stage (Stage III-IV)"
+            },
+            {
+              "code": "mf-early-plaques",
+              "label": "Early Mycosis Fungoides (thin plaques only)"
+            },
+            {
+              "code": "mf-extensive-tumour",
+              "label": "MF extensive / nodular plaques / Sézary cells"
+            }
+          ]
+        },
+        {
+          "id": "cns-risk-factors",
+          "label": "CNS high-risk features",
+          "help": "High-risk extranodal involvement (testicular, parameningeal, breast, renal, adrenal, >2 extranodal sites with high LDH, blastoid MCL).",
+          "category": "Prognosis & Risk",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-cns-risk-factors",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-cns-risk-factors",
+          "values": [
+            {
+              "code": "cns-high-risk",
+              "label": "High-risk CNS features present"
+            },
+            {
+              "code": "cns-standard-risk",
+              "label": "Standard risk / no high-risk CNS features"
+            }
+          ]
+        },
+        {
+          "id": "planned-therapy-cardiac",
+          "label": "Planned regimen & organ safety",
+          "help": "Planned systemic therapy requiring baseline organ assessment (anthracycline cardiotoxicity or high-dose MTX renal monitoring).",
+          "category": "Treatment Plan & Organ Safety",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-planned-therapy-cardiac",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-planned-therapy-cardiac",
+          "values": [
+            {
+              "code": "anthracycline-planned",
+              "label": "Anthracycline planned (CHOP/ABVD) or cardiac comorbidity"
+            },
+            {
+              "code": "high-dose-mtx-planned",
+              "label": "High-dose Methotrexate planned (age >40 or renal risk)"
+            },
+            {
+              "code": "other-systemic-therapy",
+              "label": "Other standard therapy / low cardiac risk"
+            }
+          ]
+        },
+        {
+          "id": "viral-screening-hbv",
+          "label": "Hepatitis B serology (HBsAg / HBcAb)",
+          "help": "Screening before B-cell depleting (anti-CD20) or immunosuppressive therapy to prevent fatal HBV reactivation.",
+          "category": "Infectious & Safety",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hbv",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-viral-screening-hbv",
+          "values": [
+            {
+              "code": "hbv-positive",
+              "label": "HBsAg or HBcAb-IgG positive"
+            },
+            {
+              "code": "hbv-negative",
+              "label": "HBsAg and HBcAb-IgG negative"
+            }
+          ]
+        },
+        {
+          "id": "viral-screening-hcv",
+          "label": "Hepatitis C serology (Anti-HCV)",
+          "help": "Screening before systemic therapy. If positive, quantitative HCV RNA is required with hepatologist referral.",
+          "category": "Infectious & Safety",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hcv",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-viral-screening-hcv",
+          "values": [
+            {
+              "code": "hcv-positive",
+              "label": "Anti-HCV antibody reactive"
+            },
+            {
+              "code": "hcv-negative",
+              "label": "Anti-HCV antibody negative"
+            }
+          ]
+        },
+        {
+          "id": "viral-screening-hiv",
+          "label": "HIV screening serology",
+          "help": "Step 3 viral marker: if positive, check CD4 count, viral load, initiate OI prophylaxis, and coordinate non-myelosuppressive ART.",
+          "category": "Infectious & Safety",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hiv",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-viral-screening-hiv",
+          "values": [
+            {
+              "code": "hiv-positive",
+              "label": "HIV-1/2 reactive"
+            },
+            {
+              "code": "hiv-negative",
+              "label": "HIV-1/2 non-reactive"
+            }
+          ]
+        },
+        {
+          "id": "tls-metabolic-risk",
+          "label": "Tumor lysis syndrome (TLS) metabolic risk",
+          "help": "Metabolic panel screening (Ca, Phos, Uric acid, LDH) to detect hyperuricemia and high TLS risk before therapy.",
+          "category": "Safety & Comorbidities",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-tls-metabolic-risk",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-tls-metabolic-risk",
+          "values": [
+            {
+              "code": "tls-high-risk",
+              "label": "High TLS risk (bulky disease, elevated uric acid / LDH)"
+            },
+            {
+              "code": "tls-standard-risk",
+              "label": "Standard / low TLS risk"
+            }
+          ]
+        },
+        {
+          "id": "double-hit-fish",
+          "label": "Double-hit (DHL) FISH panel (MYC/BCL2)",
+          "help": "Reflex cytogenetic testing in GCB-DLBCL to screen for MYC and BCL-2 rearrangements.",
+          "category": "Cytogenetics & Molecular",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-double-hit-fish",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-double-hit-fish",
+          "values": [
+            {
+              "code": "dhl-detected",
+              "label": "Double-hit / Triple-hit confirmed (MYC + BCL2/6 rearrangement)"
+            },
+            {
+              "code": "dhl-negative",
+              "label": "Standard GCB-DLBCL (MYC rearrangement negative)"
+            },
+            {
+              "code": "not-applicable",
+              "label": "Not applicable / non-DLBCL"
+            }
+          ]
+        },
+        {
+          "id": "age-group",
+          "label": "Age group (IPI / aaIPI / FLIPI / MIPI stratification)",
+          "help": "Age factor for prognostic scoring: Age <= 60 uses aaIPI (max score 3); Age > 60 uses standard IPI/FLIPI; Age >= 70 confers adverse risk in MIPI and MALT-IPI.",
+          "category": "Demographics & Prognostic Factors",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-age-group",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-age-group",
+          "values": [
+            {
+              "code": "age-le-60",
+              "label": "Age <= 60 years (aaIPI candidate)"
+            },
+            {
+              "code": "age-gt-60",
+              "label": "Age 61-69 years (standard IPI / FLIPI / IPS)"
+            },
+            {
+              "code": "age-ge-70",
+              "label": "Age >= 70 years (MIPI / MALT-IPI adverse)"
+            }
+          ]
+        },
+        {
+          "id": "ecog-ps",
+          "label": "ECOG performance status",
+          "help": "Performance status at presentation (ECOG >= 2 is an adverse prognostic factor in IPI, aaIPI, MIPI, and PIT).",
+          "category": "Performance & Fitness",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-ecog-ps",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-ecog-ps",
+          "values": [
+            {
+              "code": "ecog-0-1",
+              "label": "ECOG 0-1 (fully active / light work)"
+            },
+            {
+              "code": "ecog-ge-2",
+              "label": "ECOG >= 2 (capable of self-care / bedbound > 50%)"
+            }
+          ]
+        },
+        {
+          "id": "serum-ldh",
+          "label": "Serum LDH (Lactate Dehydrogenase)",
+          "help": "Serum LDH compared to upper limit of normal (ULN). Elevated LDH indicates high tumor proliferation and is an adverse factor across all indices.",
+          "category": "Labs & Biomarkers",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-serum-ldh",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-serum-ldh",
+          "values": [
+            {
+              "code": "ldh-normal",
+              "label": "Normal (<= ULN)"
+            },
+            {
+              "code": "ldh-elevated",
+              "label": "Elevated (> ULN)"
+            }
+          ]
+        },
+        {
+          "id": "extranodal-sites",
+          "label": "Extranodal involvement sites",
+          "help": "Number of involved extranodal anatomical sites (> 1 extranodal site is an adverse factor in standard IPI).",
+          "category": "Staging & Anatomy",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-extranodal-sites",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-extranodal-sites",
+          "values": [
+            {
+              "code": "extranodal-0-1",
+              "label": "0 or 1 extranodal site"
+            },
+            {
+              "code": "extranodal-gt-1",
+              "label": "> 1 extranodal site"
+            }
+          ]
+        },
+        {
+          "id": "hemoglobin-level",
+          "label": "Hemoglobin level",
+          "help": "Adverse anemia threshold: Hb < 12 g/dL in FLIPI; Hb < 10.5 g/dL in IPS for Hodgkin Lymphoma.",
+          "category": "Labs & Biomarkers",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-hemoglobin-level",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-hemoglobin-level",
+          "values": [
+            {
+              "code": "hb-normal",
+              "label": "Hb >= 12.0 g/dL (normal)"
+            },
+            {
+              "code": "hb-lt-12",
+              "label": "Hb < 12.0 g/dL (FLIPI adverse)"
+            },
+            {
+              "code": "hb-lt-10-5",
+              "label": "Hb < 10.5 g/dL (IPS adverse)"
+            }
+          ]
+        },
+        {
+          "id": "wbc-count",
+          "label": "White blood cell count (WBC)",
+          "help": "Elevated leucocyte count: WBC >= 10 x 10^9/L in MIPI; WBC >= 15 x 10^9/L in IPS.",
+          "category": "Labs & Biomarkers",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-wbc-count",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-wbc-count",
+          "values": [
+            {
+              "code": "wbc-normal",
+              "label": "WBC < 10.0 x 10^9/L (normal)"
+            },
+            {
+              "code": "wbc-ge-10",
+              "label": "WBC >= 10.0 x 10^9/L (MIPI adverse)"
+            },
+            {
+              "code": "wbc-ge-15",
+              "label": "WBC >= 15.0 x 10^9/L (IPS adverse)"
+            }
+          ]
+        },
+        {
+          "id": "serum-albumin",
+          "label": "Serum albumin",
+          "help": "Serum albumin < 4.0 g/dL is an adverse factor in IPS for Hodgkin Lymphoma.",
+          "category": "Labs & Biomarkers",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-serum-albumin",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-serum-albumin",
+          "values": [
+            {
+              "code": "albumin-normal",
+              "label": "Albumin >= 4.0 g/dL (normal)"
+            },
+            {
+              "code": "albumin-low",
+              "label": "Albumin < 4.0 g/dL (IPS adverse)"
+            }
+          ]
+        },
+        {
+          "id": "b2m-level",
+          "label": "Beta-2 microglobulin (B2M)",
+          "help": "Elevated B2M (> 3.5 mg/L in CLL-IPI; > ULN in FLIPI-2) indicates high tumor burden.",
+          "category": "Labs & Biomarkers",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-b2m-level",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-b2m-level",
+          "values": [
+            {
+              "code": "b2m-normal",
+              "label": "Normal (<= 3.5 mg/L)"
+            },
+            {
+              "code": "b2m-elevated",
+              "label": "Elevated (> 3.5 mg/L in CLL-IPI / > ULN)"
+            }
+          ]
+        },
+        {
+          "id": "tp53-status",
+          "label": "TP53 mutation / 17p deletion",
+          "help": "TP53 disruption (17p deletion or mutation) confers 4 points in CLL-IPI and predicts chemotherapy refractoriness.",
+          "category": "Cytogenetics & Molecular",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-tp53-status",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-tp53-status",
+          "values": [
+            {
+              "code": "tp53-wild-type",
+              "label": "TP53 wild-type / negative"
+            },
+            {
+              "code": "tp53-aberrant",
+              "label": "TP53 mutated or 17p deletion present (high risk)"
+            }
+          ]
+        },
+        {
+          "id": "igvh-status",
+          "label": "IGHV somatic mutation status",
+          "help": "Unmutated IGHV (>=98% homology to germline) confers 2 points in CLL-IPI.",
+          "category": "Cytogenetics & Molecular",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-igvh-status",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-igvh-status",
+          "values": [
+            {
+              "code": "igvh-mutated",
+              "label": "IGHV mutated (< 98% homology, favorable)"
+            },
+            {
+              "code": "igvh-unmutated",
+              "label": "IGHV unmutated (>= 98% homology, adverse)"
+            }
+          ]
+        },
+        {
+          "id": "bone-marrow-status",
+          "label": "Bone marrow biopsy involvement",
+          "help": "Bone marrow infiltration confirmed on aspirate/trephine (adverse factor in FLIPI-2 and PIT).",
+          "category": "Staging & Anatomy",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-bone-marrow-status",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-bone-marrow-status",
+          "values": [
+            {
+              "code": "bm-negative",
+              "label": "Bone marrow uninvolved / negative"
+            },
+            {
+              "code": "bm-positive",
+              "label": "Bone marrow involved / positive"
+            }
+          ]
+        },
+        {
+          "id": "nodal-sites-count",
+          "label": "Number of involved nodal sites",
+          "help": "> 4 nodal anatomical areas involved confers 1 adverse point in FLIPI.",
+          "category": "Staging & Anatomy",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-nodal-sites-count",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-nodal-sites-count",
+          "values": [
+            {
+              "code": "nodal-sites-le-4",
+              "label": "<= 4 nodal areas involved"
+            },
+            {
+              "code": "nodal-sites-gt-4",
+              "label": "> 4 nodal areas involved (FLIPI adverse)"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "id": "aaipi-dlbcl",
+          "name": "aaIPI",
+          "label": "Age-adjusted IPI (aaIPI)",
+          "description": "Age-adjusted International Prognostic Index for DLBCL in patients age <= 60 years. Sums Stage III-IV (1 pt), elevated LDH (1 pt), and ECOG >= 2 (1 pt). Max score: 3.",
+          "appliesWhen": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "age-group",
+              "op": "is",
+              "values": [
+                "age-le-60"
+              ]
+            }
+          ],
+          "factors": [
+            {
+              "findingId": "staging-extent",
+              "points": {
+                "stage-1-2-limited": 0,
+                "stage-3-4-advanced": 1
+              }
+            },
+            {
+              "findingId": "serum-ldh",
+              "points": {
+                "ldh-normal": 0,
+                "ldh-elevated": 1
+              }
+            },
+            {
+              "findingId": "ecog-ps",
+              "points": {
+                "ecog-0-1": 0,
+                "ecog-ge-2": 1
+              }
+            }
+          ],
+          "bands": [
+            {
+              "code": "low",
+              "label": "Low Risk",
+              "min": 0,
+              "max": 0,
+              "note": "~75-80% 5-yr OS"
+            },
+            {
+              "code": "low-intermediate",
+              "label": "Low-Intermediate Risk",
+              "min": 1,
+              "max": 1,
+              "note": "~65-70% 5-yr OS"
+            },
+            {
+              "code": "high-intermediate",
+              "label": "High-Intermediate Risk",
+              "min": 2,
+              "max": 2,
+              "note": "~50-55% 5-yr OS"
+            },
+            {
+              "code": "high",
+              "label": "High Risk",
+              "min": 3,
+              "max": 3,
+              "note": "~35-45% 5-yr OS"
+            }
+          ]
+        },
+        {
+          "id": "ipi-dlbcl",
+          "name": "IPI",
+          "label": "International Prognostic Index (IPI)",
+          "description": "Standard IPI for DLBCL (all ages). Sums Age > 60 (1 pt), Stage III-IV (1 pt), elevated LDH (1 pt), ECOG >= 2 (1 pt), Extranodal > 1 site (1 pt). Max: 5.",
+          "appliesWhen": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            }
+          ],
+          "factors": [
+            {
+              "findingId": "age-group",
+              "points": {
+                "age-le-60": 0,
+                "age-gt-60": 1,
+                "age-ge-70": 1
+              }
+            },
+            {
+              "findingId": "staging-extent",
+              "points": {
+                "stage-1-2-limited": 0,
+                "stage-3-4-advanced": 1
+              }
+            },
+            {
+              "findingId": "serum-ldh",
+              "points": {
+                "ldh-normal": 0,
+                "ldh-elevated": 1
+              }
+            },
+            {
+              "findingId": "ecog-ps",
+              "points": {
+                "ecog-0-1": 0,
+                "ecog-ge-2": 1
+              }
+            },
+            {
+              "findingId": "extranodal-sites",
+              "points": {
+                "extranodal-0-1": 0,
+                "extranodal-gt-1": 1
+              }
+            }
+          ],
+          "bands": [
+            {
+              "code": "low",
+              "label": "Low Risk",
+              "min": 0,
+              "max": 1,
+              "note": "~75-80% 5-yr OS"
+            },
+            {
+              "code": "low-intermediate",
+              "label": "Low-Intermediate Risk",
+              "min": 2,
+              "max": 2,
+              "note": "~65-70% 5-yr OS"
+            },
+            {
+              "code": "high-intermediate",
+              "label": "High-Intermediate Risk",
+              "min": 3,
+              "max": 3,
+              "note": "~50-55% 5-yr OS"
+            },
+            {
+              "code": "high",
+              "label": "High Risk",
+              "min": 4,
+              "max": 5,
+              "note": "~35-45% 5-yr OS"
+            }
+          ]
+        },
+        {
+          "id": "flipi-fl",
+          "name": "FLIPI",
+          "label": "Follicular Lymphoma International Prognostic Index (FLIPI)",
+          "description": "Prognostic index for Follicular Lymphoma. Sums Age > 60 (1 pt), Stage III-IV (1 pt), Hb < 12 g/dL (1 pt), Nodal sites > 4 (1 pt), LDH > ULN (1 pt). Max: 5.",
+          "appliesWhen": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "fl"
+              ]
+            }
+          ],
+          "factors": [
+            {
+              "findingId": "age-group",
+              "points": {
+                "age-le-60": 0,
+                "age-gt-60": 1,
+                "age-ge-70": 1
+              }
+            },
+            {
+              "findingId": "staging-extent",
+              "points": {
+                "stage-1-2-limited": 0,
+                "stage-3-4-advanced": 1
+              }
+            },
+            {
+              "findingId": "hemoglobin-level",
+              "points": {
+                "hb-normal": 0,
+                "hb-lt-12": 1,
+                "hb-lt-10-5": 1
+              }
+            },
+            {
+              "findingId": "nodal-sites-count",
+              "points": {
+                "nodal-sites-le-4": 0,
+                "nodal-sites-gt-4": 1
+              }
+            },
+            {
+              "findingId": "serum-ldh",
+              "points": {
+                "ldh-normal": 0,
+                "ldh-elevated": 1
+              }
+            }
+          ],
+          "bands": [
+            {
+              "code": "low",
+              "label": "Low Risk",
+              "min": 0,
+              "max": 1,
+              "note": "~91% 5-yr OS"
+            },
+            {
+              "code": "intermediate",
+              "label": "Intermediate Risk",
+              "min": 2,
+              "max": 2,
+              "note": "~78% 5-yr OS"
+            },
+            {
+              "code": "high",
+              "label": "High Risk",
+              "min": 3,
+              "max": 5,
+              "note": "~53% 5-yr OS"
+            }
+          ]
+        },
+        {
+          "id": "cllipi-cll",
+          "name": "CLLIPI",
+          "label": "CLL International Prognostic Index (CLL-IPI)",
+          "description": "Prognostic scoring for CLL: TP53 del/mut (4 pts), IGHV unmutated (2 pts), B2M > 3.5 mg/L (2 pts), Stage III-IV (1 pt), Age > 65 (1 pt). Max: 10.",
+          "appliesWhen": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "cll-sll"
+              ]
+            }
+          ],
+          "factors": [
+            {
+              "findingId": "tp53-status",
+              "points": {
+                "tp53-wild-type": 0,
+                "tp53-aberrant": 4
+              }
+            },
+            {
+              "findingId": "igvh-status",
+              "points": {
+                "igvh-mutated": 0,
+                "igvh-unmutated": 2
+              }
+            },
+            {
+              "findingId": "b2m-level",
+              "points": {
+                "b2m-normal": 0,
+                "b2m-elevated": 2
+              }
+            },
+            {
+              "findingId": "staging-extent",
+              "points": {
+                "stage-1-2-limited": 0,
+                "stage-3-4-advanced": 1
+              }
+            },
+            {
+              "findingId": "age-group",
+              "points": {
+                "age-le-60": 0,
+                "age-gt-60": 1,
+                "age-ge-70": 1
+              }
+            }
+          ],
+          "bands": [
+            {
+              "code": "low",
+              "label": "Low Risk",
+              "min": 0,
+              "max": 1,
+              "note": "~93% 5-yr OS"
+            },
+            {
+              "code": "intermediate",
+              "label": "Intermediate Risk",
+              "min": 2,
+              "max": 3,
+              "note": "~79% 5-yr OS"
+            },
+            {
+              "code": "high",
+              "label": "High Risk",
+              "min": 4,
+              "max": 6,
+              "note": "~64% 5-yr OS"
+            },
+            {
+              "code": "very-high",
+              "label": "Very High Risk",
+              "min": 7,
+              "max": 10,
+              "note": "~23% 5-yr OS"
+            }
+          ]
+        },
+        {
+          "id": "mipi-mcl",
+          "name": "MIPI",
+          "label": "MCL International Prognostic Index (MIPI)",
+          "description": "Simplified MIPI for Mantle Cell Lymphoma. Evaluates Age, ECOG, LDH, and WBC count. Max: 11.",
+          "appliesWhen": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "mcl"
+              ]
+            }
+          ],
+          "factors": [
+            {
+              "findingId": "age-group",
+              "points": {
+                "age-le-60": 0,
+                "age-gt-60": 2,
+                "age-ge-70": 3
+              }
+            },
+            {
+              "findingId": "ecog-ps",
+              "points": {
+                "ecog-0-1": 0,
+                "ecog-ge-2": 2
+              }
+            },
+            {
+              "findingId": "serum-ldh",
+              "points": {
+                "ldh-normal": 0,
+                "ldh-elevated": 2
+              }
+            },
+            {
+              "findingId": "wbc-count",
+              "points": {
+                "wbc-normal": 0,
+                "wbc-ge-10": 2,
+                "wbc-ge-15": 2
+              }
+            }
+          ],
+          "bands": [
+            {
+              "code": "low",
+              "label": "Low Risk",
+              "min": 0,
+              "max": 3,
+              "note": "Median OS not reached"
+            },
+            {
+              "code": "intermediate",
+              "label": "Intermediate Risk",
+              "min": 4,
+              "max": 5,
+              "note": "Median OS ~51 mo"
+            },
+            {
+              "code": "high",
+              "label": "High Risk",
+              "min": 6,
+              "max": 11,
+              "note": "Median OS ~29 mo"
+            }
+          ]
+        },
+        {
+          "id": "ips-hl",
+          "name": "IPS",
+          "label": "International Prognostic Score (IPS)",
+          "description": "IPS for Hodgkin Lymphoma: Albumin < 4 (1 pt), Hb < 10.5 (1 pt), Stage IV (1 pt), Age >= 45 (1 pt), WBC >= 15 (1 pt). Max: 5.",
+          "appliesWhen": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "hl"
+              ]
+            }
+          ],
+          "factors": [
+            {
+              "findingId": "serum-albumin",
+              "points": {
+                "albumin-normal": 0,
+                "albumin-low": 1
+              }
+            },
+            {
+              "findingId": "hemoglobin-level",
+              "points": {
+                "hb-normal": 0,
+                "hb-lt-12": 0,
+                "hb-lt-10-5": 1
+              }
+            },
+            {
+              "findingId": "staging-extent",
+              "points": {
+                "stage-1-2-limited": 0,
+                "stage-3-4-advanced": 1
+              }
+            },
+            {
+              "findingId": "age-group",
+              "points": {
+                "age-le-60": 0,
+                "age-gt-60": 1,
+                "age-ge-70": 1
+              }
+            },
+            {
+              "findingId": "wbc-count",
+              "points": {
+                "wbc-normal": 0,
+                "wbc-ge-10": 0,
+                "wbc-ge-15": 1
+              }
+            }
+          ],
+          "bands": [
+            {
+              "code": "score-0",
+              "label": "Score 0",
+              "min": 0,
+              "max": 0,
+              "note": "~84% 5-yr FFP"
+            },
+            {
+              "code": "score-1",
+              "label": "Score 1",
+              "min": 1,
+              "max": 1,
+              "note": "~77% 5-yr FFP"
+            },
+            {
+              "code": "score-2",
+              "label": "Score 2",
+              "min": 2,
+              "max": 2,
+              "note": "~67% 5-yr FFP"
+            },
+            {
+              "code": "score-3",
+              "label": "Score 3",
+              "min": 3,
+              "max": 3,
+              "note": "~60% 5-yr FFP"
+            },
+            {
+              "code": "score-4",
+              "label": "Score 4",
+              "min": 4,
+              "max": 4,
+              "note": "~51% 5-yr FFP"
+            },
+            {
+              "code": "score-high",
+              "label": "Score >= 5",
+              "min": 5,
+              "max": 7,
+              "note": "~42% 5-yr FFP"
+            }
+          ]
+        },
+        {
+          "id": "malti-mzl",
+          "name": "MALT_IPI",
+          "label": "MALT-IPI",
+          "description": "Marginal Zone / MALT International Prognostic Index. Sums Age >= 70 (1 pt), Stage III-IV (1 pt), LDH > ULN (1 pt). Max: 3.",
+          "appliesWhen": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "mzl"
+              ]
+            }
+          ],
+          "factors": [
+            {
+              "findingId": "age-group",
+              "points": {
+                "age-le-60": 0,
+                "age-gt-60": 0,
+                "age-ge-70": 1
+              }
+            },
+            {
+              "findingId": "staging-extent",
+              "points": {
+                "stage-1-2-limited": 0,
+                "stage-3-4-advanced": 1
+              }
+            },
+            {
+              "findingId": "serum-ldh",
+              "points": {
+                "ldh-normal": 0,
+                "ldh-elevated": 1
+              }
+            }
+          ],
+          "bands": [
+            {
+              "code": "low",
+              "label": "Low Risk",
+              "min": 0,
+              "max": 0,
+              "note": "~70% 5-yr PFS"
+            },
+            {
+              "code": "intermediate",
+              "label": "Intermediate Risk",
+              "min": 1,
+              "max": 1,
+              "note": "~56% 5-yr PFS"
+            },
+            {
+              "code": "high",
+              "label": "High Risk",
+              "min": 2,
+              "max": 3,
+              "note": "~29% 5-yr PFS"
+            }
+          ]
+        },
+        {
+          "id": "pit-ptcl",
+          "name": "PIT",
+          "label": "Prognostic Index for PTCL (PIT)",
+          "description": "Prognostic scoring for Peripheral T-Cell Lymphoma. Age > 60 (1 pt), ECOG >= 2 (1 pt), LDH > ULN (1 pt), Bone marrow involvement (1 pt). Max: 4.",
+          "appliesWhen": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "ptcl"
+              ]
+            }
+          ],
+          "factors": [
+            {
+              "findingId": "age-group",
+              "points": {
+                "age-le-60": 0,
+                "age-gt-60": 1,
+                "age-ge-70": 1
+              }
+            },
+            {
+              "findingId": "ecog-ps",
+              "points": {
+                "ecog-0-1": 0,
+                "ecog-ge-2": 1
+              }
+            },
+            {
+              "findingId": "serum-ldh",
+              "points": {
+                "ldh-normal": 0,
+                "ldh-elevated": 1
+              }
+            },
+            {
+              "findingId": "bone-marrow-status",
+              "points": {
+                "bm-negative": 0,
+                "bm-positive": 1
+              }
+            }
+          ],
+          "bands": [
+            {
+              "code": "group-1",
+              "label": "Group 1 (0 adverse factors)",
+              "min": 0,
+              "max": 0,
+              "note": "~62% 5-yr OS"
+            },
+            {
+              "code": "group-2",
+              "label": "Group 2 (1 adverse factor)",
+              "min": 1,
+              "max": 1,
+              "note": "~53% 5-yr OS"
+            },
+            {
+              "code": "group-3",
+              "label": "Group 3 (2 adverse factors)",
+              "min": 2,
+              "max": 2,
+              "note": "~33% 5-yr OS"
+            },
+            {
+              "code": "group-4",
+              "label": "Group 4 (3-4 adverse factors)",
+              "min": 3,
+              "max": 4,
+              "note": "~18% 5-yr OS"
+            }
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "needs-review",
+          "label": "Needs clinician review (Safety gate)",
+          "kind": "review",
+          "category": "",
+          "rationale": "Critical diagnostic or staging inputs are missing, unrecorded, or derived from unverified free-text. A clinician must review before ordering invasive biopsies or treatment.",
+          "regimens": []
+        },
+        {
+          "id": "pathway-viral-prophylaxis-hbv",
+          "label": "HBV Reactivation Prophylaxis Protocol",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "HBsAg or HBcAb-IgG positivity carries a high risk of lethal Hepatitis B reactivation under anti-CD20 (rituximab) or immunosuppressive chemotherapy. Quantitative HBV DNA and prophylactic entecavir or tenofovir are mandatory.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Quantitative HBV DNA PCR test",
+              "category": "Virology"
+            },
+            {
+              "id": "r2",
+              "name": "Initiate prophylactic antiviral therapy (Entecavir 0.5 mg daily or Tenofovir)",
+              "category": "Prophylaxis"
+            },
+            {
+              "id": "r3",
+              "name": "Continue antiviral prophylaxis during and for at least 12 months post-chemotherapy",
+              "category": "Monitoring"
+            },
+            {
+              "id": "r4",
+              "name": "LFT monitoring every 4-6 weeks",
+              "category": "Safety labs"
+            }
+          ]
+        },
+        {
+          "id": "pathway-viral-prophylaxis-hcv",
+          "label": "HCV Management: Quantitative HCV RNA + Hepatology Referral",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 3: Anti-HCV positive patients require quantitative HCV RNA testing. If detectable, urgent referral to a gastroenterologist/hepatologist prior to systemic chemo is mandatory to coordinate direct-acting antiviral (DAA) therapy.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Quantitative HCV RNA by RT-PCR",
+              "category": "Virology"
+            },
+            {
+              "id": "r2",
+              "name": "Gastroenterology / Hepatology referral before systemic therapy",
+              "category": "Specialist consultation"
+            },
+            {
+              "id": "r3",
+              "name": "Coordinate Direct-Acting Antiviral (DAA) therapy",
+              "category": "Antiviral therapy"
+            }
+          ]
+        },
+        {
+          "id": "pathway-hiv-multidisciplinary",
+          "label": "HIV Lymphoma Protocol: CD4/Viral Load + ART Coordination",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 3: In HIV-positive patients, evaluate CD4 count and HIV viral load, initiate opportunistic infection (OI) prophylaxis per CD4 count, and coordinate ART avoiding myelosuppressive drugs (e.g. avoid Zidovudine).",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "CD4 cell count and HIV-1 RNA viral load",
+              "category": "Immunology & Virology"
+            },
+            {
+              "id": "r2",
+              "name": "Opportunistic infection (OI) assessment and prophylaxis (PJP, MAC, Fungal)",
+              "category": "Prophylaxis"
+            },
+            {
+              "id": "r3",
+              "name": "Coordinate with HIV specialist; avoid myelosuppressive antiretroviral agents",
+              "category": "Clinical pharmacology"
+            }
+          ]
+        },
+        {
+          "id": "pathway-tls-prophylaxis",
+          "label": "Tumor Lysis Syndrome (TLS) Metabolic Prophylaxis",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 3: Metabolic screening identifies high-risk TLS (elevated uric acid, high LDH, bulky disease). Mandatory vigorous IV hydration, urine output monitoring, and Rasburicase or Allopurinol prophylaxis.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Aggressive intravenous hydration (2.5-3 L/m2/day) with strict I/O monitoring",
+              "category": "Hydration therapy"
+            },
+            {
+              "id": "r2",
+              "name": "Rasburicase (0.2 mg/kg IV) for hyperuricemia or Allopurinol for moderate risk",
+              "category": "Uric acid reduction"
+            },
+            {
+              "id": "r3",
+              "name": "Serum electrolytes, Ca, Phos, Uric acid, Creatinine, LDH Q6-12h",
+              "category": "Metabolic monitoring"
+            }
+          ]
+        },
+        {
+          "id": "pathway-double-hit-specialized",
+          "label": "Double-Hit Lymphoma (DHL): High-Grade B-Cell Protocol",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 8: GCB-DLBCL harboring concurrent MYC and BCL-2 rearrangements has poor outcomes with standard R-CHOP. Dose-adjusted EPOCH-R (DA-EPOCH-R) and CNS prophylaxis are recommended.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Dose-adjusted EPOCH-R (DA-EPOCH-R) regimen",
+              "category": "Chemotherapy"
+            },
+            {
+              "id": "r2",
+              "name": "Diagnostic LP and CNS-directed prophylaxis (IT methotrexate / cytarabine)",
+              "category": "CNS prophylaxis"
+            },
+            {
+              "id": "r3",
+              "name": "Evaluate for autologous or allogeneic stem cell transplantation in CR1",
+              "category": "Transplant evaluation"
+            }
+          ]
+        },
+        {
+          "id": "pathway-flow-cytometry-clpd",
+          "label": "Peripheral Blood Flow Cytometry (Avoid initial nodal biopsy)",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 4 & 5: Abnormal lymphocytosis on smear enables rapid peripheral blood immunophenotyping. Lymph node biopsy is avoided (unless FL or Richter transformation suspected). Bone marrow exam is NOT required if flow confirms diagnosis.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Flow cytometry CLPD panel (CD5, CD10, CD19, CD20, CD23, CD22, FMC7, CD200, Cyclin D1)",
+              "category": "Diagnostic immunology"
+            },
+            {
+              "id": "r2",
+              "name": "Subtype differentiation (CLL vs MCL vs FL vs SMZL vs HCL vs T/NK-CLPD)",
+              "category": "Laboratory diagnosis"
+            },
+            {
+              "id": "r3",
+              "name": "Omit initial lymph node biopsy and routine bone marrow examination",
+              "category": "Clinical pathway guidance"
+            }
+          ]
+        },
+        {
+          "id": "pathway-tissue-excision-biopsy",
+          "label": "Tissue Excision Biopsy + Immunohistochemistry (IHC)",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 6: In the absence of peripheral lymphocytosis, primary diagnosis requires histopathological examination. Excision biopsy of the largest accessible lymph node is preferred over core needle.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Excision biopsy of largest accessible lymph node (preferred over FNA/core)",
+              "category": "Surgical biopsy"
+            },
+            {
+              "id": "r2",
+              "name": "Comprehensive lymphoma IHC panel (B-cell, T-cell, proliferation markers)",
+              "category": "Immunohistochemistry"
+            },
+            {
+              "id": "r3",
+              "name": "Image-guided core needle biopsy (USG/CT) if nodes are deep/internal or surgery contraindicated",
+              "category": "Alternative technique"
+            }
+          ]
+        },
+        {
+          "id": "pathway-staging-pet-ct-and-bm",
+          "label": "Staging: Whole-body PET-CT + Bone Marrow Examination",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 7 & 8: For low-grade lymphomas (FL, MZL, MCL, Burkitt, PTCL), whole-body 18F-FDG PET-CT is standard staging, AND bone marrow aspiration + trephine biopsy is mandatory because marrow involvement dictates stage and prognosis.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Whole-body 18F-FDG PET-CT (skull base to mid-thigh)",
+              "category": "Staging imaging"
+            },
+            {
+              "id": "r2",
+              "name": "Bone marrow aspiration + imprint + trephine biopsy",
+              "category": "Bone marrow staging"
+            },
+            {
+              "id": "r3",
+              "name": "Flow cytometry and cytogenetics on bone marrow aspirate",
+              "category": "Ancillary marrow test"
+            }
+          ]
+        },
+        {
+          "id": "pathway-staging-pet-ct-omit-bm",
+          "label": "Staging: PET-CT alone (Bone Marrow NOT required)",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 8: In Stage I-II DLBCL and Classical Hodgkin Lymphoma staged with high-quality PET-CT, PET-CT has exceptional negative predictive value for marrow disease. Routine bone marrow biopsy can be safely omitted.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Whole-body 18F-FDG PET-CT",
+              "category": "Staging imaging"
+            },
+            {
+              "id": "r2",
+              "name": "Omit routine bone marrow biopsy (PET-CT sufficient)",
+              "category": "Clinical recommendation"
+            },
+            {
+              "id": "r3",
+              "name": "Calculate disease-specific prognostic index (aaIPI / IPI / IPS)",
+              "category": "Prognostication"
+            }
+          ]
+        },
+        {
+          "id": "pathway-staging-cll-surveillance",
+          "label": "CLL Staging: CXR PA view + Abdominal USG (Minimal Staging)",
+          "kind": "observation",
+          "category": "",
+          "rationale": "Step 7: For asymptomatic CLL without therapy indication, avoid unnecessary radiation from CT and invasive bone marrow biopsy. Baseline CXR and abdominal ultrasonography are sufficient.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "CXR PA view + Ultrasound abdomen and pelvis",
+              "category": "Baseline imaging"
+            },
+            {
+              "id": "r2",
+              "name": "Omit CT chest/abdomen/pelvis and omit bone marrow biopsy",
+              "category": "Radiation stewardship"
+            },
+            {
+              "id": "r3",
+              "name": "Active clinical and haematological surveillance (every 3-6 months)",
+              "category": "Surveillance"
+            }
+          ]
+        },
+        {
+          "id": "pathway-staging-cll-pretherapy",
+          "label": "CLL Pre-Therapy Workup: CECT + Bone Marrow + FISH Panel",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 7 & 8: When CLL requires systemic treatment: CECT chest/abdomen/pelvis is indicated, bone marrow biopsy evaluates cytopenias, and CLL FISH panel (17p deletion, TP53, IgVH mutation status) is mandatory.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "CECT chest + abdomen + pelvis",
+              "category": "Contrast CT staging"
+            },
+            {
+              "id": "r2",
+              "name": "Bone marrow aspirate & trephine biopsy (for cytopenias / reserve assessment)",
+              "category": "Bone marrow"
+            },
+            {
+              "id": "r3",
+              "name": "CLL FISH panel (del 17p, 11q, 13q, +12) + TP53 mutation + IgVH status",
+              "category": "Molecular genetics"
+            },
+            {
+              "id": "r4",
+              "name": "Calculate CLL-IPI prognostic score",
+              "category": "Prognostic scoring"
+            }
+          ]
+        },
+        {
+          "id": "pathway-staging-mzl-cect",
+          "label": "MZL Staging: Diagnostic CECT + SPEP + Subtype Genetics",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 7 & 8: In Marginal Zone Lymphoma (all subtypes), CECT chest/abdomen/pelvis is preferred. Serum Protein Electrophoresis (SPEP) evaluates paraproteinemia, and t(11;18) FISH in gastric MALT predicts anti-H. pylori resistance.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "CECT chest + abdomen + pelvis",
+              "category": "Diagnostic imaging"
+            },
+            {
+              "id": "r2",
+              "name": "Serum Protein Electrophoresis (SPEP) for paraprotein / immunoglobulin spike",
+              "category": "Laboratory"
+            },
+            {
+              "id": "r3",
+              "name": "Bone marrow aspirate and trephine biopsy",
+              "category": "Staging biopsy"
+            },
+            {
+              "id": "r4",
+              "name": "t(11;18) translocation FISH if gastric MALT (predicts H. pylori resistance)",
+              "category": "Special genetics"
+            }
+          ]
+        },
+        {
+          "id": "pathway-cns-staging-and-cardiac",
+          "label": "High-Risk CNS Staging (LP with CSF flow) + 2D-ECHO",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 8: For DLBCL with high-risk extranodal involvement (testicular, parameningeal, renal/adrenal) or blastoid MCL: diagnostic lumbar puncture with CSF morphology and flow cytometry is mandatory. 2D-ECHO is required prior to anthracyclines.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Diagnostic Lumbar Puncture: CSF cytology + flow cytometry",
+              "category": "CNS staging"
+            },
+            {
+              "id": "r2",
+              "name": "Brain MRI with contrast (if neurological symptoms or PCNSL suspected)",
+              "category": "Neuroimaging"
+            },
+            {
+              "id": "r3",
+              "name": "2D-Echocardiography (LVEF assessment) prior to anthracycline therapy",
+              "category": "Cardiac evaluation"
+            },
+            {
+              "id": "r4",
+              "name": "Plan CNS-directed prophylaxis (intrathecal MTX or systemic high-dose MTX)",
+              "category": "Therapeutic planning"
+            }
+          ]
+        },
+        {
+          "id": "pathway-cutaneous-tcell-staging",
+          "label": "Cutaneous T-Cell Lymphoma: Skin Biopsy + Stage-Directed Imaging",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 6 & 7: Skin biopsy is mandatory for MF/Sézary subtype confirmation. Early thin-plaque disease requires clinical staging only. Extensive skin, tumour, or Sézary cells in peripheral blood require CECT chest/abdomen/pelvis.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Skin biopsy (punch or incisional, mandatory for histopathology + TCR clonality)",
+              "category": "Dermatopathology"
+            },
+            {
+              "id": "r2",
+              "name": "Clinical skin staging (mSWAT score for early plaque disease)",
+              "category": "Clinical staging"
+            },
+            {
+              "id": "r3",
+              "name": "CECT chest + abdomen + pelvis if nodular, extensive skin disease, or Sézary cells",
+              "category": "Cross-sectional imaging"
+            },
+            {
+              "id": "r4",
+              "name": "Peripheral blood smear review for cerebriform Sézary cells",
+              "category": "Haematology"
+            }
+          ]
+        },
+        {
+          "id": "pathway-high-dose-mtx-dtpa",
+          "label": "High-Dose MTX Protocol: Mandatory DTPA-GFR Clearance",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Step 8: High-dose Methotrexate requires accurate baseline renal glomerular clearance. In patients aged > 40 or with diabetic/hypertensive/borderline eGFR, 99mTc-DTPA GFR is mandatory before infusion.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "99mTc-DTPA GFR clearance test (mandatory before high-dose MTX if age > 40)",
+              "category": "Nuclear nephrology"
+            },
+            {
+              "id": "r2",
+              "name": "Hydration and urine alkalinization protocol (target urinary pH >= 7.0)",
+              "category": "Renal protection"
+            },
+            {
+              "id": "r3",
+              "name": "Leucovorin rescue planning and methotrexate serum drug level monitoring",
+              "category": "Pharmacotherapy"
+            }
+          ]
+        }
+      ],
+      "rules": [
+        {
+          "id": "rule1",
+          "label": "Missing or unparsed smear/presentation",
+          "outcomeId": "needs-review",
+          "conditions": [
+            {
+              "findingId": "presentation-smear",
+              "op": "unknown",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "rule2",
+          "label": "Missing or unparsed lymphoma subtype",
+          "outcomeId": "needs-review",
+          "conditions": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "unknown",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "rule3",
+          "label": "Hepatitis B positive requiring antiviral prophylaxis",
+          "outcomeId": "pathway-viral-prophylaxis-hbv",
+          "conditions": [
+            {
+              "findingId": "viral-screening-hbv",
+              "op": "is",
+              "values": [
+                "hbv-positive"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule4",
+          "label": "Hepatitis C positive requiring HCV RNA and hepatology referral",
+          "outcomeId": "pathway-viral-prophylaxis-hcv",
+          "conditions": [
+            {
+              "findingId": "viral-screening-hcv",
+              "op": "is",
+              "values": [
+                "hcv-positive"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule5",
+          "label": "HIV positive requiring viral load, CD4 count, and OI prophylaxis",
+          "outcomeId": "pathway-hiv-multidisciplinary",
+          "conditions": [
+            {
+              "findingId": "viral-screening-hiv",
+              "op": "is",
+              "values": [
+                "hiv-positive"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule6",
+          "label": "High metabolic risk requiring Tumor Lysis Syndrome prophylaxis",
+          "outcomeId": "pathway-tls-prophylaxis",
+          "conditions": [
+            {
+              "findingId": "tls-metabolic-risk",
+              "op": "is",
+              "values": [
+                "tls-high-risk"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule7",
+          "label": "Circulating lymphocytosis present on smear",
+          "outcomeId": "pathway-flow-cytometry-clpd",
+          "conditions": [
+            {
+              "findingId": "presentation-smear",
+              "op": "is",
+              "values": [
+                "lymphocytosis-present"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule8",
+          "label": "Solid mass without lymphocytosis (biopsy needed)",
+          "outcomeId": "pathway-tissue-excision-biopsy",
+          "conditions": [
+            {
+              "findingId": "presentation-smear",
+              "op": "is",
+              "values": [
+                "no-lymphocytosis"
+              ]
+            },
+            {
+              "findingId": "staging-extent",
+              "op": "unknown",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "rule9",
+          "label": "Double-Hit Lymphoma confirmed (DA-EPOCH-R protocol)",
+          "outcomeId": "pathway-double-hit-specialized",
+          "conditions": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "double-hit-fish",
+              "op": "is",
+              "values": [
+                "dhl-detected"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule10",
+          "label": "Asymptomatic CLL without treatment indication",
+          "outcomeId": "pathway-staging-cll-surveillance",
+          "conditions": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "cll-sll"
+              ]
+            },
+            {
+              "findingId": "cll-therapy-indication",
+              "op": "is",
+              "values": [
+                "asymptomatic-no-therapy"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule11",
+          "label": "CLL with treatment indicated",
+          "outcomeId": "pathway-staging-cll-pretherapy",
+          "conditions": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "cll-sll"
+              ]
+            },
+            {
+              "findingId": "cll-therapy-indication",
+              "op": "is",
+              "values": [
+                "therapy-indicated"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule12",
+          "label": "Marginal Zone Lymphoma (MALT / SMZL)",
+          "outcomeId": "pathway-staging-mzl-cect",
+          "conditions": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "mzl"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule13",
+          "label": "Cutaneous T-Cell Lymphoma (MF / Sézary)",
+          "outcomeId": "pathway-cutaneous-tcell-staging",
+          "conditions": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "ctcl-mf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule14",
+          "label": "DLBCL or MCL with CNS high-risk anatomical features",
+          "outcomeId": "pathway-cns-staging-and-cardiac",
+          "conditions": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "dlbcl",
+                "mcl"
+              ]
+            },
+            {
+              "findingId": "cns-risk-factors",
+              "op": "is",
+              "values": [
+                "cns-high-risk"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule15",
+          "label": "High-dose Methotrexate planned requiring DTPA-GFR renal clearance",
+          "outcomeId": "pathway-high-dose-mtx-dtpa",
+          "conditions": [
+            {
+              "findingId": "planned-therapy-cardiac",
+              "op": "is",
+              "values": [
+                "high-dose-mtx-planned"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule16",
+          "label": "Limited-stage DLBCL or Hodgkin Lymphoma on PET-CT (omit marrow)",
+          "outcomeId": "pathway-staging-pet-ct-omit-bm",
+          "conditions": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "dlbcl",
+                "hl"
+              ]
+            },
+            {
+              "findingId": "staging-extent",
+              "op": "is",
+              "values": [
+                "stage-1-2-limited"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule17",
+          "label": "Low-grade lymphomas, MCL, Burkitt, PTCL (PET-CT + BM required)",
+          "outcomeId": "pathway-staging-pet-ct-and-bm",
+          "conditions": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "fl",
+                "mcl",
+                "ptcl",
+                "burkitt-hbl",
+                "hcl-lpl"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule18",
+          "label": "Advanced DLBCL (Age <= 60) with high aaIPI score (>= 2)",
+          "outcomeId": "pathway-staging-pet-ct-omit-bm",
+          "conditions": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "staging-extent",
+              "op": "is",
+              "values": [
+                "stage-3-4-advanced"
+              ]
+            },
+            {
+              "functionId": "aaipi-dlbcl",
+              "op": "score_gte",
+              "threshold": 2
+            }
+          ]
+        },
+        {
+          "id": "rule19",
+          "label": "Advanced DLBCL standard risk (PET-CT staging)",
+          "outcomeId": "pathway-staging-pet-ct-omit-bm",
+          "conditions": [
+            {
+              "findingId": "lymphoma-category",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "staging-extent",
+              "op": "is",
+              "values": [
+                "stage-3-4-advanced"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NCG_FL_2020",
+      "version": "0.2.1",
+      "title": "Follicular Lymphoma - first-line treatment pathway",
+      "shortTitle": "Follicular lymphoma: first-line treatment",
+      "stage": "First-line treatment",
+      "order": 2,
+      "organization": "Hematology-Oncology Clinical Working Group",
+      "source": "Follicular Lymphoma Treatment Workflow; Lymphoma Workup Flowchart",
+      "description": "Assigns an adult follicular lymphoma patient to a treatment group based on histology, Ann Arbor stage, GELF tumour burden, bone marrow status and fitness.",
+      "enforceProvenance": true,
+      "fallbackOutcomeId": "needs-review",
+      "findings": [
+        {
+          "id": "histology",
+          "label": "Histology / grade",
+          "help": "WHO histological grade from the pathology report.",
+          "category": "Histology & Pathology",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-histology",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-histology",
+          "values": [
+            {
+              "code": "fl-grade-1-2",
+              "label": "FL grade 1-2"
+            },
+            {
+              "code": "fl-grade-3a",
+              "label": "FL grade 3a"
+            },
+            {
+              "code": "fl-grade-3b",
+              "label": "FL grade 3b"
+            },
+            {
+              "code": "fl-duodenal",
+              "label": "Primary duodenal FL"
+            },
+            {
+              "code": "transformed-dlbcl",
+              "label": "Transformed to DLBCL"
+            }
+          ]
+        },
+        {
+          "id": "stage",
+          "label": "Ann Arbor stage",
+          "help": "Validated anatomical stage (PET-CT / CECT).",
+          "category": "Staging & Anatomy",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-stage",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-stage",
+          "values": [
+            {
+              "code": "stage-1",
+              "label": "Stage I"
+            },
+            {
+              "code": "stage-2",
+              "label": "Stage II"
+            },
+            {
+              "code": "stage-3",
+              "label": "Stage III"
+            },
+            {
+              "code": "stage-4",
+              "label": "Stage IV"
+            }
+          ]
+        },
+        {
+          "id": "stage2-contiguity",
+          "label": "Stage II contiguity",
+          "help": "Only relevant for Stage II.",
+          "category": "Staging & Anatomy",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-stage2-contiguity",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-stage2-contiguity",
+          "values": [
+            {
+              "code": "contiguous",
+              "label": "Contiguous"
+            },
+            {
+              "code": "non-contiguous",
+              "label": "Non-contiguous"
+            }
+          ]
+        },
+        {
+          "id": "bone-marrow",
+          "label": "Bone marrow biopsy",
+          "help": "Marrow involvement upstages the patient to Stage IV.",
+          "category": "Staging & Anatomy",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-bone-marrow",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-bone-marrow",
+          "values": [
+            {
+              "code": "cleared",
+              "label": "Negative (cleared)"
+            },
+            {
+              "code": "involved",
+              "label": "Involved"
+            }
+          ]
+        },
+        {
+          "id": "gelf",
+          "label": "GELF tumour burden",
+          "help": "High if any GELF criterion is met (bulky mass > 7 cm, 3 nodes > 3 cm, cytopenias, B symptoms...).",
+          "category": "Prognosis & Tumor Burden",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-gelf",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-gelf",
+          "values": [
+            {
+              "code": "low-burden",
+              "label": "Low burden"
+            },
+            {
+              "code": "high-burden",
+              "label": "High burden"
+            }
+          ]
+        },
+        {
+          "id": "fitness",
+          "label": "Fitness for systemic therapy",
+          "help": "Fit for full-dose chemoimmunotherapy (BR / R-CHOP).",
+          "category": "Performance & Fitness",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-fitness",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-fitness",
+          "values": [
+            {
+              "code": "fit",
+              "label": "Fit"
+            },
+            {
+              "code": "frail",
+              "label": "Frail / comorbid"
+            }
+          ]
+        }
+      ],
+      "functions": [],
+      "outcomes": [
+        {
+          "id": "needs-review",
+          "label": "Needs clinician review",
+          "kind": "review",
+          "category": "",
+          "rationale": "Required data is missing or unreliable. A clinician must decide - no regimen is suggested.",
+          "regimens": []
+        },
+        {
+          "id": "treat-as-dlbcl",
+          "label": "Treat as DLBCL",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Grade 3b / transformed FL behaves as aggressive lymphoma.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "R-CHOP x 6 cycles (+/- ISRT to bulky sites)",
+              "category": "Anthracycline chemoimmunotherapy"
+            },
+            {
+              "id": "r2",
+              "name": "Polatuzumab vedotin + R-CHP",
+              "category": "Targeted ADC"
+            }
+          ]
+        },
+        {
+          "id": "fl-duodenal-limited",
+          "label": "Duodenal FL - watch / local therapy",
+          "kind": "observation",
+          "category": "",
+          "rationale": "Primary duodenal FL is usually indolent and localised.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Observation / watchful waiting",
+              "category": "Surveillance"
+            },
+            {
+              "id": "r2",
+              "name": "ISRT 24-30 Gy if symptomatic",
+              "category": "Local therapy"
+            }
+          ]
+        },
+        {
+          "id": "stage-1-limited",
+          "label": "Stage I - curative radiotherapy",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Limited stage with cleared marrow: curative-intent radiotherapy.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "ISRT 24 Gy in 12 fractions",
+              "category": "Radiation therapy"
+            },
+            {
+              "id": "r2",
+              "name": "Watchful waiting if radiotherapy contraindicated",
+              "category": "Surveillance"
+            }
+          ]
+        },
+        {
+          "id": "stage-2-contiguous",
+          "label": "Stage II contiguous - radiotherapy",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "Contiguous nodal disease fits a single radiation field.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "IFRT / ISRT 24 Gy",
+              "category": "Radiation therapy"
+            },
+            {
+              "id": "r2",
+              "name": "Single-agent rituximab 375 mg/m2 weekly x 4",
+              "category": "Monotherapy"
+            }
+          ]
+        },
+        {
+          "id": "advanced-low-burden",
+          "label": "Advanced, low burden - watch and wait",
+          "kind": "observation",
+          "category": "",
+          "rationale": "Asymptomatic low tumour burden: no survival benefit from early treatment.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Watchful waiting (review every 3-6 months)",
+              "category": "Surveillance"
+            },
+            {
+              "id": "r2",
+              "name": "Single-agent rituximab x 4 if patient declines observation",
+              "category": "Monotherapy"
+            }
+          ]
+        },
+        {
+          "id": "advanced-high-burden-systemic",
+          "label": "Advanced, high burden - systemic therapy",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "High GELF burden in a fit patient.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Bendamustine + rituximab (BR) x 6",
+              "category": "Chemoimmunotherapy"
+            },
+            {
+              "id": "r2",
+              "name": "R-CHOP x 6",
+              "category": "Chemoimmunotherapy"
+            },
+            {
+              "id": "r3",
+              "name": "Rituximab + lenalidomide (R2)",
+              "category": "Immunomodulatory"
+            }
+          ]
+        },
+        {
+          "id": "advanced-high-burden-frail",
+          "label": "Advanced, high burden - frail",
+          "kind": "treatment",
+          "category": "",
+          "rationale": "High burden but not fit for full-dose therapy.",
+          "regimens": [
+            {
+              "id": "r1",
+              "name": "Single-agent rituximab weekly x 4",
+              "category": "Monotherapy"
+            },
+            {
+              "id": "r2",
+              "name": "Attenuated bendamustine + rituximab",
+              "category": "Dose-reduced"
+            },
+            {
+              "id": "r3",
+              "name": "R-CVP",
+              "category": "Non-anthracycline"
+            }
+          ]
+        }
+      ],
+      "rules": [
+        {
+          "id": "rule1",
+          "label": "Histology unknown",
+          "outcomeId": "needs-review",
+          "conditions": [
+            {
+              "findingId": "histology",
+              "op": "unknown",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "rule2",
+          "label": "Grade 3b or transformed",
+          "outcomeId": "treat-as-dlbcl",
+          "conditions": [
+            {
+              "findingId": "histology",
+              "op": "is",
+              "values": [
+                "fl-grade-3b",
+                "transformed-dlbcl"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule3",
+          "label": "Duodenal FL",
+          "outcomeId": "fl-duodenal-limited",
+          "conditions": [
+            {
+              "findingId": "histology",
+              "op": "is",
+              "values": [
+                "fl-duodenal"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule4",
+          "label": "Stage unknown",
+          "outcomeId": "needs-review",
+          "conditions": [
+            {
+              "findingId": "stage",
+              "op": "unknown",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "rule5",
+          "label": "Stage I, marrow not assessed",
+          "outcomeId": "needs-review",
+          "conditions": [
+            {
+              "findingId": "stage",
+              "op": "is",
+              "values": [
+                "stage-1"
+              ]
+            },
+            {
+              "findingId": "bone-marrow",
+              "op": "unknown",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "rule6",
+          "label": "Stage I, marrow cleared",
+          "outcomeId": "stage-1-limited",
+          "conditions": [
+            {
+              "findingId": "stage",
+              "op": "is",
+              "values": [
+                "stage-1"
+              ]
+            },
+            {
+              "findingId": "bone-marrow",
+              "op": "is",
+              "values": [
+                "cleared"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule7",
+          "label": "Stage I but marrow involved (restage as IV)",
+          "outcomeId": "needs-review",
+          "conditions": [
+            {
+              "findingId": "stage",
+              "op": "is",
+              "values": [
+                "stage-1"
+              ]
+            },
+            {
+              "findingId": "bone-marrow",
+              "op": "is",
+              "values": [
+                "involved"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule8",
+          "label": "Stage II contiguous",
+          "outcomeId": "stage-2-contiguous",
+          "conditions": [
+            {
+              "findingId": "stage",
+              "op": "is",
+              "values": [
+                "stage-2"
+              ]
+            },
+            {
+              "findingId": "stage2-contiguity",
+              "op": "is",
+              "values": [
+                "contiguous"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule9",
+          "label": "Advanced disease, GELF unknown",
+          "outcomeId": "needs-review",
+          "conditions": [
+            {
+              "findingId": "stage",
+              "op": "is",
+              "values": [
+                "stage-2",
+                "stage-3",
+                "stage-4"
+              ]
+            },
+            {
+              "findingId": "gelf",
+              "op": "unknown",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "rule10",
+          "label": "Advanced disease, low burden",
+          "outcomeId": "advanced-low-burden",
+          "conditions": [
+            {
+              "findingId": "stage",
+              "op": "is",
+              "values": [
+                "stage-2",
+                "stage-3",
+                "stage-4"
+              ]
+            },
+            {
+              "findingId": "gelf",
+              "op": "is",
+              "values": [
+                "low-burden"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule11",
+          "label": "Advanced, high burden, fit",
+          "outcomeId": "advanced-high-burden-systemic",
+          "conditions": [
+            {
+              "findingId": "stage",
+              "op": "is",
+              "values": [
+                "stage-2",
+                "stage-3",
+                "stage-4"
+              ]
+            },
+            {
+              "findingId": "gelf",
+              "op": "is",
+              "values": [
+                "high-burden"
+              ]
+            },
+            {
+              "findingId": "fitness",
+              "op": "is",
+              "values": [
+                "fit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule12",
+          "label": "Advanced, high burden, frail",
+          "outcomeId": "advanced-high-burden-frail",
+          "conditions": [
+            {
+              "findingId": "stage",
+              "op": "is",
+              "values": [
+                "stage-2",
+                "stage-3",
+                "stage-4"
+              ]
+            },
+            {
+              "findingId": "gelf",
+              "op": "is",
+              "values": [
+                "high-burden"
+              ]
+            },
+            {
+              "findingId": "fitness",
+              "op": "is",
+              "values": [
+                "frail"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NCG_DLBCL_TREATMENT_2020",
+      "version": "1.0.0",
+      "title": "DLBCL & PMBCL - First-Line Treatment Pathway",
+      "shortTitle": "DLBCL / PMBCL: first-line treatment",
+      "stage": "First-line treatment",
+      "order": 3,
+      "organization": "Hematology-Oncology Clinical Working Group",
+      "source": "Clinical Guidelines - Lymphoma Treatment Workflow (DLBCL & PMBCL)",
+      "description": "Evidence-based clinical decision pathway guiding first-line treatment for Diffuse Large B-Cell Lymphoma (DLBCL) and Primary Mediastinal B-Cell Lymphoma (PMBCL). Incorporates anthracycline fitness assessment (LVEF/Echo, age, comorbidities), stage-based stratification (Limited Stage I-II: aaIPI 0 non-bulky PET-adapted R-CHOP vs aaIPI >= 1 / bulky R-CHOP x 6 + IFRT; Advanced Stage III-IV: standard R-CHOP x 6 vs Pola-R-CHP for non-GCB IPI >= 2), mandatory CNS prophylaxis for high-risk sites, HIV-associated DLBCL (CD4 >= 50 vs < 50), regimens for unfit/frail patients (R-miniCHOP, R-CEOP, R-GCVP, BR/R-PEP-C), PMBCL pathway (DA-EPOCH-R with CBC dose adjustment vs R-CHOP), pre-phase therapy, G-CSF prophylaxis, and cardiac monitoring.",
+      "enforceProvenance": true,
+      "fallbackOutcomeId": "needs-review",
+      "findings": [
+        {
+          "id": "lymphoma-subtype",
+          "label": "Histological lymphoma diagnosis",
+          "help": "Confirmed WHO histological diagnosis on formal surgical excisional or core biopsy.",
+          "category": "Histology & Pathology",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-lymphoma-subtype",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-lymphoma-subtype",
+          "values": [
+            {
+              "code": "dlbcl",
+              "label": "Diffuse Large B-Cell Lymphoma (DLBCL)"
+            },
+            {
+              "code": "pmbcl",
+              "label": "Primary Mediastinal B-Cell Lymphoma (PMBCL)"
+            }
+          ]
+        },
+        {
+          "id": "anthracycline-fitness",
+          "label": "Anthracycline (R-CHOP) fitness status",
+          "help": "Cardiopulmonary fitness and comorbidity evaluation: normal LVEF >= 50%, age < 70, absence of severe uncontrolled organ failure.",
+          "category": "Performance & Fitness",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-anthracycline-fitness",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-anthracycline-fitness",
+          "values": [
+            {
+              "code": "fit-r-chop",
+              "label": "Fit for standard R-CHOP (LVEF >= 50%, Age < 70, controlled comorbidities)"
+            },
+            {
+              "code": "unfit-cardiac",
+              "label": "Cardiac dysfunction / CAD / RWMA / prior anthracycline toxicity (LVEF < 50%)"
+            },
+            {
+              "code": "unfit-elderly-frail",
+              "label": "Elderly with significant frailty / comorbid (Age > 70 with frailty)"
+            },
+            {
+              "code": "unfit-anthra-ineligible",
+              "label": "Severe hepatic / renal / systemic contraindication to anthracyclines"
+            },
+            {
+              "code": "frail-palliative",
+              "label": "Frail / advanced decline (candidate for palliative / low-intensity therapy only)"
+            }
+          ]
+        },
+        {
+          "id": "dlbcl-stage",
+          "label": "Ann Arbor anatomical disease stage",
+          "help": "Anatomical stage classification validated by baseline whole-body 18F-FDG PET-CT.",
+          "category": "Staging & Anatomy",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-dlbcl-stage",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-dlbcl-stage",
+          "values": [
+            {
+              "code": "stage-1-2-limited",
+              "label": "Limited Stage (Stage I & II)"
+            },
+            {
+              "code": "stage-3-4-advanced",
+              "label": "Advanced Stage (Stage III & IV)"
+            }
+          ]
+        },
+        {
+          "id": "bulky-status",
+          "label": "Bulky disease status (>= 7.5 cm)",
+          "help": "Single largest contiguous tumor mass dimension on PET-CT (cutoff >= 7.5 cm per clinical guideline).",
+          "category": "Staging & Anatomy",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-bulky-status",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-bulky-status",
+          "values": [
+            {
+              "code": "non-bulky",
+              "label": "Non-bulky disease (largest lesion < 7.5 cm)"
+            },
+            {
+              "code": "bulky-gte-7-5cm",
+              "label": "Bulky disease (largest lesion >= 7.5 cm)"
+            }
+          ]
+        },
+        {
+          "id": "cell-of-origin",
+          "label": "DLBCL cell-of-origin (IHC Hans algorithm)",
+          "help": "Immunohistochemical subtyping (CD10, BCL6, MUM1): Germinal Center B-cell (GCB) vs Non-GCB / Activated B-cell (ABC).",
+          "category": "Histology & Pathology",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-cell-of-origin",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-cell-of-origin",
+          "values": [
+            {
+              "code": "gcb",
+              "label": "GCB (Germinal Center B-cell phenotype)"
+            },
+            {
+              "code": "non-gcb",
+              "label": "Non-GCB / ABC (Activated B-cell phenotype)"
+            }
+          ]
+        },
+        {
+          "id": "cns-risk-sites",
+          "label": "CNS high-risk anatomical involvement",
+          "help": "High-risk anatomical sites: testicular, breast, adnexa, adrenal, renal involvement, or confirmed Double-Hit Lymphoma (DHL).",
+          "category": "Prognosis & Risk",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-cns-risk-sites",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-cns-risk-sites",
+          "values": [
+            {
+              "code": "cns-high-risk",
+              "label": "High CNS risk (testicular, breast, adnexal, renal, adrenal DLBCL or DHL)"
+            },
+            {
+              "code": "cns-standard-risk",
+              "label": "Standard CNS risk (no high-risk anatomical involvement)"
+            }
+          ]
+        },
+        {
+          "id": "viral-screening-hiv",
+          "label": "HIV screening serology",
+          "help": "Step 4 HIV status: HIV-positive patients require concurrent ART, OI prophylaxis, and CD4-adapted chemoimmunotherapy.",
+          "category": "Infectious & Safety",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-viral-screening-hiv",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-viral-screening-hiv",
+          "values": [
+            {
+              "code": "hiv-negative",
+              "label": "HIV serology negative / non-reactive"
+            },
+            {
+              "code": "hiv-positive",
+              "label": "HIV confirmed positive (requires CD4 count & ART coordination)"
+            }
+          ]
+        },
+        {
+          "id": "cd4-count",
+          "label": "CD4 lymphocyte count (in HIV+ DLBCL)",
+          "help": "Absolute CD4 count threshold: CD4 >= 50 cells/uL permits Rituximab (SC-RR-EPOCH); CD4 < 50 cells/uL contraindicates Rituximab (EPOCH without R).",
+          "category": "Infectious & Safety",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-cd4-count",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-cd4-count",
+          "values": [
+            {
+              "code": "cd4-gte-50",
+              "label": "CD4 >= 50 cells/uL (Rituximab permitted)"
+            },
+            {
+              "code": "cd4-lt-50",
+              "label": "CD4 < 50 cells/uL (Rituximab contraindicated / avoided)"
+            },
+            {
+              "code": "not-applicable",
+              "label": "Not applicable (HIV negative)"
+            }
+          ]
+        },
+        {
+          "id": "central-venous-access",
+          "label": "Central venous access availability (for PMBCL)",
+          "help": "Continuous infusional chemotherapy (DA-EPOCH-R) mandates central venous access (PICC line or chemo port).",
+          "category": "Treatment Planning",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-central-venous-access",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-central-venous-access",
+          "values": [
+            {
+              "code": "central-access-available",
+              "label": "Central venous access available (PICC line or chemo port in place)"
+            },
+            {
+              "code": "no-central-access",
+              "label": "No central venous access / peripheral IV only"
+            }
+          ]
+        },
+        {
+          "id": "cardiac-echo-status",
+          "label": "2D-ECHO LVEF monitoring on therapy",
+          "help": "Mandatory 2D-ECHO at baseline and after cycle 4 of R-CHOP. Decline > 10% requires anthracycline discontinuation.",
+          "category": "Safety & Comorbidities",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-cardiac-echo-status",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-cardiac-echo-status",
+          "values": [
+            {
+              "code": "echo-normal-stable",
+              "label": "LVEF >= 50% and stable (decline <= 10% from baseline)"
+            },
+            {
+              "code": "echo-lvef-declined",
+              "label": "LVEF decline > 10% from baseline (cardiotoxicity gate)"
+            }
+          ]
+        },
+        {
+          "id": "prephase-indication",
+          "label": "Pre-phase therapy indication",
+          "help": "Mandatory pre-phase Cyclophosphamide + Steroids in: elderly Stage III/IV, bulky disease, GI involvement, or poor PS.",
+          "category": "Performance & Fitness",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-prephase-indication",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-prephase-indication",
+          "values": [
+            {
+              "code": "prephase-indicated",
+              "label": "Pre-phase indicated (elderly III/IV, bulky, GI involvement, poor PS)"
+            },
+            {
+              "code": "prephase-not-indicated",
+              "label": "No pre-phase indicated (standard good PS non-bulky)"
+            }
+          ]
+        },
+        {
+          "id": "age-group",
+          "label": "Patient age bracket (IPI cutoff)",
+          "help": "Prognostic age cutoff: age <= 60 years uses aaIPI (3 factors); age > 60 years uses standard 5-factor IPI.",
+          "category": "Demographics",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-age-group",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-age-group",
+          "values": [
+            {
+              "code": "age-le-60",
+              "label": "Age <= 60 years"
+            },
+            {
+              "code": "age-gt-60",
+              "label": "Age > 60 years"
+            }
+          ]
+        },
+        {
+          "id": "serum-ldh",
+          "label": "Serum LDH (Lactate Dehydrogenase)",
+          "help": "Pre-treatment serum LDH compared to institutional upper limit of normal (ULN).",
+          "category": "Labs & Biomarkers",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-serum-ldh",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-serum-ldh",
+          "values": [
+            {
+              "code": "ldh-normal",
+              "label": "Normal (<= ULN)"
+            },
+            {
+              "code": "ldh-elevated",
+              "label": "Elevated (> ULN)"
+            }
+          ]
+        },
+        {
+          "id": "ecog-ps",
+          "label": "ECOG performance status",
+          "help": "Eastern Cooperative Oncology Group functional status score.",
+          "category": "Performance & Fitness",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-ecog-ps",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-ecog-ps",
+          "values": [
+            {
+              "code": "ecog-0-1",
+              "label": "ECOG 0-1 (ambulatory, fully active or restricted light work)"
+            },
+            {
+              "code": "ecog-2-4",
+              "label": "ECOG >= 2 (capable of limited self-care, bed/chair > 50% waking hours)"
+            }
+          ]
+        },
+        {
+          "id": "extranodal-sites",
+          "label": "Extranodal involvement sites",
+          "help": "Number of documented extranodal disease sites (excluding bone marrow / spleen).",
+          "category": "Staging & Anatomy",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-extranodal-sites",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-extranodal-sites",
+          "values": [
+            {
+              "code": "extranodal-0-1",
+              "label": "0 or 1 extranodal site"
+            },
+            {
+              "code": "extranodal-gt-1",
+              "label": "> 1 extranodal site"
+            }
+          ]
+        }
+      ],
+      "functions": [
+        {
+          "id": "aaipi-dlbcl",
+          "name": "aaIPI",
+          "label": "Age-adjusted IPI (aaIPI)",
+          "description": "Age-adjusted International Prognostic Index for DLBCL in patients age <= 60 years. Sums Stage III-IV (1 pt), elevated LDH (1 pt), and ECOG >= 2 (1 pt). Max: 3.",
+          "appliesWhen": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "age-group",
+              "op": "is",
+              "values": [
+                "age-le-60"
+              ]
+            }
+          ],
+          "factors": [
+            {
+              "findingId": "dlbcl-stage",
+              "points": {
+                "stage-1-2-limited": 0,
+                "stage-3-4-advanced": 1
+              }
+            },
+            {
+              "findingId": "serum-ldh",
+              "points": {
+                "ldh-normal": 0,
+                "ldh-elevated": 1
+              }
+            },
+            {
+              "findingId": "ecog-ps",
+              "points": {
+                "ecog-0-1": 0,
+                "ecog-2-4": 1
+              }
+            }
+          ],
+          "bands": [
+            {
+              "code": "low",
+              "label": "Low Risk",
+              "min": 0,
+              "max": 0,
+              "note": "Score 0: ~83% 5-year OS"
+            },
+            {
+              "code": "low-intermediate",
+              "label": "Low-Intermediate Risk",
+              "min": 1,
+              "max": 1,
+              "note": "Score 1: ~69% 5-year OS"
+            },
+            {
+              "code": "high-intermediate",
+              "label": "High-Intermediate Risk",
+              "min": 2,
+              "max": 2,
+              "note": "Score 2: ~53% 5-year OS"
+            },
+            {
+              "code": "high",
+              "label": "High Risk",
+              "min": 3,
+              "max": 3,
+              "note": "Score 3: ~32% 5-year OS"
+            }
+          ]
+        },
+        {
+          "id": "ipi-dlbcl",
+          "name": "IPI",
+          "label": "International Prognostic Index (IPI)",
+          "description": "Full 5-factor prognostic index for DLBCL across all age groups: Age > 60 (1 pt), Stage III-IV (1 pt), elevated LDH (1 pt), ECOG >= 2 (1 pt), Extranodal > 1 site (1 pt). Max: 5.",
+          "appliesWhen": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            }
+          ],
+          "factors": [
+            {
+              "findingId": "age-group",
+              "points": {
+                "age-le-60": 0,
+                "age-gt-60": 1
+              }
+            },
+            {
+              "findingId": "dlbcl-stage",
+              "points": {
+                "stage-1-2-limited": 0,
+                "stage-3-4-advanced": 1
+              }
+            },
+            {
+              "findingId": "serum-ldh",
+              "points": {
+                "ldh-normal": 0,
+                "ldh-elevated": 1
+              }
+            },
+            {
+              "findingId": "ecog-ps",
+              "points": {
+                "ecog-0-1": 0,
+                "ecog-2-4": 1
+              }
+            },
+            {
+              "findingId": "extranodal-sites",
+              "points": {
+                "extranodal-0-1": 0,
+                "extranodal-gt-1": 1
+              }
+            }
+          ],
+          "bands": [
+            {
+              "code": "low",
+              "label": "Low Risk",
+              "min": 0,
+              "max": 1,
+              "note": "Score 0-1: ~82% 5-year OS"
+            },
+            {
+              "code": "low-intermediate",
+              "label": "Low-Intermediate Risk",
+              "min": 2,
+              "max": 2,
+              "note": "Score 2: ~67% 5-year OS"
+            },
+            {
+              "code": "high-intermediate",
+              "label": "High-Intermediate Risk",
+              "min": 3,
+              "max": 3,
+              "note": "Score 3: ~55% 5-year OS"
+            },
+            {
+              "code": "high",
+              "label": "High Risk",
+              "min": 4,
+              "max": 5,
+              "note": "Score 4-5: ~40% 5-year OS"
+            }
+          ]
+        }
+      ],
+      "outcomes": [
+        {
+          "id": "needs-review",
+          "label": "Needs clinician review (Safety Gate / Missing Data)",
+          "kind": "review",
+          "category": "Clinical Governance & Safety",
+          "rationale": "Required clinical findings (subtype, stage, cardiac fitness, or viral status) are missing or incomplete. A clinician must review before initiating treatment.",
+          "regimens": []
+        },
+        {
+          "id": "cardiotoxicity-switch",
+          "label": "Cardiac Toxicity Alert: Discontinue Anthracycline",
+          "kind": "treatment",
+          "category": "Cardiac Safety",
+          "rationale": "Step 9: 2D-ECHO showed LVEF decline > 10% from baseline. Discontinue doxorubicin/anthracyclines immediately, refer to cardiology, and switch to non-cardiotoxic alternative (etoposide or gemcitabine).",
+          "regimens": [
+            {
+              "id": "r-cardio-ref",
+              "name": "Urgent Cardiology referral & cardioprotective optimization",
+              "category": "Safety Consultation"
+            },
+            {
+              "id": "r-ceop-switch",
+              "name": "Discontinue Doxorubicin -> Switch to R-CEOP (Etoposide replaces Doxorubicin)",
+              "category": "Chemoimmunotherapy"
+            },
+            {
+              "id": "r-gcvp-switch",
+              "name": "Alternative: R-GCVP / R-CGOP (Gemcitabine based)",
+              "category": "Chemoimmunotherapy"
+            }
+          ]
+        },
+        {
+          "id": "dlbcl-high-cns-risk-prophylaxis",
+          "label": "High-Risk CNS DLBCL: Intrathecal + High-Dose MTX Prophylaxis",
+          "kind": "treatment",
+          "category": "CNS Prophylaxis",
+          "rationale": "Step 3: DLBCL involving testicular, breast, adnexal, adrenal, renal sites or confirmed Double-Hit Lymphoma (DHL) has high CNS recurrence risk (> 10%). Intrathecal MTX with each R-CHOP cycle plus 2 cycles of High-Dose Methotrexate (HD-MTX 3-3.5 g/m2) post cycle 6 are mandatory (provided DTPA GFR > 60 mL/min and PET-CT shows CMR).",
+          "regimens": [
+            {
+              "id": "r-rchop-cns",
+              "name": "R-CHOP x 6 cycles q21d",
+              "category": "Systemic Backbone"
+            },
+            {
+              "id": "r-it-mtx",
+              "name": "Intrathecal Methotrexate (12 mg) with each chemotherapy cycle",
+              "category": "Intrathecal Prophylaxis"
+            },
+            {
+              "id": "r-hd-mtx",
+              "name": "High-Dose Methotrexate (3.0-3.5 g/m2) x 2 cycles after cycle 6 (DTPA GFR > 60 required)",
+              "category": "Systemic CNS Prophylaxis"
+            },
+            {
+              "id": "r-testes-rt",
+              "name": "Consider prophylactic radiation to both testes if testicular involvement",
+              "category": "Radiation Therapy"
+            }
+          ]
+        },
+        {
+          "id": "dlbcl-hiv-cd4-gte-50",
+          "label": "HIV+ DLBCL (CD4 >= 50): SC-RR-EPOCH + ART + OI Prophylaxis",
+          "kind": "treatment",
+          "category": "HIV Lymphoma",
+          "rationale": "Step 4: In HIV-positive DLBCL with CD4 >= 50 cells/uL, Rituximab can be safely administered. SC-RR-EPOCH with concurrent ART and opportunistic infection prophylaxis is recommended. PET-CT after cycle 2 guides subsequent cycles.",
+          "regimens": [
+            {
+              "id": "r-sc-rr-epoch",
+              "name": "SC-RR-EPOCH (short-course dose-dense infusional EPOCH with Rituximab)",
+              "category": "Dose-Adjusted Chemoimmunotherapy"
+            },
+            {
+              "id": "r-art",
+              "name": "Optimized combination Antiretroviral Therapy (ART) continuation",
+              "category": "Antiviral"
+            },
+            {
+              "id": "r-oi-proph",
+              "name": "Opportunistic infection prophylaxis (TMP-SMX for PCP + fungal prophylaxis)",
+              "category": "Infectious Prophylaxis"
+            },
+            {
+              "id": "r-pet-c2",
+              "name": "Interim PET-CT after cycle 2 (if CMR -> 1 more cycle, total 3; if not CMR -> 3rd cycle)",
+              "category": "Imaging Response"
+            }
+          ]
+        },
+        {
+          "id": "dlbcl-hiv-cd4-lt-50",
+          "label": "HIV+ DLBCL (CD4 < 50): EPOCH (Without Rituximab) + ART",
+          "kind": "treatment",
+          "category": "HIV Lymphoma",
+          "rationale": "Step 4: Severe CD4 lymphopenia (< 50 cells/uL) carries prohibitive risk of fatal infectious toxicity if Rituximab is given. Rituximab is avoided; treatment is infusional EPOCH alone with ART optimization and strict OI prophylaxis.",
+          "regimens": [
+            {
+              "id": "r-epoch-no-r",
+              "name": "Infusional EPOCH without Rituximab (Rituximab avoided due to CD4 < 50)",
+              "category": "Chemotherapy"
+            },
+            {
+              "id": "r-art-opt",
+              "name": "Aggressive ART optimization & viral load monitoring",
+              "category": "Antiviral"
+            },
+            {
+              "id": "r-oi-full",
+              "name": "Mandatory multi-pathogen opportunistic infection prophylaxis",
+              "category": "Infectious Prophylaxis"
+            },
+            {
+              "id": "r-cd4-reassess",
+              "name": "Re-assess CD4 count after ART response before subsequent therapy decisions",
+              "category": "Immunology Monitoring"
+            }
+          ]
+        },
+        {
+          "id": "dlbcl-fit-limited-aai0-nonbulky",
+          "label": "Limited Stage DLBCL (aaIPI 0, Non-Bulky): PET-Adapted R-CHOP x 3-4 Cycles",
+          "kind": "treatment",
+          "category": "Limited Stage DLBCL",
+          "rationale": "Step 2: Limited Stage (Stage I-II) with aaIPI 0 and non-bulky disease (< 7.5 cm) in a fit patient: R-CHOP x 3 cycles followed by interim PET-CT. If interim PET shows Complete Metabolic Response (CMR) -> 1 additional cycle (total 4 R-CHOP); if PET is positive -> 3 more cycles (total 6) OR 30-35 Gy IFRT. (Alternative if PET unavailable: 4 x R-CHOP + 2 x Rituximab).",
+          "regimens": [
+            {
+              "id": "r-rchop-3",
+              "name": "R-CHOP x 3 cycles (Rituximab, Cyclophosphamide, Doxorubicin, Vincristine, Prednisone)",
+              "category": "Chemoimmunotherapy"
+            },
+            {
+              "id": "r-interim-pet",
+              "name": "Interim 18F-FDG PET-CT after cycle 3",
+              "category": "Response Imaging"
+            },
+            {
+              "id": "r-rchop-plus1",
+              "name": "If PET CMR: +1 more R-CHOP cycle (total 4 cycles, no radiation)",
+              "category": "Consolidation"
+            },
+            {
+              "id": "r-ifrt-pos",
+              "name": "If PET positive: 3 more R-CHOP cycles OR 30-35 Gy IFRT",
+              "category": "Salvage / Radiation"
+            }
+          ]
+        },
+        {
+          "id": "dlbcl-fit-limited-aai1-or-bulky",
+          "label": "Limited Stage DLBCL (aaIPI >= 1 or Bulky >= 7.5 cm): R-CHOP x 6 + IFRT",
+          "kind": "treatment",
+          "category": "Limited Stage DLBCL",
+          "rationale": "Step 2: Limited stage DLBCL with aaIPI >= 1 or bulky disease (>= 7.5 cm): full 6 cycles of R-CHOP plus Involved-Field Radiotherapy (IFRT 30-35 Gy) to bulky disease site(s).",
+          "regimens": [
+            {
+              "id": "r-rchop-6",
+              "name": "R-CHOP x 6 cycles q21d",
+              "category": "Chemoimmunotherapy"
+            },
+            {
+              "id": "r-ifrt-bulk",
+              "name": "Involved-Field Radiotherapy (IFRT) 30-35 Gy to initial bulky disease site(s)",
+              "category": "Radiation Therapy"
+            },
+            {
+              "id": "r-echo-c4",
+              "name": "Mandatory 2D-ECHO after cycle 4 to monitor LVEF",
+              "category": "Cardiac Safety"
+            }
+          ]
+        },
+        {
+          "id": "dlbcl-fit-advanced-pola-r-chp",
+          "label": "Advanced Non-GCB DLBCL (IPI >= 2, Age < 70, Non-Bulky): Pola-R-CHP x 6",
+          "kind": "treatment",
+          "category": "Targeted Chemoimmunotherapy",
+          "rationale": "Step 2: POLARIX regimen for previously untreated Non-GCB DLBCL with IPI >= 2, age < 70 years, and non-bulky disease. Polatuzumab vedotin (1.8 mg/kg) replaces vincristine in the R-CHP backbone, demonstrating superior progression-free survival.",
+          "regimens": [
+            {
+              "id": "r-pola-r-chp",
+              "name": "Polatuzumab vedotin (1.8 mg/kg) + R-CHP x 6 cycles q21d",
+              "category": "Targeted ADC Chemoimmunotherapy"
+            },
+            {
+              "id": "r-ritux-maint",
+              "name": "Rituximab monotherapy (375 mg/m2) x 2 additional doses",
+              "category": "Monoclonal Antibody"
+            },
+            {
+              "id": "r-gcsf-pep",
+              "name": "Pegylated G-CSF primary prophylaxis 24h post-chemotherapy",
+              "category": "Growth Factor Support"
+            },
+            {
+              "id": "r-eot-pet",
+              "name": "End-of-treatment (EOT) 18F-FDG PET-CT assessment",
+              "category": "Imaging"
+            }
+          ]
+        },
+        {
+          "id": "dlbcl-fit-advanced-standard",
+          "label": "Advanced Stage DLBCL (Fit): Standard R-CHOP x 6 Cycles",
+          "kind": "treatment",
+          "category": "Advanced Stage DLBCL",
+          "rationale": "Step 2: Standard backbone for advanced stage (Stage III-IV) fit DLBCL is R-CHOP x 6 cycles. End-of-treatment PET-CT: if CMR -> observation (no consolidative RT, except testicular DLBCL); if Partial Response (PR) with uptake at a single residual site -> consolidative RT 30-35 Gy.",
+          "regimens": [
+            {
+              "id": "r-rchop-6-std",
+              "name": "R-CHOP x 6 cycles q21d",
+              "category": "Standard Chemoimmunotherapy"
+            },
+            {
+              "id": "r-echo-c4-std",
+              "name": "2D-ECHO mandatory after cycle 4 to screen for cardiotoxicity",
+              "category": "Cardiac Safety"
+            },
+            {
+              "id": "r-eot-pet-std",
+              "name": "End-of-treatment (EOT) PET-CT assessment",
+              "category": "Imaging"
+            },
+            {
+              "id": "r-rt-pr-site",
+              "name": "Consolidative RT 30-35 Gy if PR with uptake at single residual site",
+              "category": "Radiation Therapy"
+            }
+          ]
+        },
+        {
+          "id": "dlbcl-unfit-cardiac-ceop",
+          "label": "Unfit (Cardiac Dysfunction): R-CEOP x 6 Cycles",
+          "kind": "treatment",
+          "category": "Alternative Backbone",
+          "rationale": "Step 5: For patients with significant cardiac dysfunction (LVEF < 50%, CAD with RWMA, or prior congestive heart failure), Doxorubicin is contraindicated. R-CEOP (Etoposide 50 mg/m2 IV D1-3 replacing Doxorubicin) achieves curative intent without cardiotoxicity.",
+          "regimens": [
+            {
+              "id": "r-ceop-6",
+              "name": "R-CEOP x 6 cycles (Rituximab, Cyclophosphamide, Etoposide, Vincristine, Prednisone)",
+              "category": "Non-Anthracycline Chemoimmunotherapy"
+            },
+            {
+              "id": "r-gcsf-ceop",
+              "name": "Prophylactic G-CSF support",
+              "category": "Growth Factor"
+            },
+            {
+              "id": "r-eot-pet-ceop",
+              "name": "End-of-treatment PET-CT response evaluation",
+              "category": "Imaging"
+            }
+          ]
+        },
+        {
+          "id": "dlbcl-unfit-elderly-minichop",
+          "label": "Unfit / Elderly Frail (Curative Intent): R-miniCHOP x 6 Cycles",
+          "kind": "treatment",
+          "category": "Attenuated Chemoimmunotherapy",
+          "rationale": "Step 5: For elderly patients (age > 70 with frailty) who remain eligible for curative intent: R-miniCHOP (attenuated doses of cyclophosphamide 400 mg/m2, doxorubicin 25 mg/m2, vincristine 1 mg cap, and prednisone with full-dose rituximab) significantly reduces treatment-related mortality while preserving curative potential.",
+          "regimens": [
+            {
+              "id": "r-minichop-6",
+              "name": "R-miniCHOP x 6 cycles q21d (attenuated doses + full-dose Rituximab 375 mg/m2)",
+              "category": "Attenuated Chemoimmunotherapy"
+            },
+            {
+              "id": "r-prephase-elderly",
+              "name": "Pre-phase Cyclophosphamide + Prednisone x 7 days prior to cycle 1",
+              "category": "Toxicity Reduction"
+            },
+            {
+              "id": "r-gcsf-elderly",
+              "name": "Mandatory Pegylated G-CSF support in all cycles",
+              "category": "Growth Factor Support"
+            }
+          ]
+        },
+        {
+          "id": "dlbcl-unfit-anthra-ineligible-gcvp",
+          "label": "Unfit (Anthracycline Ineligible): R-GCVP / R-CGOP x 6 Cycles",
+          "kind": "treatment",
+          "category": "Alternative Backbone",
+          "rationale": "Step 5: Gemcitabine-based chemoimmunotherapy (R-GCVP: Gemcitabine, Cyclophosphamide, Vincristine, Prednisolone, or R-CGOP: Gemcitabine + Oxaliplatin) provides an active non-anthracycline curative option.",
+          "regimens": [
+            {
+              "id": "r-gcvp-6",
+              "name": "R-GCVP x 6 cycles (Rituximab, Gemcitabine, Cyclophosphamide, Vincristine, Prednisone)",
+              "category": "Gemcitabine Backbone"
+            },
+            {
+              "id": "r-gcsf-gcvp",
+              "name": "G-CSF prophylaxis",
+              "category": "Supportive Care"
+            }
+          ]
+        },
+        {
+          "id": "dlbcl-frail-palliative",
+          "label": "Frail / Palliative Intent: BR or R-PEP-C / Palliative RT",
+          "kind": "treatment",
+          "category": "Palliative Care",
+          "rationale": "Step 5: For frail patients unable to tolerate systemic curative regimens: palliative-intent BR (Bendamustine + Rituximab), oral metronomic R-PEP-C, or involved-field RT alone (for Stage I-II with limited field) provides disease control and symptom relief with minimal toxicity.",
+          "regimens": [
+            {
+              "id": "r-br-palliative",
+              "name": "Bendamustine + Rituximab (BR) attenuated / palliative intent",
+              "category": "Chemoimmunotherapy"
+            },
+            {
+              "id": "r-pepc",
+              "name": "Oral metronomic R-PEP-C (Prednisone, Etoposide, Procarbazine, Cyclophosphamide + Rituximab)",
+              "category": "Oral Chemotherapy"
+            },
+            {
+              "id": "r-rt-alone",
+              "name": "Radiotherapy alone if Stage I-II disease coverable in limited radiation field",
+              "category": "Radiation Therapy"
+            }
+          ]
+        },
+        {
+          "id": "pmbcl-fit-central-access",
+          "label": "PMBCL (Fit, Central Access Available): DA-EPOCH-R x 6 Cycles",
+          "kind": "treatment",
+          "category": "PMBCL First-Line",
+          "rationale": "PMBCL Step 2: In confirmed Primary Mediastinal B-Cell Lymphoma in fit patients with central venous access (PICC/port): Dose-Adjusted EPOCH-R (DA-EPOCH-R) x 6 cycles is the preferred regimen. CBC on Days 8, 10, 12 guides pharmacodynamic dose escalation. Interim PET-CT at cycle 4; if DS <= 3 -> complete 6 cycles without consolidative RT.",
+          "regimens": [
+            {
+              "id": "r-da-epoch-r",
+              "name": "DA-EPOCH-R x 6 cycles (continuous 96-hr infusional etoposide, doxorubicin, vincristine + bolus cyclophosphamide & rituximab)",
+              "category": "Dose-Adjusted Infusion"
+            },
+            {
+              "id": "r-cbc-titration",
+              "name": "CBC on Days 8, 10, and 12 of each cycle to calculate pharmacodynamic dose adjustment",
+              "category": "Safety Protocol"
+            },
+            {
+              "id": "r-gcsf-pmbcl",
+              "name": "Mandatory prophylactic G-CSF in every cycle",
+              "category": "Growth Factor Support"
+            },
+            {
+              "id": "r-interim-pet-c4",
+              "name": "Interim PET-CT at cycle 4 and End-of-Treatment PET-CT at cycle 6",
+              "category": "Response Evaluation"
+            }
+          ]
+        },
+        {
+          "id": "pmbcl-alternative-rchop",
+          "label": "PMBCL (No Central Access / Infrastructure): R-CHOP x 6 Cycles + RT",
+          "kind": "treatment",
+          "category": "PMBCL Alternative",
+          "rationale": "PMBCL Step 2: When infusional DA-EPOCH-R cannot be delivered (e.g. lack of central line access or ambulatory infusion pumps): R-CHOP x 6 cycles is the standard alternative. Interim PET-CT at cycle 4: if positive (DS 4-5) -> consolidative radiotherapy after cycle 6.",
+          "regimens": [
+            {
+              "id": "r-rchop-pmbcl",
+              "name": "R-CHOP x 6 cycles q21d",
+              "category": "Chemoimmunotherapy"
+            },
+            {
+              "id": "r-interim-pet-pmbcl",
+              "name": "Interim PET-CT at cycle 4",
+              "category": "Imaging"
+            },
+            {
+              "id": "r-rt-positive-pmbcl",
+              "name": "Consolidative RT to mediastinum if interim PET positive (DS 4-5)",
+              "category": "Radiation Therapy"
+            }
+          ]
+        }
+      ],
+      "rules": [
+        {
+          "id": "rule1",
+          "label": "Lymphoma subtype or stage unknown",
+          "outcomeId": "needs-review",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "unknown",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "rule2",
+          "label": "DLBCL stage or fitness unknown",
+          "outcomeId": "needs-review",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "dlbcl-stage",
+              "op": "unknown",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "rule3",
+          "label": "Anthracycline fitness unknown",
+          "outcomeId": "needs-review",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "anthracycline-fitness",
+              "op": "unknown",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "rule4",
+          "label": "Cardiotoxicity gate: LVEF decline > 10% on therapy",
+          "outcomeId": "cardiotoxicity-switch",
+          "conditions": [
+            {
+              "findingId": "cardiac-echo-status",
+              "op": "is",
+              "values": [
+                "echo-lvef-declined"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule5",
+          "label": "PMBCL with central venous access: DA-EPOCH-R",
+          "outcomeId": "pmbcl-fit-central-access",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "pmbcl"
+              ]
+            },
+            {
+              "findingId": "central-venous-access",
+              "op": "is",
+              "values": [
+                "central-access-available"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule6",
+          "label": "PMBCL without central venous access: R-CHOP alternative",
+          "outcomeId": "pmbcl-alternative-rchop",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "pmbcl"
+              ]
+            },
+            {
+              "findingId": "central-venous-access",
+              "op": "is",
+              "values": [
+                "no-central-access"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule7",
+          "label": "HIV+ DLBCL with CD4 >= 50: SC-RR-EPOCH with Rituximab",
+          "outcomeId": "dlbcl-hiv-cd4-gte-50",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "viral-screening-hiv",
+              "op": "is",
+              "values": [
+                "hiv-positive"
+              ]
+            },
+            {
+              "findingId": "cd4-count",
+              "op": "is",
+              "values": [
+                "cd4-gte-50"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule8",
+          "label": "HIV+ DLBCL with CD4 < 50: EPOCH without Rituximab",
+          "outcomeId": "dlbcl-hiv-cd4-lt-50",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "viral-screening-hiv",
+              "op": "is",
+              "values": [
+                "hiv-positive"
+              ]
+            },
+            {
+              "findingId": "cd4-count",
+              "op": "is",
+              "values": [
+                "cd4-lt-50"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule9",
+          "label": "Cardiac dysfunction: R-CEOP non-anthracycline regimen",
+          "outcomeId": "dlbcl-unfit-cardiac-ceop",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "anthracycline-fitness",
+              "op": "is",
+              "values": [
+                "unfit-cardiac"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule10",
+          "label": "Elderly with frailty (curative intent): R-miniCHOP",
+          "outcomeId": "dlbcl-unfit-elderly-minichop",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "anthracycline-fitness",
+              "op": "is",
+              "values": [
+                "unfit-elderly-frail"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule11",
+          "label": "Anthracycline ineligible: R-GCVP gemcitabine regimen",
+          "outcomeId": "dlbcl-unfit-anthra-ineligible-gcvp",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "anthracycline-fitness",
+              "op": "is",
+              "values": [
+                "unfit-anthra-ineligible"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule12",
+          "label": "Frail / Palliative intent: BR or R-PEP-C",
+          "outcomeId": "dlbcl-frail-palliative",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "anthracycline-fitness",
+              "op": "is",
+              "values": [
+                "frail-palliative"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule13",
+          "label": "High CNS relapse risk sites: IT + HD-MTX prophylaxis",
+          "outcomeId": "dlbcl-high-cns-risk-prophylaxis",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "anthracycline-fitness",
+              "op": "is",
+              "values": [
+                "fit-r-chop"
+              ]
+            },
+            {
+              "findingId": "cns-risk-sites",
+              "op": "is",
+              "values": [
+                "cns-high-risk"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule14",
+          "label": "Limited stage aaIPI 0, non-bulky: PET-adapted R-CHOP x 3-4",
+          "outcomeId": "dlbcl-fit-limited-aai0-nonbulky",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "anthracycline-fitness",
+              "op": "is",
+              "values": [
+                "fit-r-chop"
+              ]
+            },
+            {
+              "findingId": "dlbcl-stage",
+              "op": "is",
+              "values": [
+                "stage-1-2-limited"
+              ]
+            },
+            {
+              "findingId": "bulky-status",
+              "op": "is",
+              "values": [
+                "non-bulky"
+              ]
+            },
+            {
+              "functionId": "aaipi-dlbcl",
+              "op": "band_is",
+              "values": [
+                "low"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule15",
+          "label": "Limited stage with bulky disease (>= 7.5 cm): R-CHOP x 6 + IFRT",
+          "outcomeId": "dlbcl-fit-limited-aai1-or-bulky",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "anthracycline-fitness",
+              "op": "is",
+              "values": [
+                "fit-r-chop"
+              ]
+            },
+            {
+              "findingId": "dlbcl-stage",
+              "op": "is",
+              "values": [
+                "stage-1-2-limited"
+              ]
+            },
+            {
+              "findingId": "bulky-status",
+              "op": "is",
+              "values": [
+                "bulky-gte-7-5cm"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule16",
+          "label": "Limited stage with aaIPI >= 1: R-CHOP x 6 + IFRT",
+          "outcomeId": "dlbcl-fit-limited-aai1-or-bulky",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "anthracycline-fitness",
+              "op": "is",
+              "values": [
+                "fit-r-chop"
+              ]
+            },
+            {
+              "findingId": "dlbcl-stage",
+              "op": "is",
+              "values": [
+                "stage-1-2-limited"
+              ]
+            },
+            {
+              "functionId": "aaipi-dlbcl",
+              "op": "band_is",
+              "values": [
+                "low-intermediate",
+                "high-intermediate",
+                "high"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule17",
+          "label": "Advanced Non-GCB DLBCL (IPI >= 2, Age < 70, non-bulky): Pola-R-CHP",
+          "outcomeId": "dlbcl-fit-advanced-pola-r-chp",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "anthracycline-fitness",
+              "op": "is",
+              "values": [
+                "fit-r-chop"
+              ]
+            },
+            {
+              "findingId": "dlbcl-stage",
+              "op": "is",
+              "values": [
+                "stage-3-4-advanced"
+              ]
+            },
+            {
+              "findingId": "cell-of-origin",
+              "op": "is",
+              "values": [
+                "non-gcb"
+              ]
+            },
+            {
+              "findingId": "bulky-status",
+              "op": "is",
+              "values": [
+                "non-bulky"
+              ]
+            },
+            {
+              "functionId": "ipi-dlbcl",
+              "op": "band_is",
+              "values": [
+                "low-intermediate",
+                "high-intermediate",
+                "high"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule18",
+          "label": "Advanced stage DLBCL fit: Standard R-CHOP x 6",
+          "outcomeId": "dlbcl-fit-advanced-standard",
+          "conditions": [
+            {
+              "findingId": "lymphoma-subtype",
+              "op": "is",
+              "values": [
+                "dlbcl"
+              ]
+            },
+            {
+              "findingId": "anthracycline-fitness",
+              "op": "is",
+              "values": [
+                "fit-r-chop"
+              ]
+            },
+            {
+              "findingId": "dlbcl-stage",
+              "op": "is",
+              "values": [
+                "stage-3-4-advanced"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "NCG_DLBCL_RR_2020",
+      "version": "1.0.0",
+      "title": "Relapsed / Refractory DLBCL - Salvage, CAR-T & Palliative Pathways",
+      "shortTitle": "Relapsed / refractory DLBCL",
+      "stage": "Relapse",
+      "order": 4,
+      "organization": "Hematology-Oncology Clinical Working Group",
+      "source": "Clinical Guidelines - Relapsed / Refractory DLBCL Treatment Workflow Flowchart",
+      "description": "Evidence-based clinical decision pathway guiding evaluation and management of Relapsed or Refractory Diffuse Large B-Cell Lymphoma (DLBCL). Enforces mandatory repeat biopsy and PET-CT staging, stratifies by relapse timing (late relapse > 12 months vs early relapse <= 12 months / primary refractory), guides Pathway A (salvage chemo R-GEMOX/R-GDP/Pola-R-GEMOX x 3, post-salvage PET response, and ASCT consolidation), Pathway B (CAR-T evaluation, bridging with R-GEMOX/Pola-R-GEMOX, anti-CD19 CAR-T Axi-cel/Tisa-cel/Liso-cel vs Glofitamab-GEMOX), Pathway C (unfit for chemotherapy: palliative care, oral metronomic, targeted lenalidomide/bortezomib for non-GCB), consolidative/palliative radiotherapy (30-36 Gy), and enforces the critical contraindication avoiding bendamustine/Pola-BR when CAR-T is a future possibility.",
+      "enforceProvenance": true,
+      "fallbackOutcomeId": "needs-review",
+      "findings": [
+        {
+          "id": "relapse-biopsy-status",
+          "label": "Relapse tissue biopsy confirmation status",
+          "help": "Mandatory repeat biopsy from most representative site (largest size + highest SUVmax) to confirm DLBCL, repeat IHC (GCB vs non-GCB), and exclude indolent transformation.",
+          "category": "Diagnostics & Pathology",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-relapse-biopsy-status",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-relapse-biopsy-status",
+          "values": [
+            {
+              "code": "biopsy-confirmed-dlbcl",
+              "label": "Biopsy confirmed DLBCL (repeat IHC completed)"
+            },
+            {
+              "code": "transformation-indolent",
+              "label": "Transformed from prior indolent lymphoma (e.g. transformed FL)"
+            },
+            {
+              "code": "biopsy-pending",
+              "label": "Biopsy pending / FNAC only (repeat core/excisional biopsy mandatory)"
+            }
+          ]
+        },
+        {
+          "id": "relapse-timing",
+          "label": "Timing of relapse / progression relative to R-CHOP",
+          "help": "Critical branch point: Relapse > 12 months after R-CHOP completion (chemosensitive likely -> Pathway A) vs Relapse <= 12 months / progression ON R-CHOP (early/refractory -> Pathway B).",
+          "category": "Prognosis & Chronology",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-relapse-timing",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-relapse-timing",
+          "values": [
+            {
+              "code": "relapse-gt-12m",
+              "label": "Late relapse (> 12 months post completion of first-line R-CHOP)"
+            },
+            {
+              "code": "relapse-le-12m",
+              "label": "Early relapse (<= 12 months post completion of first-line R-CHOP)"
+            },
+            {
+              "code": "primary-refractory",
+              "label": "Primary refractory / progression ON first-line R-CHOP therapy"
+            }
+          ]
+        },
+        {
+          "id": "chemo-fitness-overall",
+          "label": "Fitness for combination systemic chemotherapy",
+          "help": "General fitness to tolerate intensive or non-transplant combination chemotherapy vs candidate for palliative/low-intensity oral therapy only.",
+          "category": "Performance & Fitness",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-chemo-fitness-overall",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-chemo-fitness-overall",
+          "values": [
+            {
+              "code": "chemo-eligible",
+              "label": "Chemotherapy eligible (candidate for intensive or standard combination salvage)"
+            },
+            {
+              "code": "unfit-all-chemo",
+              "label": "Unfit for combination chemotherapy (candidate for palliative / oral metronomic / targeted only)"
+            }
+          ]
+        },
+        {
+          "id": "asct-fitness",
+          "label": "Fitness for salvage chemotherapy + ASCT",
+          "help": "Eligibility for high-dose chemotherapy and Autologous Stem Cell Transplant (age, ECOG PS, absence of severe organ dysfunction).",
+          "category": "Performance & Fitness",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-asct-fitness",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-asct-fitness",
+          "values": [
+            {
+              "code": "asct-fit",
+              "label": "Fit for intensive salvage therapy + Autologous Stem Cell Transplant (ASCT)"
+            },
+            {
+              "code": "asct-unfit",
+              "label": "Not fit for ASCT (non-transplant candidate)"
+            }
+          ]
+        },
+        {
+          "id": "car-t-fitness",
+          "label": "Fitness for anti-CD19 CAR-T cell therapy",
+          "help": "Physiological fitness to tolerate cytokine release syndrome (CRS) and neurotoxicity (ICANS) associated with CAR-T.",
+          "category": "Performance & Fitness",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-car-t-fitness",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-car-t-fitness",
+          "values": [
+            {
+              "code": "car-t-fit",
+              "label": "Fit for CAR-T cell therapy (tolerable CRS/ICANS risk, adequate organ reserve)"
+            },
+            {
+              "code": "car-t-unfit",
+              "label": "Not fit for CAR-T cell therapy"
+            }
+          ]
+        },
+        {
+          "id": "pet-response-salvage",
+          "label": "PET-CT response after salvage chemotherapy (3 cycles)",
+          "help": "Deauville 5-point scale score after 3 cycles of salvage chemo (R-GEMOX / R-GDP / Pola-R-GEMOX).",
+          "category": "Response Assessment",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-pet-response-salvage",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-pet-response-salvage",
+          "values": [
+            {
+              "code": "salvage-cr-pr",
+              "label": "Chemosensitive: PR or CR (Deauville Score 1-3, >= 50% reduction in uptake)"
+            },
+            {
+              "code": "salvage-ds4-partial",
+              "label": "Partial response / residual uptake (Deauville Score 4, no new disease sites)"
+            },
+            {
+              "code": "salvage-ds5-refractory",
+              "label": "Chemotherapy-refractory (Deauville Score 5 or progressive disease)"
+            },
+            {
+              "code": "not-assessed",
+              "label": "Not yet assessed / salvage therapy not yet completed"
+            }
+          ]
+        },
+        {
+          "id": "car-t-future-plan",
+          "label": "CAR-T cell therapy future intention / possibility",
+          "help": "CRITICAL SAFETY GATE: Bendamustine causes prolonged T-cell lymphopenia and impairs CAR-T manufacture. Must be AVOIDED if CAR-T remains a possibility.",
+          "category": "Treatment Planning & Safety",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-car-t-future-plan",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-car-t-future-plan",
+          "values": [
+            {
+              "code": "cart-possible",
+              "label": "CAR-T is planned or remains a future possibility (MANDATORY TO AVOID BENDA / POLA-BR)"
+            },
+            {
+              "code": "cart-definitively-excluded",
+              "label": "CAR-T is definitively NOT planned / patient ineligible / unavailable"
+            }
+          ]
+        },
+        {
+          "id": "cell-of-origin-rr",
+          "label": "Repeat IHC cell-of-origin subtype at relapse",
+          "help": "Tumor biology may evolve at relapse. Non-GCB subtype qualifies for oral targeted lenalidomide or bortezomib in the palliative setting.",
+          "category": "Histology & Pathology",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-cell-of-origin-rr",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-cell-of-origin-rr",
+          "values": [
+            {
+              "code": "non-gcb",
+              "label": "Non-GCB phenotype (eligible for targeted lenalidomide / bortezomib)"
+            },
+            {
+              "code": "gcb",
+              "label": "GCB phenotype"
+            }
+          ]
+        },
+        {
+          "id": "dominant-residual-site",
+          "label": "Residual or bulky disease site for radiation",
+          "help": "Presence of single residual PET-positive site or bulky site at presentation suitable for consolidative radiotherapy (30-36 Gy).",
+          "category": "Radiation Therapy",
+          "codeSystemUrl": "http://ncgindia.org/fhir/CodeSystem/ncg-dominant-residual-site",
+          "valueSetUrl": "http://ncgindia.org/fhir/ValueSet/ncg-dominant-residual-site",
+          "values": [
+            {
+              "code": "single-site-residual",
+              "label": "Single residual PET+ site OR initial bulky site (candidate for consolidative RT 30-36 Gy)"
+            },
+            {
+              "code": "diffuse-multisite",
+              "label": "Diffuse widespread multi-site disease (systemic therapy only)"
+            },
+            {
+              "code": "no-residual-cmr",
+              "label": "Complete metabolic response (no residual uptake)"
+            }
+          ]
+        }
+      ],
+      "functions": [],
+      "outcomes": [
+        {
+          "id": "needs-review",
+          "label": "Needs clinician review (Safety Gate / Missing Workup)",
+          "kind": "review",
+          "category": "Clinical Governance & Safety",
+          "rationale": "Required clinical findings (relapse timing, fitness status, or biopsy confirmation) are missing or incomplete. A multidisciplinary tumor board review is required.",
+          "regimens": []
+        },
+        {
+          "id": "rr-biopsy-mandatory-gate",
+          "label": "Relapse Workup Gate: Mandatory Repeat Biopsy & Staging PET-CT",
+          "kind": "review",
+          "category": "Diagnostics & Safety",
+          "rationale": "Step 1: Repeat biopsy is MANDATORY from the most representative site (largest size + highest SUVmax on PET-CT) to rule out transformation from indolent lymphoma, confirm DLBCL histology, and re-evaluate IHC (GCB vs non-GCB) as tumor biology evolves at relapse. Salvage therapy must not begin without tissue confirmation.",
+          "regimens": [
+            {
+              "id": "r-pet-ct-staging",
+              "name": "Whole-body 18F-FDG PET-CT to identify highest SUVmax biopsy site",
+              "category": "Staging Imaging"
+            },
+            {
+              "id": "r-core-biopsy",
+              "name": "Image-guided core needle or surgical excisional biopsy of dominant lesion",
+              "category": "Diagnostic Procedure"
+            },
+            {
+              "id": "r-ihc-repeat",
+              "name": "Repeat immunohistochemistry panel (CD20, CD10, BCL6, MUM1, MYC, BCL2)",
+              "category": "Pathology"
+            },
+            {
+              "id": "r-echo-screen",
+              "name": "Baseline 2D-ECHO (LVEF) & Viral screening (HBsAg, HBcAb, HCV, HIV)",
+              "category": "Safety Screening"
+            }
+          ]
+        },
+        {
+          "id": "rr-pathway-a-salvage-fit",
+          "label": "Pathway A (Relapse > 12 Mo, Fit for ASCT): Salvage Chemotherapy x 3 Cycles",
+          "kind": "treatment",
+          "category": "Salvage Chemotherapy",
+          "rationale": "Step 4A: Late relapse (> 12 months) in a transplant-eligible patient. Initiate platinum/gemcitabine salvage chemoimmunotherapy for 3 cycles (R-GEMOX, R-GDP, or Pola-R-GEMOX), followed by mandatory PET-CT restaging.",
+          "regimens": [
+            {
+              "id": "r-gemox",
+              "name": "R-GEMOX x 3 cycles (Rituximab 375 mg/m2 D1, Gemcitabine 1000 mg/m2 D1,8, Oxaliplatin 100 mg/m2 D1 q14d)",
+              "category": "Standard Salvage Backbone"
+            },
+            {
+              "id": "r-gdp",
+              "name": "Alternative: R-GDP x 3 cycles (Rituximab, Gemcitabine, Dexamethasone, Cisplatin/Carboplatin)",
+              "category": "Platinum Salvage"
+            },
+            {
+              "id": "r-pola-gemox",
+              "name": "Alternative: Pola-R-GEMOX x 3 cycles (Polatuzumab vedotin + R-GEMOX)",
+              "category": "Targeted ADC Salvage"
+            },
+            {
+              "id": "r-restaging-pet",
+              "name": "Mandatory 18F-FDG PET-CT response evaluation after cycle 3",
+              "category": "Restaging Imaging"
+            }
+          ]
+        },
+        {
+          "id": "rr-pathway-a-asct-consolidation",
+          "label": "Pathway A: Chemosensitive Responders -> Autologous Stem Cell Transplant (ASCT)",
+          "kind": "treatment",
+          "category": "Transplant Consolidation",
+          "rationale": "Step 4A: Patients achieving PR or CR (Deauville Score 1-3) after 3 cycles of salvage chemotherapy demonstrate chemosensitivity and proceed directly to high-dose therapy and Autologous Stem Cell Transplant (ASCT) — the optimal curative-intent consolidation. Consolidative RT (30-36 Gy) may be delivered to initial bulky sites or single residual sites post-ASCT.",
+          "regimens": [
+            {
+              "id": "r-stem-cell-mobil",
+              "name": "Peripheral blood stem cell (PBSC) mobilization (G-CSF +/- Plerixafor) and apheresis harvest",
+              "category": "Cellular Therapy"
+            },
+            {
+              "id": "r-beam-asct",
+              "name": "High-dose conditioning chemotherapy (BEAM regimen: Carmustine, Etoposide, Cytarabine, Melphalan)",
+              "category": "Conditioning Chemo"
+            },
+            {
+              "id": "r-asct-infusion",
+              "name": "Autologous stem cell transplantation and post-transplant supportive care",
+              "category": "Transplantation"
+            },
+            {
+              "id": "r-post-asct-rt",
+              "name": "Consolidative ISRT 30-36 Gy to single residual or initial presentation bulky site post-ASCT",
+              "category": "Radiation Therapy"
+            }
+          ]
+        },
+        {
+          "id": "rr-pathway-a-ds4-biopsy-triage",
+          "label": "Pathway A (Salvage DS-4 Partial Response): Re-Biopsy & MDT CAR-T Triage",
+          "kind": "review",
+          "category": "Response Triage",
+          "rationale": "Step 4A: Deauville Score 4 after 3 cycles of salvage chemo represents residual metabolic uptake without progression. A repeat biopsy is considered to distinguish viable lymphoma from post-treatment inflammatory necrosis. If viable disease persists, re-assess for CAR-T cell therapy in a Multidisciplinary Tumor Board (MDT).",
+          "regimens": [
+            {
+              "id": "r-biopsy-residual",
+              "name": "Targeted biopsy of residual FDG-avid mass to verify viable lymphoma vs inflammatory necrosis",
+              "category": "Diagnostic Procedure"
+            },
+            {
+              "id": "r-mdt-cart-review",
+              "name": "Multidisciplinary Tumor Board review for CAR-T eligibility vs consolidative RT",
+              "category": "Specialist Review"
+            }
+          ]
+        },
+        {
+          "id": "rr-pathway-a-ds5-salvage-cart",
+          "label": "Pathway A (Salvage Refractory DS-5): Switch to CAR-T Cell Therapy",
+          "kind": "treatment",
+          "category": "Cellular Immunotherapy",
+          "rationale": "Step 4A: Deauville Score 5 (progression or no response after salvage chemotherapy) indicates chemotherapy-refractory disease. Chemotherapy-refractory patients have poor outcomes with ASCT and should immediately transition to anti-CD19 CAR-T cell therapy if fit and eligible.",
+          "regimens": [
+            {
+              "id": "r-cart-referral",
+              "name": "Urgent referral to CAR-T certified cellular therapy center",
+              "category": "Cellular Therapy"
+            },
+            {
+              "id": "r-cart-infusion-ds5",
+              "name": "Anti-CD19 CAR-T cell infusion (Axi-cel, Tisa-cel, or Liso-cel)",
+              "category": "CAR-T Cell Therapy"
+            },
+            {
+              "id": "r-bridging-ds5",
+              "name": "Non-bendamustine bridging therapy (R-GEMOX or localized RT)",
+              "category": "Bridging Therapy"
+            }
+          ]
+        },
+        {
+          "id": "rr-pathway-a-nontransplant-salvage",
+          "label": "Pathway A (Relapse > 12 Mo, NOT Fit for ASCT): Non-Transplant Salvage x 6 Cycles",
+          "kind": "treatment",
+          "category": "Non-Transplant Salvage",
+          "rationale": "Step 4A (Alt): Late relapse (> 12 months) in patients ineligible for high-dose chemotherapy/ASCT. Goal is disease control with tolerable therapy. Administer 3 cycles of R-GEMOX, R-GDP, or Pola-R-GEMOX; if responding, complete 6 cycles total. Glofitamab-GEMOX is an alternative bispecific option. (Avoid bendamustine/Pola-BR if CAR-T remains a future possibility).",
+          "regimens": [
+            {
+              "id": "r-nontransplant-gemox",
+              "name": "R-GEMOX / R-GDP / Pola-R-GEMOX x 3 cycles -> if responding complete 6 cycles total",
+              "category": "Combination Chemo"
+            },
+            {
+              "id": "r-glofit-alt",
+              "name": "Alternative: Glofitamab-GEM-OX (CD20xCD3 bispecific + GemOx)",
+              "category": "Bispecific Antibody"
+            },
+            {
+              "id": "r-carboplatin-renal",
+              "name": "Note: Carboplatin replaces cisplatin in R-GDP for renal impairment",
+              "category": "Dose Modification"
+            },
+            {
+              "id": "r-isrt-site",
+              "name": "Consolidative RT (30-36 Gy) to single residual or bulky presentation site post-chemotherapy",
+              "category": "Radiation Therapy"
+            }
+          ]
+        },
+        {
+          "id": "rr-pathway-b-cart-primary",
+          "label": "Pathway B (Early Relapse / Refractory, Fit for CAR-T): Primary CAR-T Therapy",
+          "kind": "treatment",
+          "category": "Cellular Immunotherapy",
+          "rationale": "Step 4B: Early relapse (<= 12 months) or primary refractory DLBCL carries chemotherapy resistance. Anti-CD19 CAR-T cell therapy is the PRIMARY curative-intent strategy. Bridging/debulking while awaiting manufacture should use R-GEMOX, Pola-R-GEMOX, or dominant-site radiation. STRICT SAFETY WARNING: AVOID Pola-BR and Bendamustine, as bendamustine causes profound prolonged T-cell depletion and severely impairs CAR-T manufacture.",
+          "regimens": [
+            {
+              "id": "r-apheresis-cart",
+              "name": "T-cell leukapheresis for anti-CD19 CAR-T manufacturing (Axi-cel / Tisa-cel / Liso-cel)",
+              "category": "Cellular Therapy"
+            },
+            {
+              "id": "r-bridging-nobenda",
+              "name": "Bridging therapy: R-GEMOX or Pola-R-GEMOX or dominant-site RT (STRICTLY AVOID BENDAMUSTINE)",
+              "category": "Bridging Debulking"
+            },
+            {
+              "id": "r-flucy-lymphodeplete",
+              "name": "Pre-infusion lymphodepleting chemotherapy: Fludarabine (30 mg/m2 D1-3) + Cyclophosphamide (300 mg/m2 D1-3)",
+              "category": "Conditioning Protocol"
+            },
+            {
+              "id": "r-cart-infuse",
+              "name": "Anti-CD19 CAR-T cell infusion with mandatory inpatient CRS and ICANS neurotoxicity monitoring",
+              "category": "CAR-T Infusion"
+            }
+          ]
+        },
+        {
+          "id": "rr-pathway-b-cart-unfit-glofit",
+          "label": "Pathway B (Early Relapse / Refractory, NOT Fit for CAR-T): Glofitamab-GEMOX",
+          "kind": "treatment",
+          "category": "Bispecific Immunotherapy",
+          "rationale": "Step 4B (Alt): Early relapse or primary refractory DLBCL in patients ineligible for CAR-T cell therapy. Glofitamab-GEMOX (CD20xCD3 bispecific T-cell engager with gemcitabine and oxaliplatin) delivers high response rates without requiring apheresis or autologous T-cell fitness. Obinutuzumab pre-treatment and step-up dosing are mandatory to mitigate CRS.",
+          "regimens": [
+            {
+              "id": "r-obinutuzumab-pre",
+              "name": "Obinutuzumab pre-treatment (1000 mg IV on D-7 of Cycle 1) to deplete circulating B cells and mitigate CRS",
+              "category": "CRS Prophylaxis"
+            },
+            {
+              "id": "r-glofit-stepup",
+              "name": "Glofitamab step-up dosing (2.5 mg D8, 10 mg D15 of Cycle 1, then 30 mg D1 Cycle 2 onwards)",
+              "category": "Bispecific T-Cell Engager"
+            },
+            {
+              "id": "r-gemox-partner",
+              "name": "Gemcitabine (1000 mg/m2) + Oxaliplatin (100 mg/m2) chemotherapy backbone",
+              "category": "Chemotherapy Backbone"
+            },
+            {
+              "id": "r-alt-salvage",
+              "name": "Alternative if Glofitamab unavailable: R-GEMOX / R-GDP x 6 cycles",
+              "category": "Salvage Chemo"
+            }
+          ]
+        },
+        {
+          "id": "rr-pathway-b-cart-unfit-pola-br",
+          "label": "Pathway B (NOT Fit for CAR-T, CAR-T Excluded): Pola-BR x 6 Cycles",
+          "kind": "treatment",
+          "category": "Targeted Chemoimmunotherapy",
+          "rationale": "Step 4B (Alt): Pola-BR (Polatuzumab vedotin + Bendamustine + Rituximab) x 6 cycles is indicated ONLY when CAR-T cell therapy is definitively NOT planned or permanently contraindicated. Bendamustine impairs T-cell collection, but provides valuable disease control in non-transplant/non-CAR-T patients.",
+          "regimens": [
+            {
+              "id": "r-pola-br-6",
+              "name": "Polatuzumab vedotin (1.8 mg/kg D1) + Bendamustine (90 mg/m2 D1,2) + Rituximab (375 mg/m2 D1) x 6 cycles q28d",
+              "category": "Targeted Chemoimmunotherapy"
+            },
+            {
+              "id": "r-gcsf-polabr",
+              "name": "Prophylactic G-CSF support in every cycle",
+              "category": "Growth Factor"
+            },
+            {
+              "id": "r-eot-pet-polabr",
+              "name": "End-of-treatment PET-CT assessment",
+              "category": "Imaging"
+            }
+          ]
+        },
+        {
+          "id": "rr-pathway-c-palliative-nongcb",
+          "label": "Pathway C (Unfit for Chemo, Non-GCB): Palliative Care + Targeted Lenalidomide / Bortezomib",
+          "kind": "treatment",
+          "category": "Palliative Targeted Therapy",
+          "rationale": "Step 5 / Pathway C: Frail patients unable to tolerate IV combination chemotherapy with confirmed Non-GCB DLBCL phenotype. Non-GCB tumors exhibit NF-kB pathway activation and respond to oral immunomodulatory or proteasome inhibitor targeted therapy (Lenalidomide or Bortezomib based) with low toxicity.",
+          "regimens": [
+            {
+              "id": "r-lenalidomide-oral",
+              "name": "Oral Lenalidomide (20-25 mg daily D1-21 q28d +/- Rituximab)",
+              "category": "Targeted Immunomodulatory"
+            },
+            {
+              "id": "r-bortezomib-alt",
+              "name": "Alternative: Subcutaneous Bortezomib-based therapy",
+              "category": "Proteasome Inhibitor"
+            },
+            {
+              "id": "r-palliative-support",
+              "name": "Palliative symptom care, pain management, and transfusion support",
+              "category": "Palliative Care"
+            },
+            {
+              "id": "r-palliative-rt-site",
+              "name": "Palliative radiotherapy to localized painful or symptomatic sites",
+              "category": "Radiation Therapy"
+            }
+          ]
+        },
+        {
+          "id": "rr-pathway-c-palliative-supportive",
+          "label": "Pathway C (Unfit for Chemo): Palliative Care + Oral Metronomic Chemotherapy",
+          "kind": "treatment",
+          "category": "Palliative Care",
+          "rationale": "Step 5 / Pathway C: Frail patients unable to tolerate IV chemotherapy. Comprehensive palliative care, symptom management, and low-toxicity oral metronomic chemotherapy (e.g. oral etoposide-based regimens) provide disease stabilization without compromising quality of life.",
+          "regimens": [
+            {
+              "id": "r-palliative-core",
+              "name": "Best supportive care: pain control, nutritional support, palliative care team co-management",
+              "category": "Supportive Care"
+            },
+            {
+              "id": "r-oral-metronomic",
+              "name": "Oral metronomic chemotherapy (e.g. low-dose oral etoposide 50 mg/m2 or oral cyclophosphamide)",
+              "category": "Oral Metronomic Chemo"
+            },
+            {
+              "id": "r-palliative-rt",
+              "name": "Palliative RT for localized bleeding, bone pain, or mass obstruction",
+              "category": "Radiation Therapy"
+            }
+          ]
+        },
+        {
+          "id": "rr-consolidative-radiotherapy",
+          "label": "Consolidative Radiotherapy (30-36 Gy) to Residual or Bulky Site",
+          "kind": "treatment",
+          "category": "Radiation Therapy",
+          "rationale": "Special Decision Rule: Radiation therapy (30-36 Gy) plays a vital consolidative role in R/R DLBCL when given to a single residual PET-positive site after salvage chemotherapy or to an initial presentation bulky site post-ASCT.",
+          "regimens": [
+            {
+              "id": "r-isrt-30-36",
+              "name": "Consolidative ISRT 30-36 Gy delivered to single residual FDG-avid lesion or initial presentation bulk",
+              "category": "Radiation Therapy"
+            },
+            {
+              "id": "r-pet-followup-rt",
+              "name": "Post-radiotherapy PET-CT assessment at 12 weeks",
+              "category": "Imaging Response"
+            }
+          ]
+        }
+      ],
+      "rules": [
+        {
+          "id": "rule1",
+          "label": "Biopsy pending: Mandatory repeat biopsy before salvage",
+          "outcomeId": "rr-biopsy-mandatory-gate",
+          "conditions": [
+            {
+              "findingId": "relapse-biopsy-status",
+              "op": "is",
+              "values": [
+                "biopsy-pending"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule2",
+          "label": "Relapse timing or overall fitness unknown",
+          "outcomeId": "needs-review",
+          "conditions": [
+            {
+              "findingId": "relapse-timing",
+              "op": "unknown",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "rule3",
+          "label": "Overall chemotherapy fitness unknown",
+          "outcomeId": "needs-review",
+          "conditions": [
+            {
+              "findingId": "chemo-fitness-overall",
+              "op": "unknown",
+              "values": []
+            }
+          ]
+        },
+        {
+          "id": "rule4",
+          "label": "Unfit for chemo, Non-GCB: Targeted Lenalidomide / Bortezomib",
+          "outcomeId": "rr-pathway-c-palliative-nongcb",
+          "conditions": [
+            {
+              "findingId": "chemo-fitness-overall",
+              "op": "is",
+              "values": [
+                "unfit-all-chemo"
+              ]
+            },
+            {
+              "findingId": "cell-of-origin-rr",
+              "op": "is",
+              "values": [
+                "non-gcb"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule5",
+          "label": "Unfit for chemo: Palliative care + Oral metronomic chemotherapy",
+          "outcomeId": "rr-pathway-c-palliative-supportive",
+          "conditions": [
+            {
+              "findingId": "chemo-fitness-overall",
+              "op": "is",
+              "values": [
+                "unfit-all-chemo"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule6",
+          "label": "Early relapse / refractory, Fit for CAR-T: Primary CAR-T Therapy",
+          "outcomeId": "rr-pathway-b-cart-primary",
+          "conditions": [
+            {
+              "findingId": "relapse-timing",
+              "op": "is",
+              "values": [
+                "relapse-le-12m",
+                "primary-refractory"
+              ]
+            },
+            {
+              "findingId": "car-t-fitness",
+              "op": "is",
+              "values": [
+                "car-t-fit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule7",
+          "label": "Early relapse / refractory, NOT Fit for CAR-T (CAR-T definitively excluded): Pola-BR",
+          "outcomeId": "rr-pathway-b-cart-unfit-pola-br",
+          "conditions": [
+            {
+              "findingId": "relapse-timing",
+              "op": "is",
+              "values": [
+                "relapse-le-12m",
+                "primary-refractory"
+              ]
+            },
+            {
+              "findingId": "car-t-fitness",
+              "op": "is",
+              "values": [
+                "car-t-unfit"
+              ]
+            },
+            {
+              "findingId": "car-t-future-plan",
+              "op": "is",
+              "values": [
+                "cart-definitively-excluded"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule8",
+          "label": "Early relapse / refractory, NOT Fit for CAR-T: Glofitamab-GEMOX",
+          "outcomeId": "rr-pathway-b-cart-unfit-glofit",
+          "conditions": [
+            {
+              "findingId": "relapse-timing",
+              "op": "is",
+              "values": [
+                "relapse-le-12m",
+                "primary-refractory"
+              ]
+            },
+            {
+              "findingId": "car-t-fitness",
+              "op": "is",
+              "values": [
+                "car-t-unfit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule9",
+          "label": "Late relapse, post-salvage chemosensitive (PR or better, DS 1-3): ASCT",
+          "outcomeId": "rr-pathway-a-asct-consolidation",
+          "conditions": [
+            {
+              "findingId": "relapse-timing",
+              "op": "is",
+              "values": [
+                "relapse-gt-12m"
+              ]
+            },
+            {
+              "findingId": "asct-fitness",
+              "op": "is",
+              "values": [
+                "asct-fit"
+              ]
+            },
+            {
+              "findingId": "pet-response-salvage",
+              "op": "is",
+              "values": [
+                "salvage-cr-pr"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule10",
+          "label": "Late relapse, post-salvage DS-4 partial uptake: Biopsy & CAR-T triage",
+          "outcomeId": "rr-pathway-a-ds4-biopsy-triage",
+          "conditions": [
+            {
+              "findingId": "relapse-timing",
+              "op": "is",
+              "values": [
+                "relapse-gt-12m"
+              ]
+            },
+            {
+              "findingId": "asct-fitness",
+              "op": "is",
+              "values": [
+                "asct-fit"
+              ]
+            },
+            {
+              "findingId": "pet-response-salvage",
+              "op": "is",
+              "values": [
+                "salvage-ds4-partial"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule11",
+          "label": "Late relapse, salvage refractory (DS-5): Re-assess for CAR-T",
+          "outcomeId": "rr-pathway-a-ds5-salvage-cart",
+          "conditions": [
+            {
+              "findingId": "relapse-timing",
+              "op": "is",
+              "values": [
+                "relapse-gt-12m"
+              ]
+            },
+            {
+              "findingId": "pet-response-salvage",
+              "op": "is",
+              "values": [
+                "salvage-ds5-refractory"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule12",
+          "label": "Late relapse, Fit for ASCT: Salvage Chemotherapy x 3 Cycles",
+          "outcomeId": "rr-pathway-a-salvage-fit",
+          "conditions": [
+            {
+              "findingId": "relapse-timing",
+              "op": "is",
+              "values": [
+                "relapse-gt-12m"
+              ]
+            },
+            {
+              "findingId": "asct-fitness",
+              "op": "is",
+              "values": [
+                "asct-fit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule13",
+          "label": "Single residual site post-salvage: Consolidative Radiotherapy (30-36 Gy)",
+          "outcomeId": "rr-consolidative-radiotherapy",
+          "conditions": [
+            {
+              "findingId": "relapse-timing",
+              "op": "is",
+              "values": [
+                "relapse-gt-12m"
+              ]
+            },
+            {
+              "findingId": "asct-fitness",
+              "op": "is",
+              "values": [
+                "asct-unfit"
+              ]
+            },
+            {
+              "findingId": "dominant-residual-site",
+              "op": "is",
+              "values": [
+                "single-site-residual"
+              ]
+            },
+            {
+              "findingId": "pet-response-salvage",
+              "op": "is",
+              "values": [
+                "salvage-ds4-partial"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "rule14",
+          "label": "Late relapse, NOT Fit for ASCT: Non-Transplant Salvage x 6 Cycles",
+          "outcomeId": "rr-pathway-a-nontransplant-salvage",
+          "conditions": [
+            {
+              "findingId": "relapse-timing",
+              "op": "is",
+              "values": [
+                "relapse-gt-12m"
+              ]
+            },
+            {
+              "findingId": "asct-fitness",
+              "op": "is",
+              "values": [
+                "asct-unfit"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -24,7 +24,7 @@ export function Setup({ g, edit, issues, goto }) {
         </div>
         <div className="card">
           <Field label="Organisation"><input type="text" value={g.organization} onChange={(e) => edit((d) => { d.organization = e.target.value; })} /></Field>
-          <Field label="Source document"><input type="text" value={g.source} placeholder="e.g. NCG Adult Hematolymphoid Guidelines 2020, p. 14" onChange={(e) => edit((d) => { d.source = e.target.value; })} /></Field>
+          <Field label="Source document"><input type="text" value={g.source} placeholder="e.g. Adult Hematolymphoid Clinical Guidelines, p. 14" onChange={(e) => edit((d) => { d.source = e.target.value; })} /></Field>
           <Field label="Plain-language description"><textarea value={g.description} onChange={(e) => edit((d) => { d.description = e.target.value; })} /></Field>
           <label className="row" style={{ cursor: 'pointer' }}>
             <input type="checkbox" checked={g.enforceProvenance} onChange={(e) => edit((d) => { d.enforceProvenance = e.target.checked; })} />

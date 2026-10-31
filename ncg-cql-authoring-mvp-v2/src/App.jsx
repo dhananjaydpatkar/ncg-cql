@@ -14,6 +14,8 @@ import { CatalogModal } from './components/CatalogModal';
 import { GuidedTour } from './components/GuidedTour';
 import { Compass, Sparkles } from 'lucide-react';
 
+const CDSS_URL = 'https://production.d363iqgbc372rx.amplifyapp.com/';
+
 const TABS = [
   ['setup', '1 · Details'],
   ['findings', '2 · Findings'],
@@ -49,7 +51,7 @@ export default function App() {
   const [tourStep, setTourStep] = useState(0);
   const [hasSeenTourPrompt, setHasSeenTourPrompt] = useState(() => {
     try {
-      return !!localStorage.getItem('ncg-tour-completed');
+      return !!localStorage.getItem('clinical-tour-completed');
     } catch {
       return false;
     }
@@ -64,7 +66,7 @@ export default function App() {
   const closeTour = () => {
     setTourOpen(false);
     try {
-      localStorage.setItem('ncg-tour-completed', 'true');
+      localStorage.setItem('clinical-tour-completed', 'true');
     } catch {
       // ignore storage failure
     }
@@ -149,8 +151,8 @@ export default function App() {
       <header className="topbar">
         <div className="topbar-row">
           <div className="brand" data-tour="brand">
-            <div className="brand-mark">N</div>
-            <div>NCG Guideline Studio<small>Write guidelines as rules - CQL &amp; FHIR are generated</small></div>
+            <span className="brand-mark" aria-hidden="true">Rx</span>
+            <div>Clinical Guideline Studio<small>Write guidelines as rules - CQL &amp; FHIR are generated</small></div>
           </div>
           <span className="spacer" />
           <select className="inline" data-tour="guideline-select" value={g.id} onChange={(e) => {
@@ -181,6 +183,15 @@ export default function App() {
             <Compass size={14} className="tour-trigger-icon" />
             <span>Guided Tour</span>
           </button>
+          <a
+            className="btn sm primary"
+            href={`${CDSS_URL}?guideline=${encodeURIComponent(g.id)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Launch Point-of-Care Clinical Decision Support (CDSS) Workstation for this guideline"
+          >
+            🩺 Point-of-Care CDSS ↗
+          </a>
           <input ref={fileRef} type="file" accept=".json,application/json" hidden onChange={importFile} />
         </div>
         <nav className="tabs" data-tour="tabs-nav">
@@ -198,7 +209,7 @@ export default function App() {
           <div className="tour-banner-content">
             <Sparkles size={16} className="tour-banner-sparkle" />
             <span>
-              <b>New to NCG Guideline Studio?</b> Take an interactive 2-minute tour to explore findings, score functions, decision rules, test cases, and CQL export.
+              <b>New to Clinical Guideline Studio?</b> Take an interactive 2-minute tour to explore findings, score functions, decision rules, test cases, and CQL export.
             </span>
           </div>
           <div className="tour-banner-actions">
@@ -209,7 +220,7 @@ export default function App() {
               className="btn sm ghost"
               onClick={() => {
                 try {
-                  localStorage.setItem('ncg-tour-completed', 'true');
+                  localStorage.setItem('clinical-tour-completed', 'true');
                 } catch {
                   // ignore
                 }

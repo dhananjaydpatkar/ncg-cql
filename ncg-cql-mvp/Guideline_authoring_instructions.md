@@ -1,6 +1,6 @@
-# Author's Guide: NCG Pathway Studio (Authoring MVP)
+# Author's Guide: Clinical Pathway Studio (Authoring MVP)
 
-The **NCG Pathway Studio** is an interactive, clinician-friendly authoring workbench (inspired by CMS/ONC's MADiE) designed for the National Cancer Grid (NCG). It bridges narrative clinical guidelines and executable healthcare standards, allowing hematologists, oncologists, and clinical informaticians to author, test, and package **FHIR R4 PlanDefinitions** and **CQL 1.4 logic libraries** without needing manual CQL coding.
+The **Clinical Pathway Studio** is an interactive, clinician-friendly authoring workbench (inspired by CMS/ONC's MADiE) designed for oncology working groups. It bridges narrative clinical guidelines and executable healthcare standards, allowing hematologists, oncologists, and clinical informaticians to author, test, and package **FHIR R4 PlanDefinitions** and **CQL 1.4 logic libraries** without needing manual CQL coding.
 
 ---
 
@@ -10,7 +10,7 @@ The workbench is organized into four integrated studios:
 
 ```
 ┌────────────────────────────────────────────────────────────────────────┐
-│                        NCG PATHWAY STUDIO                              │
+│                      CLINICAL PATHWAY STUDIO                           │
 ├─────────────────┬─────────────────┬──────────────────┬─────────────────┤
 │  Decision Tree  │   CQL Preview   │   Terminology    │  Test Workspace │
 │ (Visual Flow)   │ (Live CQL 1.4)  │ (SNOMED / LOINC) │ (Patient Evals) │
@@ -32,8 +32,8 @@ The workbench is organized into four integrated studios:
 * **Export / Copy:** Copy generated CQL for local compilation with the HL7 `cql-to-elm` CLI.
 
 ### C. Terminology Studio (`terminology` tab)
-* **Interim NCG CodeSystems:** Explore standardized codes for histology, staging, tumor burden, and clinical flags.
-* **National Coding Alignment:** Cross-reference NCG interim codes with **SNOMED CT-IN** (NRCeS India release) and **LOINC**.
+* **Interim CodeSystems:** Explore standardized codes for histology, staging, tumor burden, and clinical flags.
+* **National Coding Alignment:** Cross-reference interim codes with **SNOMED CT-IN** (NRCeS India release) and **LOINC**.
 * **Data-Quality Tiers:** Inspect the four data-provenance tiers (`source-coded`, `nlp-extracted-high-confidence`, `unparsed`, `missing`).
 
 ### D. Test Workspace (`tests` tab)
@@ -46,7 +46,7 @@ The workbench is organized into four integrated studios:
 Click **"Export FHIR Package"** in the top navigation bar to generate:
 * **FHIR R4 Library** (`Library-ncg-*.json`) containing base64-encoded CQL logic.
 * **FHIR R4 PlanDefinition** (`PlanDefinition-ncg-*-pathway.json`) ready for EHR Clinical Decision Support (CDS Hooks).
-* **Mermaid Diagram** (`.mmd`) for visual inclusion in NCG guideline PDF/HTML publications.
+* **Mermaid Diagram** (`.mmd`) for visual inclusion in clinical guideline PDF/HTML publications.
 
 ---
 
@@ -90,8 +90,8 @@ export const DLBCL_GUIDELINE = {
   id: "NCG_DLBCL_2022",
   version: "0.1.0",
   title: "Diffuse Large B-Cell Lymphoma (DLBCL) Pathway",
-  organization: "National Cancer Grid (India)",
-  sourceGuideline: "NCG Adult Hematolymphoid Guidelines: DLBCL",
+  organization: "Hematology-Oncology Clinical Working Group",
+  sourceGuideline: "Adult Hematolymphoid Guidelines: DLBCL",
   status: "draft",
   settings: {
     enforceProvenanceGate: true,
